@@ -63,11 +63,10 @@
         };
     # General help
       # Tree-sitter
-        # Using nixpkgs version for more language servers
-        # "plugin:nvim-treesitter" = {
-        #   url = "github:nvim-treesitter/nvim-treesitter";
-        #   flake = false;
-        # };
+        "plugin:nvim-treesitter" = {
+          url = "github:nvim-treesitter/nvim-treesitter";
+          flake = false;
+        };
         "plugin:nvim-ts-rainbow" = {
           url = "github:p00f/nvim-ts-rainbow";
           flake = false;
@@ -155,6 +154,11 @@
         url = "github:lukas-reineke/indent-blankline.nvim";
         flake = false;
       };
+      "plugin:neoscroll.nvim" = {
+        url = "github:karb94/neoscroll.nvim";
+        flake = false;
+      };
+
       # Note taking
         "plugin:nabla.nvim" = {
           url = "github:jbyuki/nabla.nvim";
@@ -303,8 +307,7 @@
                           configure = {
                             customRC = customRC;
                             packages.myVimPackage = with pkgs.neovimPlugins; {
-                              start = start
-                                    ++ [(pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: pkgs.tree-sitter.allGrammars))];
+                              start = start;
                               opt = opt;
                             };
                           };

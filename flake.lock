@@ -213,6 +213,22 @@
         "type": "github"
       }
     },
+    "plugin:neoscroll.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642114705,
+        "narHash": "sha256-0OaoqN9kmS2AAEKM+cfzLjPwgD0j5P+bmBlblmsbkvU=",
+        "owner": "karb94",
+        "repo": "neoscroll.nvim",
+        "rev": "07242b9c29eed0367cb305d41851b2e04de9052e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "karb94",
+        "repo": "neoscroll.nvim",
+        "type": "github"
+      }
+    },
     "plugin:nvim-cmp": {
       "flake": false,
       "locked": {
@@ -258,6 +274,22 @@
       "original": {
         "owner": "neovim",
         "repo": "nvim-lspconfig",
+        "type": "github"
+      }
+    },
+    "plugin:nvim-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645291611,
+        "narHash": "sha256-kvgVBDl4hkzLR0zWDdywpTUrVMCyqnCY3sZK3JfQCuY=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "rev": "560e8fb4500ac481601d2511b40f730b4515820e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
         "type": "github"
       }
     },
@@ -611,9 +643,11 @@
         "plugin:fzf.vim": "plugin:fzf.vim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
+        "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
         "plugin:nvim-lspconfig": "plugin:nvim-lspconfig",
+        "plugin:nvim-treesitter": "plugin:nvim-treesitter",
         "plugin:nvim-ts-rainbow": "plugin:nvim-ts-rainbow",
         "plugin:onedark-vim": "plugin:onedark-vim",
         "plugin:tabular": "plugin:tabular",

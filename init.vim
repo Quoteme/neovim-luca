@@ -84,6 +84,9 @@ lua << EOF
   require("twilight").setup {}
 EOF
 
+" NeoScroll
+lua require('neoscroll').setup()
+
 " indent-blankline.nvim
 lua << EOF
 vim.opt.list = true
