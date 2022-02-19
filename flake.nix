@@ -63,10 +63,11 @@
         };
     # General help
       # Tree-sitter
-        "plugin:nvim-treesitter" = {
-          url = "github:nvim-treesitter/nvim-treesitter";
-          flake = false;
-        };
+        # Using nixpkgs version for more language servers
+        # "plugin:nvim-treesitter" = {
+        #   url = "github:nvim-treesitter/nvim-treesitter";
+        #   flake = false;
+        # };
         "plugin:nvim-ts-rainbow" = {
           url = "github:p00f/nvim-ts-rainbow";
           flake = false;
@@ -302,7 +303,8 @@
                           configure = {
                             customRC = customRC;
                             packages.myVimPackage = with pkgs.neovimPlugins; {
-                              start = start;
+                              start = start
+                                    ++ [(pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: pkgs.tree-sitter.allGrammars))];
                               opt = opt;
                             };
                           };
