@@ -158,7 +158,15 @@
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
-
+      # Buffer line
+        "plugin:nvim-web-devicons" = {
+           url = "github:kyazdani42/nvim-web-devicons";
+           flake = false;
+          };
+        "plugin:barbar.nvim" = {
+           url = "github:romgrk/barbar.nvim";
+           flake = false;
+         };
       # Note taking
         "plugin:nabla.nvim" = {
           url = "github:jbyuki/nabla.nvim";

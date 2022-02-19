@@ -69,6 +69,22 @@
         "type": "github"
       }
     },
+    "plugin:barbar.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1633397874,
+        "narHash": "sha256-cVrvJZNJp5R331T9Qdh8myGnrBCqyceE26WX/IblcE8=",
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "rev": "6e638309efcad2f308eb9c5eaccf6f62b794bbab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "type": "github"
+      }
+    },
     "plugin:cmp-buffer": {
       "flake": false,
       "locked": {
@@ -306,6 +322,22 @@
       "original": {
         "owner": "p00f",
         "repo": "nvim-ts-rainbow",
+        "type": "github"
+      }
+    },
+    "plugin:nvim-web-devicons": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645288522,
+        "narHash": "sha256-0nuv0kBPGV9F6Nmt5GERUG9E8kkXFrbS+cJ1CVQAQ9g=",
+        "owner": "kyazdani42",
+        "repo": "nvim-web-devicons",
+        "rev": "4415d1aaa56f73b9c05795af84d625c610b05d3b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "kyazdani42",
+        "repo": "nvim-web-devicons",
         "type": "github"
       }
     },
@@ -634,6 +666,7 @@
         "flake-utils": "flake-utils",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
+        "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
         "plugin:cmp-path": "plugin:cmp-path",
@@ -649,6 +682,7 @@
         "plugin:nvim-lspconfig": "plugin:nvim-lspconfig",
         "plugin:nvim-treesitter": "plugin:nvim-treesitter",
         "plugin:nvim-ts-rainbow": "plugin:nvim-ts-rainbow",
+        "plugin:nvim-web-devicons": "plugin:nvim-web-devicons",
         "plugin:onedark-vim": "plugin:onedark-vim",
         "plugin:tabular": "plugin:tabular",
         "plugin:twilight.nvim": "plugin:twilight.nvim",

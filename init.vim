@@ -119,8 +119,17 @@ lua << EOF
 local wk = require("which-key")
 wk.setup{}
 wk.register({
-	b = {":Buffers<CR>", "show Buffers"},
-	t = {":tab ball<CR>", "make all Buffers tabs"},
+	b = {
+		name = "buffer settings",
+		l = {":Buffers<CR>", "list Buffers"},
+		p = {"<cmd>BufferPrevious<CR>", "previous buffer"},
+		n = {"<cmd>BufferNext<CR>", "next buffer"},
+		P = {"<cmd>BufferMovePrevious<CR>", "swap with preceding buffer"},
+		N = {"<cmd>BufferMoveNext<CR>", "swap with next buffer"},
+		c = {"<cmd>BufferClose<CR>", "close buffer"},
+		},
+	--t = {":tab ball<CR>", "make all Buffers tabs"},
+	t = {":twilight<CR>", "toggle twilight"},
 	n = {
 		name = "Nabla latex view",
 		a = {"<cmd>lua require('nabla').action()<CR>", "action"},
@@ -202,6 +211,10 @@ wk.register({
 wk.register({
 	c = {
 		s = "change surrounding char arg1 with arg2. cs\"\'"
+		},
+	g = {
+		b = {"<cmd>BufferPrevious<CR>", "previous buffer"},
+		B = {"<cmd>BufferNext<CR>", "next buffer"},
 		}
 })
 EOF
