@@ -13,15 +13,152 @@
     };
     
     # Theme
-    "plugin:onedark-vim" = {
-      url = "github:joshdick/onedark.vim";
-      flake = false;
-    };
-    # Git
-    "plugin:gitsigns" = {
-      url = "github:lewis6991/gitsigns.nvim";
-      flake = false;
-    };
+      "plugin:onedark-vim" = {
+        url = "github:joshdick/onedark.vim";
+        flake = false;
+      };
+    # Programming Language Specific stuff
+      # SAGE
+        "plugin:vim-sage" = {
+          url = "github:petRUShka/vim-sage";
+          flake = false;
+        };
+      # NIX
+        "plugin:vim-nix" = {
+          url = "github:LnL7/vim-nix";
+          flake = false;
+        };
+      # Clojure
+        "plugin:vim-dispatch" = {
+          url = "github:tpope/vim-dispatch";
+          flake = false;
+        };
+        "plugin:vim-dispatch-neovim" = {
+          url = "github:radenling/vim-dispatch-neovim";
+          flake = false;
+        };
+        "plugin:vim-jack-in" = {
+          url = "github:clojure-vim/vim-jack-in";
+          flake = false;
+        };
+        "plugin:conjure" = {
+          url = "github:Olical/conjure";
+          flake = false;
+        };
+        "plugin:vim-repeat" = {
+          url = "github:tpope/vim-repeat";
+          flake = false;
+        };
+        "plugin:vim-surround" = {
+          url = "github:tpope/vim-surround";
+          flake = false;
+        };
+        "plugin:vim-sexp" = {
+          url = "github:guns/vim-sexp";
+          flake = false;
+        };
+        "plugin:vim-sexp-mappings-for-regular-people" = {
+          url = "github:tpope/vim-sexp-mappings-for-regular-people";
+          flake = false;
+        };
+    # General help
+      # Tree-sitter
+        "plugin:nvim-treesitter" = {
+          url = "github:nvim-treesitter/nvim-treesitter";
+          flake = false;
+        };
+        "plugin:nvim-ts-rainbow" = {
+          url = "github:p00f/nvim-ts-rainbow";
+          flake = false;
+        };
+      # Language Server Protocol
+        "plugin:nvim-lspconfig" = {
+          url = "github:neovim/nvim-lspconfig";
+          flake = false;
+        };
+        # Completion Engine
+          "plugin:nvim-cmp" = {
+            url = "github:hrsh7th/nvim-cmp";
+            flake = false;
+          };
+          "plugin:cmp-nvim-lsp" = {
+            url = "github:hrsh7th/cmp-nvim-lsp";
+            flake = false;
+          };
+          "plugin:cmp-buffer" = {
+            url = "github:hrsh7th/cmp-buffer";
+            flake = false;
+          };
+          "plugin:cmp-vsnip" = { # TODO add custom snippts
+            url = "github:hrsh7th/cmp-vsnip";
+            flake = false;
+          };
+          "plugin:cmp-path" = {
+            url = "github:hrsh7th/cmp-path";
+            flake = false;
+          };
+          "plugin:vim-vsnip" = {
+            url = "github:hrsh7th/vim-vsnip";
+            flake = false;
+          };
+      "plugin:vim-slime" = {
+        url = "github:jpalardy/vim-slime";
+        flake = false;
+      };
+      "plugin:vim-signify" = {
+        url = "github:mhinz/vim-signify";
+        flake = false;
+      };
+      # Color
+        "plugin:nvim-colorizer.lua" = {
+          url = "github:norcalli/nvim-colorizer.lua";
+          flake = false;
+        };
+        "plugin:twilight.nvim" = {
+          url = "github:folke/twilight.nvim";
+          flake = false;
+        };
+      "plugin:tabular" = {
+        url = "github:godlygeek/tabular";
+        flake = false;
+      };
+      "plugin:vim-matchup" = {
+        url = "github:andymass/vim-matchup";
+        flake = false;
+      };
+      "plugin:delimitMate" = {
+        url = "github:Raimondi/delimitMate";
+        flake = false;
+      };
+      "plugin:fzf.vim" = {
+        url = "github:junegunn/fzf.vim";
+        flake = false;
+      };
+      "plugin:vim-commentary" = {
+        url = "github:tpope/vim-commentary";
+        flake = false;
+      };
+      "plugin:vim-visual-multi" = {
+        url = "github:mg979/vim-visual-multi";
+        flake = false;
+      };
+      "plugin:which-key.nvim" = {
+        url = "github:folke/which-key.nvim";
+        flake = false;
+      };
+      "plugin:vim-skeleton" = {
+        url = "github:noahfrederick/vim-skeleton";
+        flake = false;
+      };
+      "plugin:indent-blankline.nvim" = {
+        url = "github:lukas-reineke/indent-blankline.nvim";
+        flake = false;
+      };
+      # Note taking
+        "plugin:nabla.nvim" = {
+          url = "github:jbyuki/nabla.nvim";
+          flake = false;
+        };
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs:
@@ -46,7 +183,7 @@
         pluginOverlay = final: prev:
           let
             inherit (prev.vimUtils) buildVimPluginFrom2Nix;
-            treesitterGrammars = prev.tree-sitter.withPlugins (_: prev.tree-sitter.allGrammars);
+            # treesitterGrammars = prev.tree-sitter.withPlugins (_: prev.tree-sitter.allGrammars);
             plugins = builtins.filter
               (s: (builtins.match "plugin:.*" s) != null)
               (builtins.attrNames inputs);
@@ -128,6 +265,34 @@
                         , debug    ? false }:
                         let
                           myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
+                            buildInputs = with pkgs;
+                                          prev.buildInputs
+                                          ++ [
+                                            # LaTex
+                                              texlab
+                                            # Haskell
+                                              haskell-language-server
+                                              ormolu
+                                            # JavaScript / Typescript
+                                              nodePackages.javascript-typescript-langserver
+                                            # NIX
+                                              rnix-lsp
+                                            # Python
+                                              pyright
+                                            # Rust
+                                              rls
+                                            # Clojure
+                                              clojure-lsp
+                                            # C
+                                              clang-tools
+                                          ]
+                                          ++ [
+                                            fzf
+                                            ripgrep
+                                            bat
+                                            toilet
+                                            xclip
+                                         ];
                             propagatedBuildInputs = with pkgs; [ pkgs.stdenv.cc.cc.lib ];
                           });
                         in
