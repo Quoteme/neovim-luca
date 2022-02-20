@@ -172,6 +172,11 @@
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
+      # marks
+        "plugin:marks.nvim" = {
+          url = "github:chentau/marks.nvim";
+          flake = false;
+        };
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs:

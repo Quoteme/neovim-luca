@@ -87,6 +87,11 @@ EOF
 " NeoScroll
 lua require('neoscroll').setup()
 
+" Marks.nvim
+lua << EOF
+require'marks'.setup {}
+EOF
+
 " indent-blankline.nvim
 lua << EOF
 vim.opt.list = true
