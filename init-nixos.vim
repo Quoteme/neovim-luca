@@ -17,6 +17,7 @@
 	set relativenumber
 	set tabstop=4
 	set shiftwidth=4
+	set expandtab
 	set clipboard=unnamedplus				" Allow for use of system-wide copy and paste functions
 	set scrolloff=5							" Keep at least 3 lines above/below when scrolling
 	set hlsearch							" Highlight search
@@ -91,7 +92,7 @@ lua require('neoscroll').setup()
 lua << EOF
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
--- vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("eol:↴")
 require("indent_blankline").setup {
     space_char_blankline = " ",
     show_current_context = true,
@@ -408,9 +409,9 @@ EOF
 	autocmd FileType cabal setlocal expandtab
 
 " Nix
-	autocmd FileType nix setlocal tabstop=2
-	autocmd FileType nix setlocal shiftwidth=2
-	autocmd FileType nix setlocal expandtab
+	autocmd FileType haskell setlocal tabstop=2
+	autocmd FileType haskell setlocal shiftwidth=2
+	autocmd FileType haskell setlocal expandtab
 
 " LaTex
 	autocmd FileType tex map <F5> :!pdflatex<space>%<enter>
