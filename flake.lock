@@ -213,6 +213,22 @@
         "type": "github"
       }
     },
+    "plugin:marks.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1640652731,
+        "narHash": "sha256-3TCu+kSw5EGg3Z4G6QkDo25KUd+hCIy4GlipUYZTb+M=",
+        "owner": "chentau",
+        "repo": "marks.nvim",
+        "rev": "4b0aad42e72a653ca1afe31d2942f8aa5ab633e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "chentau",
+        "repo": "marks.nvim",
+        "type": "github"
+      }
+    },
     "plugin:nabla.nvim": {
       "flake": false,
       "locked": {
@@ -675,6 +691,7 @@
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:fzf.vim": "plugin:fzf.vim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
+        "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",

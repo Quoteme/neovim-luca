@@ -43,6 +43,11 @@
 	set termguicolors 						" true color support
 
 " Autocommands and keyboard-shortcuts
+	" German keyboard fix
+	nnoremap ö '
+	nnoremap ü [
+	nnoremap ä ]
+	nnoremap ß {
 	autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
 	" Automatically deletes all tralling whitespace on save.
 		" autocmd BufWritePre * %s/\s\+$//e
