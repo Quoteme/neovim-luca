@@ -44,10 +44,10 @@
 
 " Autocommands and keyboard-shortcuts
 	" German keyboard fix
-	nnoremap ö '
-	nnoremap ü [
-	nnoremap ä ]
-	nnoremap ß {
+	nmap ö '
+	nmap ü [
+	nmap ä ]
+	nmap ß {
 	autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
 	" Automatically deletes all tralling whitespace on save.
 		" autocmd BufWritePre * %s/\s\+$//e
