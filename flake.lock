@@ -181,6 +181,22 @@
         "type": "github"
       }
     },
+    "plugin:friendly-snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1643810276,
+        "narHash": "sha256-zgivFhDH7jM/0z2EwWnThc/E65s98vdYwv+VeG3Hixk=",
+        "owner": "rafamadriz",
+        "repo": "friendly-snippets",
+        "rev": "2e575549910571ff5abb6b02178c69ad760a4e00",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rafamadriz",
+        "repo": "friendly-snippets",
+        "type": "github"
+      }
+    },
     "plugin:fzf.vim": {
       "flake": false,
       "locked": {
@@ -689,6 +705,7 @@
         "plugin:cmp-vsnip": "plugin:cmp-vsnip",
         "plugin:conjure": "plugin:conjure",
         "plugin:delimitMate": "plugin:delimitMate",
+        "plugin:friendly-snippets": "plugin:friendly-snippets",
         "plugin:fzf.vim": "plugin:fzf.vim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",

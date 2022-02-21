@@ -89,10 +89,6 @@
             url = "github:hrsh7th/cmp-buffer";
             flake = false;
           };
-          "plugin:cmp-vsnip" = { # TODO add custom snippts
-            url = "github:hrsh7th/cmp-vsnip";
-            flake = false;
-          };
           "plugin:cmp-path" = {
             url = "github:hrsh7th/cmp-path";
             flake = false;
@@ -101,6 +97,15 @@
             url = "github:hrsh7th/vim-vsnip";
             flake = false;
           };
+          # Snippets
+            "plugin:cmp-vsnip" = { # TODO add custom snippts
+              url = "github:hrsh7th/cmp-vsnip";
+              flake = false;
+            };
+            "plugin:friendly-snippets" = { # TODO add custom snippts
+              url = "github:rafamadriz/friendly-snippets";
+              flake = false;
+            };
       "plugin:vim-slime" = {
         url = "github:jpalardy/vim-slime";
         flake = false;
