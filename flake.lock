@@ -85,6 +85,22 @@
         "type": "github"
       }
     },
+    "plugin:cheatsheet.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1640255456,
+        "narHash": "sha256-TYkGB7cON2t4GwMaR9H1MDG2j3btBv2AR37ade8kqTY=",
+        "owner": "sudormrfbin",
+        "repo": "cheatsheet.nvim",
+        "rev": "9716f9aaa94dd1fd6ce59b5aae0e5f25e2a463ef",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sudormrfbin",
+        "repo": "cheatsheet.nvim",
+        "type": "github"
+      }
+    },
     "plugin:cmp-buffer": {
       "flake": false,
       "locked": {
@@ -389,6 +405,38 @@
         "type": "github"
       }
     },
+    "plugin:plenary.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645295082,
+        "narHash": "sha256-WBlJPXCMVqlGdg4x6+ZfyDwUh769MZSKQNdPv0L9lfw=",
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "rev": "2a278c8a12a399e25b78a43ebcd4f3996cd4e4b6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "plenary.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:popup.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1637254091,
+        "narHash": "sha256-dNWz/xovUg55fDZUpVs/2kLphk3lqQyvPtc9ATwbeSQ=",
+        "owner": "nvim-lua",
+        "repo": "popup.nvim",
+        "rev": "b7404d35d5d3548a82149238289fa71f7f6de4ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lua",
+        "repo": "popup.nvim",
+        "type": "github"
+      }
+    },
     "plugin:tabular": {
       "flake": false,
       "locked": {
@@ -402,6 +450,22 @@
       "original": {
         "owner": "godlygeek",
         "repo": "tabular",
+        "type": "github"
+      }
+    },
+    "plugin:telescope.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1644911516,
+        "narHash": "sha256-aTNioZAu8zfPsiTLxn2JrBkpmgGuJZQ88oRG6w8o3Wc=",
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
+        "rev": "df0b35c8bc0944164828ccba8ea17941423c6725",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope.nvim",
         "type": "github"
       }
     },
@@ -699,6 +763,7 @@
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
+        "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
         "plugin:cmp-path": "plugin:cmp-path",
@@ -718,7 +783,10 @@
         "plugin:nvim-ts-rainbow": "plugin:nvim-ts-rainbow",
         "plugin:nvim-web-devicons": "plugin:nvim-web-devicons",
         "plugin:onedark-vim": "plugin:onedark-vim",
+        "plugin:plenary.nvim": "plugin:plenary.nvim",
+        "plugin:popup.nvim": "plugin:popup.nvim",
         "plugin:tabular": "plugin:tabular",
+        "plugin:telescope.nvim": "plugin:telescope.nvim",
         "plugin:twilight.nvim": "plugin:twilight.nvim",
         "plugin:vim-commentary": "plugin:vim-commentary",
         "plugin:vim-dispatch": "plugin:vim-dispatch",

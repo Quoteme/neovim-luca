@@ -163,6 +163,23 @@
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
+      # Chearcheet
+        "plugin:plenary.nvim" = {
+          url = "github:nvim-lua/plenary.nvim";
+          flake = false;
+        };
+        "plugin:telescope.nvim" = {
+          url = "github:nvim-telescope/telescope.nvim";
+          flake = false;
+        };
+        "plugin:popup.nvim" = {
+          url = "github:nvim-lua/popup.nvim";
+          flake = false;
+        };
+        "plugin:cheatsheet.nvim" = {
+          url = "github:sudormrfbin/cheatsheet.nvim";
+          flake = false;
+        };
       # Buffer line
         "plugin:nvim-web-devicons" = {
            url = "github:kyazdani42/nvim-web-devicons";
@@ -310,9 +327,10 @@
                                               clang-tools
                                           ]
                                           ++ [
-                                            fzf
-                                            ripgrep
-                                            bat
+                                            # Telescope
+                                              fd
+                                              ripgrep
+                                              bat
                                             toilet
                                             xclip
                                          ];
