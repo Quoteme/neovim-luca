@@ -213,22 +213,6 @@
         "type": "github"
       }
     },
-    "plugin:fzf.vim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1643697288,
-        "narHash": "sha256-UU3O5qLZFyidMF7jOp+GjNQFnAwrlGcK9D/BjdMz0Tg=",
-        "owner": "junegunn",
-        "repo": "fzf.vim",
-        "rev": "1f7bfa4007043c30027b2cd79625e8aac5cff1f9",
-        "type": "github"
-      },
-      "original": {
-        "owner": "junegunn",
-        "repo": "fzf.vim",
-        "type": "github"
-      }
-    },
     "plugin:indent-blankline.nvim": {
       "flake": false,
       "locked": {
@@ -771,7 +755,6 @@
         "plugin:conjure": "plugin:conjure",
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
-        "plugin:fzf.vim": "plugin:fzf.vim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",

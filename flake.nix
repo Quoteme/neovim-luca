@@ -135,10 +135,10 @@
         url = "github:Raimondi/delimitMate";
         flake = false;
       };
-      "plugin:fzf.vim" = {
-        url = "github:junegunn/fzf.vim";
-        flake = false;
-      };
+      # "plugin:fzf.vim" = {
+      #   url = "github:junegunn/fzf.vim";
+      #   flake = false;
+      # };
       "plugin:vim-commentary" = {
         url = "github:tpope/vim-commentary";
         flake = false;

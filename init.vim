@@ -48,6 +48,12 @@
 	nmap ü [
 	nmap ä ]
 	nmap ß {
+	" Mappings only available to patched terminals. See quoteme/st-nix
+	map <C-Tab> <cmd>BufferNext<CR>
+	map <C-S-Tab> <cmd>BufferPrevious<CR>
+	map <M-Tab> <cmd>BufferMovePrevious<CR>
+	map <M-S-Tab> <cmd>BufferMoveNext<CR>
+	" Fix ugly red backgrounds TODO is this still needed?
 	autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
 	" Automatically deletes all tralling whitespace on save.
 		" autocmd BufWritePre * %s/\s\+$//e
