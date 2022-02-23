@@ -107,14 +107,26 @@
               url = "github:rafamadriz/friendly-snippets";
               flake = false;
             };
-      "plugin:vim-slime" = {
-        url = "github:jpalardy/vim-slime";
-        flake = false;
-      };
-      "plugin:vim-signify" = {
-        url = "github:mhinz/vim-signify";
-        flake = false;
-      };
+      # Code execution
+        # TODO sniprun is installed from nixpkgs. Add nixpkgs option
+        # "plugin:sniprun" = {
+        #   url = "github:michaelb/sniprun";
+        #   flake = false;
+        # };
+        # Notification
+          "plugin:nvim-notify" = {
+            url = "github:rcarriga/nvim-notify";
+            flake = false;
+          };
+        "plugin:vim-slime" = {
+          url = "github:jpalardy/vim-slime";
+          flake = false;
+        };
+      # Git integration
+        "plugin:vim-signify" = {
+          url = "github:mhinz/vim-signify";
+          flake = false;
+        };
       # Color
         "plugin:nvim-colorizer.lua" = {
           url = "github:norcalli/nvim-colorizer.lua";
@@ -372,6 +384,10 @@
         packages.neovimLuca = neovimBuilder {
           # the next line loads a trivial example of a init.vim:
           customRC = pkgs.lib.readFile ./init.vim;
+          # Add sniprun as an extra plugin from nixpkgs because idk
+          # how to build it from source yet
+          start = (builtins.attrValues pkgs.neovimPlugins)
+                ++ [pkgs.vimPlugins.sniprun];
           depencies = with pkgs; [
             # Telescope
               fd

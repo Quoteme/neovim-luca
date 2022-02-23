@@ -184,7 +184,30 @@ wk.register({
  		S = {"<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", "set loclist"},
  		f = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "format"},
 		},
-}, { prefix = "<leader>" })
+	e = {
+		name = "evaluate using sniprun",
+		e = {"<cmd>lua require'sniprun'.run()<cr>", "run line"},
+		i = {"<cmd>lua require'sniprun'.info()<cr>", "sniprun info"},
+		r = {"<cmd>lua require'sniprun'.reset()<cr>", "reset sniprun"},
+		r = {"<cmd>lua require'sniprun'.clear_repl()<cr>", "clear sniprun repl memory"},
+		x = {"<cmd>lua require'sniprun.display'.close()<cr>", "close sniprun"},
+		l = {"<cmd>lua require'sniprun.live_mode'.toggle()<cr>", "sniprun live mode toggle"},
+		},
+}, {
+	mode = "n", 
+	prefix = "<leader>"
+})
+
+
+wk.register({
+	e = {
+		name = "evaluate using sniprun",
+		e = {"<cmd>lua require'sniprun'.run('v')<cr>", "run visual selection"},
+	},
+}, {
+	mode = "v",
+	prefix = "<leader>"
+})
 
 if vim.bo.filetype=="clojure" then
 	wk.register({
@@ -239,6 +262,16 @@ wk.register({
 		b = {"<cmd>Telescope buffers<cr>"    , "find in buffers"},
 		h = {"<cmd>Telescope help_tags<cr>"  , "help tags"},
 		}
+})
+EOF
+
+" SnipRun
+lua << EOF
+require'sniprun'.setup({
+	display = {
+		"VirtualTextOk",
+		"NvimNotify",
+	}
 })
 EOF
 
