@@ -7,6 +7,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/flake-utils";
     };
+    # This section will allow us to create a python environment
+    # with specific predefined python packages from PyPi
+    pypi-deps-db = {
+      url = "github:DavHau/mach-nix/3.3.0";
+    };
+    mach-nix = {
+      url = "github:DavHau/mach-nix/3.3.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.pypi-deps-db.follows = "pypi-deps-db";
+    };
+
+    # --- Neovim and plugins section ---
+
     neovim-flake = {
       url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -194,6 +208,10 @@
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
+        "plugin:gkeep.nvim" = {
+          url = "github:stevearc/gkeep.nvim";
+          flake = false;
+        };
       # marks
         "plugin:marks.nvim" = {
           url = "github:chentau/marks.nvim";
@@ -266,6 +284,20 @@
           ];
         };
 
+        # Set up a python environment, because some plugins
+        # (like gkeep.nvim) require python with specific packages.
+        # simply create a new python enviroment using
+        # ```
+        # (mach.mkPython {
+        #   requirements = ''
+        #     putYourDependenciesHere
+        #   '';
+        # })
+        # ```
+        python = "python310";
+        mach = import inputs.mach-nix { inherit pkgs python; };
+        # create a custom python environment
+
         # neovimBuilder is a function that takes your prefered
         # configuration as input and just returns a version of
         # neovim where the default config was overwritten with your
@@ -297,57 +329,67 @@
         #          | to your imports!
         # opt      | List of optional plugins to load only when 
         #          | explicitly loaded from inside neovim
-        neovimBuilder = { customRC ? ""
-                        , viAlias  ? true
-                        , vimAlias ? true
-                        , start    ? builtins.attrValues pkgs.neovimPlugins
-                        , opt      ? []
-                        , debug    ? false }:
+        neovimBuilder = { customRC  ? ""
+                        , viAlias   ? true
+                        , vimAlias  ? true
+                        , start     ? builtins.attrValues pkgs.neovimPlugins
+                        , opt       ? []
+                        , debug     ? false 
+                        , depencies ? []}:
                         let
                           myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
-                            buildInputs = with pkgs;
-                                          prev.buildInputs
-                                          ++ [
-                                            # LaTex
-                                              texlab
-                                            # Haskell
-                                              haskell-language-server
-                                              ormolu
-                                            # JavaScript / Typescript
-                                              nodePackages.javascript-typescript-langserver
-                                            # NIX
-                                              rnix-lsp
-                                            # Python
-                                              pyright
-                                            # Rust
-                                              rls
-                                            # Clojure
-                                              clojure-lsp
-                                            # C
-                                              clang-tools
-                                          ]
-                                          ++ [
-                                            # Telescope
-                                              fd
-                                              ripgrep
-                                              bat
-                                            toilet
-                                            xclip
-                                         ];
-                            propagatedBuildInputs = with pkgs; [ pkgs.stdenv.cc.cc.lib ];
+                            propagatedBuildInputs = with pkgs; [
+                              # TODO find out why this is here
+                              pkgs.stdenv.cc.cc.lib
+                            ];
                           });
-                        in
-                        pkgs.wrapNeovim myNeovimUnwrapped {
-                          inherit viAlias;
-                          inherit vimAlias;
-                          configure = {
-                            customRC = customRC;
-                            packages.myVimPackage = with pkgs.neovimPlugins; {
-                              start = start;
-                              opt = opt;
+                          neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
+                            inherit viAlias;
+                            inherit vimAlias;
+                            configure = {
+                              customRC = customRC;
+                              packages.myVimPackage = with pkgs.neovimPlugins; {
+                                start = start;
+                                opt = opt;
+                              };
                             };
                           };
-                        };
+                          neovim-withExternalDependencies = neovim-wrapped.overrideAttrs (prev: {
+                            # here we add some external programs to neovim
+                            # which means that neovim will be installed
+                            # in a way that also installs these programs.
+                            # This also means, that neovim can call them
+                            # even if the user has not installed them
+                            # system-wide
+                            buildInputs = with pkgs; [
+                              # Language servers
+                                # LaTex
+                                  texlab
+                                # Haskell
+                                  haskell-language-server
+                                  ormolu
+                                # JavaScript / Typescript
+                                  nodePackages.javascript-typescript-langserver
+                                # NIX
+                                  rnix-lsp
+                                # Python
+                                  pyright
+                                # Rust
+                                  rls
+                                # Clojure
+                                  clojure-lsp
+                                # C
+                                  clang-tools
+                              # Other dependencies
+                                xclip
+                              ]
+                              # finally load some extra depencies which
+                              # can be passed as arguments to neovimBuilder
+                              ++ depencies;
+                          });
+                        in
+                        neovim-withExternalDependencies;
+                        
       in
       rec {
         defaultApp = apps.nvim;
@@ -361,6 +403,20 @@
         packages.neovimLuca = neovimBuilder {
           # the next line loads a trivial example of a init.vim:
           customRC = pkgs.lib.readFile ./init.vim;
+          depencies = with pkgs; [
+            # Telescope
+              fd
+              ripgrep
+              bat
+            # gkeep.nvim
+            (mach.mkPython {
+              requirements = ''
+                gkeepapi
+                keyring==18.0.1
+              '';
+            })
+            toilet
+          ];
           # if you wish to only load the onedark-vim colorscheme:
           # start = with pkgs.neovimPlugins; [ onedark-vim ];
         };

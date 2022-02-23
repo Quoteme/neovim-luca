@@ -30,6 +30,48 @@
         "type": "github"
       }
     },
+    "flake-utils_3": {
+      "locked": {
+        "lastModified": 1642700792,
+        "narHash": "sha256-XqHrk7hFb+zBvRg6Ghl+AZDq03ov6OshJLiSWOoX5es=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "846b2ae0fc4cc943637d3d1def4454213e203cba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "mach-nix": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "pypi-deps-db": [
+          "pypi-deps-db"
+        ]
+      },
+      "locked": {
+        "lastModified": 1643953409,
+        "narHash": "sha256-CJDg/RpZdUVyI3QIAXUqIoYDl7VkxFtNE4JWih0ucKc=",
+        "owner": "DavHau",
+        "repo": "mach-nix",
+        "rev": "fe5255e6fd8df57e9507b7af82fc59dda9e9ff2b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DavHau",
+        "ref": "3.4.0",
+        "repo": "mach-nix",
+        "type": "github"
+      }
+    },
     "neovim-flake": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -67,6 +109,21 @@
         "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1643805626,
+        "narHash": "sha256-AXLDVMG+UaAGsGSpOtQHPIKB+IZ0KSd9WS77aanGzgc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "554d2d8aa25b6e583575459c297ec23750adb6cb",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
       }
     },
     "plugin:barbar.nvim": {
@@ -210,6 +267,22 @@
       "original": {
         "owner": "rafamadriz",
         "repo": "friendly-snippets",
+        "type": "github"
+      }
+    },
+    "plugin:gkeep.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1645571148,
+        "narHash": "sha256-JpR1JfRl9oOHqy007QDJ3v21uXpNMZuvd4ci28TjuVw=",
+        "owner": "stevearc",
+        "repo": "gkeep.nvim",
+        "rev": "72ef82a4c251f02ff5575a1248f974321802b3be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "gkeep.nvim",
         "type": "github"
       }
     },
@@ -741,9 +814,47 @@
         "type": "github"
       }
     },
+    "pypi-deps-db": {
+      "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": "nixpkgs_2",
+        "pypi-deps-db": "pypi-deps-db_2"
+      },
+      "locked": {
+        "lastModified": 1643953409,
+        "narHash": "sha256-CJDg/RpZdUVyI3QIAXUqIoYDl7VkxFtNE4JWih0ucKc=",
+        "owner": "DavHau",
+        "repo": "mach-nix",
+        "rev": "fe5255e6fd8df57e9507b7af82fc59dda9e9ff2b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DavHau",
+        "ref": "3.4.0",
+        "repo": "mach-nix",
+        "type": "github"
+      }
+    },
+    "pypi-deps-db_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1643877077,
+        "narHash": "sha256-jv8pIvRFTP919GybOxXE5TfOkrjTbdo9QiCO1TD3ZaY=",
+        "owner": "DavHau",
+        "repo": "pypi-deps-db",
+        "rev": "da53397f0b782b0b18deb72ef8e0fb5aa7c98aa3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DavHau",
+        "repo": "pypi-deps-db",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "mach-nix": "mach-nix",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
@@ -755,6 +866,7 @@
         "plugin:conjure": "plugin:conjure",
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
+        "plugin:gkeep.nvim": "plugin:gkeep.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
@@ -787,7 +899,8 @@
         "plugin:vim-surround": "plugin:vim-surround",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
         "plugin:vim-vsnip": "plugin:vim-vsnip",
-        "plugin:which-key.nvim": "plugin:which-key.nvim"
+        "plugin:which-key.nvim": "plugin:which-key.nvim",
+        "pypi-deps-db": "pypi-deps-db"
       }
     }
   },
