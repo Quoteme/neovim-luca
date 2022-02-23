@@ -270,22 +270,6 @@
         "type": "github"
       }
     },
-    "plugin:gkeep.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1645571148,
-        "narHash": "sha256-JpR1JfRl9oOHqy007QDJ3v21uXpNMZuvd4ci28TjuVw=",
-        "owner": "stevearc",
-        "repo": "gkeep.nvim",
-        "rev": "72ef82a4c251f02ff5575a1248f974321802b3be",
-        "type": "github"
-      },
-      "original": {
-        "owner": "stevearc",
-        "repo": "gkeep.nvim",
-        "type": "github"
-      }
-    },
     "plugin:indent-blankline.nvim": {
       "flake": false,
       "locked": {
@@ -866,7 +850,6 @@
         "plugin:conjure": "plugin:conjure",
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
-        "plugin:gkeep.nvim": "plugin:gkeep.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",

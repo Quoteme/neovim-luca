@@ -10,10 +10,10 @@
     # This section will allow us to create a python environment
     # with specific predefined python packages from PyPi
     pypi-deps-db = {
-      url = "github:DavHau/mach-nix/3.3.0";
+      url = "github:DavHau/mach-nix/3.4.0";
     };
     mach-nix = {
-      url = "github:DavHau/mach-nix/3.3.0";
+      url = "github:DavHau/mach-nix/3.4.0";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
       inputs.pypi-deps-db.follows = "pypi-deps-db";
@@ -208,10 +208,6 @@
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
-        "plugin:gkeep.nvim" = {
-          url = "github:stevearc/gkeep.nvim";
-          flake = false;
-        };
       # marks
         "plugin:marks.nvim" = {
           url = "github:chentau/marks.nvim";
@@ -283,20 +279,6 @@
             })
           ];
         };
-
-        # Set up a python environment, because some plugins
-        # (like gkeep.nvim) require python with specific packages.
-        # simply create a new python enviroment using
-        # ```
-        # (mach.mkPython {
-        #   requirements = ''
-        #     putYourDependenciesHere
-        #   '';
-        # })
-        # ```
-        python = "python310";
-        mach = import inputs.mach-nix { inherit pkgs python; };
-        # create a custom python environment
 
         # neovimBuilder is a function that takes your prefered
         # configuration as input and just returns a version of
@@ -408,13 +390,6 @@
               fd
               ripgrep
               bat
-            # gkeep.nvim
-            (mach.mkPython {
-              requirements = ''
-                gkeepapi
-                keyring==18.0.1
-              '';
-            })
             toilet
           ];
           # if you wish to only load the onedark-vim colorscheme:
