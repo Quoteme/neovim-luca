@@ -7,19 +7,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/flake-utils";
     };
-    # This section will allow us to create a python environment
-    # with specific predefined python packages from PyPi
-    pypi-deps-db = {
-      url = "github:DavHau/mach-nix/3.4.0";
-    };
-    mach-nix = {
-      url = "github:DavHau/mach-nix/3.4.0";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-      inputs.pypi-deps-db.follows = "pypi-deps-db";
-    };
-
-    # --- Neovim and plugins section ---
 
     neovim-flake = {
       url = "github:neovim/neovim?dir=contrib";
