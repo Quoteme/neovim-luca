@@ -55,10 +55,10 @@
 	map <M-S-Tab> <cmd>BufferMoveNext<CR>
 	map <C-W> <cmd>BufferClose<CR>
 		" We need to remap some keys for remapping ctrl-w to work
-		map <C-H> <cmd>:wincmd h<CR>
-		map <C-J> <cmd>:wincmd j<CR>
-		map <C-K> <cmd>:wincmd k<CR>
-		map <C-L> <cmd>:wincmd l<CR>
+		map <C-S-H> <cmd>:wincmd h<CR>
+		map <C-S-J> <cmd>:wincmd k<CR>
+		map <C-S-K> <cmd>:wincmd j<CR>
+		map <C-S-L> <cmd>:wincmd l<CR>
 	" Fix ugly red backgrounds TODO is this still needed?
 	autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
 	" Automatically deletes all tralling whitespace on save.
