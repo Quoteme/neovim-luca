@@ -393,6 +393,8 @@
               fd
               ripgrep
               bat
+            # Treesitter
+              gcc
             toilet
           ];
           # if you wish to only load the onedark-vim colorscheme:
