@@ -494,5 +494,5 @@ EOF
 	autocmd FileType markdown setlocal expandtab
 	autocmd FileType markdown map <F5> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
 
-" CLOJURE
-	autocmd FileType clojure :Lein
+" " CLOJURE
+" 	autocmd FileType clojure :Lein
