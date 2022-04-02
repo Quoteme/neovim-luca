@@ -207,6 +207,10 @@
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
+        "plugin:LanguageTool.nvim" = {
+          url = "github:vigoux/LanguageTool.nvim";
+          flake = false;
+        };
       # marks
         "plugin:marks.nvim" = {
           url = "github:chentau/marks.nvim";
