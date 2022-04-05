@@ -12,6 +12,11 @@
       url = "github:neovim/neovim?dir=contrib";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ltex-ls = {
+      url = "https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz";
+      flake = false;
+    };
     
     # Theme
       "plugin:onedark-vim" = {
@@ -107,6 +112,19 @@
               url = "github:rafamadriz/friendly-snippets";
               flake = false;
             };
+          # Github Copilot
+            "plugin:copilot.vim" = {
+              url = "github:github/copilot.vim";
+              flake = false;
+            };
+            "plugin:copilot.lua" = {
+              url = "github:zbirenbaum/copilot.lua";
+              flake = false;
+            };
+            "plugin:copilot-cmp" = {
+              url = "github:zbirenbaum/copilot-cmp";
+              flake = false;
+            };
       # Code execution
         # TODO sniprun is installed from nixpkgs. Add nixpkgs option
         # "plugin:sniprun" = {
@@ -176,6 +194,10 @@
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
+      "plugin:auto-session" = {
+        url = "github:rmagatti/auto-session";
+        flake = false;
+      };
       # Chearcheet
         "plugin:plenary.nvim" = {
           url = "github:nvim-lua/plenary.nvim";
@@ -205,10 +227,6 @@
       # Note taking
         "plugin:nabla.nvim" = {
           url = "github:jbyuki/nabla.nvim";
-          flake = false;
-        };
-        "plugin:LanguageTool.nvim" = {
-          url = "github:vigoux/LanguageTool.nvim";
           flake = false;
         };
       # marks
@@ -323,30 +341,14 @@
                         , depencies ? []}:
                         let
                           myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
-                            propagatedBuildInputs = with pkgs; [
-                              # TODO find out why this is here
-                              pkgs.stdenv.cc.cc.lib
-                            ];
-                          });
-                          neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
-                            inherit viAlias;
-                            inherit vimAlias;
-                            configure = {
-                              customRC = customRC;
-                              packages.myVimPackage = with pkgs.neovimPlugins; {
-                                start = start;
-                                opt = opt;
-                              };
-                            };
-                          };
-                          neovim-withExternalDependencies = neovim-wrapped.overrideAttrs (prev: {
                             # here we add some external programs to neovim
                             # which means that neovim will be installed
                             # in a way that also installs these programs.
                             # This also means, that neovim can call them
                             # even if the user has not installed them
                             # system-wide
-                            buildInputs = with pkgs; [
+                            propagatedBuildInputs = with pkgs; [
+                              stdenv.cc.cc.lib
                               # Language servers
                                 # LaTex
                                   texlab
@@ -367,13 +369,24 @@
                                   clang-tools
                               # Other dependencies
                                 xclip
-                              ]
-                              # finally load some extra depencies which
-                              # can be passed as arguments to neovimBuilder
-                              ++ depencies;
+                                nodejs
+                                # Spelling and grammar
+                                  # languagetool
+                              ] ++ depencies;
                           });
+                          neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
+                            inherit viAlias;
+                            inherit vimAlias;
+                            configure = {
+                              customRC = customRC;
+                              packages.myVimPackage = with pkgs.neovimPlugins; {
+                                start = start;
+                                opt = opt;
+                              };
+                            };
+                          };
                         in
-                        neovim-withExternalDependencies;
+                        neovim-wrapped;
                         
       in
       rec {
@@ -381,9 +394,14 @@
         defaultPackage = packages.neovimLuca;
 
         apps.nvim = {
-            type = "app";
-            program = "${defaultPackage}/bin/nvim";
-          };
+          type = "app";
+          program = "${defaultPackage}/bin/nvim";
+        };
+
+        apps.ltex-ls = {
+          type = "app";
+          program = "${inputs.ltex-ls}/./ltex-ls-15.2.0/bin/ltex-ls";
+        };
 
         packages.neovimLuca = neovimBuilder {
           # the next line loads a trivial example of a init.vim:
@@ -398,7 +416,6 @@
               ripgrep
               bat
             # Treesitter
-              gcc
             toilet
           ];
           # if you wish to only load the onedark-vim colorscheme:

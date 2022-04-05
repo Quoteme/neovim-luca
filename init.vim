@@ -281,6 +281,12 @@ require'sniprun'.setup({
 })
 EOF
 
+" Copilot
+lua << EOF
+-- vim.schedule(function() require("copilot") end)
+EOF
+
+
 " Nvim-Cmp
 set completeopt=menu,menuone,noselect
 lua <<EOF
@@ -305,6 +311,7 @@ lua <<EOF
       ['<C-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     },
     sources = {
+	  { name = "copilot" },
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
       { name = 'buffer' },
@@ -346,7 +353,16 @@ local on_attach = function(client, bufnr)
 end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'texlab', 'tsserver', 'hls', 'rnix', 'pyright', 'clojure_lsp', 'rls', 'clangd' }
+local servers = {
+	'texlab',
+	'tsserver',
+	'hls',
+	'rnix',
+	'pyright',
+	'clojure_lsp',
+	'rls',
+	'clangd',
+	'ltex' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
