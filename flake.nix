@@ -113,10 +113,11 @@
               flake = false;
             };
           # Github Copilot
-            "plugin:copilot.vim" = {
-              url = "github:github/copilot.vim";
-              flake = false;
-            };
+            # This is only needed for authentication
+            # "plugin:copilot.vim" = {
+            #   url = "github:github/copilot.vim";
+            #   flake = false;
+            # };
             "plugin:copilot.lua" = {
               url = "github:zbirenbaum/copilot.lua";
               flake = false;
@@ -388,7 +389,7 @@
                               # Other dependencies
                                 xclip
                                 # Spelling and grammar
-                                  # languagetool
+                                  languagetool
                             ] ++ depencies;
                             nativeBuildInputs = [ pkgs.makeWrapper ];
                             postBuild = ''
