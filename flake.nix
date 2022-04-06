@@ -341,14 +341,32 @@
                         , depencies ? []}:
                         let
                           myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
+                            propagatedBuildInputs = with pkgs; [
+                              # TODO find out why this is here
+                              pkgs.stdenv.cc.cc.lib
+                            ];
+                          });
+                          neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
+                            inherit viAlias;
+                            inherit vimAlias;
+                            configure = {
+                              customRC = customRC;
+                              packages.myVimPackage = with pkgs.neovimPlugins; {
+                                start = start;
+                                opt = opt;
+                              };
+                            };
+                          };
+                          neovim-withExternalDependencies = pkgs.symlinkJoin {
                             # here we add some external programs to neovim
                             # which means that neovim will be installed
                             # in a way that also installs these programs.
                             # This also means, that neovim can call them
                             # even if the user has not installed them
                             # system-wide
-                            propagatedBuildInputs = with pkgs; [
-                              stdenv.cc.cc.lib
+                            name = "neovim";
+                            paths = with pkgs; [
+                              neovim-wrapped
                               # Language servers
                                 # LaTex
                                   texlab
@@ -369,24 +387,17 @@
                                   clang-tools
                               # Other dependencies
                                 xclip
-                                nodejs
                                 # Spelling and grammar
                                   # languagetool
-                              ] ++ depencies;
-                          });
-                          neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
-                            inherit viAlias;
-                            inherit vimAlias;
-                            configure = {
-                              customRC = customRC;
-                              packages.myVimPackage = with pkgs.neovimPlugins; {
-                                start = start;
-                                opt = opt;
-                              };
-                            };
+                            ] ++ depencies;
+                            nativeBuildInputs = [ pkgs.makeWrapper ];
+                            postBuild = ''
+                              wrapProgram $out/bin/nvim \
+                                --prefix PATH : $out/bin
+                            '';
                           };
                         in
-                        neovim-wrapped;
+                        neovim-withExternalDependencies;
                         
       in
       rec {
@@ -416,7 +427,9 @@
               ripgrep
               bat
             # Treesitter
+              gcc
             toilet
+            nodejs
           ];
           # if you wish to only load the onedark-vim colorscheme:
           # start = with pkgs.neovimPlugins; [ onedark-vim ];
