@@ -386,6 +386,8 @@
                                   clojure-lsp
                                 # C
                                   clang-tools
+                                # Java
+                                  jdk11
                               # Other dependencies
                                 xclip
                                 # Spelling and grammar
@@ -393,6 +395,11 @@
                             ] ++ depencies;
                             nativeBuildInputs = [ pkgs.makeWrapper ];
                             postBuild = ''
+                              # Add ltex-ls
+                              ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
+                              wrapProgram $out/bin/ltex-ls \
+                                --set JAVA_HOME ${pkgs.jdk11}
+                              # add external dependencies to path of neovim
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin
                             '';
@@ -408,11 +415,6 @@
         apps.nvim = {
           type = "app";
           program = "${defaultPackage}/bin/nvim";
-        };
-
-        apps.ltex-ls = {
-          type = "app";
-          program = "${inputs.ltex-ls}/./ltex-ls-15.2.0/bin/ltex-ls";
         };
 
         packages.neovimLuca = neovimBuilder {
@@ -431,10 +433,31 @@
               gcc
             toilet
             nodejs
+            packages.ltex-ls
           ];
           # if you wish to only load the onedark-vim colorscheme:
           # start = with pkgs.neovimPlugins; [ onedark-vim ];
         };
+
+        # This should somehow be integrated into neovimLuca but idk how
+        apps.ltex-ls = {
+          type = "app";
+          program = "${packages.ltex-ls}/bin/ltex-ls";
+        };
+
+        packages.ltex-ls = pkgs.symlinkJoin {
+          name = "ltex-ls";
+          paths = [
+            pkgs.jdk11
+          ];
+          nativeBuildInputs = [ pkgs.makeWrapper ];
+          postBuild = ''
+            ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
+            wrapProgram $out/bin/ltex-ls \
+              --set JAVA_HOME ${pkgs.jdk11}
+          '';
+        };
+
       }
     );
 }
