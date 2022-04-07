@@ -81,6 +81,22 @@
         "type": "github"
       }
     },
+    "plugin:LuaSnip": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649161648,
+        "narHash": "sha256-aEkDqez8xUpikaq+LI7Rmx+xk24wmlGmibnDKSk3SLY=",
+        "owner": "L3MON4D3",
+        "repo": "LuaSnip",
+        "rev": "69cb81cf7490666890545fef905d31a414edc15b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "L3MON4D3",
+        "repo": "LuaSnip",
+        "type": "github"
+      }
+    },
     "plugin:auto-session": {
       "flake": false,
       "locked": {
@@ -177,19 +193,19 @@
         "type": "github"
       }
     },
-    "plugin:cmp-vsnip": {
+    "plugin:cmp_luasnip": {
       "flake": false,
       "locked": {
-        "lastModified": 1636543683,
-        "narHash": "sha256-7K3shsiGK7ISFXj9D9MPK7yRqIxeCrbj1IsggToWHO4=",
-        "owner": "hrsh7th",
-        "repo": "cmp-vsnip",
-        "rev": "0abfa1860f5e095a07c477da940cfcb0d273b700",
+        "lastModified": 1648846007,
+        "narHash": "sha256-1JiDa7fK9AEMUxLOFD3SSsxKEVLfd5xR8vfUlLRqz+M=",
+        "owner": "saadparwaiz1",
+        "repo": "cmp_luasnip",
+        "rev": "b10829736542e7cc9291e60bab134df1273165c9",
         "type": "github"
       },
       "original": {
-        "owner": "hrsh7th",
-        "repo": "cmp-vsnip",
+        "owner": "saadparwaiz1",
+        "repo": "cmp_luasnip",
         "type": "github"
       }
     },
@@ -785,22 +801,6 @@
         "type": "github"
       }
     },
-    "plugin:vim-vsnip": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1645858217,
-        "narHash": "sha256-giaCFG4s86W5o5CMg11a6lE7rDA4oHr8HL3cUO23TBA=",
-        "owner": "hrsh7th",
-        "repo": "vim-vsnip",
-        "rev": "70a1131d64d75150ece513b983b0f42939bcb03c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hrsh7th",
-        "repo": "vim-vsnip",
-        "type": "github"
-      }
-    },
     "plugin:which-key.nvim": {
       "flake": false,
       "locked": {
@@ -823,13 +823,14 @@
         "ltex-ls": "ltex-ls",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
+        "plugin:LuaSnip": "plugin:LuaSnip",
         "plugin:auto-session": "plugin:auto-session",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
         "plugin:cmp-path": "plugin:cmp-path",
-        "plugin:cmp-vsnip": "plugin:cmp-vsnip",
+        "plugin:cmp_luasnip": "plugin:cmp_luasnip",
         "plugin:conjure": "plugin:conjure",
         "plugin:copilot-cmp": "plugin:copilot-cmp",
         "plugin:copilot.lua": "plugin:copilot.lua",
@@ -867,7 +868,6 @@
         "plugin:vim-slime": "plugin:vim-slime",
         "plugin:vim-surround": "plugin:vim-surround",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
-        "plugin:vim-vsnip": "plugin:vim-vsnip",
         "plugin:which-key.nvim": "plugin:which-key.nvim"
       }
     }

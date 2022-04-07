@@ -99,15 +99,23 @@
             url = "github:hrsh7th/cmp-path";
             flake = false;
           };
-          "plugin:vim-vsnip" = {
-            url = "github:hrsh7th/vim-vsnip";
-            flake = false;
-          };
           # Snippets
-            "plugin:cmp-vsnip" = { # TODO add custom snippts
-              url = "github:hrsh7th/cmp-vsnip";
+            "plugin:LuaSnip" = {
+              url = "github:L3MON4D3/LuaSnip";
               flake = false;
             };
+            "plugin:cmp_luasnip" = {
+              url = "github:saadparwaiz1/cmp_luasnip";
+              flake = false;
+            };
+            # "plugin:vim-vsnip" = {
+            #   url = "github:hrsh7th/vim-vsnip";
+            #   flake = false;
+            # };
+            # "plugin:cmp-vsnip" = { # TODO add custom snippts
+            #   url = "github:hrsh7th/cmp-vsnip";
+            #   flake = false;
+            # };
             "plugin:friendly-snippets" = { # TODO add custom snippts
               url = "github:rafamadriz/friendly-snippets";
               flake = false;
@@ -388,6 +396,7 @@
                                   clang-tools
                                 # Java
                                   jdk11
+                                  java-language-server
                               # Other dependencies
                                 xclip
                                 # Spelling and grammar
