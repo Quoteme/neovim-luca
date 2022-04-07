@@ -1,3 +1,4 @@
+" vim: tabstop=2 shiftwidth=2 expandtab
 "       _
 "__   _(_)_ __ ___  _ __ ___
 "\ \ / / | '_ ` _ \| '__/ __|
@@ -288,12 +289,460 @@ EOF
 
 " Luasnip
 lua <<EOF
+-- Load VSCode like snippets from external plugins
 require("luasnip.loaders.from_vscode").lazy_load()
+
+-- Custom snippets
+local ls = require("luasnip")
+-- some shorthands...
+local snip = ls.snippet
+local node = ls.snippet_node
+local text = ls.text_node
+local insert = ls.insert_node
+local func = ls.function_node
+local choice = ls.choice_node
+local dynamicn = ls.dynamic_node
+
+local date = function() return {os.date('%Y-%m-%d')} end
+
+-- Markdown
+ls.filetype_extend("markdown",{"latex", "plaintext"})
+ls.add_snippets("markdown",{
+  -- meta data
+  snip({
+    trig="meta",
+    name="YAML Metadata",
+    dscr="YAML metadata format for markdown",
+    },{
+    text({"---",
+    "title: "}), insert(1, "note_title"), text({"", 
+    "author: "}), insert(2, "author"), text({"", 
+    "date: "}), func(date, {}), text({"",
+    "categories: ["}), insert(3, ""), text({"]",
+    "lastmod: "}), func(date, {}), text({"",
+    "tags: ["}), insert(4), text({"]",
+    "lang: "}), insert(5), text({"",
+    "header-includes: ","  - \\usepackage{amsthm}","  - "}), insert(6), text({"",
+    "comments: true",
+    "---", ""}),
+    insert(0)
+  }),
+  -- math mode
+  snip({
+    trig="mi",
+    name="inline math",
+    dscr="inline math using $ ... $",
+    },{
+    text({"$"}),
+    insert(1),
+    text({"$"}),
+  }),
+  snip({
+    trig="mn",
+    name="new line math",
+    dscr="new line math using $$ ... $$",
+    },{
+    text({"","$$"}),
+    insert(1),
+    text({"$$",""}),
+  }),
+  snip({
+    trig="aligned",
+    name="aligned math environment",
+    dscr="\\begin{aligned} ... \\end{aligned}",
+    },{
+    text({"\\begin{aligned}"}),
+    insert(1),
+    text({" &= "}),
+    insert(2),
+    text({" \\\\"}),
+    insert(3),
+    text({" &= "}),
+    insert(4),
+    text({"\\end{aligned}"}),
+  }),
+  snip({
+    trig="set",
+    name="set",
+    dscr="\\{ ... | ... \\}",
+    },{
+    text({"\\{ "}),
+    insert(1),
+    text({" | "}),
+    insert(2),
+    text({" \\}"}),
+  }),
+  snip({
+    trig="_",
+    name="subscript",
+    dscr="..._{ ... }",
+    },{
+    text({"_{"}),
+    insert(1),
+    text({"}"}),
+  }),
+  snip({
+    trig="^",
+    name="supscript",
+    dscr="...^{ ... }",
+    },{
+    text({"^{"}),
+    insert(1),
+    text({"}"}),
+  }),
+  snip({
+    trig="frac",
+    name="fraction",
+    dscr="\\frac{ ... }{ ... }\n\n x \n---\n y ",
+    },{
+    text({"\\frac{"}),
+    insert(1),
+    text({"}{"}),
+    insert(2),
+    text({"}"}),
+  }),
+  -- Letters
+  snip({
+    trig="cal",
+    name="mathcal",
+    dscr="\\mathcal{...}",
+    },{
+    text({"\\mathcal{"}),
+    insert(1),
+    text({"}"}),
+  }),
+  snip({
+    trig="bb",
+    name="mathbb",
+    dscr="\\mathbb{...}",
+    },{
+    text({"\\mathbb{"}),
+    insert(1),
+    text({"}"}),
+  }),
+  -- arrows
+  snip({
+    trig="arrowright",
+    name="→",
+    dscr="\\rightarrow",
+    },{
+    text({"\\rightarrow"}),
+  }),
+  snip({
+    trig="arrowleft",
+    name="←",
+    dscr="\\leftarrow",
+    },{
+    text({"\\leftarrow"}),
+  }),
+  snip({
+    trig="arrowrightlong",
+    name="⟶",
+    dscr="\\longrightarrow",
+    },{
+    text({"\\longrightarrow"}),
+  }),
+  snip({
+    trig="arrowleftlong",
+    name="⟵",
+    dscr="\\longleftarrow",
+    },{
+    text({"\\longleftarrow"}),
+  }),
+  snip({
+    trig="implicate",
+    name="⇒",
+    dscr="\\Rightarrow",
+    },{
+    text({"\\Rightarrow"}),
+  }),
+  snip({
+    trig="iff",
+    name="⇔",
+    dscr="\\Leftrightarrow",
+    },{
+    text({"\\Leftrightarrow"}),
+  }),
+  -- brackets
+  snip({
+    trig="<",
+    name="〈 ... 〉",
+    dscr="\\langle ... \\rangle\n<...>",
+    },{
+    text({"\\langle "}),
+    insert(1),
+    text({" \\rangle"}),
+  }),
+  snip({
+    trig="<size",
+    name="〈 ... 〉",
+    dscr="\\langle ... \\rangle\n/     \\\n| ... |\\n\\     /",
+    },{
+    text({"\\langle "}),
+    insert(1),
+    text({" \\rangle"}),
+  }),
+  snip({
+    trig="(",
+    name="\\left( ... \\right)",
+    dscr="\\left( ... \\right)",
+    },{
+    text({"\\left("}),
+    insert(1),
+    text({"\\right)"}),
+  }),
+  -- bra-ket notation
+  snip({
+    trig="bra",
+    name="< ... |",
+    dscr="\\langle ... |",
+    },{
+    text({"\\langle "}),
+    insert(1),
+    text({" |"}),
+  }),
+  snip({
+    trig="ket",
+    name="| ... >",
+    dscr="| ... \\rangle",
+    },{
+    text({"| "}),
+    insert(1),
+    text({" \\rangle"}),
+  }),
+  snip({
+    trig="braket",
+    name="< ... | ... >",
+    dscr="\\langle ... | ... \\rangle",
+    },{
+    text({"\\langle "}),
+    insert(1),
+    text({" | "}),
+    insert(2),
+    text({" \\rangle"}),
+  }),
+  -- amsthm support
+  snip({
+    trig="def",
+    name="Definition",
+    dscr="amsthm definition block",
+    },{
+    text({"\\begin{definition}",""}),
+    insert(1),
+    text({"","\\end{definition}"}),
+  }),
+  snip({
+    trig="thm",
+    name="Theorem",
+    dscr="amsthm theorem block",
+    },{
+    text({"\\begin{theorem}",""}),
+    insert(1),
+    text({"","\\end{theorem}"}),
+  }),
+  snip({
+    trig="prop",
+    name="Proposition",
+    dscr="amsthm proposition block",
+    },{
+    text({"\\begin{proposition}",""}),
+    insert(1),
+    text({"","\\end{proposition}"}),
+  }),
+  snip({
+    trig="lem",
+    name="Lemmata",
+    dscr="amsthm lemmata block",
+    },{
+    text({"\\begin{lemmata}",""}),
+    insert(1),
+    text({"","\\end{lemmata}"}),
+  }),
+  snip({
+    trig="cor",
+    name="Corollary",
+    dscr="amsthm corollary block",
+    },{
+    text({"\\begin{corollary}",""}),
+    insert(1),
+    text({"","\\end{corollary}"}),
+  }),
+  -- dots
+  snip({
+    trig="*",
+    name="cdot",
+    dscr="·",
+    },{
+    text({"\\cdot"}),
+  }),
+  snip({
+    trig="...",
+    name="dots",
+    dscr="...",
+    },{
+    text({"\\dots"}),
+  }),
+  snip({
+    trig="...",
+    name="diagonal dots",
+    dscr="·\n ·\n  ·",
+    },{
+    text({"\\ddots"}),
+  }),
+  snip({
+    trig="...",
+    name="vertical dots",
+    dscr="·\n·\n·",
+    },{
+    text({"\\vdots"}),
+  }),
+  -- Matrix
+  snip({
+    trig="matrix2x2",
+    name="matrix 2x2",
+    dscr="a11 a12\na21 a22",
+    },{
+    text({"\\begin{array}{cc}",""}),
+    insert(1, "a_{11}"),
+    text({" & "}),
+    insert(2, "a_{12}"),
+    text({" \\\\",""}),
+    insert(3, "a_{21}"),
+    text({" & "}),
+    insert(4, "a_{22}"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  }),
+  snip({
+    trig="matrix3x3",
+    name="matrix 3x3",
+    dscr="a11 a12 a13\na21 a22 a23\na31 a32 a33",
+    },{
+    text({"\\begin{array}{ccc}",""}),
+    insert(1, "a_{11}"),
+    text({" & "}),
+    insert(2, "a_{12}"),
+    text({" & "}),
+    insert(3, "a_{13}"),
+    text({" \\\\",""}),
+    insert(4, "a_{21}"),
+    text({" & "}),
+    insert(5, "a_{22}"),
+    text({" & "}),
+    insert(6, "a_{23}"),
+    text({" \\\\",""}),
+    insert(7, "a_{31}"),
+    text({" & "}),
+    insert(8, "a_{32}"),
+    text({" & "}),
+    insert(9, "a_{33}"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  }),
+  snip({
+    trig="matrix4x4",
+    name="matrix 4x4",
+    dscr="a11 a12 a13 a14\na21 a22 a23 a24\na31 a32 a33 a34\na41 a42 a43 a44",
+    },{
+    text({"\\begin{array}{cccc}",""}),
+    insert(1, "a_{11}"),
+    text({" & "}),
+    insert(2, "a_{12}"),
+    text({" & "}),
+    insert(3, "a_{13}"),
+    text({" & "}),
+    insert(4, "a_{14}"),
+    text({" \\\\",""}),
+    insert(5, "a_{21}"),
+    text({" & "}),
+    insert(6, "a_{22}"),
+    text({" & "}),
+    insert(7, "a_{23}"),
+    text({" & "}),
+    insert(8, "a_{24}"),
+    text({" \\\\",""}),
+    insert(9, "a_{31}"),
+    text({" & "}),
+    insert(10, "a_{32}"),
+    text({" & "}),
+    insert(11, "a_{33}"),
+    text({" & "}),
+    insert(12, "a_{34}"),
+    text({" \\\\",""}),
+    insert(13, "a_{41}"),
+    text({" & "}),
+    insert(14, "a_{42}"),
+    text({" & "}),
+    insert(15, "a_{43}"),
+    text({" & "}),
+    insert(16, "a_{44}"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  }),
+  -- Vectors
+  snip({
+    trig="vector2",
+    name="vector 2",
+    dscr="a1\na2",
+    },{
+    text({"\\begin{array}{c}",""}),
+    insert(1, "a_1"),
+    text({" \\\\",""}),
+    insert(2, "a_2"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  }),
+  snip({
+    trig="vector3",
+    name="vector 3",
+    dscr="a1\na2\na3",
+    },{
+    text({"\\begin{array}{c}",""}),
+    insert(1, "a_1"),
+    text({" \\\\",""}),
+    insert(2, "a_2"),
+    text({" \\\\",""}),
+    insert(3, "a_3"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  }),
+  snip({
+    trig="vector4",
+    name="vector 4",
+    dscr="a1\na2\na3\na4",
+    },{
+    text({"\\begin{array}{c}",""}),
+    insert(1, "a_1"),
+    text({" \\\\",""}),
+    insert(2, "a_2"),
+    text({" \\\\",""}),
+    insert(3, "a_3"),
+    text({" \\\\",""}),
+    insert(4, "a_4"),
+    text({" \\\\",""}),
+    text({"\\end{array}"}),
+  })
+})
+
+-- latex
+-- ls.add_snippets("latex",{
+--   -- amsthm support
+--   snip({
+--     trig="def",
+--     name="Definition",
+--     dscr="amsthm definition block",
+--     },{
+--     text({"\\begin{definition}",""}),
+--     insert(0),
+--     text({"","\\end{definition}"}),
+--   })
+-- })
 EOF
 
 " Nvim-Cmp
 set completeopt=menu,menuone,noselect
 lua <<EOF
+  local luasnip = require("luasnip")
   -- Setup nvim-cmp.
   local cmp = require'cmp'
   cmp.setup({
@@ -301,25 +750,56 @@ lua <<EOF
       expand = function(args)
         -- For `vsnip` user.
         -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
-		require('luasnip').lsp_expand(args.body) -- For `luasnip` users
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users
       end,
     },
     mapping = {
-      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+      ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 's' }),
+      ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 's' }),
+      ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 's' }),
       ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
       ['<C-e>'] = cmp.mapping({
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),
-      ['<C-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+    -- Accept currently selected item. Set `select` to `false` to
+    -- only confirm explicitly selected items.
+      ['<C-CR>'] = cmp.mapping(function(fallback)
+        if cmp.visible() then
+          cmp.confirm({ select = true })
+        elseif luasnip.expand_or_jumpable() then
+          luasnip.expand_or_jump()
+        else
+          fallback()
+        end
+      end),
+      ['<S-C-CR>'] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end),
+      ['<Tab>'] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(1) then
+          luasnip.jump(1)
+        else
+          fallback()
+        end
+      end),
+      ['<S-Tab>'] = cmp.mapping(function(fallback)
+        if luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end),
     },
     sources = {
-    { name = "copilot" },
+      { name = "copilot" },
       { name = 'nvim_lsp' },
-	  -- { name = 'vsnip' }, -- For vsnip users
-	  { name = 'luasnip' }, -- For luasnip users
+      -- { name = 'vsnip' }, -- For vsnip users
+      { name = 'luasnip' }, -- For luasnip users
       { name = 'buffer' },
       { name = 'path' },
     }
