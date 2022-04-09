@@ -305,6 +305,13 @@ local dynamicn = ls.dynamic_node
 
 local date = function() return {os.date('%Y-%m-%d')} end
 
+-- Repeat Insernode text
+-- @param insert_node_id The id of the insert node to repeat (the first line from)
+-- https://www.reddit.com/r/neovim/comments/s0llvm/luasnip_examples/
+local ri = function (insert_node_id)
+    return func(function (args) return args[1][1] end, insert_node_id)
+end
+
 -- Markdown
 ls.filetype_extend("markdown",{"latex", "plaintext"})
 ls.add_snippets("markdown",{
@@ -351,15 +358,45 @@ ls.add_snippets("markdown",{
     name="aligned math environment",
     dscr="\\begin{aligned} ... \\end{aligned}",
     },{
-    text({"\\begin{aligned}"}),
+    text({"\\begin{aligned}",""}),
     insert(1),
     text({" &= "}),
     insert(2),
-    text({" \\\\"}),
+    text({" \\\\",""}),
     insert(3),
     text({" &= "}),
     insert(4),
-    text({"\\end{aligned}"}),
+    text({"","\\end{aligned}"}),
+  }),
+  snip({
+    trig="equation",
+    name="equation math environment with numbering",
+    dscr="\\begin{equation} ... \\end{equation}",
+    },{
+    text({"\\begin{equation}",""}),
+    insert(1),
+    text({" &= "}),
+    insert(2),
+    text({" \\\\",""}),
+    insert(3),
+    text({" &= "}),
+    insert(4),
+    text({"","\\end{equation}"}),
+  }),
+  snip({
+    trig="equation*",
+    name="equation math environment without numbering",
+    dscr="\\begin{equation*} ... \\end{equation*}",
+    },{
+    text({"\\begin{equation*}",""}),
+    insert(1),
+    text({" &= "}),
+    insert(2),
+    text({" \\\\",""}),
+    insert(3),
+    text({" &= "}),
+    insert(4),
+    text({"","\\end{equation*}"}),
   }),
   snip({
     trig="set",
@@ -483,7 +520,7 @@ ls.add_snippets("markdown",{
     text({" \\rangle"}),
   }),
   snip({
-    trig="(",
+    trig="left",
     name="\\left( ... \\right)",
     dscr="\\left( ... \\right)",
     },{
@@ -737,6 +774,84 @@ ls.add_snippets("markdown",{
 --     text({"","\\end{definition}"}),
 --   })
 -- })
+
+-- nix
+ls.add_snippets("nix",{
+  snip({
+    trig="flake",
+    name="Default flake template",
+    dscr="simle nix-flake template",
+    },{
+    text({"{",""}),
+    text({"  description = \""}),insert(1, "a simple project"),text({"\";", ""}),
+    text({"",""}),
+    text({"  inputs = {",""}),
+    text({"    nixpkgs.url = \"github:nixos/nixpkgs/nixpkgs-unstable\";",""}),
+    text({"    flake-utils = {",""}),
+    text({"      inputs.nixpkgs.follows = \"nixpkgs\";",""}),
+    text({"      url = \"github:numtide/flake-utils\";",""}),
+    text({"    };",""}),
+    text({"",""}),
+    text({"  outputs = { self, nixpkgs, flake-utils, ... }@inputs:",""}),
+    text({"    flake-utils.lib.eachDefaultSystem (system:",""}),
+    text({"      let",""}),
+    text({"        pkgs = import nixpkgs { inherit system; };",""}),
+    text({"      in",""}),
+    text({"        rec {",""}),
+    text({"          defaultApp = apps."}),insert(2, "app_name"),text({";",""}),
+    text({"          defaultPackage = packages."}),insert(3, "package_name"),text({";",""}),
+    text({"",""}),
+    text({"          apps."}),ri(2),text({" = {",""}),
+    text({"            type = \"app\";",""}),
+    text({"            program = \"${defaultPackage}/bin/"}),insert(4, "default_binary"),text({"\";",""}),
+    text({"          };"}),
+    text({"",""}),
+    text({"          packages."}),ri(3),text({" = "}),insert(5, "derivation"),text({"",""}),
+    text({"        }",""}),
+    text({"      );",""}),
+    text({"}"}),
+  }),
+  snip({
+    trig="derivation",
+    name="stdenv.mkDerivation",
+    dscr="Simple derivation",
+    },{
+    text({"stdenv.mkDerivation {", ""}),
+    text({"  name = \""}),insert(1, "name"),text({"\";",""}),
+    text({"  pname = \""}),ri(1),text({"\";",""}),
+    text({"  version = \""}),insert(2, "1.0"),text({"\";",""}),
+    text({"  src = "}),insert(3, "./src"),text({";",""}),
+    text({"",""}),
+    text({"  buildInputs = with pkgs; [",""}),
+    text({"    "}),insert(4, "dependency"),text({"",""}),
+    text({"  ];",""}),
+    text({"  buildPhase = ''",""}),
+    text({"    "}),insert(5, "cp $src/bin/lal $out/bin/lal"),text({"",""}),
+    text({"  '';",""}),
+    text({"  installPhase = ''",""}),
+    text({"    "}),insert(5, "cp $src/bin/lal $out/bin/lal"),text({"",""}),
+    text({"  '';",""}),
+    text({"};"}),
+  }),
+  snip({
+    trig="symlinkJoin",
+    name="pkgs.symlinkJoin",
+    dscr="join multiple derivations using symlinks",
+    },{
+    text({"pkgs.symlinkJoin {",""}),
+    text({"  name = \""}),insert(1,"name"),text({"\";",""}),
+    text({"  paths = [",""}),
+    text({"    "}),insert(2,"derivation"),text({"",""}),
+    text({"  ];",""}),
+    text({"",""}),
+    text({"  nativeBuildInputs = [ pkgs.makeWrapper ];",""}),
+    text({"  postBuild = ''",""}),
+    text({"    wrapProgram $out/bin/"}),insert(3,"binary"),text({" \\",""}),
+    text({"    --prefix PATH : $out/bin",""}),
+    text({"  '';",""}),
+    text({"};"}),
+  })
+})
 EOF
 
 " Nvim-Cmp
