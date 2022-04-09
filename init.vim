@@ -410,6 +410,30 @@ ls.add_snippets("markdown",{
     text({" \\}"}),
   }),
   snip({
+    trig="setdots",
+    name="set with comma-seperated values",
+    dscr="\\{ a, b, ... \\}",
+    },{
+    text({"\\{ "}),
+    insert(1),
+    text({", "}),
+    insert(2),
+    text({", \\dots \\}"}),
+  }),
+  snip({
+    trig="setdotsfinite",
+    name="set with comma-seperated values",
+    dscr="\\{ a, b, ..., c \\}",
+    },{
+    text({"\\{ "}),
+    insert(1),
+    text({", "}),
+    insert(2),
+    text({", \\dots, "}),
+    insert(3),
+    text({" \\}"}),
+  }),
+  snip({
     trig="_",
     name="subscript",
     dscr="..._{ ... }",
