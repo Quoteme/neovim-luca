@@ -531,33 +531,62 @@ ls.add_snippets("markdown",{
   -- bra-ket notation
   snip({
     trig="bra",
-    name="< ... |",
-    dscr="\\langle ... |",
+    name="bra from \\usepackage{braket}",
+    dscr="< ... |",
     },{
-    text({"\\langle "}),
+    text({"\\Bra{ "}),
     insert(1),
-    text({" |"}),
+    text({" }"}),
   }),
   snip({
     trig="ket",
-    name="| ... >",
-    dscr="| ... \\rangle",
+    name="ket from \\usepackage{braket}",
+    dscr="| ... >",
     },{
-    text({"| "}),
+    text({"\\Ket{ "}),
     insert(1),
-    text({" \\rangle"}),
+    text({" }"}),
   }),
   snip({
     trig="braket",
-    name="< ... | ... >",
-    dscr="\\langle ... | ... \\rangle",
+    name="braket from \\usepackage{braket}",
+    dscr="< ... | ... >",
     },{
-    text({"\\langle "}),
+    text({"\\Braket{ "}),
     insert(1),
     text({" | "}),
     insert(2),
-    text({" \\rangle"}),
+    text({" }"}),
   }),
+  -- snip({
+  --   trig="bra",
+  --   name="< ... |",
+  --   dscr="\\langle ... |",
+  --   },{
+  --   text({"\\langle "}),
+  --   insert(1),
+  --   text({" |"}),
+  -- }),
+  -- snip({
+  --   trig="ket",
+  --   name="| ... >",
+  --   dscr="| ... \\rangle",
+  --   },{
+  --   text({"| "}),
+  --   insert(1),
+  --   text({" \\rangle"}),
+  -- }),
+  -- snip({
+  --   trig="braket",
+  --   name="< ... | ... >",
+  --   dscr="\\langle ... | ... \\rangle",
+  --   },{
+  --   text({"\\langle "}),
+  --   insert(1),
+  --   text({" | "}),
+  --   insert(2),
+  --   text({" \\rangle"}),
+  -- }),
   -- amsthm support
   snip({
     trig="def",
