@@ -692,7 +692,7 @@ ls.add_snippets("markdown",{
     name="matrix 2x2",
     dscr="a11 a12\na21 a22",
     },{
-    text({"\\begin{array}{cc}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_{11}"),
     text({" & "}),
     insert(2, "a_{12}"),
@@ -701,14 +701,14 @@ ls.add_snippets("markdown",{
     text({" & "}),
     insert(4, "a_{22}"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   }),
   snip({
     trig="matrix3x3",
     name="matrix 3x3",
     dscr="a11 a12 a13\na21 a22 a23\na31 a32 a33",
     },{
-    text({"\\begin{array}{ccc}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_{11}"),
     text({" & "}),
     insert(2, "a_{12}"),
@@ -727,14 +727,14 @@ ls.add_snippets("markdown",{
     text({" & "}),
     insert(9, "a_{33}"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   }),
   snip({
     trig="matrix4x4",
     name="matrix 4x4",
     dscr="a11 a12 a13 a14\na21 a22 a23 a24\na31 a32 a33 a34\na41 a42 a43 a44",
     },{
-    text({"\\begin{array}{cccc}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_{11}"),
     text({" & "}),
     insert(2, "a_{12}"),
@@ -767,7 +767,7 @@ ls.add_snippets("markdown",{
     text({" & "}),
     insert(16, "a_{44}"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   }),
   -- Vectors
   snip({
@@ -775,33 +775,33 @@ ls.add_snippets("markdown",{
     name="vector 2",
     dscr="a1\na2",
     },{
-    text({"\\begin{array}{c}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_1"),
     text({" \\\\",""}),
     insert(2, "a_2"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   }),
   snip({
     trig="vector3",
     name="vector 3",
     dscr="a1\na2\na3",
     },{
-    text({"\\begin{array}{c}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_1"),
     text({" \\\\",""}),
     insert(2, "a_2"),
     text({" \\\\",""}),
     insert(3, "a_3"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   }),
   snip({
     trig="vector4",
     name="vector 4",
     dscr="a1\na2\na3\na4",
     },{
-    text({"\\begin{array}{c}",""}),
+    text({"\\begin{bmatrix}",""}),
     insert(1, "a_1"),
     text({" \\\\",""}),
     insert(2, "a_2"),
@@ -810,7 +810,7 @@ ls.add_snippets("markdown",{
     text({" \\\\",""}),
     insert(4, "a_4"),
     text({" \\\\",""}),
-    text({"\\end{array}"}),
+    text({"\\end{bmatrix}"}),
   })
 })
 
