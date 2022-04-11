@@ -847,6 +847,7 @@ ls.add_snippets("nix",{
     text({"      inputs.nixpkgs.follows = \"nixpkgs\";",""}),
     text({"      url = \"github:numtide/flake-utils\";",""}),
     text({"    };",""}),
+    text({"  };",""}),
     text({"",""}),
     text({"  outputs = { self, nixpkgs, flake-utils, ... }@inputs:",""}),
     text({"    flake-utils.lib.eachDefaultSystem (system:",""}),
