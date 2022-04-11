@@ -102,6 +102,9 @@ lua << EOF
   require("twilight").setup {}
 EOF
 
+" nvim-colorizer.lua
+lua require'colorizer'.setup()
+
 " NeoScroll
 lua require('neoscroll').setup()
 
@@ -349,9 +352,9 @@ ls.add_snippets("markdown",{
     name="new line math",
     dscr="new line math using $$ ... $$",
     },{
-    text({"","$$"}),
+    text({"$$"}),
     insert(1),
-    text({"$$",""}),
+    text({"$$"}),
   }),
   snip({
     trig="aligned",
@@ -692,16 +695,16 @@ ls.add_snippets("markdown",{
     name="matrix 2x2",
     dscr="a11 a12\na21 a22",
     },{
-    text({"\\begin{bmatrix}",""}),
+    text({"\\begin{bmatrix} "}),
     insert(1, "a_{11}"),
     text({" & "}),
     insert(2, "a_{12}"),
-    text({" \\\\",""}),
+    text({" \\\\ "}),
     insert(3, "a_{21}"),
     text({" & "}),
     insert(4, "a_{22}"),
-    text({" \\\\",""}),
-    text({"\\end{bmatrix}"}),
+    text({" \\\\"}),
+    text({" \\end{bmatrix}"}),
   }),
   snip({
     trig="matrix3x3",
