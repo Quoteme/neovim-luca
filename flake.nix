@@ -73,6 +73,11 @@
           url = "github:tpope/vim-sexp-mappings-for-regular-people";
           flake = false;
         };
+      # JAVA
+        "plugin:nvim-jdtls" = {
+          url = "github:mfussenegger/nvim-jdtls";
+          flake = false;
+        };
     # General help
       # Tree-sitter
         "plugin:nvim-treesitter" = {
@@ -116,6 +121,10 @@
             };
             snippets-java = {
               url = "github:tushortz/vscode-Java-Snippets";
+              flake = false;
+            };
+            snippets-shebang = {
+              url = "github:Rpinski/vscode-shebang-snippets";
               flake = false;
             };
             # "plugin:vim-vsnip" = {
@@ -217,7 +226,7 @@
         url = "github:rmagatti/auto-session";
         flake = false;
       };
-      # Chearcheet
+      # Cheatcheet
         "plugin:plenary.nvim" = {
           url = "github:nvim-lua/plenary.nvim";
           flake = false;
@@ -368,7 +377,9 @@
                               # runtime is in $out/share/nvim/runtime
                               # snippet stuff
                               mkdir -p $out/share/nvim/runtime/snippets
+                              # TODO: These snippets do not get loaded yet :(
                               cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
+                              cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
                               cp -r ${inputs.runtime}/* $out/share/nvim/runtime/
                             '';
                           });
@@ -427,7 +438,10 @@
                                 --set JAVA_HOME ${pkgs.jdk11}
                               # add external dependencies to path of neovim
                               wrapProgram $out/bin/nvim \
-                                --prefix PATH : $out/bin
+                                --prefix PATH : $out/bin \
+                                --set JAVA_HOME ${pkgs.jdk11} \
+                                --set JDTLS_HOME ${inputs.runtime}/jdt-language-server
+# /nix/store/ca5mg50y6hrx0klwnb7p6mjlnr4ihlm5-neovim-unwrapped-master/share/nvim/
                             '';
                           };
                         in

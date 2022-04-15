@@ -385,6 +385,22 @@
         "type": "github"
       }
     },
+    "plugin:nvim-jdtls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649947669,
+        "narHash": "sha256-/RhK9qoI5vKvuJEVc46xT8QwhuBeh443NZx/ZFmLluY=",
+        "owner": "mfussenegger",
+        "repo": "nvim-jdtls",
+        "rev": "ffb08466d51f717775d85e7e334ac83156c0ca98",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-jdtls",
+        "type": "github"
+      }
+    },
     "plugin:nvim-lspconfig": {
       "flake": false,
       "locked": {
@@ -842,6 +858,7 @@
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
+        "plugin:nvim-jdtls": "plugin:nvim-jdtls",
         "plugin:nvim-lspconfig": "plugin:nvim-lspconfig",
         "plugin:nvim-notify": "plugin:nvim-notify",
         "plugin:nvim-treesitter": "plugin:nvim-treesitter",
@@ -870,13 +887,14 @@
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
         "runtime": "runtime",
-        "snippets-java": "snippets-java"
+        "snippets-java": "snippets-java",
+        "snippets-shebang": "snippets-shebang"
       }
     },
     "runtime": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-RHlW/bxscaC4xSY7cqGjIofH/MIOviXU/AASHtY5O/I=",
+        "narHash": "sha256-9SZoTS8PRlLt1MpBu2HH61FuA+benuZ3c6Dyt/QRdpM=",
         "path": "./runtime/",
         "type": "path"
       },
@@ -898,6 +916,22 @@
       "original": {
         "owner": "tushortz",
         "repo": "vscode-Java-Snippets",
+        "type": "github"
+      }
+    },
+    "snippets-shebang": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1594681038,
+        "narHash": "sha256-uhNtMPLU0HKy5ci7YlX6KiU9NCQn6lh2Z5Mw6Zf5V+Y=",
+        "owner": "Rpinski",
+        "repo": "vscode-shebang-snippets",
+        "rev": "9aa476b97f24cc5ebc86fa3e62eee0ef08fb6620",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rpinski",
+        "repo": "vscode-shebang-snippets",
         "type": "github"
       }
     }

@@ -237,6 +237,23 @@ if vim.bo.filetype=="clojure" then
       R = {"clear - hard reset"},
       },
   }, { prefix = "<localleader>" })
+elseif vim.bo.filetype=="java" then
+  wk.register({
+    j = {
+      name = "jdtls",
+      o = {"<cmd>lua require'jdtls'.organize_imports()<CR>","organize imports"},
+      v = {"<cmd>lua require'jdtls'.extract_variable()<CR>","extract variable"},
+      V = {"<cmd>lua require'jdtls'.extract_variable(true)<CR>","extract variable"},
+      c = {"<cmd>lua require'jdtls'.extract_constant(true)<CR>","extract constant"},
+      C = {"<cmd>lua require'jdtls'.extract_constant(true)<CR>","extract constant"},
+      m = {"<cmd>lua require'jdtls'.extract_method(true)<CR>","extract method"},
+      },
+    d = {
+      name = "jdtls debug",
+      c = {"<cmd>lua require'jdtls'.test_class()<CR>","test class"},
+      c = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
+      },
+  }, { prefix = "<localleader>" })
 elseif vim.bo.filetype=="markdown" then
   wk.register({
     c = {
@@ -420,6 +437,14 @@ nvim_lsp['java_language_server'].setup {
   },
   cmd = {"java-language-server"},
 }
+nvim_lsp['jdtls'].setup {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = {vim.env.VIMRUNTIME .. "/jdt-language-server/bin/jdtls"},
+}
 EOF
 
 " treesitter
@@ -464,6 +489,31 @@ EOF
     nunmap <buffer><C-n>
     nunmap <buffer><C-p>
   endfunction
+
+" nvim-jdtls
+lua <<EOF
+require('jdtls').start_or_attach({
+  cmd = {
+    -- 💀
+    'java', 
+    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+    '-Dosgi.bundles.defaultStartLevel=4',
+    '-Declipse.product=org.eclipse.jdt.ls.core.product',
+    '-Dlog.protocol=true',
+    '-Dlog.level=ALL',
+    '-Xms1g',
+    '--add-modules=ALL-SYSTEM',
+    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+    -- 💀
+    '-jar', vim.env.VIMRUNTIME .. '/jdt-language-server/bin/jdtls',
+    -- 💀
+    '-configuration', vim.env.VIMRUNTIME .. '/jdt-language-server/config_linux',
+    -- 💀
+    '-data', '/path/to/unique/per/project/workspace/folder'
+    },
+})
+EOF
 
 " vim2hs
   "let g:haskell_conceal_wide = 1
