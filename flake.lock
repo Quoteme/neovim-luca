@@ -868,7 +868,37 @@
         "plugin:vim-slime": "plugin:vim-slime",
         "plugin:vim-surround": "plugin:vim-surround",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
-        "plugin:which-key.nvim": "plugin:which-key.nvim"
+        "plugin:which-key.nvim": "plugin:which-key.nvim",
+        "runtime": "runtime",
+        "snippets-java": "snippets-java"
+      }
+    },
+    "runtime": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-RHlW/bxscaC4xSY7cqGjIofH/MIOviXU/AASHtY5O/I=",
+        "path": "./runtime/",
+        "type": "path"
+      },
+      "original": {
+        "path": "./runtime/",
+        "type": "path"
+      }
+    },
+    "snippets-java": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1456672155,
+        "narHash": "sha256-hzqmb1uhX/DTS43cUxkPhAUjMbcf/IZoZ/pVhLsYYmA=",
+        "owner": "tushortz",
+        "repo": "vscode-Java-Snippets",
+        "rev": "8f37f1fc290c3d375872491a0f5fd7f2e802554b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tushortz",
+        "repo": "vscode-Java-Snippets",
+        "type": "github"
       }
     }
   },

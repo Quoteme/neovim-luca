@@ -18,6 +18,12 @@
       flake = false;
     };
     
+    # runtime stores all the settings which will be copied into the vim runtime
+    runtime = {
+      url = "path:./runtime/";
+      flake = false;
+    };
+
     # Theme
       "plugin:onedark-vim" = {
         url = "github:joshdick/onedark.vim";
@@ -106,6 +112,10 @@
             };
             "plugin:cmp_luasnip" = {
               url = "github:saadparwaiz1/cmp_luasnip";
+              flake = false;
+            };
+            snippets-java = {
+              url = "github:tushortz/vscode-Java-Snippets";
               flake = false;
             };
             # "plugin:vim-vsnip" = {
@@ -354,6 +364,13 @@
                               # TODO find out why this is here
                               pkgs.stdenv.cc.cc.lib
                             ];
+                            postInstall = ''
+                              # runtime is in $out/share/nvim/runtime
+                              # snippet stuff
+                              mkdir -p $out/share/nvim/runtime/snippets
+                              cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
+                              cp -r ${inputs.runtime}/* $out/share/nvim/runtime/
+                            '';
                           });
                           neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
                             inherit viAlias;
