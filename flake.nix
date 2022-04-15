@@ -404,7 +404,7 @@
                                 # NIX
                                   rnix-lsp
                                 # Python
-                                  pyright
+                                  python39Packages.jedi-language-server
                                 # Rust
                                   rls
                                 # Clojure

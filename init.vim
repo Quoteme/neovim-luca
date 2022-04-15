@@ -398,7 +398,7 @@ local servers = {
   'tsserver',
   'hls',
   'rnix',
-  'pyright',
+  'jedi_language_server',
   'clojure_lsp',
   'rls',
   'clangd',
