@@ -337,6 +337,22 @@
         "type": "github"
       }
     },
+    "plugin:neogen": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1648827423,
+        "narHash": "sha256-x2jpJ49G6fJhwE2I2FA4wZy/moZokvApJhzUav+fzqA=",
+        "owner": "danymat",
+        "repo": "neogen",
+        "rev": "f249a70ee598bdf8d015c10536c0dcd97c79b3aa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danymat",
+        "repo": "neogen",
+        "type": "github"
+      }
+    },
     "plugin:neoscroll.nvim": {
       "flake": false,
       "locked": {
@@ -855,6 +871,7 @@
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
+        "plugin:neogen": "plugin:neogen",
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
@@ -894,7 +911,7 @@
     "runtime": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-9SZoTS8PRlLt1MpBu2HH61FuA+benuZ3c6Dyt/QRdpM=",
+        "narHash": "sha256-67MIIB0G8qMcvzta93onHf6sq5Nc+CIt/CCH7k50RKY=",
         "path": "./runtime/",
         "type": "path"
       },

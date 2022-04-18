@@ -153,6 +153,11 @@
               url = "github:zbirenbaum/copilot-cmp";
               flake = false;
             };
+          # Documentation
+            "plugin:neogen" = {
+              url = "github:danymat/neogen";
+              flake = false;
+            };
       # Code execution
         # TODO sniprun is installed from nixpkgs. Add nixpkgs option
         # "plugin:sniprun" = {
@@ -425,6 +430,8 @@
                                 # Java
                                   jdk11
                                   java-language-server
+                                # Lua
+                                  sumneko-lua-language-server
                               # Other dependencies
                                 xclip
                                 # Spelling and grammar
