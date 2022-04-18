@@ -1,3 +1,4 @@
+-- vim: tabstop=2 shiftwidth=2 expandtab
 -- Load VSCode like snippets from external plugins
 require("luasnip.loaders.from_vscode").lazy_load()
 -- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.env.VIMRUNTIME .. "/snippets/" } })

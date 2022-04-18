@@ -1,3 +1,4 @@
+-- vim: tabstop=2 shiftwidth=2 expandtab
 local wk = require("which-key")
 wk.setup{}
 wk.register({
@@ -18,6 +19,14 @@ wk.register({
     p = {"<cmd>lua require('nabla').popup()<CR>", "popup"},
     },
   -- ? = {"<cmd>Cheatsheet<CR>", "Cheatsheet"},
+  d = {
+    name = "neogen documentation",
+    d = {":Neogen", "document automatically"},
+    f = {":Neogen func", "document function"},
+    F = {":Neogen file", "document file"},
+    c = {":Neogen class", "document class"},
+    t = {":Neogen type", "document type"},
+  },
   c = {
     ':exec &conceallevel ? "set conceallevel=0<CR>" : "set conceallevel=1"',
     "toggle conceal"
