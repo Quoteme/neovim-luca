@@ -3,11 +3,6 @@
 require("luasnip.loaders.from_vscode").lazy_load()
 -- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.env.VIMRUNTIME .. "/snippets/" } })
 
--- One peculiarity of honza/vim-snippets is that the file containing global
--- snippets is _.snippets, so we need to tell luasnip that the filetype "_"
--- contains global snippets:
-require("luasnip.loaders.from_snipmate").lazy_load()
-ls.filetype_extend("all", { "_" })
 
 -- Custom snippets
 local ls = require("luasnip")
@@ -21,6 +16,13 @@ local choice = ls.choice_node
 local dynamicn = ls.dynamic_node
 
 local date = function() return {os.date('%Y-%m-%d')} end
+
+
+-- One peculiarity of honza/vim-snippets is that the file containing global
+-- snippets is _.snippets, so we need to tell luasnip that the filetype "_"
+-- contains global snippets:
+require("luasnip.loaders.from_snipmate").lazy_load()
+ls.filetype_extend("all", { "_" })
 
 -- Repeat Insernode text
 -- @param insert_node_id The id of the insert node to repeat (the first line from)
