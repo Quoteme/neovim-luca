@@ -21,11 +21,11 @@ wk.register({
   -- ? = {"<cmd>Cheatsheet<CR>", "Cheatsheet"},
   d = {
     name = "neogen documentation",
-    d = {":Neogen", "document automatically"},
-    f = {":Neogen func", "document function"},
-    F = {":Neogen file", "document file"},
-    c = {":Neogen class", "document class"},
-    t = {":Neogen type", "document type"},
+    d = {":Neogen<CR>", "document automatically"},
+    f = {":Neogen func<CR>", "document function"},
+    F = {":Neogen file<CR>", "document file"},
+    c = {":Neogen class<CR>", "document class"},
+    t = {":Neogen type<CR>", "document type"},
   },
   c = {
     ':exec &conceallevel ? "set conceallevel=0<CR>" : "set conceallevel=1"',

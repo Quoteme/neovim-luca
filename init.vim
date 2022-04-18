@@ -160,6 +160,12 @@ lua << EOF
 -- vim.schedule(function() require("copilot") end)
 EOF
 
+" Neogen
+lua << EOF
+require('neogen').setup {}
+require('neogen').setup({ snippet_engine = "luasnip" })
+EOF
+
 " Luasnip
 lua require"myluasnip"
 
