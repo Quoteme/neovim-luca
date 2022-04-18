@@ -142,7 +142,7 @@ EOF
 
 " WhichKey
 lua << EOF
--- require"mywhichkey"
+require"mywhichkey"
 EOF
 
 " SnipRun
