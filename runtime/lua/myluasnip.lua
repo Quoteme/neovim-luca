@@ -24,6 +24,7 @@ end
 
 -- Markdown
 ls.filetype_extend("markdown",{"latex", "plaintext"})
+ls.filetype_extend("latex",{"markdown", "plaintext"})
 ls.add_snippets("markdown",{
   -- meta data
   snip({
