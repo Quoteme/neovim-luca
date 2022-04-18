@@ -139,6 +139,10 @@
               url = "github:rafamadriz/friendly-snippets";
               flake = false;
             };
+            "plugin:vim-snippets" = { # TODO add custom snippts
+              url = "github:honza/vim-snippets";
+              flake = false;
+            };
           # Github Copilot
             # This is only needed for authentication
             # "plugin:copilot.vim" = {

@@ -801,6 +801,22 @@
         "type": "github"
       }
     },
+    "plugin:vim-snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650101494,
+        "narHash": "sha256-S96jg/a66bqgF7CFxdeAqVj6X/ScVwU+XMKHC7OzDvI=",
+        "owner": "honza",
+        "repo": "vim-snippets",
+        "rev": "a0f550c77ac4c815ee6ab42a1d88bf2ba905ad67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "honza",
+        "repo": "vim-snippets",
+        "type": "github"
+      }
+    },
     "plugin:vim-surround": {
       "flake": false,
       "locked": {
@@ -900,6 +916,7 @@
         "plugin:vim-signify": "plugin:vim-signify",
         "plugin:vim-skeleton": "plugin:vim-skeleton",
         "plugin:vim-slime": "plugin:vim-slime",
+        "plugin:vim-snippets": "plugin:vim-snippets",
         "plugin:vim-surround": "plugin:vim-surround",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
@@ -911,7 +928,7 @@
     "runtime": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-67MIIB0G8qMcvzta93onHf6sq5Nc+CIt/CCH7k50RKY=",
+        "narHash": "sha256-avg2mJYSFdaqXCysQdEhDsBcTQuVIoZBiMaYzA93vN8=",
         "path": "./runtime/",
         "type": "path"
       },
