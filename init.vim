@@ -288,14 +288,14 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-nvim_lsp['java_language_server'].setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  flags = {
-    debounce_text_changes = 150,
-  },
-  cmd = {"java-language-server"},
-}
+-- nvim_lsp['java_language_server'].setup {
+--   on_attach = on_attach,
+--   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+--   flags = {
+--     debounce_text_changes = 150,
+--   },
+--   cmd = {"java-language-server"},
+-- }
 nvim_lsp['jdtls'].setup {
   on_attach = on_attach,
   capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),

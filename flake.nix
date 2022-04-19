@@ -78,6 +78,10 @@
           url = "github:mfussenegger/nvim-jdtls";
           flake = false;
         };
+        "plugin:nvim-dap" = {
+          url = "github:mfussenegger/nvim-dap";
+          flake = false;
+        };
     # General help
       # Tree-sitter
         "plugin:nvim-treesitter" = {

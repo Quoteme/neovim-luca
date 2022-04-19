@@ -401,6 +401,22 @@
         "type": "github"
       }
     },
+    "plugin:nvim-dap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650298230,
+        "narHash": "sha256-vc5WXPiTlEadFWUTHDusFnwjVSMSmdfQ8TOp4+AJo1w=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "rev": "d6d8317ce9e096029150bc5844916347a9af6f45",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
     "plugin:nvim-jdtls": {
       "flake": false,
       "locked": {
@@ -891,6 +907,7 @@
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
+        "plugin:nvim-dap": "plugin:nvim-dap",
         "plugin:nvim-jdtls": "plugin:nvim-jdtls",
         "plugin:nvim-lspconfig": "plugin:nvim-lspconfig",
         "plugin:nvim-notify": "plugin:nvim-notify",
@@ -928,7 +945,7 @@
     "runtime": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-avg2mJYSFdaqXCysQdEhDsBcTQuVIoZBiMaYzA93vN8=",
+        "narHash": "sha256-WLLt+mBXtCEaCp1cRv3zhpxGHn1OMHhZ9P+te12BsSY=",
         "path": "./runtime/",
         "type": "path"
       },

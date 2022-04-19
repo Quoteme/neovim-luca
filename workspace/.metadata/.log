@@ -2847,3 +2847,926 @@ BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
 
 !ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:32:06.190
 !MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2022-04-18 12:53:28.649 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.12
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.005
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.335
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.408
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.410
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.419
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.431
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.432
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.438
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.439
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.441
+!MESSAGE ProjectRegistryRefreshJob finished 2ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.441
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.477
+!MESSAGE Started org.eclipse.buildship.core 35ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.510
+!MESSAGE LoadingGradleVersionJob finished 32ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:34.614
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.342
+!MESSAGE Workspace initialized in 1830ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.383
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.390
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.427
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.432
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:36.433
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:38.717
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:38.762
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:38.782
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:53:38.818
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2022-04-18 12:57:22.189 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.12
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.398
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.765
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.842
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.844
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.851
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.864
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.864
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.871
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.871
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.873
+!MESSAGE ProjectRegistryRefreshJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.873
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.918
+!MESSAGE Started org.eclipse.buildship.core 45ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:25.980
+!MESSAGE LoadingGradleVersionJob finished 62ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:27.784
+!MESSAGE Workspace initialized in 1800ms
+!SESSION 2022-04-18 12:57:39.301 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:43.619
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.005
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.057
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.058
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.062
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.072
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.073
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.081
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.082
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.084
+!MESSAGE ProjectRegistryRefreshJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.084
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.108
+!MESSAGE Started org.eclipse.buildship.core 24ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:44.142
+!MESSAGE LoadingGradleVersionJob finished 33ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:46.668
+!MESSAGE Workspace initialized in 2523ms
+!SESSION 2022-04-18 12:57:47.541 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.1
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.271
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.648
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.717
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.719
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.724
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.738
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.738
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.745
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.746
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.748
+!MESSAGE ProjectRegistryRefreshJob finished 2ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.749
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.787
+!MESSAGE Started org.eclipse.buildship.core 39ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.841
+!MESSAGE LoadingGradleVersionJob finished 53ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:53.878
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.372
+!MESSAGE Workspace initialized in 2528ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.433
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.458
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.493
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.498
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:57:56.511
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:23.867
+!MESSAGE Parent process stopped running, forcing server exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:23.868
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:23.876
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:31.336
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:31.381
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:31.391
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 12:58:31.407
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2022-04-18 13:03:24.538 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.12
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.340
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.743
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.816
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.818
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.826
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.838
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.839
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.846
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.847
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.848
+!MESSAGE ProjectRegistryRefreshJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.849
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.877
+!MESSAGE Started org.eclipse.buildship.core 29ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:29.921
+!MESSAGE LoadingGradleVersionJob finished 44ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:30.034
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.062
+!MESSAGE Workspace initialized in 2137ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.106
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.119
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.164
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.169
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.170
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.195
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.208
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.232
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.241
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.253
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.265
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.281
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.501
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:32.648
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:33.568
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:33.714
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:33.991
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:34.140
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:34.419
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:34.568
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:34.812
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:34.959
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:35.191
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:35.338
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:35.563
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:35.714
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:35.863
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:36.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:36.332
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:36.675
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:36.824
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:37.178
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:37.328
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:38.088
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:38.253
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:38.427
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:38.585
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:39.739
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:40.184
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:40.760
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:41.779
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:41.926
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:42.514
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:42.663
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:43.023
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:43.354
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:43.743
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:43.954
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:44.593
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:44.744
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:45.303
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:45.453
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:47.516
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:47.663
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:50.570
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:50.719
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:50.976
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:51.123
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:51.412
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:51.561
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:51.709
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:51.857
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:52.134
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:52.284
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:52.645
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:52.792
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:52.938
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:53.083
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:53.232
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:54.295
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:54.444
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:55.209
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:55.383
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:55.549
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:55.707
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:56.148
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:57.046
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:03:57.818
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:00.288
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:00.436
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:00.902
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:01.049
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:01.892
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:02.038
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:02.538
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:02.681
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:03.040
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:03.183
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:03.469
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:03.619
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:03.971
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:04.119
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:04.432
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:04.582
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:05.127
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:05.276
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:09.347
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:09.496
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:10.425
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:13.357
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:13.363
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:13.404
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:13.420
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.971
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.972
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.978
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.989
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.989
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:14.992
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.343
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.419
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.435
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.539
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.686
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:16.928
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.077
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.226
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.454
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.464
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.471
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.691
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:17.840
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:18.988
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:19.155
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:19.303
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:19.599
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:19.746
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:19.941
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:20.090
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:20.427
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:20.575
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:20.725
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:20.874
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:21.928
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:22.793
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:22.796
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:22.841
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-18 13:04:22.862
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2022-04-19 13:27:08.411 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.12
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.021
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.533
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.622
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.625
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.632
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.651
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.651
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.662
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.663
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.666
+!MESSAGE ProjectRegistryRefreshJob finished 2ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.667
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:13.753
+!MESSAGE Started org.eclipse.buildship.core 87ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:15.093
+!MESSAGE LoadingGradleVersionJob finished 1339ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:15.191
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:16.999
+!MESSAGE Workspace initialized in 1901ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.040
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.050
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.068
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.075
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.075
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.080
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.112
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:17.869
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:18.020
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:18.356
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:18.504
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:18.705
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:18.856
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:19.004
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:19.153
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:19.412
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:19.561
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:20.245
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:20.394
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:24.412
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:24.419
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:24.467
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:27:24.485
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2022-04-19 13:28:36.982 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.12
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=de_DE
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.297
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.704
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.785
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.787
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.792
+!MESSAGE No workspace folders or root uri was defined. Falling back on /home/luca/OneDrive/dev/shell/neovim-luca/workspace
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.807
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.808
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.818
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.819
+!MESSAGE Started org.eclipse.m2e.core 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.820
+!MESSAGE ProjectRegistryRefreshJob finished 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.821
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.911
+!MESSAGE Started org.eclipse.buildship.core 90ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:39.949
+!MESSAGE LoadingGradleVersionJob finished 37ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:40.060
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.879
+!MESSAGE Workspace initialized in 1925ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.934
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.950
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.972
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.982
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:28:41.983
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:29:21.749
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:29:26.809
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:29:26.816
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:29:26.884
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-04-19 13:29:26.908
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
