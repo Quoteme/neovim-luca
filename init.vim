@@ -384,6 +384,9 @@ EOF
 
 " nvim-jdtls
 lua <<EOF
+-- If you started neovim within `~/dev/xy/project-1` this would resolve to `project-1`
+local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local workspace_dir = '~/.jdtls-workspace/' .. project_name
 require('jdtls').start_or_attach({
   cmd = {
     -- 💀
@@ -402,7 +405,7 @@ require('jdtls').start_or_attach({
     -- 💀
     '-configuration', vim.env.VIMRUNTIME .. '/jdt-language-server/config_linux',
     -- 💀
-    '-data', '/path/to/unique/per/project/workspace/folder'
+    '-data', workspace_dir
     },
 })
 EOF
