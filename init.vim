@@ -505,3 +505,14 @@ EOF
 
 " " CLOJURE
 "   autocmd FileType clojure :Lein
+
+" Java
+  autocmd FileType java setlocal tabstop=2
+  autocmd FileType java setlocal shiftwidth=2
+  autocmd FileType java setlocal expandtab
+  autocmd FileType groovy setlocal tabstop=2
+  autocmd FileType groovy setlocal shiftwidth=2
+  autocmd FileType groovy setlocal expandtab
+  autocmd FileType kotlin setlocal tabstop=2
+  autocmd FileType kotlin setlocal shiftwidth=2
+  autocmd FileType kotlin setlocal expandtab
