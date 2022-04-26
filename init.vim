@@ -16,9 +16,8 @@
   set encoding=utf-8
   set number
   set relativenumber
-  set tabstop=2
-  set shiftwidth=2
-  set expandtab
+  set tabstop=4
+  set shiftwidth=4
   set clipboard=unnamedplus       " Allow for use of system-wide copy and paste functions
   set scrolloff=5             " Keep at least 3 lines above/below when scrolling
   set hlsearch              " Highlight search
@@ -474,6 +473,11 @@ EOF
 
 " GO
   autocmd FileType go noremap <F5> <ESC>:GoRun
+
+" C
+  autocmd FileType c setlocal tabstop=2
+  autocmd FileType c setlocal shiftwidth=2
+  autocmd FileType c setlocal expandtab
 
 " HASKELL
   autocmd FileType haskell setlocal tabstop=2
