@@ -16,8 +16,9 @@
   set encoding=utf-8
   set number
   set relativenumber
-  set tabstop=4
-  set shiftwidth=4
+  set tabstop=2
+  set shiftwidth=2
+  set expandtab
   set clipboard=unnamedplus       " Allow for use of system-wide copy and paste functions
   set scrolloff=5             " Keep at least 3 lines above/below when scrolling
   set hlsearch              " Highlight search
