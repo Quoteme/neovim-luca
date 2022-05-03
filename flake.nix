@@ -176,6 +176,11 @@
               url = "github:stevearc/aerial.nvim";
               flake = false;
             };
+          # Code testing
+            "plugin:vim-test" = {
+              url = "github:vim-test/vim-test";
+              flake = false;
+            };
       # Code execution
         # TODO sniprun is installed from nixpkgs. Add nixpkgs option
         # "plugin:sniprun" = {
