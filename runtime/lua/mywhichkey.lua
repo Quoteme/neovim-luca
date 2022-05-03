@@ -12,7 +12,7 @@ wk.register({
     c = {"<cmd>BufferClose<CR>", "close buffer"},
     },
   --t = {":tab ball<CR>", "make all Buffers tabs"},
-  t = {":twilight<CR>", "toggle twilight"},
+  z = {":twilight<CR>", "toggle twilight"},
   n = {
     name = "Nabla latex view",
     a = {"<cmd>lua require('nabla').action()<CR>", "action"},
@@ -100,7 +100,15 @@ wk.register({
     f = {":Neotree filesystem toggle left<CR>", "show filesystem"},
     b = {":Neotree buffers toggle float<CR>", "show buffers"},
     g = {":Neotree git_status toggle right<CR>", "show git status"},
-  }
+  },
+  t = {
+    name = "vim-test",
+    n = {":TestNearest<CR>", "test nearest"},
+    f = {":TestFile<CR>", "test file"},
+    s = {":TestSuite<CR>", "test suite"},
+    l = {":TestLast<CR>", "test last"},
+    v = {":TestVisit<CR>", "visit test file"},
+  };
 }, {
   mode = "n",
   prefix = "<leader>"

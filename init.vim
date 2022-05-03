@@ -482,6 +482,8 @@ EOF
   map <F9> :!nix-build<space>--quiet<enter>
   map <S-F9> :!nix-build<enter>
 
+" neotree file browsing
+  nnoremap <F5> :Neotree filesystem toggle left<CR>
 " aerial code browsing
   nnoremap <F6> :AerialToggle!<CR>
 " prettyfy file
