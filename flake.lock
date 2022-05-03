@@ -145,22 +145,6 @@
         "type": "github"
       }
     },
-    "plugin:chadtree": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651539336,
-        "narHash": "sha256-lJJuQZNzFFM8PE9iPyySW2iuuiG8bLew8tg/S6+YN9Y=",
-        "owner": "ms-jpq",
-        "repo": "chadtree",
-        "rev": "1b81b450204b3a55067648c56b37b19b3da78ac2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ms-jpq",
-        "repo": "chadtree",
-        "type": "github"
-      }
-    },
     "plugin:cheatsheet.nvim": {
       "flake": false,
       "locked": {
@@ -305,6 +289,22 @@
         "type": "github"
       }
     },
+    "plugin:focus.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1646798528,
+        "narHash": "sha256-PYuy7OF+ZhSyXWInRBtfH4nvECU22BqvNLn553kvzUI=",
+        "owner": "beauwilliams",
+        "repo": "focus.nvim",
+        "rev": "86d036649ab8d00ac8fdca750533a541b892e4fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "beauwilliams",
+        "repo": "focus.nvim",
+        "type": "github"
+      }
+    },
     "plugin:friendly-snippets": {
       "flake": false,
       "locked": {
@@ -385,6 +385,22 @@
         "type": "github"
       }
     },
+    "plugin:neo-tree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651416351,
+        "narHash": "sha256-UbnEVgDWf23xskIqgXrz/hUdtzv0mglicSW/uuCAHF8=",
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
+        "rev": "596881126091afdc9ddf4bc01e3caf5b1ea38d7f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neo-tree",
+        "repo": "neo-tree.nvim",
+        "type": "github"
+      }
+    },
     "plugin:neogen": {
       "flake": false,
       "locked": {
@@ -414,6 +430,22 @@
       "original": {
         "owner": "karb94",
         "repo": "neoscroll.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:nui.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649443132,
+        "narHash": "sha256-YWotqv+oqvKSDXu7TrlGrHdNBfr740Ccc2LPvH3C8T0=",
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
+        "rev": "42552b3797c3452c5c94e0c84a04fbda9591b9d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MunifTanjim",
+        "repo": "nui.nvim",
         "type": "github"
       }
     },
@@ -881,6 +913,22 @@
         "type": "github"
       }
     },
+    "plugin:vim-test": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649241069,
+        "narHash": "sha256-T+1Dlm+mtMTtmuINCxcUTZHfniEaGEYM1r1Xu0oaFos=",
+        "owner": "vim-test",
+        "repo": "vim-test",
+        "rev": "2240d7a4b868cb594b7d83544e1b6db4df806e5e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vim-test",
+        "repo": "vim-test",
+        "type": "github"
+      }
+    },
     "plugin:vim-visual-multi": {
       "flake": false,
       "locked": {
@@ -923,7 +971,6 @@
         "plugin:aerial.nvim": "plugin:aerial.nvim",
         "plugin:auto-session": "plugin:auto-session",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
-        "plugin:chadtree": "plugin:chadtree",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
@@ -933,13 +980,16 @@
         "plugin:copilot-cmp": "plugin:copilot-cmp",
         "plugin:copilot.lua": "plugin:copilot.lua",
         "plugin:delimitMate": "plugin:delimitMate",
+        "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
         "plugin:gitsigns.nvim": "plugin:gitsigns.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
+        "plugin:neo-tree": "plugin:neo-tree",
         "plugin:neogen": "plugin:neogen",
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
+        "plugin:nui.nvim": "plugin:nui.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
         "plugin:nvim-dap": "plugin:nvim-dap",
@@ -969,6 +1019,7 @@
         "plugin:vim-slime": "plugin:vim-slime",
         "plugin:vim-snippets": "plugin:vim-snippets",
         "plugin:vim-surround": "plugin:vim-surround",
+        "plugin:vim-test": "plugin:vim-test",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
         "runtime": "runtime",
