@@ -80,7 +80,7 @@ wk.register({
     s = {"<cmd>lua package.loaded.gitsigns.stage_buffer()<CR>", "stage buffer"},
     r = {"<cmd>lua package.loaded.gitsigns.reset_buffer()<CR>", "reset buffer"},
     t = {"<cmd>lua package.loaded.gitsigns.toggle_current_line_blame()<CR>", "toggle current line blame"},
-    b = {"<cmd>lua package.loaded.gitsigns.gs.blame_line{full=true}<CR>", "blame line full"},
+    b = {"<cmd>lua package.loaded.gitsigns.blame_line{full=true}<CR>", "blame line full"},
     d = {"<cmd>lua package.loaded.gitsigns.diffthis()<CR>", "diff this"},
     D = {"<cmd>lua package.loaded.gitsigns.diffthis('~')<CR>", "diff this ~"},
     x = {"<cmd>lua package.loaded.gitsigns.toggle_delete()<CR>", "toggle delete"},
