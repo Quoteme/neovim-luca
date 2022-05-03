@@ -166,6 +166,16 @@
               url = "github:danymat/neogen";
               flake = false;
             };
+          # File browsing
+            "plugin:chadtree" = {
+              url = "github:ms-jpq/chadtree";
+              flake = false;
+            };
+          # Code browsing
+            "plugin:aerial.nvim" = {
+              url = "github:stevearc/aerial.nvim";
+              flake = false;
+            };
       # Code execution
         # TODO sniprun is installed from nixpkgs. Add nixpkgs option
         # "plugin:sniprun" = {

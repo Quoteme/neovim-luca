@@ -97,6 +97,22 @@
         "type": "github"
       }
     },
+    "plugin:aerial.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651555103,
+        "narHash": "sha256-dX3PIek08o2cP7DRC1TDQjOLtidK9sBz9qQnx68hAEU=",
+        "owner": "stevearc",
+        "repo": "aerial.nvim",
+        "rev": "b4c84e98c15bee424b396261f25744d1b41c3bfc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "stevearc",
+        "repo": "aerial.nvim",
+        "type": "github"
+      }
+    },
     "plugin:auto-session": {
       "flake": false,
       "locked": {
@@ -126,6 +142,22 @@
       "original": {
         "owner": "romgrk",
         "repo": "barbar.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:chadtree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651539336,
+        "narHash": "sha256-lJJuQZNzFFM8PE9iPyySW2iuuiG8bLew8tg/S6+YN9Y=",
+        "owner": "ms-jpq",
+        "repo": "chadtree",
+        "rev": "1b81b450204b3a55067648c56b37b19b3da78ac2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ms-jpq",
+        "repo": "chadtree",
         "type": "github"
       }
     },
@@ -888,8 +920,10 @@
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:LuaSnip": "plugin:LuaSnip",
+        "plugin:aerial.nvim": "plugin:aerial.nvim",
         "plugin:auto-session": "plugin:auto-session",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
+        "plugin:chadtree": "plugin:chadtree",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",

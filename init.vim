@@ -271,6 +271,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+-- Call aerial.nvim for LSP integration
+require("aerial").on_attach(client, bufnr)
 end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
@@ -364,6 +366,11 @@ EOF
 " gitsigns.nvim
 lua << EOF
 require('gitsigns').setup()
+EOF
+
+" aerial.nvim
+lua << EOF
+require('aerial').setup({})
 EOF
 
 " colorscheme
@@ -471,10 +478,12 @@ EOF
 " enable spellchecker with F1
   map <F1> :set spell!<CR>
 
-  " build nix projects with <F9>
-    map <F9> :!nix-build<space>--quiet<enter>
-    map <S-F9> :!nix-build<enter>
+" build nix projects with <F9>
+  map <F9> :!nix-build<space>--quiet<enter>
+  map <S-F9> :!nix-build<enter>
 
+" aerial code browsing
+  nnoremap <F6> :AerialToggle!<CR>
 " prettyfy file
   nnoremap <F3> mzgggqG`z
 

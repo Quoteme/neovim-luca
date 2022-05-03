@@ -86,6 +86,15 @@ wk.register({
     D = {"<cmd>lua package.loaded.gitsigns.diffthis('~')<CR>", "diff this ~"},
     x = {"<cmd>lua package.loaded.gitsigns.toggle_delete()<CR>", "toggle delete"},
   },
+  a = {
+    name = "aerial.nvim",
+    t = {"<cmd>AerialToggle!<CR>", "toggle aerial"},
+    T = {"<cmd>AerialTreeToggle!<CR>", "toggle aerial tree"},
+    p = {"<cmd>AerialPrev<CR>", "aerial previous"},
+    n = {"<cmd>AerialNext<CR>", "aerial next"},
+    P = {"<cmd>AerialPrevUp<CR>", "aerial previous up"},
+    N = {"<cmd>AerialNextUp<CR>", "aerial next up"},
+  },
 }, {
   mode = "n",
   prefix = "<leader>"
