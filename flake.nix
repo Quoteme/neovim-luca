@@ -29,6 +29,11 @@
         url = "github:joshdick/onedark.vim";
         flake = false;
       };
+    # Splits and windows
+      "plugin:focus.nvim" = {
+        url = "github:beauwilliams/focus.nvim";
+        flake = false;
+      };
     # Programming Language Specific stuff
       # SAGE
         "plugin:vim-sage" = {
@@ -171,6 +176,11 @@
               url = "github:nvim-neo-tree/neo-tree.nvim";
               flake = false;
             };
+            # Required by neo-tree
+              "plugin:nui.nvim" = {
+                url = "github:MunifTanjim/nui.nvim";
+                flake = false;
+              };
           # Code browsing
             "plugin:aerial.nvim" = {
               url = "github:stevearc/aerial.nvim";

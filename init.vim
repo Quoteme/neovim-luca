@@ -110,6 +110,9 @@ EOF
 " nvim-colorizer.lua
 lua require'colorizer'.setup()
 
+" Split auto resizing
+lua require("focus").setup()
+
 " NeoScroll
 lua require('neoscroll').setup()
 
