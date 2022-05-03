@@ -289,6 +289,22 @@
         "type": "github"
       }
     },
+    "plugin:focus.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1646798528,
+        "narHash": "sha256-PYuy7OF+ZhSyXWInRBtfH4nvECU22BqvNLn553kvzUI=",
+        "owner": "beauwilliams",
+        "repo": "focus.nvim",
+        "rev": "86d036649ab8d00ac8fdca750533a541b892e4fb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "beauwilliams",
+        "repo": "focus.nvim",
+        "type": "github"
+      }
+    },
     "plugin:friendly-snippets": {
       "flake": false,
       "locked": {
@@ -964,6 +980,7 @@
         "plugin:copilot-cmp": "plugin:copilot-cmp",
         "plugin:copilot.lua": "plugin:copilot.lua",
         "plugin:delimitMate": "plugin:delimitMate",
+        "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
         "plugin:gitsigns.nvim": "plugin:gitsigns.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",

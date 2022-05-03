@@ -29,6 +29,11 @@
         url = "github:joshdick/onedark.vim";
         flake = false;
       };
+    # Splits and windows
+      "plugin:focus.nvim" = {
+        url = "github:beauwilliams/focus.nvim";
+        flake = false;
+      };
     # Programming Language Specific stuff
       # SAGE
         "plugin:vim-sage" = {

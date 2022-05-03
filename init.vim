@@ -65,6 +65,10 @@
     map <C-S-J> <cmd>:wincmd k<CR>
     map <C-S-K> <cmd>:wincmd j<CR>
     map <C-S-L> <cmd>:wincmd l<CR>
+    map <M-K> <cmd>:vs<CR>
+    map <M-j> <cmd>:vs<CR>
+    map <M-L> <cmd>:split<CR>
+    map <M-H> <cmd>:split<CR>
   " Fix ugly red backgrounds TODO is this still needed?
   autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
   " Automatically deletes all tralling whitespace on save.
@@ -103,9 +107,10 @@
 "               |___/                              |___/
 
 " Twilight
-lua << EOF
-  require("twilight").setup {}
-EOF
+lua require("twilight").setup {}
+
+" Split auto resizing
+lua require("focus").setup()
 
 " nvim-colorizer.lua
 lua require'colorizer'.setup()
@@ -114,9 +119,7 @@ lua require'colorizer'.setup()
 lua require('neoscroll').setup()
 
 " Marks.nvim
-lua << EOF
-require'marks'.setup {}
-EOF
+lua require'marks'.setup {}
 
 " indent-blankline.nvim
 lua << EOF
@@ -146,9 +149,7 @@ EOF
 "   \ }))<CR><enter>
 
 " WhichKey
-lua << EOF
-require"mywhichkey"
-EOF
+lua require"mywhichkey"
 
 " SnipRun
 lua << EOF
