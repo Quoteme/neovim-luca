@@ -95,6 +95,12 @@ wk.register({
     P = {"<cmd>AerialPrevUp<CR>", "aerial previous up"},
     N = {"<cmd>AerialNextUp<CR>", "aerial next up"},
   },
+  f = {
+    name = "neotree",
+    f = {":Neotree filesystem toggle left<CR>", "show filesystem"},
+    b = {":Neotree buffers toggle float<CR>", "show buffers"},
+    g = {":Neotree git_status toggle right<CR>", "show git status"},
+  }
 }, {
   mode = "n",
   prefix = "<leader>"
