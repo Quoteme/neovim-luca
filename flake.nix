@@ -167,13 +167,23 @@
               flake = false;
             };
           # File browsing
-            "plugin:chadtree" = {
-              url = "github:ms-jpq/chadtree";
+            "plugin:neo-tree" = {
+              url = "github:nvim-neo-tree/neo-tree.nvim";
               flake = false;
             };
+            # Required by neo-tree
+              "plugin:nui.nvim" = {
+                url = "github:MunifTanjim/nui.nvim";
+                flake = false;
+              };
           # Code browsing
             "plugin:aerial.nvim" = {
               url = "github:stevearc/aerial.nvim";
+              flake = false;
+            };
+          # Code testing
+            "plugin:vim-test" = {
+              url = "github:vim-test/vim-test";
               flake = false;
             };
       # Code execution
