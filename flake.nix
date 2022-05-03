@@ -167,8 +167,8 @@
               flake = false;
             };
           # File browsing
-            "plugin:chadtree" = {
-              url = "github:ms-jpq/chadtree";
+            "plugin:neo-tree" = {
+              url = "github:nvim-neo-tree/neo-tree.nvim";
               flake = false;
             };
           # Code browsing
