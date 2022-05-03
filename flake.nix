@@ -182,8 +182,8 @@
           flake = false;
         };
       # Git integration
-        "plugin:vim-signify" = {
-          url = "github:mhinz/vim-signify";
+        "plugin:gitsigns.nvim" = {
+          url = "github:lewis6991/gitsigns.nvim";
           flake = false;
         };
       # Color
@@ -464,7 +464,7 @@
                         
       in
       rec {
-        defaultApp = apps.nvim;
+        defaultApp = packages.neovimLuca;
         defaultPackage = packages.neovimLuca;
 
         apps.nvim = {

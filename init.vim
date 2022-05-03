@@ -55,6 +55,11 @@
   map <M-Tab> <cmd>BufferMovePrevious<CR>
   map <M-S-Tab> <cmd>BufferMoveNext<CR>
   map <C-W> <cmd>BufferClose<CR>
+  inoremap <C-Tab> <cmd>BufferNext<CR><ESC>
+  inoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
+  inoremap <M-Tab> <cmd>BufferMovePrevious<CR><ESC>
+  inoremap <M-S-Tab> <cmd>BufferMoveNext<CR><ESC>
+  inoremap <C-W> <cmd>BufferClose<CR><ESC>
     " We need to remap some keys for remapping ctrl-w to work
     map <C-S-H> <cmd>:wincmd h<CR>
     map <C-S-J> <cmd>:wincmd k<CR>
@@ -354,6 +359,11 @@ require'nvim-treesitter.configs'.setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
   }
 }
+EOF
+
+" gitsigns.nvim
+lua << EOF
+require('gitsigns').setup()
 EOF
 
 " colorscheme

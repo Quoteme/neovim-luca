@@ -64,12 +64,29 @@ wk.register({
     e = {"<cmd>lua require'sniprun'.run()<cr>", "run line"},
     i = {"<cmd>lua require'sniprun'.info()<cr>", "sniprun info"},
     r = {"<cmd>lua require'sniprun'.reset()<cr>", "reset sniprun"},
-    r = {"<cmd>lua require'sniprun'.clear_repl()<cr>", "clear sniprun repl memory"},
+    c = {"<cmd>lua require'sniprun'.clear_repl()<cr>", "clear sniprun repl memory"},
     x = {"<cmd>lua require'sniprun.display'.close()<cr>", "close sniprun"},
     l = {"<cmd>lua require'sniprun.live_mode'.toggle()<cr>", "sniprun live mode toggle"},
     },
+  g = {
+    name = "gitsigns",
+    h = {
+      name = "hunk",
+      s = {":Gitsigns stage_hunk<CR>", "stage hunk"},
+      r = {":Gitsigns reset_hunk<CR>", "reset hunk"},
+      u = {"<cmd>lua package.loaded.gitsigns.undo_stage_hunk()<CR>", "undo stage hunk"},
+      p = {"<cmd>lua package.loaded.gitsigns.preview_hunk()<CR>", "preview hunk"},
+    },
+    s = {"<cmd>lua package.loaded.gitsigns.stage_buffer()<CR>", "stage buffer"},
+    r = {"<cmd>lua package.loaded.gitsigns.reset_buffer()<CR>", "reset buffer"},
+    t = {"<cmd>lua package.loaded.gitsigns.toggle_current_line_blame()<CR>", "toggle current line blame"},
+    b = {"<cmd>lua package.loaded.gitsigns.gs.blame_line{full=true}<CR>", "blame line full"},
+    d = {"<cmd>lua package.loaded.gitsigns.diffthis()<CR>", "diff this"},
+    D = {"<cmd>lua package.loaded.gitsigns.diffthis('~')<CR>", "diff this ~"},
+    x = {"<cmd>lua package.loaded.gitsigns.toggle_delete()<CR>", "toggle delete"},
+  },
 }, {
-  mode = "n", 
+  mode = "n",
   prefix = "<leader>"
 })
 
@@ -79,6 +96,7 @@ wk.register({
     name = "evaluate using sniprun",
     e = {"<cmd>lua require'sniprun'.run('v')<cr>", "run visual selection"},
   },
+  g = {"<C-U>Gitsigns select_hunk<CR>", "gitsigns selected hunk"},
 }, {
   mode = "v",
   prefix = "<leader>"
@@ -116,7 +134,7 @@ wk.register({
     d = {
       name = "jdtls debug",
       c = {"<cmd>lua require'jdtls'.test_class()<CR>","test class"},
-      c = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
+      m = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
       },
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
