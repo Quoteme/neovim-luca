@@ -52,13 +52,13 @@
   " Mappings only available to patched terminals. See quoteme/st-nix
   map <C-Tab> <cmd>BufferNext<CR>
   map <C-S-Tab> <cmd>BufferPrevious<CR>
-  map <M-Tab> <cmd>BufferMovePrevious<CR>
-  map <M-S-Tab> <cmd>BufferMoveNext<CR>
+  map <M-Tab> <cmd>BufferMoveNext<CR>
+  map <M-S-Tab> <cmd>BufferMovePrevious<CR>
   map <C-W> <cmd>BufferClose<CR>
   inoremap <C-Tab> <cmd>BufferNext<CR><ESC>
   inoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
-  inoremap <M-Tab> <cmd>BufferMovePrevious<CR><ESC>
-  inoremap <M-S-Tab> <cmd>BufferMoveNext<CR><ESC>
+  inoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
+  inoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
   inoremap <C-W> <cmd>BufferClose<CR><ESC>
     " We need to remap some keys for remapping ctrl-w to work
     map <C-S-H> <cmd>:wincmd h<CR>
