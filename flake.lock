@@ -97,22 +97,6 @@
         "type": "github"
       }
     },
-    "plugin:aerial.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651555103,
-        "narHash": "sha256-dX3PIek08o2cP7DRC1TDQjOLtidK9sBz9qQnx68hAEU=",
-        "owner": "stevearc",
-        "repo": "aerial.nvim",
-        "rev": "b4c84e98c15bee424b396261f25744d1b41c3bfc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "stevearc",
-        "repo": "aerial.nvim",
-        "type": "github"
-      }
-    },
     "plugin:auto-session": {
       "flake": false,
       "locked": {
@@ -465,6 +449,22 @@
         "type": "github"
       }
     },
+    "plugin:nvim-code-action-menu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647509555,
+        "narHash": "sha256-fD9luuZe5mVkJTTtngH0jnwtqljhSZp0OFobBa4uqZI=",
+        "owner": "weilbith",
+        "repo": "nvim-code-action-menu",
+        "rev": "a864a79c8e024d4f5d95915210188c9c3430b160",
+        "type": "github"
+      },
+      "original": {
+        "owner": "weilbith",
+        "repo": "nvim-code-action-menu",
+        "type": "github"
+      }
+    },
     "plugin:nvim-colorizer.lua": {
       "flake": false,
       "locked": {
@@ -638,6 +638,22 @@
       "original": {
         "owner": "nvim-lua",
         "repo": "popup.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:symbols-outline.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651371938,
+        "narHash": "sha256-kYv6GZq8EVkuH266e26e4/HDoiYP0Du75CQgDsXqFJw=",
+        "owner": "simrat39",
+        "repo": "symbols-outline.nvim",
+        "rev": "15ae99c27360ab42e931be127d130611375307d5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "simrat39",
+        "repo": "symbols-outline.nvim",
         "type": "github"
       }
     },
@@ -968,7 +984,6 @@
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:LuaSnip": "plugin:LuaSnip",
-        "plugin:aerial.nvim": "plugin:aerial.nvim",
         "plugin:auto-session": "plugin:auto-session",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
@@ -991,6 +1006,7 @@
         "plugin:neoscroll.nvim": "plugin:neoscroll.nvim",
         "plugin:nui.nvim": "plugin:nui.nvim",
         "plugin:nvim-cmp": "plugin:nvim-cmp",
+        "plugin:nvim-code-action-menu": "plugin:nvim-code-action-menu",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
         "plugin:nvim-dap": "plugin:nvim-dap",
         "plugin:nvim-jdtls": "plugin:nvim-jdtls",
@@ -1002,6 +1018,7 @@
         "plugin:onedark-vim": "plugin:onedark-vim",
         "plugin:plenary.nvim": "plugin:plenary.nvim",
         "plugin:popup.nvim": "plugin:popup.nvim",
+        "plugin:symbols-outline.nvim": "plugin:symbols-outline.nvim",
         "plugin:tabular": "plugin:tabular",
         "plugin:telescope.nvim": "plugin:telescope.nvim",
         "plugin:twilight.nvim": "plugin:twilight.nvim",
@@ -1031,7 +1048,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-JqerfaWnFrpLwRFGhRPP98kDqBKeeQdH6cL3mmJsyNU=",
+        "narHash": "sha256-V3us8p0GYTGZHqsI9n4Bo1H6RcKvbEeBMEwLJlK6e2I=",
         "path": "./runtime/",
         "type": "path"
       },

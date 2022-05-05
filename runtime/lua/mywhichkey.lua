@@ -2,6 +2,7 @@
 local wk = require("which-key")
 wk.setup{}
 wk.register({
+  a = {":CodeActionMenu<CR>", "code action"},
   b = {
     name = "buffer settings",
     l = {":Buffers<CR>", "list Buffers"},
@@ -86,15 +87,15 @@ wk.register({
     D = {"<cmd>lua package.loaded.gitsigns.diffthis('~')<CR>", "diff this ~"},
     x = {"<cmd>lua package.loaded.gitsigns.toggle_delete()<CR>", "toggle delete"},
   },
-  a = {
-    name = "aerial.nvim",
-    t = {"<cmd>AerialToggle!<CR>", "toggle aerial"},
-    T = {"<cmd>AerialTreeToggle!<CR>", "toggle aerial tree"},
-    p = {"<cmd>AerialPrev<CR>", "aerial previous"},
-    n = {"<cmd>AerialNext<CR>", "aerial next"},
-    P = {"<cmd>AerialPrevUp<CR>", "aerial previous up"},
-    N = {"<cmd>AerialNextUp<CR>", "aerial next up"},
-  },
+  -- a = {
+  --   name = "aerial.nvim",
+  --   t = {"<cmd>AerialToggle!<CR>", "toggle aerial"},
+  --   T = {"<cmd>AerialTreeToggle!<CR>", "toggle aerial tree"},
+  --   p = {"<cmd>AerialPrev<CR>", "aerial previous"},
+  --   n = {"<cmd>AerialNext<CR>", "aerial next"},
+  --   P = {"<cmd>AerialPrevUp<CR>", "aerial previous up"},
+  --   N = {"<cmd>AerialNextUp<CR>", "aerial next up"},
+  -- },
   f = {
     name = "neotree",
     f = {":Neotree filesystem toggle left<CR>", "show filesystem"},
@@ -116,6 +117,7 @@ wk.register({
 
 
 wk.register({
+  a = {":CodeActionMenu<CR>", "code action"},
   e = {
     name = "evaluate using sniprun",
     e = {"<cmd>lua require'sniprun'.run('v')<cr>", "run visual selection"},

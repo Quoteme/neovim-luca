@@ -102,6 +102,11 @@
           url = "github:neovim/nvim-lspconfig";
           flake = false;
         };
+        # code actions
+        "plugin:nvim-code-action-menu" = {
+          url = "github:weilbith/nvim-code-action-menu";
+          flake = false;
+        };
         # Completion Engine
           "plugin:nvim-cmp" = {
             url = "github:hrsh7th/nvim-cmp";
@@ -166,31 +171,35 @@
               url = "github:zbirenbaum/copilot-cmp";
               flake = false;
             };
-          # Documentation
-            "plugin:neogen" = {
-              url = "github:danymat/neogen";
+        # Documentation
+          "plugin:neogen" = {
+            url = "github:danymat/neogen";
+            flake = false;
+          };
+        # File browsing
+          "plugin:neo-tree" = {
+            url = "github:nvim-neo-tree/neo-tree.nvim";
+            flake = false;
+          };
+          # Required by neo-tree
+            "plugin:nui.nvim" = {
+              url = "github:MunifTanjim/nui.nvim";
               flake = false;
             };
-          # File browsing
-            "plugin:neo-tree" = {
-              url = "github:nvim-neo-tree/neo-tree.nvim";
-              flake = false;
-            };
-            # Required by neo-tree
-              "plugin:nui.nvim" = {
-                url = "github:MunifTanjim/nui.nvim";
-                flake = false;
-              };
-          # Code browsing
-            "plugin:aerial.nvim" = {
-              url = "github:stevearc/aerial.nvim";
-              flake = false;
-            };
-          # Code testing
-            "plugin:vim-test" = {
-              url = "github:vim-test/vim-test";
-              flake = false;
-            };
+        # Code browsing
+          # "plugin:aerial.nvim" = {
+          #   url = "github:stevearc/aerial.nvim";
+          #   flake = false;
+          # };
+          "plugin:symbols-outline.nvim" = {
+            url = "github:simrat39/symbols-outline.nvim";
+            flake = false;
+          };
+        # Code testing
+          "plugin:vim-test" = {
+            url = "github:vim-test/vim-test";
+            flake = false;
+          };
       # Code execution
         # TODO sniprun is installed from nixpkgs. Add nixpkgs option
         # "plugin:sniprun" = {
