@@ -241,6 +241,20 @@
         url = "github:Raimondi/delimitMate";
         flake = false;
       };
+      # folding
+        "plugin:fold-cycle.nvim" = {
+          url = "github:jghauser/fold-cycle.nvim";
+          flake = false;
+        };
+        "plugin:pretty-fold.nvim" = {
+          url = "github:anuvyklack/pretty-fold.nvim";
+          flake = false;
+        };
+        # for preview of folds:
+          "plugin:nvim-keymap-amend" = {
+            url = "github:anuvyklack/nvim-keymap-amend";
+            flake = false;
+          };
       # "plugin:fzf.vim" = {
       #   url = "github:junegunn/fzf.vim";
       #   flake = false;

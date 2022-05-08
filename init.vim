@@ -25,13 +25,13 @@
   set incsearch ignorecase        " Increase search
   set smartcase             " Override the 'ignorecase' option if the
                       " search pattern contains upper case characters.
-  " set foldmethod=expr
-  " set foldexpr=nvim_treesitter#foldexpr()
+  set foldmethod=expr
+  set foldexpr=nvim_treesitter#foldexpr()
   " set foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
   " set fillchars=fold:\ 
   " set foldnestmax=3
   " set foldminlines=1
-  set foldmethod=manual
+  " set foldmethod=manual
   set mouse=a
   set undofile undodir=~/.vim/tmp/undo/ " Set undofiles (undo files even if you exited the file)
   set splitbelow              " Splits open at the bottom and right
@@ -166,6 +166,15 @@ EOF
 " Copilot
 lua << EOF
 -- vim.schedule(function() require("copilot") end)
+EOF
+
+" cycle folds
+lua require('fold-cycle').setup()
+
+" pretty-fold.nvim
+lua << EOF
+require('pretty-fold').setup()
+require('pretty-fold.preview').setup()
 EOF
 
 " Neogen

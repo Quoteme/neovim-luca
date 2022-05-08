@@ -198,5 +198,9 @@ wk.register({
     g = {"<cmd>Telescope live_grep<cr>"  , "find with live grep"},
     b = {"<cmd>Telescope buffers<cr>"    , "find in buffers"},
     h = {"<cmd>Telescope help_tags<cr>"  , "help tags"},
+    -- cycle folds
+    c = {"<cmd>lua require('fold-cycle').close()<CR>", "fold: close  level"},
+    o = {"<cmd>lua require('fold-cycle').open()<CR>", "fold: open  level"},
+    t = {"<cmd>lua require('fold-cycle').toggle_all()<CR>", "fold: toggle "},
     }
 })
