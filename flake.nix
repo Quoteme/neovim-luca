@@ -483,6 +483,8 @@
                                   clojure-lsp
                                 # C
                                   clang-tools
+                                # Cmake
+                                  cmake-language-server
                                 # Java
                                   jdk11
                                   java-language-server

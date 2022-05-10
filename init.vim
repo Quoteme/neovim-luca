@@ -295,6 +295,7 @@ local servers = {
   'clojure_lsp',
   'rls',
   'clangd',
+  'cmake',
   'ltex'}
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
