@@ -169,7 +169,11 @@ lua << EOF
 EOF
 
 " cycle folds
-lua require('fold-cycle').setup()
+lua << EOF
+require('fold-cycle').setup({
+  softwrap_movement_fix = false
+})
+EOF
 
 " pretty-fold.nvim
 lua << EOF
