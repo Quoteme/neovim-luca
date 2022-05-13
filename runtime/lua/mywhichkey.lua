@@ -53,6 +53,7 @@ wk.register({
     t = {"<cmd>lua vim.lsp.buf.type_definition()<CR>", "type definition"},
     r = {"<cmd>lua vim.lsp.buf.rename()<CR>", "rename"},
     a = {"<cmd>lua vim.lsp.buf.code_action()<CR>", "code action"},
+    A = {":CodeActionMenu<CR>", "code action menu"},
     R = {"<cmd>lua vim.lsp.buf.references()<CR>", "goto references"},
     l = {"<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", "show line diagnostics"},
     p = {"<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", "goto previous"},

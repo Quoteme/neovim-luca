@@ -102,9 +102,17 @@
           url = "github:neovim/nvim-lspconfig";
           flake = false;
         };
+        "plugin:lsp_signature.nvim" = {
+          url = "github:ray-x/lsp_signature.nvim";
+          flake = false;
+        };
         # code actions
         "plugin:nvim-code-action-menu" = {
           url = "github:weilbith/nvim-code-action-menu";
+          flake = false;
+        };
+        "plugin:nvim-lightbulb" = {
+          url = "github:kosayoda/nvim-lightbulb";
           flake = false;
         };
         # Completion Engine
