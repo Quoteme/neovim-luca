@@ -386,6 +386,18 @@ require('gitsigns').setup()
 EOF
 
 " code action sign collumn
+lua << EOF
+require'nvim-lightbulb'.setup({
+  sign = {
+    enabled = true
+  },
+  status_text = {
+    enabled = true,
+    text = "",
+    text_unavailable = ""
+  }
+})
+EOF
 autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 
 " colorscheme
