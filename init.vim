@@ -506,8 +506,7 @@ EOF
   map <F1> :set spell!<CR>
 
 " build nix projects with <F9>
-  map <F9> :!nix-build<space>--quiet<enter>
-  map <S-F9> :!nix-build<enter>
+  map <F9> :!nix build<enter>
 
 " neotree file browsing
   nnoremap <F5> :Neotree filesystem toggle left<CR>
@@ -520,7 +519,7 @@ EOF
   autocmd FileType sage set syntax=python
 
 " GO
-  autocmd FileType go noremap <F5> <ESC>:GoRun
+  autocmd FileType go noremap <F10> <ESC>:GoRun
 
 " C
   autocmd FileType c setlocal tabstop=2
@@ -541,20 +540,20 @@ EOF
   autocmd FileType nix setlocal expandtab
 
 " LaTex
-  autocmd FileType tex map <F5> :!pdflatex<space>%<enter>
+  autocmd FileType tex map <F10> :!pdflatex<space>%<enter>
 
 " RMARKDOWN
   " If it is a bookdown book
   if filereadable("_build.sh")
-    autocmd FileType rmarkdown map <F5> :!./_build.sh<enter>
+    autocmd FileType rmarkdown map <F10> :!./_build.sh<enter>
   " Otherwise
   else
-    autocmd FileType rmarkdown map <F5> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
+    autocmd FileType rmarkdown map <F10> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
   endif
   autocmd FileType rmadkdown setlocal expandtab
 " MARKDOWN
   autocmd FileType markdown setlocal expandtab
-  autocmd FileType markdown map <F5> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
+  autocmd FileType markdown map <F10> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
 
 " " CLOJURE
 "   autocmd FileType clojure :Lein
