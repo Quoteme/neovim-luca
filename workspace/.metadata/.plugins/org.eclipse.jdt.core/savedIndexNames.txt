@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/luca/OneDrive/dev/shell/neovim-luca/workspace/.metadata/.plugins/org.eclipse.jdt.core
-1865797976.index
-3842426239.index
-2362064913.index
