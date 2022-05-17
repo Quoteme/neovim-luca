@@ -769,6 +769,22 @@
         "type": "github"
       }
     },
+    "plugin:todo-comments.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642601933,
+        "narHash": "sha256-8uj5TxO9XZlSCB4lVRbKRc1IlUEKcBf/4bDviwuxEgs=",
+        "owner": "folke",
+        "repo": "todo-comments.nvim",
+        "rev": "98b1ebf198836bdc226c0562b9f906584e6c400e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "todo-comments.nvim",
+        "type": "github"
+      }
+    },
     "plugin:twilight.nvim": {
       "flake": false,
       "locked": {
@@ -1106,6 +1122,7 @@
         "plugin:symbols-outline.nvim": "plugin:symbols-outline.nvim",
         "plugin:tabular": "plugin:tabular",
         "plugin:telescope.nvim": "plugin:telescope.nvim",
+        "plugin:todo-comments.nvim": "plugin:todo-comments.nvim",
         "plugin:twilight.nvim": "plugin:twilight.nvim",
         "plugin:vim-commentary": "plugin:vim-commentary",
         "plugin:vim-dispatch": "plugin:vim-dispatch",

@@ -153,15 +153,18 @@
             #   url = "github:hrsh7th/vim-vsnip";
             #   flake = false;
             # };
-            # "plugin:cmp-vsnip" = { # TODO add custom snippts
+            # TODO add custom snippts
+            # "plugin:cmp-vsnip" = {
             #   url = "github:hrsh7th/cmp-vsnip";
             #   flake = false;
             # };
-            "plugin:friendly-snippets" = { # TODO add custom snippts
+            # TODO add custom snippts
+            "plugin:friendly-snippets" = {
               url = "github:rafamadriz/friendly-snippets";
               flake = false;
             };
-            "plugin:vim-snippets" = { # TODO add custom snippts
+            # TODO add custom snippts
+            "plugin:vim-snippets" = {
               url = "github:honza/vim-snippets";
               flake = false;
             };
@@ -201,6 +204,10 @@
           # };
           "plugin:symbols-outline.nvim" = {
             url = "github:simrat39/symbols-outline.nvim";
+            flake = false;
+          };
+          "plugin:todo-comments.nvim" = {
+            url = "github:folke/todo-comments.nvim";
             flake = false;
           };
         # Code testing

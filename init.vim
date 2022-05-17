@@ -65,7 +65,6 @@
     map <C-S-J> <cmd>:wincmd k<CR>
     map <C-S-K> <cmd>:wincmd j<CR>
     map <C-S-L> <cmd>:wincmd l<CR>
-  " Fix ugly red backgrounds TODO is this still needed?
   autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
   " Automatically deletes all tralling whitespace on save.
     " autocmd BufWritePre * %s/\s\+$//e
@@ -368,9 +367,9 @@ lua << EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    disable = function(lang, bufnr) -- Disable in python because this is currently broken TODO fix this
-      return lang == "python" or lang == "vim"
-    end,
+    -- disable = function(lang, bufnr) -- Disable in python because this is currently broken TODO fix this
+    --   return lang == "python" or lang == "vim"
+    -- end,
   },
   rainbow = { -- nvim-ts-rainbow
     enable = true,
@@ -378,6 +377,13 @@ require'nvim-treesitter.configs'.setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
   }
 }
+EOF
+
+" todo-comments
+lua << EOF
+  require("todo-comments").setup {
+    signs = false,
+  }
 EOF
 
 " gitsigns.nvim
@@ -464,8 +470,6 @@ EOF
   let delimitMate_expand_cr=1
 
 " vim-skeleton
-  " TODO: This should be baked into the nix derivation
-  " let g:skeleton_template_dir = "/etc/nixos/nvim/skeleton/"
   let g:skeleton_replacements = {}
   function! g:skeleton_replacements.DATE()
     return strftime("%Y-%m-%d %a %H:%M %S")
@@ -512,8 +516,8 @@ EOF
   nnoremap <F5> :Neotree filesystem toggle left<CR>
 " symbols-outline code browsing
   nnoremap <F6> :SymbolsOutline<CR>
-" prettyfy file
-  nnoremap <F3> mzgggqG`z
+" todo-comments
+  nnoremap <F3> :TodoTelescope<CR>
 
 " Sage
   autocmd FileType sage set syntax=python
