@@ -17,6 +17,11 @@
       url = "https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz";
       flake = false;
     };
+
+    java-debug = {
+      url = "github:microsoft/java-debug";
+      flake = false;
+    };
     
     # runtime stores all the settings which will be copied into the vim runtime
     runtime = {
@@ -83,11 +88,12 @@
           url = "github:mfussenegger/nvim-jdtls";
           flake = false;
         };
+    # General help
+      # Debugging
         "plugin:nvim-dap" = {
           url = "github:mfussenegger/nvim-dap";
           flake = false;
         };
-    # General help
       # Tree-sitter
         "plugin:nvim-treesitter" = {
           url = "github:nvim-treesitter/nvim-treesitter";

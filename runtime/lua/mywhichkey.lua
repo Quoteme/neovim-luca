@@ -157,12 +157,23 @@ wk.register({
       c = {"<cmd>lua require'jdtls'.extract_constant(true)<CR>","extract constant"},
       C = {"<cmd>lua require'jdtls'.extract_constant(true)<CR>","extract constant"},
       m = {"<cmd>lua require'jdtls'.extract_method(true)<CR>","extract method"},
+      d = {
+        name = "jdtls debug",
+        c = {"<cmd>lua require'jdtls'.test_class()<CR>","test class"},
+        m = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
+        },
       },
     d = {
-      name = "jdtls debug",
-      c = {"<cmd>lua require'jdtls'.test_class()<CR>","test class"},
-      m = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
+      name = "debug",
+      b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "toggle breakpoint"},
+      c = {"<cmd>lua require'dap'.continue()<CR>", "continue"},
+      s = {
+        name = "step into/over",
+        i = {"<cmd>lua require'dap'.step_into()<CR>", "step into"},
+        o = {"<cmd>lua require'dap'.step_over()<CR>", "step over"},
       },
+      r = {"<cmd>lua require'dap'.repl.open()<CR>", "repl"},
+    }
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
   wk.register({
