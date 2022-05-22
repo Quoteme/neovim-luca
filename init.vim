@@ -362,11 +362,6 @@ nvim_lsp['sumneko_lua'].setup {
 }
 EOF
 
-" neovim Debug AdaPter
-lua << EOF
-local dap = require('dap')
-EOF
-
 " treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
