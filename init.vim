@@ -362,6 +362,12 @@ nvim_lsp['sumneko_lua'].setup {
 }
 EOF
 
+" Vimspector
+" let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
+" FIX: this currently needs to be installed using `./install_gadget.py --basedir $HOME/.vim/vimspector-config --all --force-all`
+let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
+" let g:vimspector_base_dir='/home/luca/.vim/vimspector-config'
+
 " treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
@@ -499,23 +505,13 @@ EOF
 "|____/ \___|\__|\__|_|_| |_|\__, |___/
 "                            |___/
 
-" restore folds when reopening files
-  " augroup remember_folds
-  "   autocmd!
-  "   autocmd BufWinLeave * mkview
-  "   autocmd BufWinEnter * silent! loadview
-  " augroup END
-
-" enable spellchecker with F1
-  map <F1> :set spell!<CR>
-
-" build nix projects with <F9>
+" build nix projects
   map <F9> :!nix build<enter>
 
 " neotree file browsing
-  nnoremap <F5> :Neotree filesystem toggle left<CR>
+  nnoremap <F1> :Neotree filesystem toggle left<CR>
 " symbols-outline code browsing
-  nnoremap <F6> :SymbolsOutline<CR>
+  nnoremap <F2> :SymbolsOutline<CR>
 " todo-comments
   nnoremap <F3> :TodoTelescope<CR>
 
@@ -523,7 +519,7 @@ EOF
   autocmd FileType sage set syntax=python
 
 " GO
-  autocmd FileType go noremap <F10> <ESC>:GoRun
+  autocmd FileType go noremap <F9> <ESC>:GoRun<enter>
 
 " C
   autocmd FileType c setlocal tabstop=2
@@ -544,20 +540,20 @@ EOF
   autocmd FileType nix setlocal expandtab
 
 " LaTex
-  autocmd FileType tex map <F10> :!pdflatex<space>%<enter>
+  autocmd FileType tex map <F9> :!pdflatex<space>%<enter>
 
 " RMARKDOWN
   " If it is a bookdown book
   if filereadable("_build.sh")
-    autocmd FileType rmarkdown map <F10> :!./_build.sh<enter>
+    autocmd FileType rmarkdown map <F9> :!./_build.sh<enter>
   " Otherwise
   else
-    autocmd FileType rmarkdown map <F10> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
+    autocmd FileType rmarkdown map <F9> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
   endif
   autocmd FileType rmadkdown setlocal expandtab
 " MARKDOWN
   autocmd FileType markdown setlocal expandtab
-  autocmd FileType markdown map <F10> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
+  autocmd FileType markdown map <F9> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
 
 " " CLOJURE
 "   autocmd FileType clojure :Lein

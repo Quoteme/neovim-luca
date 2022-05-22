@@ -529,22 +529,6 @@
         "type": "github"
       }
     },
-    "plugin:nvim-dap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1650298230,
-        "narHash": "sha256-vc5WXPiTlEadFWUTHDusFnwjVSMSmdfQ8TOp4+AJo1w=",
-        "owner": "mfussenegger",
-        "repo": "nvim-dap",
-        "rev": "d6d8317ce9e096029150bc5844916347a9af6f45",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mfussenegger",
-        "repo": "nvim-dap",
-        "type": "github"
-      }
-    },
     "plugin:nvim-jdtls": {
       "flake": false,
       "locked": {
@@ -1073,6 +1057,22 @@
         "type": "github"
       }
     },
+    "plugin:vimspector": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652935997,
+        "narHash": "sha256-Ft96juwy2Tv6htazvYscWl+HLp1iueBtaJb0CTzDARQ=",
+        "owner": "puremourning",
+        "repo": "vimspector",
+        "rev": "4e03d5ea5c2d7efb8d1f5e73dcc917ad53b0bfb9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "puremourning",
+        "repo": "vimspector",
+        "type": "github"
+      }
+    },
     "plugin:which-key.nvim": {
       "flake": false,
       "locked": {
@@ -1123,7 +1123,6 @@
         "plugin:nvim-cmp": "plugin:nvim-cmp",
         "plugin:nvim-code-action-menu": "plugin:nvim-code-action-menu",
         "plugin:nvim-colorizer.lua": "plugin:nvim-colorizer.lua",
-        "plugin:nvim-dap": "plugin:nvim-dap",
         "plugin:nvim-jdtls": "plugin:nvim-jdtls",
         "plugin:nvim-keymap-amend": "plugin:nvim-keymap-amend",
         "plugin:nvim-lightbulb": "plugin:nvim-lightbulb",
@@ -1157,6 +1156,7 @@
         "plugin:vim-surround": "plugin:vim-surround",
         "plugin:vim-test": "plugin:vim-test",
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
+        "plugin:vimspector": "plugin:vimspector",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
         "runtime": "runtime",
         "snippets-java": "snippets-java",

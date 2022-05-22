@@ -90,8 +90,12 @@
         };
     # General help
       # Debugging
-        "plugin:nvim-dap" = {
-          url = "github:mfussenegger/nvim-dap";
+        # "plugin:nvim-dap" = {
+        #   url = "github:mfussenegger/nvim-dap";
+        #   flake = false;
+        # };
+        "plugin:vimspector" = {
+          url = "github:puremourning/vimspector";
           flake = false;
         };
       # Tree-sitter

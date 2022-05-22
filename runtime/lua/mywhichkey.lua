@@ -174,6 +174,33 @@ wk.register({
     --   },
     --   r = {"<cmd>lua require'dap'.repl.open()<CR>", "repl"},
     -- }
+    d = {
+      name = "debug (vimspector)",
+      c = {"<Plug>VimspectorContinue<CR>", "continue"},
+      s = {"<Plug>VimspectorStop<CR>", "stop"},
+      r = {"<Plug>VimsspectorRestart<CR>", "restart"},
+      p = {"<Plug>VimspectorPause<CR>", "pause"},
+      b = {"<Plug>VimspectorToggleBreakpoint<CR>", "breakpoint toggle"},
+      B = {
+        name = "breakpoint options",
+        l = {"<Plug>VimspectorBreakpoints<CR>", "breakpoint list"},
+        c = {"<Plug>VimspectorToggleConditionalBreakpoint<CR>", "conditional breakpoint toggle"},
+        f = {"<Plug>VimspectorAddFunctionBreakpoint<CR>", "function breakpoint toggle"},
+      },
+      C = {"<Plug>VimspectorRunToCursor<CR>", "run to cursor"},
+      l = {"<Plug>VimspectorGoToCurrentLine<CR>", "move to current line"},
+      S = {
+        name = "step",
+        i = {"<Plug>VimspectorStepInto<CR>", "step into"},
+        o = {"<Plug>VimspectorStepOver<CR>", "step over"},
+        O = {"<Plug>VimspectorStepOut<CR>", "step out"},
+      },
+      f = {
+        name = "frame",
+        u = {"<Plug>VimspectorUpFrame<CR>", "up frame"},
+        d = {"<Plug>VimspectorDownFrame<CR>", "down frame"},
+      }
+    }
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
   wk.register({
