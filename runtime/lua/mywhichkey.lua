@@ -163,17 +163,17 @@ wk.register({
         m = {"<cmd>lua require'jdtls'.test_nearest_method()<CR>","test nearest method"},
         },
       },
-    d = {
-      name = "debug",
-      b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "toggle breakpoint"},
-      c = {"<cmd>lua require'dap'.continue()<CR>", "continue"},
-      s = {
-        name = "step into/over",
-        i = {"<cmd>lua require'dap'.step_into()<CR>", "step into"},
-        o = {"<cmd>lua require'dap'.step_over()<CR>", "step over"},
-      },
-      r = {"<cmd>lua require'dap'.repl.open()<CR>", "repl"},
-    }
+    -- d = {
+    --   name = "debug",
+    --   b = {"<cmd>lua require'dap'.toggle_breakpoint()<CR>", "toggle breakpoint"},
+    --   c = {"<cmd>lua require'dap'.continue()<CR>", "continue"},
+    --   s = {
+    --     name = "step into/over",
+    --     i = {"<cmd>lua require'dap'.step_into()<CR>", "step into"},
+    --     o = {"<cmd>lua require'dap'.step_over()<CR>", "step over"},
+    --   },
+    --   r = {"<cmd>lua require'dap'.repl.open()<CR>", "repl"},
+    -- }
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
   wk.register({
