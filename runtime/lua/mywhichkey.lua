@@ -124,6 +124,7 @@ wk.register({
     e = {"<cmd>lua require'sniprun'.run('v')<cr>", "run visual selection"},
   },
   g = {"<C-U>Gitsigns select_hunk<CR>", "gitsigns selected hunk"},
+  i = {"<Plug>VimspectorBalloonEval<CR>", "vimspector inspect"}
 }, {
   mode = "v",
   prefix = "<leader>"
@@ -195,6 +196,7 @@ wk.register({
         o = {"<Plug>VimspectorStepOver<CR>", "step over"},
         O = {"<Plug>VimspectorStepOut<CR>", "step out"},
       },
+      i = {"<Plug>VimspectorBalloonEval<CR>", "debug inspect"},
       f = {
         name = "frame",
         u = {"<Plug>VimspectorUpFrame<CR>", "up frame"},
