@@ -178,8 +178,6 @@ wk.register({
     d = {
       name = "debug (vimspector)",
       c = {"<Plug>VimspectorContinue", "continue"},
-      s = {"<Plug>VimspectorStop", "stop"},
-      r = {"<Plug>VimsspectorRestart", "restart"},
       p = {"<Plug>VimspectorPause", "pause"},
       b = {"<Plug>VimspectorToggleBreakpoint", "breakpoint toggle"},
       B = {
@@ -193,15 +191,17 @@ wk.register({
       l = {":call vimspector#Launch()<CR>", "LAUNCH"},
       L = {"<Plug>VimspectorGoToCurrentLine", "move to current line"},
       S = {
-        name = "step / session",
+        name = "session",
+        s = {"<Plug>VimspectorStop", "stop"},
+        r = {"<Plug>VimsspectorRestart", "restart"},
+        S = {":VimspectorMkSession<CR>", "save session"},
+        L = {":VimspectorLoadSession<CR>", "load session"},
+      },
+      s = {
+        name = "step",
         i = {"<Plug>VimspectorStepInto", "step into"},
         o = {"<Plug>VimspectorStepOver", "step over"},
         O = {"<Plug>VimspectorStepOut", "step out"},
-        s = {
-          name = "session",
-          s = {":VimspectorMkSession<CR>", "save session"},
-          l = {":VimspectorLoadSession<CR>", "load session"},
-        }
       },
       i = {"<Plug>VimspectorBalloonEval", "debug inspect"},
       f = {
