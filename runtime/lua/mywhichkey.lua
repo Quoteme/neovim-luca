@@ -177,30 +177,36 @@ wk.register({
     -- }
     d = {
       name = "debug (vimspector)",
-      c = {"<Plug>VimspectorContinue<CR>", "continue"},
-      s = {"<Plug>VimspectorStop<CR>", "stop"},
-      r = {"<Plug>VimsspectorRestart<CR>", "restart"},
-      p = {"<Plug>VimspectorPause<CR>", "pause"},
-      b = {"<Plug>VimspectorToggleBreakpoint<CR>", "breakpoint toggle"},
+      c = {"<Plug>VimspectorContinue", "continue"},
+      s = {"<Plug>VimspectorStop", "stop"},
+      r = {"<Plug>VimsspectorRestart", "restart"},
+      p = {"<Plug>VimspectorPause", "pause"},
+      b = {"<Plug>VimspectorToggleBreakpoint", "breakpoint toggle"},
       B = {
         name = "breakpoint options",
-        l = {"<Plug>VimspectorBreakpoints<CR>", "breakpoint list"},
-        c = {"<Plug>VimspectorToggleConditionalBreakpoint<CR>", "conditional breakpoint toggle"},
-        f = {"<Plug>VimspectorAddFunctionBreakpoint<CR>", "function breakpoint toggle"},
+        l = {"<Plug>VimspectorBreakpoints", "breakpoint list"},
+        c = {"<Plug>VimspectorToggleConditionalBreakpoint", "conditional breakpoint toggle"},
+        f = {"<Plug>VimspectorAddFunctionBreakpoint", "function breakpoint toggle"},
       },
-      C = {"<Plug>VimspectorRunToCursor<CR>", "run to cursor"},
-      l = {"<Plug>VimspectorGoToCurrentLine<CR>", "move to current line"},
+      C = {"<Plug>VimspectorRunToCursor", "run to cursor"},
+      l = {":call vimspector#Launch()<CR>", "LAUNCH"},
+      L = {"<Plug>VimspectorGoToCurrentLine", "move to current line"},
       S = {
-        name = "step",
-        i = {"<Plug>VimspectorStepInto<CR>", "step into"},
-        o = {"<Plug>VimspectorStepOver<CR>", "step over"},
-        O = {"<Plug>VimspectorStepOut<CR>", "step out"},
+        name = "step / session",
+        i = {"<Plug>VimspectorStepInto", "step into"},
+        o = {"<Plug>VimspectorStepOver", "step over"},
+        O = {"<Plug>VimspectorStepOut", "step out"},
+        s = {
+          name = "session",
+          s = {":VimspectorMkSession<CR>", "save session"},
+          l = {":VimspectorLoadSession<CR>", "load session"},
+        }
       },
-      i = {"<Plug>VimspectorBalloonEval<CR>", "debug inspect"},
+      i = {"<Plug>VimspectorBalloonEval", "debug inspect"},
       f = {
         name = "frame",
-        u = {"<Plug>VimspectorUpFrame<CR>", "up frame"},
-        d = {"<Plug>VimspectorDownFrame<CR>", "down frame"},
+        u = {"<Plug>VimspectorUpFrame", "up frame"},
+        d = {"<Plug>VimspectorDownFrame", "down frame"},
       }
     }
   }, { prefix = "<localleader>" })
