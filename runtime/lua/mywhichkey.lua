@@ -186,6 +186,7 @@ wk.register({
         name = "breakpoint options",
         l = {"<Plug>VimspectorBreakpoints", "breakpoint list"},
         c = {"<Plug>VimspectorToggleConditionalBreakpoint", "conditional breakpoint toggle"},
+        C = {":call vimspector#ClearBreakpoints()", "clear all breakpoints"},
         f = {"<Plug>VimspectorAddFunctionBreakpoint", "function breakpoint toggle"},
       },
       C = {"<Plug>VimspectorRunToCursor", "run to cursor"},
