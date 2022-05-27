@@ -55,11 +55,13 @@
   map <M-Tab> <cmd>BufferMoveNext<CR>
   map <M-S-Tab> <cmd>BufferMovePrevious<CR>
   map <C-W> <cmd>BufferClose<CR>
+  map <C-S-W> <cmd>BufferClose!<CR>
   inoremap <C-Tab> <cmd>BufferNext<CR><ESC>
   inoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
   inoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
   inoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
   inoremap <C-W> <cmd>BufferClose<CR><ESC>
+  inoremap <C-S-W> <cmd>BufferClose!<CR>
     " We need to remap some keys for remapping ctrl-w to work
     map <C-S-H> <cmd>:wincmd h<CR>
     map <C-S-J> <cmd>:wincmd k<CR>
@@ -463,6 +465,11 @@ require('jdtls').start_or_attach({
     -- 💀
     '-data', workspace_dir
     },
+  init_options = {
+    bundles = {
+      vim.fn.glob("~/.vim/vimspector-config/gadgets/linux/vscode-java-debug/server/com.microsoft.java.debug.plugin-*.jar")
+    }
+  },
 })
 EOF
 
