@@ -515,6 +515,8 @@
                                   java-language-server
                                 # Lua
                                   sumneko-lua-language-server
+                                # Dart
+                                  dart
                               # Other dependencies
                                 xclip
                                 # Spelling and grammar
