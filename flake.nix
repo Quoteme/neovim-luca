@@ -196,10 +196,10 @@
             };
           # Github Copilot
             # This is only needed for authentication
-            "plugin:copilot.vim" = {
-              url = "github:github/copilot.vim";
-              flake = false;
-            };
+            # "plugin:copilot.vim" = {
+            #   url = "github:github/copilot.vim";
+            #   flake = false;
+            # };
             "plugin:copilot.lua" = {
               url = "github:zbirenbaum/copilot.lua";
               flake = false;
