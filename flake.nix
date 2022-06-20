@@ -142,6 +142,10 @@
             url = "github:hrsh7th/cmp-path";
             flake = false;
           };
+          "plugin:cmp-spell" = {
+            url = "github:f3fora/cmp-spell";
+            flake = false;
+          };
           # Snippets
             "plugin:LuaSnip" = {
               url = "github:L3MON4D3/LuaSnip";
