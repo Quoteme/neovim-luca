@@ -142,6 +142,22 @@
             url = "github:hrsh7th/cmp-path";
             flake = false;
           };
+          "plugin:cmp-spell" = {
+            url = "github:f3fora/cmp-spell";
+            flake = false;
+          };
+          "plugin:cmp-latex-symbols" = {
+            url = "github:kdheepak/cmp-latex-symbols";
+            flake = false;
+          };
+          "plugin:cmp-emoji" = {
+            url = "github:hrsh7th/cmp-emoji";
+            flake = false;
+          };
+          "plugin:cmp-pandoc.nvim" = {
+            url = "github:aspeddro/cmp-pandoc.nvim";
+            flake = false;
+          };
           # Snippets
             "plugin:LuaSnip" = {
               url = "github:L3MON4D3/LuaSnip";
@@ -180,10 +196,10 @@
             };
           # Github Copilot
             # This is only needed for authentication
-            # "plugin:copilot.vim" = {
-            #   url = "github:github/copilot.vim";
-            #   flake = false;
-            # };
+            "plugin:copilot.vim" = {
+              url = "github:github/copilot.vim";
+              flake = false;
+            };
             "plugin:copilot.lua" = {
               url = "github:zbirenbaum/copilot.lua";
               flake = false;

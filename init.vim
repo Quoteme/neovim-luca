@@ -40,7 +40,7 @@
   set wildmenu
   set lazyredraw              " redraw only when we need to.
   set colorcolumn=72            " limit the text input
-  set nospell spelllang=en_us,de_de     " spellchecker
+  set spell spelllang=en_us,de_de     " spellchecker
   set termguicolors             " true color support
 
 " Autocommands and keyboard-shortcuts
@@ -250,12 +250,25 @@ lua <<EOF
     sources = {
       { name = "copilot" },
       { name = 'nvim_lsp' },
+      { name = 'cmp_pandoc' },
+      { name = 'emoji' },
+      { name = "latex_symbols" },
       -- { name = 'vsnip' }, -- For vsnip users
+      { name = 'spell' },
       { name = 'luasnip' }, -- For luasnip users
-      { name = 'buffer' },
+      { name = 'buffer',
+        option = {
+          keyword_pattern = [[\k\+]],
+        }
+      },
       { name = 'path' },
     }
   })
+require'cmp_pandoc'.setup({
+  crossref = {
+    enable_nabla = true
+  }
+})
 EOF
 
 " lspconfig
