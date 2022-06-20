@@ -252,7 +252,11 @@ lua <<EOF
       { name = 'nvim_lsp' },
       -- { name = 'vsnip' }, -- For vsnip users
       { name = 'luasnip' }, -- For luasnip users
-      { name = 'buffer' },
+      { name = 'buffer',
+        option = {
+          keyword_pattern = [[\k\+]],
+        }
+      },
       { name = 'path' },
     }
   })
