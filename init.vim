@@ -250,6 +250,7 @@ lua <<EOF
     sources = {
       { name = "copilot" },
       { name = 'nvim_lsp' },
+      { name = "latex_symbols" },
       -- { name = 'vsnip' }, -- For vsnip users
       { name = 'luasnip' }, -- For luasnip users
       { name = 'buffer',

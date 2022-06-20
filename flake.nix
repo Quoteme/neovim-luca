@@ -146,6 +146,10 @@
             url = "github:f3fora/cmp-spell";
             flake = false;
           };
+          "plugin:cmp-latex-symbols" = {
+            url = "github:kdheepak/cmp-latex-symbols";
+            flake = false;
+          };
           # Snippets
             "plugin:LuaSnip" = {
               url = "github:L3MON4D3/LuaSnip";
