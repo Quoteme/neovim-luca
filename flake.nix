@@ -361,7 +361,7 @@
         };
       # marks
         "plugin:marks.nvim" = {
-          url = "github:chentoast/marks.nvim";
+          url = "github:chentau/marks.nvim";
           flake = false;
         };
   };
@@ -510,7 +510,6 @@
                                 # LaTex
                                   texlab
                                 # Haskell
-                                  ghc
                                   haskell-language-server
                                   ormolu
                                 # JavaScript / Typescript
