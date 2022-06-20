@@ -166,7 +166,7 @@ EOF
 
 " Copilot
 lua << EOF
-vim.schedule(function() require("copilot") end)
+-- vim.schedule(function() require("copilot") end)
 EOF
 
 " cycle folds
