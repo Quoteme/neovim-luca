@@ -154,6 +154,10 @@
             url = "github:hrsh7th/cmp-emoji";
             flake = false;
           };
+          "plugin:cmp-pandoc.nvim" = {
+            url = "github:aspeddro/cmp-pandoc.nvim";
+            flake = false;
+          };
           # Snippets
             "plugin:LuaSnip" = {
               url = "github:L3MON4D3/LuaSnip";

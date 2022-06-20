@@ -250,6 +250,7 @@ lua <<EOF
     sources = {
       { name = "copilot" },
       { name = 'nvim_lsp' },
+      { name = 'cmp_pandoc' },
       { name = 'emoji' },
       { name = "latex_symbols" },
       -- { name = 'vsnip' }, -- For vsnip users
@@ -263,6 +264,11 @@ lua <<EOF
       { name = 'path' },
     }
   })
+require'cmp_pandoc'.setup({
+  crossref = {
+    enable_nabla = true
+  }
+})
 EOF
 
 " lspconfig
