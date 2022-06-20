@@ -150,6 +150,10 @@
             url = "github:kdheepak/cmp-latex-symbols";
             flake = false;
           };
+          "plugin:cmp-emoji" = {
+            url = "github:hrsh7th/cmp-emoji";
+            flake = false;
+          };
           # Snippets
             "plugin:LuaSnip" = {
               url = "github:L3MON4D3/LuaSnip";
