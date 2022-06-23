@@ -254,7 +254,7 @@ lua <<EOF
       { name = 'emoji' },
       { name = "latex_symbols" },
       -- { name = 'vsnip' }, -- For vsnip users
-      { name = 'spell' },
+      -- { name = 'spell' }, -- disabled because it is cumbersome to use
       { name = 'luasnip' }, -- For luasnip users
       { name = 'buffer',
         option = {
