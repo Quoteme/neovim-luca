@@ -753,6 +753,22 @@
         "type": "github"
       }
     },
+    "plugin:pandoc.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1648166495,
+        "narHash": "sha256-RXATsMgfMtQ4eb90dHi1CWcqTN/eSmopuu6CR6wG4Bs=",
+        "owner": "aspeddro",
+        "repo": "pandoc.nvim",
+        "rev": "26220db69935b36815ed85edb431f66c1315f831",
+        "type": "github"
+      },
+      "original": {
+        "owner": "aspeddro",
+        "repo": "pandoc.nvim",
+        "type": "github"
+      }
+    },
     "plugin:plenary.nvim": {
       "flake": false,
       "locked": {
@@ -1217,6 +1233,7 @@
         "plugin:nvim-ts-rainbow": "plugin:nvim-ts-rainbow",
         "plugin:nvim-web-devicons": "plugin:nvim-web-devicons",
         "plugin:onedark-vim": "plugin:onedark-vim",
+        "plugin:pandoc.nvim": "plugin:pandoc.nvim",
         "plugin:plenary.nvim": "plugin:plenary.nvim",
         "plugin:popup.nvim": "plugin:popup.nvim",
         "plugin:pretty-fold.nvim": "plugin:pretty-fold.nvim",

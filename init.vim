@@ -266,6 +266,7 @@ lua <<EOF
       { name = 'path' },
     }
   })
+require'pandoc'.setup()
 require'cmp_pandoc'.setup({
   crossref = {
     enable_nabla = true
@@ -577,6 +578,7 @@ EOF
 " MARKDOWN
   autocmd FileType markdown setlocal expandtab
   autocmd FileType markdown map <F9> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
+  autocmd FileType markdown map <S-F9> :!pandoc<space>%<space>-o<space>%:r.html<enter>
 
 " " CLOJURE
 "   autocmd FileType clojure :Lein

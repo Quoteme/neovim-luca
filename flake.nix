@@ -359,6 +359,10 @@
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
+        "plugin:pandoc.nvim" = {
+          url = "github:aspeddro/pandoc.nvim";
+          flake = false;
+        };
       # marks
         "plugin:marks.nvim" = {
           url = "github:chentoast/marks.nvim";
