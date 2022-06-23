@@ -578,8 +578,7 @@ EOF
   autocmd FileType rmadkdown setlocal expandtab
 " MARKDOWN
   autocmd FileType markdown setlocal expandtab
-  autocmd FileType markdown map <F9> :!pandoc<space>%<space>-o<space>%:r.pdf<enter>
-  autocmd FileType markdown map <S-F9> :!pandoc<space>%<space>-o<space>%:r.html<enter>
+  autocmd FileType markdown map <F9> :!grep -q "output_format: html" % && pandoc % -o %:r.pdf \|\| pandoc % -o %:r.pdf<enter>
 
 " " CLOJURE
 "   autocmd FileType clojure :Lein

@@ -49,7 +49,8 @@ ls.add_snippets("markdown",{
     "lastmod: "}), func(date, {}), text({"",
     "tags: ["}), insert(4), text({"]",
     "lang: "}), insert(5), text({"",
-    "header-includes: ","  - \\usepackage{amsthm}","  - "}), insert(6), text({"",
+    "output_format: "}), choice(6, {text({"html"}), text({"pdf"})}), text({"",
+    "header-includes: ","  - \\usepackage{amsthm}","  - "}), insert(7), text({"",
     "comments: true",
     "---", ""}),
     insert(0)

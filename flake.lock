@@ -1269,7 +1269,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-YkZ1v4eOVfTcoRj02v4rxiSWvel9VI7cMwPYzhTAq3A=",
+        "narHash": "sha256-cma+Z5sdclnlGIQBjnSVNBXrcWH8lS/lzmk9etCGj6E=",
         "path": "./runtime/",
         "type": "path"
       },
