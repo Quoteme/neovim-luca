@@ -40,6 +40,11 @@
         flake = false;
       };
     # Programming Language Specific stuff
+      # Yuck (for eww)
+        "plugin:yuck.vim" = {
+          url = "github:elkowar/yuck.vim";
+          flake = false;
+        };
       # SAGE
         "plugin:vim-sage" = {
           url = "github:petRUShka/vim-sage";

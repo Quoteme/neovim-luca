@@ -1185,6 +1185,22 @@
         "type": "github"
       }
     },
+    "plugin:yuck.vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1628507071,
+        "narHash": "sha256-lp7qJWkvelVfoLCyI0aAiajTC+0W1BzDhmtta7tnICE=",
+        "owner": "elkowar",
+        "repo": "yuck.vim",
+        "rev": "6dc3da77c53820c32648cf67cbdbdfb6994f4e08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "elkowar",
+        "repo": "yuck.vim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -1260,6 +1276,7 @@
         "plugin:vim-visual-multi": "plugin:vim-visual-multi",
         "plugin:vimspector": "plugin:vimspector",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
+        "plugin:yuck.vim": "plugin:yuck.vim",
         "runtime": "runtime",
         "snippets-java": "snippets-java",
         "snippets-shebang": "snippets-shebang"
