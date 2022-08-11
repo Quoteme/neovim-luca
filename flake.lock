@@ -129,22 +129,6 @@
         "type": "github"
       }
     },
-    "plugin:barbar.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1655485086,
-        "narHash": "sha256-76KeWaVS6y5+YeXLujmTk+6gTnIZ/2gqmOyAhpWDENc=",
-        "owner": "romgrk",
-        "repo": "barbar.nvim",
-        "rev": "d7123f0368aa7fdd10f587176ad60aedcdfa44de",
-        "type": "github"
-      },
-      "original": {
-        "owner": "romgrk",
-        "repo": "barbar.nvim",
-        "type": "github"
-      }
-    },
     "plugin:cheatsheet.nvim": {
       "flake": false,
       "locked": {
@@ -414,6 +398,22 @@
       "original": {
         "owner": "rafamadriz",
         "repo": "friendly-snippets",
+        "type": "github"
+      }
+    },
+    "plugin:gesture.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1659235264,
+        "narHash": "sha256-ZzJZBu5FHYXF9+Lw7xa1v/KC3Sr4ui/6C3QwB4xlemE=",
+        "owner": "notomo",
+        "repo": "gesture.nvim",
+        "rev": "1f79ae130789462674e476a1814bae2c79b26fff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notomo",
+        "repo": "gesture.nvim",
         "type": "github"
       }
     },
@@ -1210,7 +1210,6 @@
         "nixpkgs": "nixpkgs",
         "plugin:LuaSnip": "plugin:LuaSnip",
         "plugin:auto-session": "plugin:auto-session",
-        "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-emoji": "plugin:cmp-emoji",
@@ -1228,6 +1227,7 @@
         "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:fold-cycle.nvim": "plugin:fold-cycle.nvim",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
+        "plugin:gesture.nvim": "plugin:gesture.nvim",
         "plugin:gitsigns.nvim": "plugin:gitsigns.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:lsp_signature.nvim": "plugin:lsp_signature.nvim",

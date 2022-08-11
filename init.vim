@@ -104,6 +104,52 @@
 "|_|   |_|\__,_|\__, | |____/ \___|\__|\__|_|_| |_|\__, |___/
 "               |___/                              |___/
 
+" gesture.nvim
+lua << EOF
+vim.keymap.set("n", "<LeftDrag>", [[<Cmd>lua require("gesture").draw()<CR>]], { silent = true })
+vim.keymap.set("n", "<LeftRelease>", [[<Cmd>lua require("gesture").finish()<CR>]], { silent = true })
+
+local gesture = require("gesture")
+gesture.register({
+  name = "scroll up",
+  inputs = { gesture.up() },
+  action = "normal <c-u>",
+})
+gesture.register({
+  name = "scroll down",
+  inputs = { gesture.down() },
+  action = "normal <c-d>",
+})
+gesture.register({
+  name = "scroll to bottom",
+  inputs = { gesture.up(), gesture.down() },
+  action = "normal! G",
+})
+gesture.register({
+  name = "scroll to top",
+  inputs = { gesture.down(), gesture.up() },
+  action = "normal! gg",
+})
+gesture.register({
+  name = "next tab",
+  inputs = { gesture.right() },
+  action = "tabnext",
+})
+gesture.register({
+  name = "previous tab",
+  inputs = { gesture.left() },
+  action = function(ctx) -- also can use callable
+    vim.cmd.tabprevious()
+  end,
+})
+gesture.register({
+  name = "go back",
+  inputs = { gesture.right(), gesture.left() },
+  -- map to `<C-o>` keycode
+  action = [[lua vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-o>", true, false, true), "n", true)]],
+})
+EOF
+
 " Twilight
 lua << EOF
   require("twilight").setup {}
