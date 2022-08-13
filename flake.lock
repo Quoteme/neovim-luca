@@ -129,6 +129,22 @@
         "type": "github"
       }
     },
+    "plugin:barbar.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660118044,
+        "narHash": "sha256-wRj/YqpcBNGtPggAs7A121EVfZUQw2ynxP1rmi4thNk=",
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "rev": "8c6a2e6e472ff9b7dc0a53d9a3bd88f1fbc7da6d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romgrk",
+        "repo": "barbar.nvim",
+        "type": "github"
+      }
+    },
     "plugin:cheatsheet.nvim": {
       "flake": false,
       "locked": {
@@ -1210,6 +1226,7 @@
         "nixpkgs": "nixpkgs",
         "plugin:LuaSnip": "plugin:LuaSnip",
         "plugin:auto-session": "plugin:auto-session",
+        "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-emoji": "plugin:cmp-emoji",

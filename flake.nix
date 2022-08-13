@@ -355,10 +355,10 @@
            url = "github:kyazdani42/nvim-web-devicons";
            flake = false;
           };
-        # "plugin:barbar.nvim" = {
-        #    url = "github:romgrk/barbar.nvim";
-        #    flake = false;
-        #  };
+        "plugin:barbar.nvim" = {
+           url = "github:romgrk/barbar.nvim";
+           flake = false;
+         };
       # Note taking
         "plugin:nabla.nvim" = {
           url = "github:jbyuki/nabla.nvim";
