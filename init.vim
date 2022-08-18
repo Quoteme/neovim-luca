@@ -9,7 +9,6 @@
 " Environment variables:
   set nocompatible
   syntax on
-  filetype plugin indent on
   let mapleader=","
   let maplocalleader="-"
   set conceallevel=0
@@ -19,13 +18,14 @@
   set tabstop=2
   set shiftwidth=2
   set expandtab
-  set clipboard=unnamedplus       " Allow for use of system-wide copy and paste functions
-  set scrolloff=5             " Keep at least 3 lines above/below when scrolling
+  filetype plugin indent on
+  set clipboard=unnamedplus " Allow for use of system-wide copy and paste functions
+  set scrolloff=5           " Keep at least 3 lines above/below when scrolling
   set hlsearch              " Highlight search
-  set noswapfile              " Don't use swap file
-  set incsearch ignorecase        " Increase search
+  set noswapfile            " Don't use swap file
+  set incsearch ignorecase  " Increase search
   set smartcase             " Override the 'ignorecase' option if the
-                      " search pattern contains upper case characters.
+                            " search pattern contains upper case characters.
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
   " set foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
@@ -319,6 +319,15 @@ require'cmp_pandoc'.setup({
     enable_nabla = true
   }
 })
+EOF
+
+" trouble.nvim
+lua << EOF
+  require("trouble").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
 EOF
 
 " lspconfig

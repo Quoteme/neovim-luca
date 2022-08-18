@@ -113,6 +113,10 @@
           flake = false;
         };
       # Language Server Protocol
+        "plugin:trouble.nvim" = {
+          url = "github:folke/trouble.nvim";
+          flake = false;
+        };
         "plugin:nvim-lspconfig" = {
           url = "github:neovim/nvim-lspconfig";
           flake = false;
