@@ -203,6 +203,11 @@
               url = "github:honza/vim-snippets";
               flake = false;
             };
+            # Language specific snippets
+              "plugin:dartlang-snippets" = {
+                url = "github:natebosch/dartlang-snippets";
+                flake = false;
+              };
           # Github Copilot
             # This is only needed for authentication
             "plugin:copilot.vim" = {

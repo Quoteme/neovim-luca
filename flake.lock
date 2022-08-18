@@ -353,6 +353,22 @@
         "type": "github"
       }
     },
+    "plugin:dartlang-snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1629479636,
+        "narHash": "sha256-mKJim252LXgJUOk9E/3+D+92pPAaG5RrZ/6flfDq8gU=",
+        "owner": "natebosch",
+        "repo": "dartlang-snippets",
+        "rev": "6ec48e1693ff9576e53dcbf358b32c70d1828ba8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "natebosch",
+        "repo": "dartlang-snippets",
+        "type": "github"
+      }
+    },
     "plugin:delimitMate": {
       "flake": false,
       "locked": {
@@ -1256,6 +1272,7 @@
         "plugin:copilot-cmp": "plugin:copilot-cmp",
         "plugin:copilot.lua": "plugin:copilot.lua",
         "plugin:copilot.vim": "plugin:copilot.vim",
+        "plugin:dartlang-snippets": "plugin:dartlang-snippets",
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:fold-cycle.nvim": "plugin:fold-cycle.nvim",
