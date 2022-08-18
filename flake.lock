@@ -820,11 +820,11 @@
     "plugin:pretty-fold.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1651369514,
-        "narHash": "sha256-GhPSqkCHToZazJv8hDNGfhN8NZyRvplNv0ZKNEnC7FU=",
+        "lastModified": 1658330126,
+        "narHash": "sha256-PQPZw0qXwMtpVE4uSxR3xUvkHE9iG4T+ZwgV6H9pUjo=",
         "owner": "anuvyklack",
         "repo": "pretty-fold.nvim",
-        "rev": "e6385d62eec67fdc8a21700b42a701d0d6fb8b32",
+        "rev": "a7d8b424abe0eedf50116c460fbe6dfd5783b1d5",
         "type": "github"
       },
       "original": {
@@ -894,6 +894,22 @@
       "original": {
         "owner": "folke",
         "repo": "todo-comments.nvim",
+        "type": "github"
+      }
+    },
+    "plugin:trouble.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652074521,
+        "narHash": "sha256-YfhujgR+EGtvBVAk7VSIWudyUIXVv+LQVPBV9FMuRKk=",
+        "owner": "folke",
+        "repo": "trouble.nvim",
+        "rev": "da61737d860ddc12f78e638152834487eabf0ee5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "trouble.nvim",
         "type": "github"
       }
     },
@@ -1274,6 +1290,7 @@
         "plugin:tabular": "plugin:tabular",
         "plugin:telescope.nvim": "plugin:telescope.nvim",
         "plugin:todo-comments.nvim": "plugin:todo-comments.nvim",
+        "plugin:trouble.nvim": "plugin:trouble.nvim",
         "plugin:twilight.nvim": "plugin:twilight.nvim",
         "plugin:vim-commentary": "plugin:vim-commentary",
         "plugin:vim-dispatch": "plugin:vim-dispatch",
@@ -1303,7 +1320,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-bOw+yGdzhaKL9J5jx3Vf50yNNLvTUYyJXhiupmXfJ3A=",
+        "narHash": "sha256-eK60ZAbFv2NadledrtzgwzbLISQLL0RYTtYzfe4wWwg=",
         "path": "./runtime/",
         "type": "path"
       },

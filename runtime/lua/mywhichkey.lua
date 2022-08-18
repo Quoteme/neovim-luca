@@ -13,7 +13,7 @@ wk.register({
     c = {"<cmd>BufferClose<CR>", "close buffer"},
     },
   --t = {":tab ball<CR>", "make all Buffers tabs"},
-  z = {":twilight<CR>", "toggle twilight"},
+  z = {":Twilight<CR>", "toggle twilight"},
   n = {
     name = "Nabla latex view",
     a = {"<cmd>lua require('nabla').action()<CR>", "action"},
@@ -60,6 +60,16 @@ wk.register({
     n = {"<cmd>lua vim.diagnostic.goto_next()<CR>", "goto next"},
     S = {"<cmd>lua vim.diagnostic.set_loclist()<CR>", "set loclist"},
     f = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "format"},
+    o = {
+      name = "Overview diagnostics",
+      o = {"<cmd>TroubleToggle<CR>", "toggle overview"},
+      w = {"<cmd>TroubleToggle<CR>", "toggle workspace overview"},
+      d = {"<cmd>TroubleToggle<CR>", "toggle document overview"},
+      q = {"<cmd>TroubleToggle<CR>", "toggle quickfix overview"},
+      l = {"<cmd>TroubleToggle<CR>", "toggle loclist overview"},
+      r = {"<cmd>TroubleToggle<CR>", "toggle LSP references"},
+      g = {"<cmd>lua trouble.open_with_trouble<CR>", "go to result"},
+    }
     },
   e = {
     name = "evaluate using sniprun",
