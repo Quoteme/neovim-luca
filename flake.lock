@@ -385,22 +385,6 @@
         "type": "github"
       }
     },
-    "plugin:flutter-tools.nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1660673020,
-        "narHash": "sha256-SahmJbXXrFBq0uHoBWV+6dhA1sX8GTSbc6ncHUyNMFI=",
-        "owner": "akinsho",
-        "repo": "flutter-tools.nvim",
-        "rev": "78551498310e25055ec26d0f8dec2b5297043676",
-        "type": "github"
-      },
-      "original": {
-        "owner": "akinsho",
-        "repo": "flutter-tools.nvim",
-        "type": "github"
-      }
-    },
     "plugin:focus.nvim": {
       "flake": false,
       "locked": {
@@ -1025,22 +1009,6 @@
         "type": "github"
       }
     },
-    "plugin:vim-flutter": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1654339473,
-        "narHash": "sha256-HGviAM1AvyucJzHJxshGFJxHzCEBmj68+KxFqnxJZ/s=",
-        "owner": "thosakwe",
-        "repo": "vim-flutter",
-        "rev": "32b9fa0126a4a4994c296c69ad038dc78aa83d68",
-        "type": "github"
-      },
-      "original": {
-        "owner": "thosakwe",
-        "repo": "vim-flutter",
-        "type": "github"
-      }
-    },
     "plugin:vim-jack-in": {
       "flake": false,
       "locked": {
@@ -1322,7 +1290,6 @@
         "plugin:copilot.vim": "plugin:copilot.vim",
         "plugin:dartlang-snippets": "plugin:dartlang-snippets",
         "plugin:delimitMate": "plugin:delimitMate",
-        "plugin:flutter-tools.nvim": "plugin:flutter-tools.nvim",
         "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:fold-cycle.nvim": "plugin:fold-cycle.nvim",
         "plugin:fold-preview.nvim": "plugin:fold-preview.nvim",
@@ -1362,7 +1329,6 @@
         "plugin:vim-commentary": "plugin:vim-commentary",
         "plugin:vim-dispatch": "plugin:vim-dispatch",
         "plugin:vim-dispatch-neovim": "plugin:vim-dispatch-neovim",
-        "plugin:vim-flutter": "plugin:vim-flutter",
         "plugin:vim-jack-in": "plugin:vim-jack-in",
         "plugin:vim-matchup": "plugin:vim-matchup",
         "plugin:vim-nix": "plugin:vim-nix",
