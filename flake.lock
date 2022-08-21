@@ -433,6 +433,22 @@
         "type": "github"
       }
     },
+    "plugin:fold-preview.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1660061136,
+        "narHash": "sha256-kMjm+q9Jm+YRrdxZp7yGsQSB0BmJzBrowbJzl6LHkqs=",
+        "owner": "anuvyklack",
+        "repo": "fold-preview.nvim",
+        "rev": "33c24101dc1b2be29876ee3354de98bb8bd14cb0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anuvyklack",
+        "repo": "fold-preview.nvim",
+        "type": "github"
+      }
+    },
     "plugin:friendly-snippets": {
       "flake": false,
       "locked": {
@@ -1309,6 +1325,7 @@
         "plugin:flutter-tools.nvim": "plugin:flutter-tools.nvim",
         "plugin:focus.nvim": "plugin:focus.nvim",
         "plugin:fold-cycle.nvim": "plugin:fold-cycle.nvim",
+        "plugin:fold-preview.nvim": "plugin:fold-preview.nvim",
         "plugin:friendly-snippets": "plugin:friendly-snippets",
         "plugin:gesture.nvim": "plugin:gesture.nvim",
         "plugin:gitsigns.nvim": "plugin:gitsigns.nvim",

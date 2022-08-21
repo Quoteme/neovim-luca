@@ -315,6 +315,10 @@
           flake = false;
         };
         # for preview of folds:
+          "plugin:fold-preview.nvim" = {
+            url = "github:anuvyklack/fold-preview.nvim";
+            flake = false;
+          };
           "plugin:nvim-keymap-amend" = {
             url = "github:anuvyklack/nvim-keymap-amend";
             flake = false;

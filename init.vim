@@ -226,7 +226,7 @@ EOF
 " pretty-fold.nvim
 lua << EOF
 require('pretty-fold').setup()
-require('pretty-fold.preview').setup()
+require('fold-preview').setup()
 EOF
 
 " Neogen
