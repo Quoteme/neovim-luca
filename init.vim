@@ -45,6 +45,9 @@
   set termguicolors             " true color support
 
 " Autocommands and keyboard-shortcuts
+  " Code action on alt-enter like intellij
+  inoremap <a-cr> <esc>:CodeActionMenu<CR>
+  nnoremap <a-cr> <esc>:CodeActionMenu<CR>
   " German keyboard fix
   nmap ö '
   nmap ü [
@@ -222,6 +225,10 @@ require('fold-cycle').setup({
   softwrap_movement_fix = false
 })
 EOF
+inoremap <c-+> <cmd>lua require('fold-cycle').open()<CR>
+nnoremap <c-+> <cmd>lua require('fold-cycle').open()<CR>
+inoremap <c--> <cmd>lua require('fold-cycle').close()<CR>
+nnoremap <c--> <cmd>lua require('fold-cycle').close()<CR>
 
 " pretty-fold.nvim
 lua << EOF
