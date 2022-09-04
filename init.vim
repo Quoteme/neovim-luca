@@ -484,15 +484,15 @@ lua << EOF
 require'nvim-lightbulb'.setup({
   sign = {
     enabled = true
+    priority = 10,
   },
   status_text = {
     enabled = true,
-    text = "",
+    text = "💡",
     text_unavailable = ""
   }
 })
 EOF
-autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 
 " colorscheme
   colorscheme onedark
