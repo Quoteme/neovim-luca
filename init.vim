@@ -483,7 +483,7 @@ EOF
 lua << EOF
 require'nvim-lightbulb'.setup({
   sign = {
-    enabled = true
+    enabled = true,
     priority = 10,
   },
   status_text = {
