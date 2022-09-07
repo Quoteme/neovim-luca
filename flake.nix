@@ -40,6 +40,11 @@
         flake = false;
       };
     # Programming Language Specific stuff
+      # Dart / Flutter
+        "plugin:dart-vim-plugin" = {
+          url = "github:dart-lang/dart-vim-plugin";
+          flake = false;
+        };
       # Yuck (for eww)
         "plugin:yuck.vim" = {
           url = "github:elkowar/yuck.vim";

@@ -353,6 +353,22 @@
         "type": "github"
       }
     },
+    "plugin:dart-vim-plugin": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1653333307,
+        "narHash": "sha256-NkmOlwVxObva/ka6xT54oYqIUSD2A9rZ9aMq5seOKHY=",
+        "owner": "dart-lang",
+        "repo": "dart-vim-plugin",
+        "rev": "81e50e80329e5eac2c115f45585b1838a614d07a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dart-lang",
+        "repo": "dart-vim-plugin",
+        "type": "github"
+      }
+    },
     "plugin:dartlang-snippets": {
       "flake": false,
       "locked": {
@@ -1288,6 +1304,7 @@
         "plugin:copilot-cmp": "plugin:copilot-cmp",
         "plugin:copilot.lua": "plugin:copilot.lua",
         "plugin:copilot.vim": "plugin:copilot.vim",
+        "plugin:dart-vim-plugin": "plugin:dart-vim-plugin",
         "plugin:dartlang-snippets": "plugin:dartlang-snippets",
         "plugin:delimitMate": "plugin:delimitMate",
         "plugin:focus.nvim": "plugin:focus.nvim",
