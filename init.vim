@@ -453,11 +453,11 @@ let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 " treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all",
   highlight = {
     enable = true,
-    -- disable = function(lang, bufnr) -- Disable in python because this is currently broken TODO fix this
-    --   return lang == "python" or lang == "vim"
-    -- end,
+    disable = {"dart"}
+    end,
   },
   rainbow = { -- nvim-ts-rainbow
     enable = true,
