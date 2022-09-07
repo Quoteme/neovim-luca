@@ -453,8 +453,8 @@ let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 " treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  parser_install_dir = "~/.config/treesitter_parsers",
-  ensure_installed = "all",
+  -- parser_install_dir = "~/.config/treesitter_parsers",
+  -- ensure_installed = "all",
   highlight = {
     enable = true,
     disable = {"dart"},
@@ -465,7 +465,7 @@ require'nvim-treesitter.configs'.setup {
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
   }
 }
-vim.opt.runtimepath:append("~/.config/treesitter_parsers")
+-- vim.opt.runtimepath:append("~/.config/treesitter_parsers")
 EOF
 
 " todo-comments
