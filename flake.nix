@@ -612,7 +612,7 @@
             # Treesitter
               gcc
             toilet
-            nodejs
+            nodejs-16_x
             packages.ltex-ls
           ];
           # if you wish to only load the onedark-vim colorscheme:
