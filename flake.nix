@@ -555,9 +555,7 @@
                                 # Clojure
                                   clojure-lsp
                                 # C
-                                  # clang-tools needs to be wrapped for each project specifically
-                                  # therefore each project needs to add its own clang-tools
-                                  # clang-tools
+                                  clang-tools
                                 # Cmake
                                   cmake-language-server
                                 # Java
