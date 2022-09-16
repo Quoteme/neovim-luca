@@ -496,7 +496,10 @@ require'nvim-lightbulb'.setup({
 EOF
 
 " colorscheme
-  colorscheme onedark
+" colorscheme onedark
+  let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+  lua require("catppuccin").setup()
+  colorscheme catppuccin
 
 " markdown
   let g:vim_markdown_folding_disabled = 1

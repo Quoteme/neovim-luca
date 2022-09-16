@@ -29,9 +29,13 @@
       flake = false;
     };
 
-    # Theme
+    # Theme / Colorscheme
       "plugin:onedark-vim" = {
         url = "github:joshdick/onedark.vim";
+        flake = false;
+      };
+      "plugin:catppuccin" = {
+        url = "github:catppuccin/nvim";
         flake = false;
       };
     # Splits and windows
