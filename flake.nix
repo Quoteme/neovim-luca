@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "nixpkgs/nixos-22.05";
     flake-utils = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/flake-utils";
@@ -398,7 +399,7 @@
         };
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, flake-utils, ... }@inputs:
     # This line makes this package availeable for all systems
     # ("x86_64-linux", "aarch64-linux", "i686-linux", "x86_64-darwin",...)
     flake-utils.lib.eachDefaultSystem (system:
@@ -452,6 +453,14 @@
               plugins);
           };
 
+        # allow stable software to be used in this unstable environment
+        overlay-stable = final: prev: {
+          stable = import nixpkgs-stable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        };
+
         # Apply the overlay and load nixpkgs as `pkgs`
         pkgs = import nixpkgs {
           inherit system;
@@ -460,6 +469,7 @@
             (final: prev: {
               neovim-unwrapped = inputs.neovim-flake.packages.${prev.system}.neovim;
             })
+            overlay-stable
           ];
         };
 
@@ -612,7 +622,7 @@
             # Treesitter
               gcc
             toilet
-            nodejs
+            stable.nodejs
             packages.ltex-ls
           ];
           # if you wish to only load the onedark-vim colorscheme:
