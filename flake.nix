@@ -551,7 +551,7 @@
                                 # Python
                                   python39Packages.jedi-language-server
                                 # Rust
-                                  rls
+                                  rust-analyzer
                                 # Clojure
                                   clojure-lsp
                                 # C

@@ -379,7 +379,7 @@ local servers = {
   'rnix',
   'jedi_language_server',
   'clojure_lsp',
-  'rls',
+  'rust_analyzer',
   'clangd',
   'cmake',
   'ltex',
