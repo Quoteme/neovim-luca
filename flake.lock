@@ -113,22 +113,6 @@
         "type": "github"
       }
     },
-    "plugin:auto-session": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1660145586,
-        "narHash": "sha256-fHqhf7JqDSzCYdognXHwsoRhHDrGRfbQ/Q/SjfOSMlU=",
-        "owner": "rmagatti",
-        "repo": "auto-session",
-        "rev": "9c302e01ebb474f9b19998488060d9f110ef75c5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rmagatti",
-        "repo": "auto-session",
-        "type": "github"
-      }
-    },
     "plugin:barbar.nvim": {
       "flake": false,
       "locked": {
@@ -1305,7 +1289,6 @@
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "plugin:LuaSnip": "plugin:LuaSnip",
-        "plugin:auto-session": "plugin:auto-session",
         "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:catppuccin": "plugin:catppuccin",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",

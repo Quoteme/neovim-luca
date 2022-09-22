@@ -351,10 +351,10 @@
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
-      "plugin:auto-session" = {
-        url = "github:rmagatti/auto-session";
-        flake = false;
-      };
+      # "plugin:auto-session" = {
+      #   url = "github:rmagatti/auto-session";
+      #   flake = false;
+      # };
       # Cheatcheet
         "plugin:plenary.nvim" = {
           url = "github:nvim-lua/plenary.nvim";
