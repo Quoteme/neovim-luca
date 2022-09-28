@@ -2,6 +2,7 @@
 -- Load VSCode like snippets from external plugins
 require("luasnip.loaders.from_vscode").lazy_load()
 -- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.env.VIMRUNTIME .. "/snippets/" } })
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = { vim.env.VIMRUNTIME .. "/snippets/" } })
 
 
 -- Custom snippets
@@ -668,25 +669,18 @@ ls.add_snippets("nix",{
     text({"        pkgs = import nixpkgs { inherit system; };",""}),
     text({"      in",""}),
     text({"        rec {",""}),
-    text({"          defaultApp = apps."}),insert(2, "app_name"),text({";",""}),
-    text({"          defaultPackage = packages."}),insert(3, "package_name"),text({";",""}),
-    text({"",""}),
-    text({"          apps."}),ri(2),text({" = {",""}),
-    text({"            type = \"app\";",""}),
-    text({"            program = \"${defaultPackage}/bin/"}),insert(4, "default_binary"),text({"\";",""}),
-    text({"          };"}),
-    text({"",""}),
-    text({"          packages."}),ri(3),text({" = "}),insert(5, "derivation"),text({"",""}),
+    text({"          defaultPackage = packages."}),insert(2, "package_name"),text({";",""}),
+    text({"          packages."}),ri(2),text({" = "}),insert(3, "derivation"),text({"",""}),
     text({"        }",""}),
     text({"      );",""}),
     text({"}"}),
   }),
   snip({
-    trig="derivation",
-    name="stdenv.mkDerivation",
+    trig="mkDerivation",
+    name="pkgs.stdenv.mkDerivation",
     dscr="Simple derivation",
     },{
-    text({"stdenv.mkDerivation {", ""}),
+    text({"pkgs.stdenv.mkDerivation {", ""}),
     text({"  name = \""}),insert(1, "name"),text({"\";",""}),
     text({"  pname = \""}),ri(1),text({"\";",""}),
     text({"  version = \""}),insert(2, "1.0"),text({"\";",""}),
