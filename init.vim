@@ -45,6 +45,8 @@
   set termguicolors             " true color support
 
 " Autocommands and keyboard-shortcuts
+  " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
+  autocmd VimEnter  * :e
   " Code action on alt-enter like intellij
   inoremap <a-cr> <esc>:CodeActionMenu<CR>
   nnoremap <a-cr> <esc>:CodeActionMenu<CR>
@@ -71,7 +73,7 @@
     map <C-S-J> <cmd>:wincmd k<CR>
     map <C-S-K> <cmd>:wincmd j<CR>
     map <C-S-L> <cmd>:wincmd l<CR>
-  autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
+  " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
   " Automatically deletes all tralling whitespace on save.
     " autocmd BufWritePre * %s/\s\+$//e
   " Disables automatic commenting on newline:
