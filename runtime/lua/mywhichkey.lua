@@ -59,7 +59,7 @@ wk.register({
     p = {"<cmd>lua vim.diagnostic.goto_prev()<CR>", "goto previous"},
     n = {"<cmd>lua vim.diagnostic.goto_next()<CR>", "goto next"},
     S = {"<cmd>lua vim.diagnostic.set_loclist()<CR>", "set loclist"},
-    f = {"<cmd>lua vim.lsp.buf.formatting()<CR>", "format"},
+    f = {"<cmd>lua vim.lsp.buf.format { async = true }<CR>", "format"},
     o = {
       name = "Overview diagnostics",
       o = {"<cmd>TroubleToggle<CR>", "toggle overview"},

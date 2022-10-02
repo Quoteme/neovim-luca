@@ -1371,7 +1371,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-86WyujTRd+u4lg/274zx3aibzVIK51BwDpL2lZeiZdQ=",
+        "narHash": "sha256-0MC/7YZtzkGklIz265jKbHqvOs8U5dc5nJ1mCFz8fUQ=",
         "path": "./runtime/",
         "type": "path"
       },
