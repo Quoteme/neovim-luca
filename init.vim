@@ -398,14 +398,7 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-nvim_lsp['jdtls'].setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
-  flags = {
-    debounce_text_changes = 150,
-  },
-  cmd = {vim.env.RUNTIME_EXTRA .. "/jdt-language-server/bin/jdtls"},
-}
+
 -- sumneko_lua - Lua Language Server
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
@@ -520,39 +513,6 @@ EOF
     nunmap <buffer><C-n>
     nunmap <buffer><C-p>
   endfunction
-
-" nvim-jdtls
-lua <<EOF
--- If you started neovim within `~/dev/xy/project-1` this would resolve to `project-1`
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = '~/.jdtls-workspace/' .. project_name
-require('jdtls').start_or_attach({
-  cmd = {
-    -- 💀
-    'java', 
-    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-    '-Dosgi.bundles.defaultStartLevel=4',
-    '-Declipse.product=org.eclipse.jdt.ls.core.product',
-    '-Dlog.protocol=true',
-    '-Dlog.level=ALL',
-    '-Xms1g',
-    '--add-modules=ALL-SYSTEM',
-    '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-    '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
-    -- 💀
-    '-jar', vim.env.RUNTIME_EXTRA .. '/jdt-language-server/bin/jdtls',
-    -- 💀
-    '-configuration', vim.env.RUNTIME_EXTRA .. '/jdt-language-server/config_linux',
-    -- 💀
-    '-data', workspace_dir
-    },
-  init_options = {
-    bundles = {
-      vim.fn.glob("~/.vim/vimspector-config/gadgets/linux/vscode-java-debug/server/com.microsoft.java.debug.plugin-*.jar")
-    }
-  },
-})
-EOF
 
 " vim2hs
   "let g:haskell_conceal_wide = 1
