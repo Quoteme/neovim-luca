@@ -202,9 +202,7 @@ EOF
 "   \ }))<CR><enter>
 
 " WhichKey
-lua << EOF
-require"mywhichkey"
-EOF
+:luafile $RUNTIME_EXTRA/lua/mywhichkey.lua
 
 " SnipRun
 lua << EOF
@@ -245,7 +243,7 @@ require('neogen').setup({ snippet_engine = "luasnip" })
 EOF
 
 " Luasnip
-lua require"myluasnip"
+:luafile $RUNTIME_EXTRA/lua/myluasnip.lua
 
 " Nvim-Cmp
 set completeopt=menu,menuone,noselect
@@ -406,7 +404,7 @@ nvim_lsp['jdtls'].setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = {vim.env.VIMRUNTIME .. "/jdt-language-server/bin/jdtls"},
+  cmd = {vim.env.RUNTIME_EXTRA .. "/jdt-language-server/bin/jdtls"},
 }
 -- sumneko_lua - Lua Language Server
 local runtime_path = vim.split(package.path, ';')
@@ -542,9 +540,9 @@ require('jdtls').start_or_attach({
     '--add-opens', 'java.base/java.util=ALL-UNNAMED',
     '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
     -- 💀
-    '-jar', vim.env.VIMRUNTIME .. '/jdt-language-server/bin/jdtls',
+    '-jar', vim.env.RUNTIME_EXTRA .. '/jdt-language-server/bin/jdtls',
     -- 💀
-    '-configuration', vim.env.VIMRUNTIME .. '/jdt-language-server/config_linux',
+    '-configuration', vim.env.RUNTIME_EXTRA .. '/jdt-language-server/config_linux',
     -- 💀
     '-data', workspace_dir
     },
