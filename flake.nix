@@ -24,8 +24,8 @@
     };
     
     # runtime stores all the settings which will be copied into the vim runtime
-    runtime = {
-      url = "path:./runtime/";
+    runtime_extra = {
+      url = "path:./runtime_extra/";
       flake = false;
     };
 
@@ -511,15 +511,6 @@
                               # TODO find out why this is here
                               pkgs.stdenv.cc.cc.lib
                             ];
-                            postInstall = ''
-                              # runtime is in $out/share/nvim/runtime
-                              # snippet stuff
-                              mkdir -p $out/share/nvim/runtime/snippets
-                              # TODO: These snippets do not get loaded yet :(
-                              cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
-                              cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
-                              cp -r ${inputs.runtime}/* $out/share/nvim/runtime/
-                            '';
                           });
                           neovim-wrapped = pkgs.wrapNeovim myNeovimUnwrapped {
                             inherit viAlias;
@@ -548,6 +539,9 @@
                                 # Haskell
                                   haskell-language-server
                                   ormolu
+                                # html
+                                  nodePackages.vscode-html-languageserver-bin
+                                  nodePackages.vscode-css-languageserver-bin
                                 # JavaScript / Typescript
                                   nodePackages.javascript-typescript-langserver
                                 # NIX
@@ -584,8 +578,12 @@
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin \
                                 --set JAVA_HOME ${pkgs.jdk11} \
-                                --set JDTLS_HOME ${inputs.runtime}/jdt-language-server
+                                --set JDTLS_HOME ${inputs.runtime_extra}/jdt-language-server
+                                --set RUNTIME_EXTRA ${inputs.runtime_extra}
 # /nix/store/ca5mg50y6hrx0klwnb7p6mjlnr4ihlm5-neovim-unwrapped-master/share/nvim/
+                              cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
+                              cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
+                              cp -r ${inputs.runtime_extra}/* $out/share/nvim/runtime/
                             '';
                           };
                         in
