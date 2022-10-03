@@ -399,6 +399,16 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+-- Java language server
+nvim_lsp.java_language_server.setup {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
+  cmd = {"java-language-server"},
+  flags = {
+    debounce_text_changes = 150,
+  }
+}
+
 -- sumneko_lua - Lua Language Server
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")

@@ -577,8 +577,6 @@
                               # add external dependencies to path of neovim
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin \
-                                --set JAVA_HOME ${pkgs.jdk11} \
-                                --set JDTLS_HOME ${inputs.runtime_extra}/jdt-language-server \
                                 --set RUNTIME_EXTRA ${inputs.runtime_extra}
 # /nix/store/ca5mg50y6hrx0klwnb7p6mjlnr4ihlm5-neovim-unwrapped-master/share/nvim/
                               mkdir -p $out/share/nvim/runtime/snippets/
