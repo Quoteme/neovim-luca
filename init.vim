@@ -76,6 +76,9 @@
   " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
   " Automatically deletes all tralling whitespace on save.
     " autocmd BufWritePre * %s/\s\+$//e
+  " Save and restore view (including folds) automatically
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
   " Disables automatic commenting on newline:
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
   " Make 0 go to the first character rather than the beginning
