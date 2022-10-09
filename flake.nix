@@ -23,12 +23,6 @@
       flake = false;
     };
     
-    # runtime stores all the settings which will be copied into the vim runtime
-    runtime_extra = {
-      url = "path:./runtime_extra/";
-      flake = false;
-    };
-
     # Theme / Colorscheme
       "plugin:onedark-vim" = {
         url = "github:joshdick/onedark.vim";
@@ -568,6 +562,7 @@
                                 # Spelling and grammar
                                   languagetool
                             ] ++ depencies;
+                            src = ./.;
                             nativeBuildInputs = [ pkgs.makeWrapper ];
                             postBuild = ''
                               # Add ltex-ls
@@ -577,12 +572,12 @@
                               # add external dependencies to path of neovim
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin \
-                                --set RUNTIME_EXTRA ${inputs.runtime_extra}
-# /nix/store/ca5mg50y6hrx0klwnb7p6mjlnr4ihlm5-neovim-unwrapped-master/share/nvim/
+                                --set RUNTIME_EXTRA $out/share/nvim/runtime_extra
                               mkdir -p $out/share/nvim/runtime/snippets/
                               cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
                               cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
-                              cp -r ${inputs.runtime_extra}/* $out/share/nvim/runtime/
+                              mkdir -p $out/share/nvim/runtime_extra
+                              cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/
                             '';
                           };
                         in

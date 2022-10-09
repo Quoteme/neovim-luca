@@ -1362,22 +1362,8 @@
         "plugin:vimspector": "plugin:vimspector",
         "plugin:which-key.nvim": "plugin:which-key.nvim",
         "plugin:yuck.vim": "plugin:yuck.vim",
-        "runtime_extra": "runtime_extra",
         "snippets-java": "snippets-java",
         "snippets-shebang": "snippets-shebang"
-      }
-    },
-    "runtime_extra": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-0MC/7YZtzkGklIz265jKbHqvOs8U5dc5nJ1mCFz8fUQ=",
-        "path": "./runtime_extra/",
-        "type": "path"
-      },
-      "original": {
-        "path": "./runtime_extra/",
-        "type": "path"
       }
     },
     "snippets-java": {
