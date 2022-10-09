@@ -1,4 +1,4 @@
-" vim: tabstop=2 shiftwidth=2 expandtab
+" vim: tabstop=2 shiftwidth=2 expandtab foldmethod=manual
 "       _
 "__   _(_)_ __ ___  _ __ ___
 "\ \ / / | '_ ` _ \| '__/ __|
@@ -44,67 +44,6 @@
   set spell spelllang=en_us,de_de     " spellchecker
   set termguicolors             " true color support
 
-" Autocommands and keyboard-shortcuts
-  " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
-  autocmd VimEnter  * :e
-  " Code action on alt-enter like intellij
-  inoremap <a-cr> <esc>:CodeActionMenu<CR>
-  nnoremap <a-cr> <esc>:CodeActionMenu<CR>
-  " German keyboard fix
-  nmap ö '
-  nmap ü [
-  nmap ä ]
-  nmap ß {
-  " Mappings only available to patched terminals. See quoteme/st-nix
-  map <C-Tab> <cmd>BufferNext<CR>
-  map <C-S-Tab> <cmd>BufferPrevious<CR>
-  map <M-Tab> <cmd>BufferMoveNext<CR>
-  map <M-S-Tab> <cmd>BufferMovePrevious<CR>
-  map <C-W> <cmd>BufferClose<CR>
-  map <C-S-W> <cmd>BufferClose!<CR>
-  inoremap <C-Tab> <cmd>BufferNext<CR><ESC>
-  inoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
-  inoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
-  inoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
-  inoremap <C-W> <cmd>BufferClose<CR><ESC>
-  inoremap <C-S-W> <cmd>BufferClose!<CR>
-    " We need to remap some keys for remapping ctrl-w to work
-    map <C-S-H> <cmd>:wincmd h<CR>
-    map <C-S-J> <cmd>:wincmd k<CR>
-    map <C-S-K> <cmd>:wincmd j<CR>
-    map <C-S-L> <cmd>:wincmd l<CR>
-  " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
-  " Automatically deletes all tralling whitespace on save.
-    " autocmd BufWritePre * %s/\s\+$//e
-  " Save and restore view (including folds) automatically
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent! loadview
-  " Disables automatic commenting on newline:
-    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-  " Make 0 go to the first character rather than the beginning
-  " " of the line. When we're programming, we're almost always
-  " " interested in working with text rather than empty space. If
-  " " you want the traditional beginning of line, use ^
-    nnoremap 0 ^
-    nnoremap ^ 0
-  " Fix the go to next line if wrap is enabled
-    nnoremap <expr> j v:count ? 'j' : 'gj'
-    nnoremap <expr> k v:count ? 'k' : 'gk'
-  " Return to last edit position when opening files (You want this!)
-    augroup Remember_cursor_position
-      autocmd!
-      autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-    augroup END
-  " Show spaces as red if there's nothing after it (stole Greg Hurrel)
-    augroup TrailWhiteSpaces
-      highlight ColorColumn ctermbg=1
-      autocmd BufWinEnter <buffer> match Error /\s\+$/
-      autocmd InsertEnter <buffer> match Error /\s\+\%#\@<!$/
-      autocmd InsertLeave <buffer> match Error /\s\+$/
-      autocmd BufWinLeave <buffer> call clearmatches()
-    augroup END
-
-
 " ____  _               ____       _   _   _
 "|  _ \| |_   _  __ _  / ___|  ___| |_| |_(_)_ __   __ _ ___
 "| |_) | | | | |/ _` | \___ \ / _ \ __| __| | '_ \ / _` / __|
@@ -117,6 +56,7 @@ lua << EOF
 vim.keymap.set("n", "<LeftDrag>", [[<Cmd>lua require("gesture").draw()<CR>]], { silent = true })
 vim.keymap.set("n", "<LeftRelease>", [[<Cmd>lua require("gesture").finish()<CR>]], { silent = true })
 
+-- TODO: make scrolling work
 local gesture = require("gesture")
 gesture.register({
   name = "scroll up",
@@ -188,21 +128,6 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 EOF
-
-" FZF
-" fun! s:openFileAtLocation(result)
-"   if len(a:result) == 0
-"     return
-"   endif
-"   let filePos = split(a:result, ':')
-"   exec 'edit +' . l:filePos[1] . ' ' . l:filePos[0]
-" endfun
-
-" nnoremap <Leader>f :call fzf#run(fzf#wrap({
-"   \ 'source': 'rg --line-number ''.*''',
-"   \ 'options': '--delimiter : --preview "bat --style=plain --color=always {1} -H {2}" --preview-window "+{2}/2"',
-"   \ 'sink': function('<sid>openFileAtLocation'),
-"   \ }))<CR><enter>
 
 " WhichKey
 :luafile $RUNTIME_EXTRA/lua/mywhichkey.lua
@@ -373,8 +298,7 @@ local on_attach = function(client, bufnr)
   -- lsp-signature
   require "lsp_signature".on_attach()
 end
--- Use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
+
 local servers = {
   'texlab',
   'hls',
@@ -388,6 +312,7 @@ local servers = {
   'dartls',
   'denols'
 }
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -592,6 +517,66 @@ EOF
 "|____/ \___|\__|\__|_|_| |_|\__, |___/
 "                            |___/
 
+" Autocommands and keyboard-shortcuts
+  " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
+  autocmd VimEnter  * :e
+  " Code action on alt-enter like intellij
+  inoremap <a-cr> <esc>:CodeActionMenu<CR>
+  nnoremap <a-cr> <esc>:CodeActionMenu<CR>
+  " German keyboard fix
+  nmap ö '
+  nmap ü [
+  nmap ä ]
+  nmap ß {
+  " Mappings only available to patched terminals. See quoteme/st-nix
+  map <C-Tab> <cmd>BufferNext<CR>
+  map <C-S-Tab> <cmd>BufferPrevious<CR>
+  map <M-Tab> <cmd>BufferMoveNext<CR>
+  map <M-S-Tab> <cmd>BufferMovePrevious<CR>
+  map <C-W> <cmd>BufferClose<CR>
+  map <C-S-W> <cmd>BufferClose!<CR>
+  inoremap <C-Tab> <cmd>BufferNext<CR><ESC>
+  inoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
+  inoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
+  inoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
+  inoremap <C-W> <cmd>BufferClose<CR><ESC>
+  inoremap <C-S-W> <cmd>BufferClose!<CR>
+    " We need to remap some keys for remapping ctrl-w to work
+    map <C-S-H> <cmd>:wincmd h<CR>
+    map <C-S-J> <cmd>:wincmd k<CR>
+    map <C-S-K> <cmd>:wincmd j<CR>
+    map <C-S-L> <cmd>:wincmd l<CR>
+  " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
+  " Automatically deletes all tralling whitespace on save.
+    " autocmd BufWritePre * %s/\s\+$//e
+  " Save and restore view (including folds) automatically
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
+  " Disables automatic commenting on newline:
+    autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  " Make 0 go to the first character rather than the beginning
+  " " of the line. When we're programming, we're almost always
+  " " interested in working with text rather than empty space. If
+  " " you want the traditional beginning of line, use ^
+    nnoremap 0 ^
+    nnoremap ^ 0
+  " Fix the go to next line if wrap is enabled
+    nnoremap <expr> j v:count ? 'j' : 'gj'
+    nnoremap <expr> k v:count ? 'k' : 'gk'
+  " Return to last edit position when opening files (You want this!)
+    augroup Remember_cursor_position
+      autocmd!
+      autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    augroup END
+  " Show spaces as red if there's nothing after it (stole Greg Hurrel)
+    augroup TrailWhiteSpaces
+      highlight ColorColumn ctermbg=1
+      autocmd BufWinEnter <buffer> match Error /\s\+$/
+      autocmd InsertEnter <buffer> match Error /\s\+\%#\@<!$/
+      autocmd InsertLeave <buffer> match Error /\s\+$/
+      autocmd BufWinLeave <buffer> call clearmatches()
+    augroup END
+
 " build nix projects
   map <F9> :!nix build<enter>
 
@@ -639,6 +624,7 @@ EOF
     autocmd FileType rmarkdown map <F9> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
   endif
   autocmd FileType rmadkdown setlocal expandtab
+
 " MARKDOWN
   autocmd FileType markdown setlocal expandtab
   autocmd FileType markdown map <F9> :!grep -q "output_format: html" % && pandoc % -o %:r.pdf \|\| pandoc % -o %:r.pdf<enter>
