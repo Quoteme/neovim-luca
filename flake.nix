@@ -401,6 +401,46 @@
     # ("x86_64-linux", "aarch64-linux", "i686-linux", "x86_64-darwin",...)
     flake-utils.lib.eachDefaultSystem (system:
       let
+        # Extra programs
+        extraPrograms = with pkgs; [
+          # Language servers
+            # LaTex
+              texlab
+            # Haskell
+              haskell-language-server
+              ormolu
+            # html
+              nodePackages.vscode-html-languageserver-bin
+              nodePackages.vscode-css-languageserver-bin
+              nodePackages.vscode-json-languageserver-bin
+            # JavaScript / Typescript
+              deno
+            # NIX
+              rnix-lsp
+            # Python
+              python39Packages.jedi-language-server
+            # Rust
+              rust-analyzer
+            # Clojure
+              clojure-lsp
+            # C
+              clang-tools
+            # Cmake
+              cmake-language-server
+            # Java
+              jdk11
+              java-language-server
+            # Lua
+              sumneko-lua-language-server
+            # Dart
+              dart
+            # (Neo)Vim
+              nodePackages.vim-language-server
+          # Other dependencies
+            xclip
+            # Spelling and grammar
+              languagetool
+        ];
         # Once we add this overlay to our nixpkgs, we are able to
         # use `pkgs.neovimPlugins`, which is a map of our plugins.
         # Each input in the format:
@@ -498,7 +538,7 @@
                         , start     ? builtins.attrValues pkgs.neovimPlugins
                         , opt       ? []
                         , debug     ? false 
-                        , depencies ? []}:
+                        , dependencies ? []}:
                         let
                           myNeovimUnwrapped = pkgs.neovim-unwrapped.overrideAttrs (prev: {
                             propagatedBuildInputs = with pkgs; [
@@ -525,43 +565,9 @@
                             # even if the user has not installed them
                             # system-wide
                             name = "neovim";
-                            paths = with pkgs; [
-                              neovim-wrapped
-                              # Language servers
-                                # LaTex
-                                  texlab
-                                # Haskell
-                                  haskell-language-server
-                                  ormolu
-                                # html
-                                  nodePackages.vscode-html-languageserver-bin
-                                  nodePackages.vscode-css-languageserver-bin
-                                # JavaScript / Typescript
-                                  nodePackages.javascript-typescript-langserver
-                                # NIX
-                                  rnix-lsp
-                                # Python
-                                  python39Packages.jedi-language-server
-                                # Rust
-                                  rust-analyzer
-                                # Clojure
-                                  clojure-lsp
-                                # C
-                                  clang-tools
-                                # Cmake
-                                  cmake-language-server
-                                # Java
-                                  jdk11
-                                  java-language-server
-                                # Lua
-                                  sumneko-lua-language-server
-                                # Dart
-                                  dart
-                              # Other dependencies
-                                xclip
-                                # Spelling and grammar
-                                  languagetool
-                            ] ++ depencies;
+                            paths = with pkgs; [ neovim-wrapped ]
+                              ++ dependencies
+                              ++ extraPrograms;
                             src = ./.;
                             nativeBuildInputs = [ pkgs.makeWrapper ];
                             postBuild = ''
@@ -572,6 +578,7 @@
                               # add external dependencies to path of neovim
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin \
+                                --prefix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
                                 --set RUNTIME_EXTRA $out/share/nvim/runtime_extra
                               mkdir -p $out/share/nvim/runtime/snippets/
                               cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
@@ -600,7 +607,7 @@
           # how to build it from source yet
           start = (builtins.attrValues pkgs.neovimPlugins)
                 ++ [pkgs.vimPlugins.sniprun];
-          depencies = with pkgs; [
+          dependencies = with pkgs; [
             # Telescope
               fd
               ripgrep

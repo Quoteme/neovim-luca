@@ -374,7 +374,6 @@ end
 -- map buffer local keybindings when the language server attaches
 local servers = {
   'texlab',
-  'tsserver',
   'hls',
   'rnix',
   'jedi_language_server',
@@ -384,11 +383,11 @@ local servers = {
   'cmake',
   'ltex',
   'dartls',
-  'html',
-  'cssls'
+  'denols'
 }
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -398,6 +397,33 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = { "html-languageserver", "--stdio" }
+}
+
+nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = { "css-languageserver", "--stdio" }
+}
+
+nvim_lsp.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
+  flags = {
+    debounce_text_changes = 150,
+  },
+  cmd = { "json-languageserver", "--stdio" }
+}
 
 -- Java language server
 nvim_lsp.java_language_server.setup {
