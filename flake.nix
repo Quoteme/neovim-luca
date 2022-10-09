@@ -533,8 +533,8 @@
         # opt      | List of optional plugins to load only when 
         #          | explicitly loaded from inside neovim
         neovimBuilder = { customRC  ? ""
-                        , viAlias   ? true
-                        , vimAlias  ? true
+                        , viAlias   ? false
+                        , vimAlias  ? false
                         , start     ? builtins.attrValues pkgs.neovimPlugins
                         , opt       ? []
                         , debug     ? false 
@@ -585,6 +585,10 @@
                               cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
                               mkdir -p $out/share/nvim/runtime_extra
                               cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/
+                              ln -sf $out/bin/nvim $out/bin/vi
+                              ln -sf $out/bin/nvim $out/bin/vim
+                              ln -sf $out/bin/nvim $out/bin/neovim
+                              ln -sf $out/bin/nvim $out/bin/neovim-luca
                             '';
                           };
                         in
