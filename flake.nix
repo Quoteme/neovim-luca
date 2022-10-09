@@ -579,7 +579,7 @@
                               wrapProgram $out/bin/nvim \
                                 --prefix PATH : $out/bin \
                                 --prefix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
-                                --set RUNTIME_EXTRA $out/share/nvim/runtime_extra
+                                --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra
                               mkdir -p $out/share/nvim/runtime/snippets/
                               cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
                               cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
