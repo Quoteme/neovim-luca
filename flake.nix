@@ -408,6 +408,7 @@
               texlab
             # Haskell
               haskell-language-server
+              ghc
               ormolu
             # html
               nodePackages.vscode-html-languageserver-bin
