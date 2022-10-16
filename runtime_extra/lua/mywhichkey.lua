@@ -3,7 +3,7 @@ local wk = require("which-key")
 wk.setup{}
 wk.register({
   a = {":CodeActionMenu<CR>", "code action"},
-  b = {
+  B = {
     name = "buffer settings",
     l = {":Buffers<CR>", "list Buffers"},
     p = {"<cmd>BufferPrevious<CR>", "previous buffer"},
@@ -107,11 +107,22 @@ wk.register({
   --   P = {"<cmd>AerialPrevUp<CR>", "aerial previous up"},
   --   N = {"<cmd>AerialNextUp<CR>", "aerial next up"},
   -- },
-  f = {
+  F = {
     name = "neotree",
     f = {":Neotree filesystem toggle left<CR>", "show filesystem"},
     b = {":Neotree buffers toggle float<CR>", "show buffers"},
     g = {":Neotree git_status toggle right<CR>", "show git status"},
+  },
+  f = {
+    name = "Telescope find",
+    f = {"<cmd>Telescope find_files<cr>" , "find files"},
+    g = {"<cmd>Telescope live_grep<cr>"  , "find with live grep"},
+    b = {"<cmd>Telescope buffers<cr>"    , "find in buffers"},
+    h = {"<cmd>Telescope help_tags<cr>"  , "help tags"},
+    -- cycle folds
+    c = {"<cmd>lua require('fold-cycle').close()<CR>", "fold: close  level"},
+    o = {"<cmd>lua require('fold-cycle').open()<CR>", "fold: open  level"},
+    t = {"<cmd>lua require('fold-cycle').toggle_all()<CR>", "fold: toggle "},
   },
   t = {
     name = "vim-test",
@@ -250,15 +261,4 @@ wk.register({
     b = {"<cmd>BufferPrevious<CR>", "previous buffer"},
     B = {"<cmd>BufferNext<CR>", "next buffer"},
     },
-  f = {
-    name = "Telescope find",
-    f = {"<cmd>Telescope find_files<cr>" , "find files"},
-    g = {"<cmd>Telescope live_grep<cr>"  , "find with live grep"},
-    b = {"<cmd>Telescope buffers<cr>"    , "find in buffers"},
-    h = {"<cmd>Telescope help_tags<cr>"  , "help tags"},
-    -- cycle folds
-    c = {"<cmd>lua require('fold-cycle').close()<CR>", "fold: close  level"},
-    o = {"<cmd>lua require('fold-cycle').open()<CR>", "fold: open  level"},
-    t = {"<cmd>lua require('fold-cycle').toggle_all()<CR>", "fold: toggle "},
-    }
 })

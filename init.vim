@@ -157,6 +157,13 @@ inoremap <c-+> <cmd>lua require('fold-cycle').open()<CR>
 nnoremap <c-+> <cmd>lua require('fold-cycle').open()<CR>
 inoremap <c--> <cmd>lua require('fold-cycle').close()<CR>
 nnoremap <c--> <cmd>lua require('fold-cycle').close()<CR>
+inoremap <s-c-+> <cmd>lua require('fold-cycle').open_all()<CR>
+nnoremap <s-c-+> <cmd>lua require('fold-cycle').open_all()<CR>
+inoremap <s-c--> <cmd>lua require('fold-cycle').close_all()<CR>
+nnoremap <s-c--> <cmd>lua require('fold-cycle').close_all()<CR>
+
+"Symbols outline
+lua require("symbols-outline").setup()
 
 " pretty-fold.nvim
 lua << EOF
