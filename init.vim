@@ -548,6 +548,13 @@ EOF
   inoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
   inoremap <C-W> <cmd>BufferClose<CR><ESC>
   inoremap <C-S-W> <cmd>BufferClose!<CR>
+  tnoremap <C-Tab> <cmd>BufferNext<CR><ESC>
+  tnoremap <C-S-Tab> <cmd>BufferPrevious<CR><ESC>
+  tnoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
+  tnoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
+  tnoremap <C-W> <cmd>BufferClose<CR><ESC>
+  tnoremap <C-S-W> <cmd>BufferClose!<CR>
+
     " We need to remap some keys for remapping ctrl-w to work
     map <C-S-H> <cmd>:wincmd h<CR>
     map <C-S-J> <cmd>:wincmd k<CR>
