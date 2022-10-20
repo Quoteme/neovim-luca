@@ -560,6 +560,10 @@ EOF
     map <C-S-J> <cmd>:wincmd k<CR>
     map <C-S-K> <cmd>:wincmd j<CR>
     map <C-S-L> <cmd>:wincmd l<CR>
+    tnoremap <C-S-H> <cmd>:wincmd h<CR>
+    tnoremap <C-S-J> <cmd>:wincmd k<CR>
+    tnoremap <C-S-K> <cmd>:wincmd j<CR>
+    tnoremap <C-S-L> <cmd>:wincmd l<CR>
   " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
   " Automatically deletes all tralling whitespace on save.
     " autocmd BufWritePre * %s/\s\+$//e
