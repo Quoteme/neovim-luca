@@ -448,6 +448,22 @@ lua <<EOF
     -- }}}
   })
   -- }}}
+  -- {{{ Setup CMDline
+  cmp.setup.cmdline(':', {
+    sources = {
+      { name = 'path' },
+      { name = 'cmdline' },
+    },
+    mapping = cmp.mapping.preset.cmdline(),
+  })
+  cmp.setup.cmdline('/', {
+    sources = {
+      { name = 'nvim_lsp_document_symbol' },
+      { name = 'buffer' },
+    },
+    mapping = cmp.mapping.preset.cmdline(),
+  })
+  --}}}
 
   -- {{{ Pandoc / Nabla
 require'pandoc'.setup()

@@ -154,12 +154,20 @@
             url = "github:hrsh7th/cmp-buffer";
             flake = false;
           };
+          "plugin:cmp-nvim-lsp-document-symbol" = {
+            url = "github:hrsh7th/cmp-nvim-lsp-document-symbol";
+            flake = false;
+          };
           "plugin:cmp-path" = {
             url = "github:hrsh7th/cmp-path";
             flake = false;
           };
           "plugin:cmp-spell" = {
             url = "github:f3fora/cmp-spell";
+            flake = false;
+          };
+          "plugin:cmp-cmdline" = {
+            url = "github:hrsh7th/cmp-cmdline";
             flake = false;
           };
           "plugin:cmp-latex-symbols" = {
