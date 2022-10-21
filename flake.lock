@@ -193,6 +193,22 @@
         "type": "github"
       }
     },
+    "plugin:cmp-cmdline-history": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651653950,
+        "narHash": "sha256-IcruTOCNxYKmbo0St1U+CmrDStASPLe+rTLNU6/2Xew=",
+        "owner": "dmitmel",
+        "repo": "cmp-cmdline-history",
+        "rev": "003573b72d4635ce636234a826fa8c4ba2895ffe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "dmitmel",
+        "repo": "cmp-cmdline-history",
+        "type": "github"
+      }
+    },
     "plugin:cmp-emoji": {
       "flake": false,
       "locked": {
@@ -286,6 +302,22 @@
       "original": {
         "owner": "hrsh7th",
         "repo": "cmp-path",
+        "type": "github"
+      }
+    },
+    "plugin:cmp-rg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662346601,
+        "narHash": "sha256-UojROsV/SsQLUVlqBX6Elb1bq7cx8V/adOxDc3U8Mgo=",
+        "owner": "lukas-reineke",
+        "repo": "cmp-rg",
+        "rev": "1cad8eb315643d0df13c37401c03d7986f891011",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lukas-reineke",
+        "repo": "cmp-rg",
         "type": "github"
       }
     },
@@ -1342,12 +1374,14 @@
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-cmdline": "plugin:cmp-cmdline",
+        "plugin:cmp-cmdline-history": "plugin:cmp-cmdline-history",
         "plugin:cmp-emoji": "plugin:cmp-emoji",
         "plugin:cmp-latex-symbols": "plugin:cmp-latex-symbols",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
         "plugin:cmp-nvim-lsp-document-symbol": "plugin:cmp-nvim-lsp-document-symbol",
         "plugin:cmp-pandoc.nvim": "plugin:cmp-pandoc.nvim",
         "plugin:cmp-path": "plugin:cmp-path",
+        "plugin:cmp-rg": "plugin:cmp-rg",
         "plugin:cmp-spell": "plugin:cmp-spell",
         "plugin:cmp_luasnip": "plugin:cmp_luasnip",
         "plugin:conjure": "plugin:conjure",

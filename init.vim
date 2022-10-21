@@ -420,6 +420,7 @@ lua <<EOF
           keyword_pattern = [[\k\+]],
         }
       },
+      { name = 'rg' },
       { name = 'emoji' },
       { name = 'spell' },
     },
@@ -449,20 +450,26 @@ lua <<EOF
   })
   -- }}}
   -- {{{ Setup CMDline
+  -- {{{ : commands
   cmp.setup.cmdline(':', {
     sources = {
       { name = 'path' },
       { name = 'cmdline' },
+      { name = 'cmdline_history' },
     },
     mapping = cmp.mapping.preset.cmdline(),
   })
+  -- }}}
+  -- {{{ / commands
   cmp.setup.cmdline('/', {
     sources = {
       { name = 'nvim_lsp_document_symbol' },
       { name = 'buffer' },
+      { name = 'cmdline_history' },
     },
     mapping = cmp.mapping.preset.cmdline(),
   })
+  -- }}}
   --}}}
 
   -- {{{ Pandoc / Nabla

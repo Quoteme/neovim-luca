@@ -170,6 +170,14 @@
             url = "github:hrsh7th/cmp-cmdline";
             flake = false;
           };
+          "plugin:cmp-cmdline-history" = {
+            url = "github:dmitmel/cmp-cmdline-history";
+            flake = false;
+          };
+          "plugin:cmp-rg" = {
+            url = "github:lukas-reineke/cmp-rg";
+            flake = false;
+          };
           "plugin:cmp-latex-symbols" = {
             url = "github:kdheepak/cmp-latex-symbols";
             flake = false;
