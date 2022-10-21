@@ -1,4 +1,4 @@
-" vim: tabstop=2 shiftwidth=2 expandtab foldmethod=manual
+" vim: tabstop=2 shiftwidth=2 expandtab foldmethod=marker
 "       _
 "__   _(_)_ __ ___  _ __ ___
 "\ \ / / | '_ ` _ \| '__/ __|
@@ -6,6 +6,7 @@
 "(_)_/ |_|_| |_| |_|_|  \___|
 "
 
+" {{{
 " Environment variables:
   set nocompatible
   syntax on
@@ -43,6 +44,7 @@
   set colorcolumn=72            " limit the text input
   set spell spelllang=en_us,de_de     " spellchecker
   set termguicolors             " true color support
+" }}}
 
 " ____  _               ____       _   _   _
 "|  _ \| |_   _  __ _  / ___|  ___| |_| |_(_)_ __   __ _ ___
@@ -51,6 +53,8 @@
 "|_|   |_|\__,_|\__, | |____/ \___|\__|\__|_|_| |_|\__, |___/
 "               |___/                              |___/
 
+" {{{
+" {{{
 " gesture.nvim
 lua << EOF
 vim.keymap.set("n", "<LeftDrag>", [[<Cmd>lua require("gesture").draw()<CR>]], { silent = true })
@@ -97,26 +101,38 @@ gesture.register({
   action = [[lua vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-o>", true, false, true), "n", true)]],
 })
 EOF
+" }}}
 
+" {{{
 " Twilight
 lua << EOF
   require("twilight").setup {}
 EOF
+" }}}
 
+" {{{
 " nvim-colorizer.lua
 lua require'colorizer'.setup()
+" }}}
 
+" {{{
 " Split auto resizing
 lua require("focus").setup()
+" }}}
 
+" {{{
 " NeoScroll
 lua require('neoscroll').setup()
+" }}}
 
+" {{{
 " Marks.nvim
 lua << EOF
 require'marks'.setup {}
 EOF
+" }}}
 
+" {{{
 " indent-blankline.nvim
 lua << EOF
 vim.opt.list = true
@@ -128,10 +144,14 @@ require("indent_blankline").setup {
     show_current_context_start = true,
 }
 EOF
+" }}}
 
+" {{{
 " WhichKey
 :luafile $RUNTIME_EXTRA/lua/mywhichkey.lua
+" }}}
 
+" {{{
 " SnipRun
 lua << EOF
 require'sniprun'.setup({
@@ -141,12 +161,16 @@ require'sniprun'.setup({
   }
 })
 EOF
+" }}}
 
+" {{{
 " Copilot
 lua << EOF
 -- vim.schedule(function() require("copilot") end)
 EOF
+" }}}
 
+" {{{
 " cycle folds
 lua << EOF
 require('fold-cycle').setup({
@@ -161,52 +185,196 @@ inoremap <s-c-+> <cmd>lua require('fold-cycle').open_all()<CR>
 nnoremap <s-c-+> <cmd>lua require('fold-cycle').open_all()<CR>
 inoremap <s-c--> <cmd>lua require('fold-cycle').close_all()<CR>
 nnoremap <s-c--> <cmd>lua require('fold-cycle').close_all()<CR>
+" }}}
 
+" {{{
 "Symbols outline
 lua require("symbols-outline").setup()
+" }}}
 
+" {{{
 " pretty-fold.nvim
 lua << EOF
 require('pretty-fold').setup()
 require('fold-preview').setup()
 EOF
+" }}}
 
+" {{{
+" nvim-web-devicons
+lua << EOF
+require'nvim-web-devicons'.setup {
+  override = {
+    html = {
+      icon = "",
+      color = "#DE8C92",
+      name = "html"
+    },
+    css = {
+      icon = "",
+      color = "#61afef",
+      name = "css"
+    },
+    js = {
+      icon = "",
+      color = "#EBCB8B",
+      name = "js"
+    },
+    ts = {
+      icon = "ﯤ",
+      color = "#519ABA",
+      name = "ts"
+    },
+    kt = {
+      icon = "󱈙",
+      color = "#F18E33",
+      name = "kt"
+    },
+    png = {
+      icon = " ",
+      color = "#BD77DC",
+      name = "png"
+    },
+    jpg = {
+      icon = " ",
+      color = "#BD77DC",
+      name = "jpg"
+    },
+    jpeg = {
+      icon = " ",
+      color = "#BD77DC",
+      name = "jpeg"
+    },
+    mp3 = {
+      icon = "",
+      color = "#C8CCD4",
+      name = "mp3"
+    },
+    mp4 = {
+      icon = "",
+      color = "#C8CCD4",
+      name = "mp4"
+    },
+    out = {
+      icon = "",
+      color = "#C8CCD4",
+      name = "out"
+    },
+    Dockerfile = {
+      icon = "",
+      color = "#b8b5ff",
+      name = "Dockerfile"
+    },
+    rb = {
+      icon = "",
+      color = "#701516",
+      name = "rb"
+    },
+    vue = {
+      icon = "﵂",
+      color = "#4FC08D",
+      name = "vue"
+    },
+    py = {
+      icon = "",
+      color = "#a1b56c",
+      name = "py"
+    },
+    toml = {
+      icon = "",
+      color = "#61afef",
+      name = "toml"
+    },
+    lock = {
+      icon = "",
+      color = "#bd93f9",
+      name = "lock"
+    },
+    zip = {
+      icon = "",
+      color = "#e0af68",
+      name = "zip"
+    },
+    xz = {
+      icon = "",
+      color = "#e0af68",
+      name = "xz"
+    },
+    deb = {
+      icon = "",
+      color = "#a3b8ef",
+      name = "deb"
+    },
+    rpm = {
+      icon = "",
+      color = "#e45649",
+      name = "rpm"
+    },
+    ["7z"] = {
+      icon = "",
+      color = "#e0af68",
+      name = "7z"
+    },
+    rar = {
+      icon = "",
+      color = "#e0af68",
+      name = "rar"
+    },
+    nix = {
+      icon = "",
+      color = "#7e7eff",
+      name = "nix"
+    },
+  };
+  color_icons = true;
+  default = true;
+}
+EOF
+" }}}
+
+" {{{
 " Neogen
 lua << EOF
 require('neogen').setup {}
 require('neogen').setup({ snippet_engine = "luasnip" })
 EOF
+" }}}
 
+" {{{
 " Luasnip
 :luafile $RUNTIME_EXTRA/lua/myluasnip.lua
+" }}}
 
+" {{{
 " Nvim-Cmp
 set completeopt=menu,menuone,noselect
 lua <<EOF
-  local luasnip = require("luasnip")
-  -- Setup nvim-cmp.
+  -- {{{ Imports
   local cmp = require'cmp'
+  local lspkind = require('lspkind')
+  local luasnip = require("luasnip")
+  -- }}}
+  -- {{{ Setup nvim-cmp.
   cmp.setup({
+    -- {{{ Snippet
     snippet = {
       expand = function(args)
-        -- For `vsnip` user.
-        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
         require('luasnip').lsp_expand(args.body) -- For `luasnip` users
       end,
     },
+    -- }}}
+    -- {{{ Mapping
     mapping = {
       ['<C-p>'] = cmp.mapping.select_prev_item(),
       ['<C-n>'] = cmp.mapping.select_next_item(),
       ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 's' }),
       ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 's' }),
       ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 's' }),
-      ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+      ['<C-y>'] = cmp.config.disable,
       ['<C-e>'] = cmp.mapping({
         i = cmp.mapping.abort(),
         c = cmp.mapping.close(),
       }),
-    -- Accept currently selected item. Set `select` to `false` to
-    -- only confirm explicitly selected items.
       ['<C-CR>'] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.confirm({ select = true })
@@ -238,31 +406,61 @@ lua <<EOF
         end
       end),
     },
+    -- }}}
+    -- {{{ Sources
     sources = {
       { name = "copilot" },
       { name = 'nvim_lsp' },
-      { name = 'cmp_pandoc' },
-      { name = 'emoji' },
-      { name = "latex_symbols" },
-      -- { name = 'vsnip' }, -- For vsnip users
-      -- { name = 'spell' }, -- disabled because it is cumbersome to use
       { name = 'luasnip' }, -- For luasnip users
+      { name = "latex_symbols" },
+      { name = 'cmp_pandoc' },
+      { name = 'path' },
       { name = 'buffer',
         option = {
           keyword_pattern = [[\k\+]],
         }
       },
-      { name = 'path' },
-    }
+      { name = 'emoji' },
+      { name = 'spell' },
+    },
+    -- }}}
+    -- {{{ Window
+    window = {
+      completion = {
+        winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+        col_offset = -3,
+        side_padding = 0,
+      },
+    },
+    -- }}}
+    -- {{{ Formatting
+    formatting = {
+      fields = { "kind", "abbr", "menu" },
+      format = function(entry, vim_item)
+        local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+        local strings = vim.split(kind.kind, "%s", { trimempty = true })
+        kind.kind = " " .. strings[1] .. " "
+        kind.menu = "    (" .. strings[2] .. ")"
+
+        return kind
+      end,
+    },
+    -- }}}
   })
+  -- }}}
+
+  -- {{{ Pandoc / Nabla
 require'pandoc'.setup()
 require'cmp_pandoc'.setup({
   crossref = {
     enable_nabla = true
   }
 })
+-- }}}
 EOF
+" }}}
 
+" {{{
 " trouble.nvim
 lua << EOF
   require("trouble").setup {
@@ -271,7 +469,9 @@ lua << EOF
     -- refer to the configuration section below
   }
 EOF
+" }}}
 
+" {{{
 " lspconfig
 lua << EOF
 local nvim_lsp = require('lspconfig')
@@ -404,13 +604,17 @@ nvim_lsp['sumneko_lua'].setup {
   },
 }
 EOF
+" }}}
 
+" {{{
 " Vimspector
 " let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
 " FIX: this currently needs to be installed using `./install_gadget.py --basedir $HOME/.vim/vimspector-config --all --force-all`
 let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 " let g:vimspector_base_dir='/home/luca/.vim/vimspector-config'
+" }}}
 
+" {{{
 " treesitter
 lua << EOF
 require'nvim-treesitter.configs'.setup {
@@ -428,19 +632,25 @@ require'nvim-treesitter.configs'.setup {
 }
 vim.opt.runtimepath:append("~/.config/treesitter_parsers")
 EOF
+" }}}
 
+" {{{
 " todo-comments
 lua << EOF
   require("todo-comments").setup {
     signs = false,
   }
 EOF
+" }}}
 
+" {{{
 " gitsigns.nvim
 lua << EOF
 require('gitsigns').setup()
 EOF
+" }}}
 
+" {{{
 " code action sign collumn
 lua << EOF
 require'nvim-lightbulb'.setup({
@@ -455,67 +665,85 @@ require'nvim-lightbulb'.setup({
   }
 })
 EOF
+" }}}
 
+" {{{
 " colorscheme
 " colorscheme onedark
   let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
   lua require("catppuccin").setup()
   colorscheme catppuccin
+" }}}
 
+" {{{
 " markdown
-  let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled = 1
+" }}}
 
+" {{{
 " vim-slime
-  let g:slime_target = "neovim"
-  let g:slime_no_mappings = 1
+let g:slime_target = "neovim"
+let g:slime_no_mappings = 1
+" }}}
 
+" {{{
 " Grammarous settings
-  let g:grammarous#languagetool_cmd = 'languagetool'
-  let g:grammarous#use_vim_spelllang = 1
-  let g:grammarous#default_comments_only_filetypes = {
-        \ '*' : 1, 'help' : 0, 'markdown' : 0,
-        \ }
-  let g:grammarous#hooks = {}
-  function! g:grammarous#hooks.on_check(errs) abort
-    nmap <buffer><C-n> <Plug>(grammarous-move-to-next-error)
-    nmap <buffer><C-p> <Plug>(grammarous-move-to-previous-error)
-  endfunction
-  function! g:grammarous#hooks.on_reset(errs) abort
-    nunmap <buffer><C-n>
-    nunmap <buffer><C-p>
-  endfunction
+let g:grammarous#languagetool_cmd = 'languagetool'
+let g:grammarous#use_vim_spelllang = 1
+let g:grammarous#default_comments_only_filetypes = {
+      \ '*' : 1, 'help' : 0, 'markdown' : 0,
+      \ }
+let g:grammarous#hooks = {}
+function! g:grammarous#hooks.on_check(errs) abort
+  nmap <buffer><C-n> <Plug>(grammarous-move-to-next-error)
+  nmap <buffer><C-p> <Plug>(grammarous-move-to-previous-error)
+endfunction
+function! g:grammarous#hooks.on_reset(errs) abort
+  nunmap <buffer><C-n>
+  nunmap <buffer><C-p>
+endfunction
+" }}}
 
+" {{{
 " vim2hs
-  "let g:haskell_conceal_wide = 1
-  let g:haskell_indent_disable=1
-  let g:haskell_classic_highlighting=1
+"let g:haskell_conceal_wide = 1
+let g:haskell_indent_disable=1
+let g:haskell_classic_highlighting=1
+" }}}
 
+" {{{
 " delimitMate
-  let delimitMate_expand_space=1
-  let delimitMate_expand_cr=1
+let delimitMate_expand_space=1
+let delimitMate_expand_cr=1
+" }}}
 
+" {{{
 " vim-skeleton
-  let g:skeleton_replacements = {}
-  function! g:skeleton_replacements.DATE()
-    return strftime("%Y-%m-%d %a %H:%M %S")
-  endfunction
-  function! g:skeleton_replacements.BASENAMECAPITAL()
-    return toupper(expand('%:t:r'))
-  endfunction
-  function! g:skeleton_replacements.FOLDERNAME()
-    return expand('%:p:h:t')
-  endfunction
-  function! g:skeleton_replacements.AUTHOR()
-    return "Luca Leon Happel"
-  endfunction
+let g:skeleton_replacements = {}
+function! g:skeleton_replacements.DATE()
+  return strftime("%Y-%m-%d %a %H:%M %S")
+endfunction
+function! g:skeleton_replacements.BASENAMECAPITAL()
+  return toupper(expand('%:t:r'))
+endfunction
+function! g:skeleton_replacements.FOLDERNAME()
+  return expand('%:p:h:t')
+endfunction
+function! g:skeleton_replacements.AUTHOR()
+  return "Luca Leon Happel"
+endfunction
+" }}}
 
+" {{{
 " latex-unicoder.vim
-  let g:unicoder_cancel_normal = 1
-  let g:unicoder_cancel_insert = 1
-  let g:unicoder_cancel_visual = 1
-  nnoremap <C-l> :call unicoder#start(0)<CR>
-  inoremap <C-l> <Esc>:call unicoder#start(1)<CR>
-  vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
+let g:unicoder_cancel_normal = 1
+let g:unicoder_cancel_insert = 1
+let g:unicoder_cancel_visual = 1
+nnoremap <C-l> :call unicoder#start(0)<CR>
+inoremap <C-l> <Esc>:call unicoder#start(1)<CR>
+vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
+" }}}
+" }}}
 
 " ____       _   _   _
 "/ ___|  ___| |_| |_(_)_ __   __ _ ___
@@ -524,18 +752,23 @@ EOF
 "|____/ \___|\__|\__|_|_| |_|\__, |___/
 "                            |___/
 
+" {{{
 " Autocommands and keyboard-shortcuts
   " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
   autocmd VimEnter  * :e
   " Code action on alt-enter like intellij
   inoremap <a-cr> <esc>:CodeActionMenu<CR>
   nnoremap <a-cr> <esc>:CodeActionMenu<CR>
+  " {{{
   " German keyboard fix
   nmap ö '
   nmap ü [
   nmap ä ]
   nmap ß {
-  " Mappings only available to patched terminals. See quoteme/st-nix
+  "}}}
+  " {{{
+  " {{{
+  " Mappings only available to patched terminals. See quoteme/st-nix{{{
   map <C-Tab> <cmd>BufferNext<CR>
   map <C-S-Tab> <cmd>BufferPrevious<CR>
   map <M-Tab> <cmd>BufferMoveNext<CR>
@@ -553,8 +786,10 @@ EOF
   tnoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
   tnoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
   tnoremap <C-W> <cmd>BufferClose<CR><ESC>
-  tnoremap <C-S-W> <cmd>BufferClose!<CR>
+  tnoremap <C-S-W> <cmd>BufferClose!<CR>"}}}
+  " }}}
 
+  " {{{
     " We need to remap some keys for remapping ctrl-w to work
     map <C-S-H> <cmd>:wincmd h<CR>
     map <C-S-J> <cmd>:wincmd k<CR>
@@ -564,28 +799,38 @@ EOF
     tnoremap <C-S-J> <cmd>:wincmd k<CR>
     tnoremap <C-S-K> <cmd>:wincmd j<CR>
     tnoremap <C-S-L> <cmd>:wincmd l<CR>
-  " autocmd ColorScheme * highlight Conceal ctermfg=red ctermbg=0
-  " Automatically deletes all tralling whitespace on save.
-    " autocmd BufWritePre * %s/\s\+$//e
+    " }}}
+  " }}}
+  " {{{
   " Save and restore view (including folds) automatically
     autocmd BufWinLeave *.* mkview
     autocmd BufWinEnter *.* silent! loadview
+  " }}}
+  " {{{
   " Disables automatic commenting on newline:
     autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+  " }}}
+  " {{{
   " Make 0 go to the first character rather than the beginning
   " " of the line. When we're programming, we're almost always
   " " interested in working with text rather than empty space. If
   " " you want the traditional beginning of line, use ^
     nnoremap 0 ^
     nnoremap ^ 0
+  " }}}
+  " {{{
   " Fix the go to next line if wrap is enabled
     nnoremap <expr> j v:count ? 'j' : 'gj'
     nnoremap <expr> k v:count ? 'k' : 'gk'
+  " }}}
+  " {{{
   " Return to last edit position when opening files (You want this!)
     augroup Remember_cursor_position
       autocmd!
       autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
     augroup END
+  " }}}
+  " {{{
   " Show spaces as red if there's nothing after it (stole Greg Hurrel)
     augroup TrailWhiteSpaces
       highlight ColorColumn ctermbg=1
@@ -594,46 +839,61 @@ EOF
       autocmd InsertLeave <buffer> match Error /\s\+$/
       autocmd BufWinLeave <buffer> call clearmatches()
     augroup END
+  " }}}
 
-" build nix projects
-  map <F9> :!nix build<enter>
-
+" {{{
 " neotree file browsing
-  nnoremap <F1> :Neotree filesystem toggle left<CR>
+nnoremap <F1> :Neotree filesystem toggle left<CR>
+" }}}
+" {{{
 " symbols-outline code browsing
   nnoremap <F2> :SymbolsOutline<CR>
+" }}}
+" {{{
 " todo-comments
   nnoremap <F3> :TodoTelescope<CR>
+" }}}
 
+" {{{
 " Sage
-  autocmd FileType sage set syntax=python
-
+autocmd FileType sage set syntax=python
+" }}}
+" {{{
 " GO
-  autocmd FileType go noremap <F9> <ESC>:GoRun<enter>
-
+autocmd FileType go noremap <F9> <ESC>:GoRun<enter>
+" }}}
+" {{{
 " C
-  autocmd FileType c setlocal tabstop=2
-  autocmd FileType c setlocal shiftwidth=2
-  autocmd FileType c setlocal expandtab
-
+autocmd FileType c setlocal tabstop=2
+autocmd FileType c setlocal shiftwidth=2
+autocmd FileType c setlocal expandtab
+" }}}
+" {{{
 " HASKELL
-  autocmd BufReadPost xmonad.hs setlocal modeline
-  autocmd FileType haskell setlocal tabstop=2
-  autocmd FileType haskell setlocal shiftwidth=2
-  autocmd FileType haskell setlocal expandtab
-  autocmd FileType cabal setlocal tabstop=2
-  autocmd FileType cabal setlocal shiftwidth=2
-  autocmd FileType cabal setlocal expandtab
-
+autocmd BufReadPost xmonad.hs setlocal modeline
+autocmd FileType haskell setlocal tabstop=2
+autocmd FileType haskell setlocal shiftwidth=2
+autocmd FileType haskell setlocal expandtab
+autocmd FileType cabal setlocal tabstop=2
+autocmd FileType cabal setlocal shiftwidth=2
+autocmd FileType cabal setlocal expandtab
+" }}}
+" {{{
 " Nix
-  autocmd FileType nix setlocal tabstop=2
-  autocmd FileType nix setlocal shiftwidth=2
-  autocmd FileType nix setlocal expandtab
-
+autocmd FileType nix setlocal tabstop=2
+autocmd FileType nix setlocal shiftwidth=2
+autocmd FileType nix setlocal expandtab
+  " {{{
+  " build nix projects
+  map <F9> :!nix build<enter>
+  " }}}
+" }}}
+" {{{
 " LaTex
-  autocmd FileType tex map <F9> :!pdflatex<space>%<enter>
-
-" RMARKDOWN
+autocmd FileType tex map <F9> :!pdflatex<space>%<enter>
+" }}}
+" {{{
+" RMarkdown
   " If it is a bookdown book
   if filereadable("_build.sh")
     autocmd FileType rmarkdown map <F9> :!./_build.sh<enter>
@@ -642,21 +902,26 @@ EOF
     autocmd FileType rmarkdown map <F9> :!Rscript<space>-e<space>'library(rmarkdown);render("%")'<enter>
   endif
   autocmd FileType rmadkdown setlocal expandtab
-
-" MARKDOWN
+  " }}}
+" {{{
+" Markdown
   autocmd FileType markdown setlocal expandtab
   autocmd FileType markdown map <F9> :!grep -q "output_format: html" % && pandoc % -o %:r.pdf \|\| pandoc % -o %:r.pdf<enter>
-
-" " CLOJURE
-"   autocmd FileType clojure :Lein
-
+" }}}
+" {{{
+" Clojure
+" autocmd FileType clojure :Lein
+" }}}
+" {{{
 " Java
-  autocmd FileType java setlocal tabstop=2
-  autocmd FileType java setlocal shiftwidth=2
-  autocmd FileType java setlocal expandtab
-  autocmd FileType groovy setlocal tabstop=2
-  autocmd FileType groovy setlocal shiftwidth=2
-  autocmd FileType groovy setlocal expandtab
-  autocmd FileType kotlin setlocal tabstop=2
-  autocmd FileType kotlin setlocal shiftwidth=2
-  autocmd FileType kotlin setlocal expandtab
+autocmd FileType java setlocal tabstop=2
+autocmd FileType java setlocal shiftwidth=2
+autocmd FileType java setlocal expandtab
+autocmd FileType groovy setlocal tabstop=2
+autocmd FileType groovy setlocal shiftwidth=2
+autocmd FileType groovy setlocal expandtab
+autocmd FileType kotlin setlocal tabstop=2
+autocmd FileType kotlin setlocal shiftwidth=2
+autocmd FileType kotlin setlocal expandtab
+" }}}
+" }}}

@@ -529,6 +529,22 @@
         "type": "github"
       }
     },
+    "plugin:lspkind.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663824370,
+        "narHash": "sha256-WwUQ+O2rIfD4yl0GFx70GsZc9nnhS7b2KWfNdaXCLmM=",
+        "owner": "onsails",
+        "repo": "lspkind.nvim",
+        "rev": "c68b3a003483cf382428a43035079f78474cd11e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "onsails",
+        "repo": "lspkind.nvim",
+        "type": "github"
+      }
+    },
     "plugin:marks.nvim": {
       "flake": false,
       "locked": {
@@ -1315,6 +1331,7 @@
         "plugin:gitsigns.nvim": "plugin:gitsigns.nvim",
         "plugin:indent-blankline.nvim": "plugin:indent-blankline.nvim",
         "plugin:lsp_signature.nvim": "plugin:lsp_signature.nvim",
+        "plugin:lspkind.nvim": "plugin:lspkind.nvim",
         "plugin:marks.nvim": "plugin:marks.nvim",
         "plugin:nabla.nvim": "plugin:nabla.nvim",
         "plugin:neo-tree": "plugin:neo-tree",

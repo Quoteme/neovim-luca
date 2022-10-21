@@ -146,6 +146,10 @@
             url = "github:hrsh7th/cmp-nvim-lsp";
             flake = false;
           };
+          "plugin:lspkind.nvim" = {
+            url = "github:onsails/lspkind.nvim";
+            flake = false;
+          };
           "plugin:cmp-buffer" = {
             url = "github:hrsh7th/cmp-buffer";
             flake = false;
