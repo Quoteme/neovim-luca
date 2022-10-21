@@ -225,6 +225,22 @@
         "type": "github"
       }
     },
+    "plugin:cmp-greek": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641803129,
+        "narHash": "sha256-CYJ4Px18wXDMw/58InwBDxbcO+94IzNLcwYp6iKJPRE=",
+        "owner": "max397574",
+        "repo": "cmp-greek",
+        "rev": "799110b976f9194055e9d506931ac38171bc6bcd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "max397574",
+        "repo": "cmp-greek",
+        "type": "github"
+      }
+    },
     "plugin:cmp-latex-symbols": {
       "flake": false,
       "locked": {
@@ -1376,6 +1392,7 @@
         "plugin:cmp-cmdline": "plugin:cmp-cmdline",
         "plugin:cmp-cmdline-history": "plugin:cmp-cmdline-history",
         "plugin:cmp-emoji": "plugin:cmp-emoji",
+        "plugin:cmp-greek": "plugin:cmp-greek",
         "plugin:cmp-latex-symbols": "plugin:cmp-latex-symbols",
         "plugin:cmp-nvim-lsp": "plugin:cmp-nvim-lsp",
         "plugin:cmp-nvim-lsp-document-symbol": "plugin:cmp-nvim-lsp-document-symbol",

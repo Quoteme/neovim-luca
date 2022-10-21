@@ -178,6 +178,10 @@
             url = "github:lukas-reineke/cmp-rg";
             flake = false;
           };
+          "plugin:cmp-greek" = {
+            url = "github:max397574/cmp-greek";
+            flake = false;
+          };
           "plugin:cmp-latex-symbols" = {
             url = "github:kdheepak/cmp-latex-symbols";
             flake = false;
