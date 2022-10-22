@@ -166,6 +166,10 @@
             url = "github:f3fora/cmp-spell";
             flake = false;
           };
+          "plugin:cmp-dictionary" = {
+            url = "github:uga-rosa/cmp-dictionary";
+            flake = false;
+          };
           "plugin:cmp-cmdline" = {
             url = "github:hrsh7th/cmp-cmdline";
             flake = false;
@@ -593,7 +597,10 @@
                               ++ dependencies
                               ++ extraPrograms;
                             src = ./.;
-                            nativeBuildInputs = [ pkgs.makeWrapper ];
+                            nativeBuildInputs = [
+                              pkgs.makeWrapper
+                              (pkgs.aspellWithDicts (dicts: with dicts; [en de]))
+                            ];
                             postBuild = ''
                               # Add ltex-ls
                               ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
@@ -607,8 +614,14 @@
                               mkdir -p $out/share/nvim/runtime/snippets/
                               cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
                               cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
+                              # Create runtime_extra
                               mkdir -p $out/share/nvim/runtime_extra
                               cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/
+                              # Create dictionaries for cmp-dictionary
+                              mkdir -p $out/share/nvim/runtime_extra/dictionaries/
+                              aspell -d de dump master | aspell -l de expand > $out/share/nvim/runtime_extra/dictionaries/de.dict
+                              aspell -d en dump master | aspell -l en expand > $out/share/nvim/runtime_extra/dictionaries/en.dict
+                              # Make aliases for neovim command
                               ln -sf $out/bin/nvim $out/bin/vi
                               ln -sf $out/bin/nvim $out/bin/vim
                               ln -sf $out/bin/nvim $out/bin/neovim

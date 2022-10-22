@@ -422,8 +422,9 @@ lua <<EOF
         }
       },
       { name = 'rg' },
+      { name = 'dictionary', keyword_length = 2 },
       { name = 'emoji' },
-      { name = 'spell' },
+      -- { name = 'spell' }, -- Disabled because cmp-dictionary works
     },
     -- }}}
     -- {{{ Window
@@ -472,6 +473,18 @@ lua <<EOF
   })
   -- }}}
   --}}}
+
+-- {{{ Setup cmp-dictionary
+
+require("cmp_dictionary").setup({
+	dic = {
+		spelllang = {
+			en_us = vim.env.RUNTIME_EXTRA .. "/dictionaries/en.dict",
+			de_de = vim.env.RUNTIME_EXTRA .. "/dictionaries/de.dict",
+		},
+	},
+})
+-- }}}
 
   -- {{{ Pandoc / Nabla
 require'pandoc'.setup()

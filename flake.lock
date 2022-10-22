@@ -209,6 +209,22 @@
         "type": "github"
       }
     },
+    "plugin:cmp-dictionary": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1661806260,
+        "narHash": "sha256-FQpfjAHzTi5G2hIkQww6ffIA4BYjkGgfPdXG4mxXtS4=",
+        "owner": "uga-rosa",
+        "repo": "cmp-dictionary",
+        "rev": "93f3e2cb2e0b4d31cf3a97820daddc4e9933ef01",
+        "type": "github"
+      },
+      "original": {
+        "owner": "uga-rosa",
+        "repo": "cmp-dictionary",
+        "type": "github"
+      }
+    },
     "plugin:cmp-emoji": {
       "flake": false,
       "locked": {
@@ -1391,6 +1407,7 @@
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-cmdline": "plugin:cmp-cmdline",
         "plugin:cmp-cmdline-history": "plugin:cmp-cmdline-history",
+        "plugin:cmp-dictionary": "plugin:cmp-dictionary",
         "plugin:cmp-emoji": "plugin:cmp-emoji",
         "plugin:cmp-greek": "plugin:cmp-greek",
         "plugin:cmp-latex-symbols": "plugin:cmp-latex-symbols",
