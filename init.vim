@@ -413,6 +413,7 @@ lua <<EOF
       { name = 'nvim_lsp' },
       { name = 'luasnip' }, -- For luasnip users
       { name = "latex_symbols" },
+      { name = 'nvim_lua' },
       { name = "greek" },
       { name = 'cmp_pandoc' },
       { name = 'path' },

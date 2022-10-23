@@ -142,6 +142,10 @@
             url = "github:hrsh7th/nvim-cmp";
             flake = false;
           };
+          "plugin:cmp-nvim-lua" = {
+            url = "github:hrsh7th/cmp-nvim-lua";
+            flake = false;
+          };
           "plugin:cmp-nvim-lsp" = {
             url = "github:hrsh7th/cmp-nvim-lsp";
             flake = false;
