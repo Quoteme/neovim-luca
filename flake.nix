@@ -466,6 +466,7 @@
               nodePackages.vim-language-server
           # Other dependencies
             xclip
+            ueberzug
             # Spelling and grammar
               languagetool
         ];
