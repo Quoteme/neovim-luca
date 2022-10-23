@@ -963,3 +963,5 @@ autocmd FileType kotlin setlocal shiftwidth=2
 autocmd FileType kotlin setlocal expandtab
 " }}}
 " }}}
+
+:luafile $RUNTIME_EXTRA/lua/mysettings.lua
