@@ -421,8 +421,8 @@ lua <<EOF
           keyword_pattern = [[\k\+]],
         }
       },
-      { name = 'rg' },
-      { name = 'dictionary', keyword_length = 2 },
+      { name = 'rg', keyword_length = 3},
+      { name = 'dictionary', keyword_length = 3 },
       { name = 'emoji' },
       -- { name = 'spell' }, -- Disabled because cmp-dictionary works
     },
