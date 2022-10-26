@@ -562,7 +562,8 @@ local servers = {
   'cmake',
   'ltex',
   'dartls',
-  'denols'
+  'denols',
+  'dockerls'
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

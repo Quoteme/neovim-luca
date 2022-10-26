@@ -468,6 +468,8 @@
               dart
             # (Neo)Vim
               nodePackages.vim-language-server
+            # Docker
+              nodePackages.dockerfile-language-server-nodejs
           # Other dependencies
             xclip
             ueberzug
