@@ -1092,11 +1092,11 @@
     "plugin__todo-comments.nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1666961860,
-        "narHash": "sha256-8sSPpg6G/EHVCm2bZV5LZHn/+Kxdq47IEum4oWyrYa4=",
+        "lastModified": 1663307545,
+        "narHash": "sha256-jCRdHv26AR8fiRqikDduBBdhyHkeMkXqRYYb/E/WGZo=",
         "owner": "folke",
         "repo": "todo-comments.nvim",
-        "rev": "530eb3a896e9eef270f00f4baafa102361afc93b",
+        "rev": "7680106239fdef81d813dddc03de8e9b08964d1e",
         "type": "github"
       },
       "original": {
