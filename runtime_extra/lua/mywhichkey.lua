@@ -33,10 +33,11 @@ wk.register({
     "toggle conceal"
     },
   i = {
-    name = "image",
-    i = {":read !echo $(maim -suo | base64)<CR>", "insert image inline (base64)"},
-    s = {":!maim -suo screenshot$(($(ls | grep 'screenshot' | wc -l) +1)).png<CR>:read !echo \\[screenshot$(ls | grep 'screenshot' | wc -l).png\\]\\(screenshot$(ls | grep 'screenshot' | wc -l).png\\)", "save image"},
-    },
+    name = "image tools",
+    i = {":PasteImg<CR>", "insert from clipboard"},
+    p = {":lua MyIMG.showUnderCursor(70,70)<CR>", "insert from clipboard"},
+    c = {":!maim -su | xclip -selection clipboard -t image/png<CR>", "capture and paste"},
+  },
   l = {
     name = "LSP commands",
     D = {"<cmd>lua vim.lsp.buf.declaration()<CR>","goto declaration"},
@@ -234,11 +235,6 @@ wk.register({
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
   wk.register({
-    i = {
-      name = "image tools",
-      p = {":PasteImg<CR>", "paste image"},
-      c = {":!maim -su | xclip -selection clipboard -t image/png<CR>", "capture and paste"},
-    },
     c = {
       name = "compile using pandoc",
       p = {":!pandoc<space>%<space>-o<space>%:r.pdf<CR>", "to pdf"},

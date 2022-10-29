@@ -48,11 +48,12 @@ function MyIMG.Image:new(o, url, x, y, w, h)
   setmetatable(o, self)
   x = x or 0
   y = y or 0
-  w = w or 100
+  w = w or 20
   h = h or 20
   self.__index = self
   self.url = string.gsub(url, "~", os.getenv("HOME") .. "/")
-  self.pid = nil
+  self.url = string.gsub(self.url, "file:", "")
+  self.job = nil
   self.x = x
   self.y = y
   self.width = w
@@ -69,26 +70,36 @@ function MyIMG.Image:command(seconds)
               '[identifier]="id0" ' ..
               '[x]="' .. self.x .. '" ' ..
               '[y]="' .. self.y .. '" ' ..
-              '[width]="' .. self.width .. '" ' ..
-              '[height]="' .. self.height .. '" ' ..
+              (self.width~="" and '[width]="' .. self.width .. '" ' or "") ..
+              (self.height~="" and'[height]="' .. self.height .. '" ' or "") ..
               '[scaler]="' .. self.scaler .. '" ' ..
               '[path]="' .. self.url .. '"); ' ..
               'sleep ' .. tostring(seconds) .. ')'
+end
+
+function MyIMG.Image:commandfifo()
+    return string.format(
+      vim.env.RUNTIME_EXTRA.."/scripts/ueberzug-fifo.sh %s %s %s %s %s %s",
+      self.url,
+      self.scaler,
+      (self.x or 0),
+      (self.y or 1),
+      (self.width or 10),
+      (self.height or 10))
 end
 
 function MyIMG.Image:show(seconds)
   seconds = seconds or 1
   if not self.shown then
     self.shown = true
-    self.pid = io.popen(self:command(seconds))
+    self.job = vim.fn.jobstart(self:commandfifo())
   end
 end
 
 function MyIMG.Image:hide()
   if self.shown then
     self.shown = false
-    io.popen('kill ' .. self.pid)
-    print("hiding image" .. self.url)
+    vim.fn.jobstop(self.job)
   end
 end
 -- }}}
@@ -115,6 +126,23 @@ function MyIMG.Collection:show(seconds)
   end
 end
 -- }}}
+
+function MyIMG.showUnderCursor(width, height)
+  width = width or 20
+  height = height or 20
+  if vim.treesitter.get_node_at_cursor() == "link_destination" then
+    local tsu = require('nvim-treesitter.ts_utils')
+    local url = tsu.get_node_text(tsu.get_node_at_cursor())[1]
+    local buffer = vim.api.nvim_get_current_buf()
+    local row1, col1, row2, col2 = tsu.get_vim_range({ tsu.get_node_range(tsu.get_node_at_cursor()) }, buffer) -- node:range()
+    local img = MyIMG.Image:new(nil, url, col1+1, row1+1, width, height)
+    img:show("infinity")
+    vim.fn.getchar()
+    img:hide()
+  else
+    print("No link found")
+  end
+end
 
 function MyIMG.showImg(url)
   local img = MyIMG.Image:new(nil, url)
@@ -156,10 +184,6 @@ function MyIMG.showAllImages(height, offsetTop, offsetLeft)
     local root = tstree:root()
     local iter = query:iter_captures(root, buffer, 0, line_count + 1)
 
-    -- for i,n in enumerate(iter) do
-    --   print(i,n)
-    -- end
-
     local placeholder = {}
     for i = 1,height,1 do
       table.insert(placeholder, {{"PLACEHOLDER", "error"}})
@@ -167,35 +191,39 @@ function MyIMG.showAllImages(height, offsetTop, offsetLeft)
 
     for i, node, metadata in iter do
       local row1, col1, row2, col2 =ts_utils.get_vim_range({ ts_utils.get_node_range(node) }, buffer) -- node:range()
-      -- print(i, row1, col1, row2, col2, vim.inspect(node), vim.inspect(metadata))
-      -- `node` has two subnodes:
-      -- ![here is some description]
-      -- (here is the url)
-      -- we now get the second node
-      local locationNode = ts_utils.get_named_children(node)[2]
-      -- now we get the text corresponding to the second node
-      -- because the location consists of only one line, we get the first element
-      local locationURL = ts_utils.get_node_text(locationNode, buffer)[1]
-      locationURL = string.gsub(locationURL, "file:", "")
-      locationURL = string.gsub(locationURL, "~", os.getenv("HOME") .. "/")
-      -- local location = 
-      local mark_id = vim.api.nvim_buf_set_extmark(
-        vim.fn.bufnr('%'),
-        MyIMG.namespace,
-        row1, -- range[1],
-        0, -- range[2],
-        {
-          virt_lines_above = true,
-          virt_lines = placeholder
-      })
-      local img = MyIMG.Image:new(nil,
-        locationURL,
-        col1+offsetLeft,
-        row1+offsetTop + MyIMG.numOfCurrentlyVisibleVirtualLines,
-        vim.api.nvim_win_get_width(0),
-        height)
-      img:show(5)
-      MyIMG.numOfCurrentlyVisibleVirtualLines = MyIMG.numOfCurrentlyVisibleVirtualLines + height
+      if vim.fn.foldclosed(row1)==-1 then
+        -- print(i, row1, col1, row2, col2, vim.inspect(node), vim.inspect(metadata))
+        -- `node` has two subnodes:
+        -- ![here is some description]
+        -- (here is the url)
+        -- we now get the second node
+        local locationNode = ts_utils.get_named_children(node)[2]
+        -- now we get the text corresponding to the second node
+        -- because the location consists of only one line, we get the first element
+        local locationURL = ts_utils.get_node_text(locationNode, buffer)[1]
+        locationURL = string.gsub(locationURL, "file:", "")
+        locationURL = string.gsub(locationURL, "~", os.getenv("HOME") .. "/")
+        -- local location = 
+        local mark_id = vim.api.nvim_buf_set_extmark(
+          vim.fn.bufnr('%'),
+          MyIMG.namespace,
+          row1, -- range[1],
+          0, -- range[2],
+          {
+            virt_lines_above = true,
+            virt_lines = placeholder
+        })
+        local img = MyIMG.Image:new(nil,
+          locationURL,
+          col1+offsetLeft,
+          row1+offsetTop + MyIMG.numOfCurrentlyVisibleVirtualLines,
+          nil,
+          height)
+        img:show(5)
+        MyIMG.numOfCurrentlyVisibleVirtualLines = MyIMG.numOfCurrentlyVisibleVirtualLines + height
+      else
+        -- print("folded")
+      end
     end
   end)
 end
