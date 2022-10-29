@@ -416,6 +416,10 @@
           url = "github:aspeddro/pandoc.nvim";
           flake = false;
         };
+        "plugin:clipboard-image.nvim" = {
+          url = "github:ekickx/clipboard-image.nvim";
+          flake = false;
+        };
       # marks
         "plugin:marks.nvim" = {
           url = "github:chentoast/marks.nvim";

@@ -161,6 +161,22 @@
         "type": "github"
       }
     },
+    "plugin:clipboard-image.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1655100458,
+        "narHash": "sha256-TyMs/YoM/xnEQYtm3MgnvmiSNt3e80jFuJhryuSzTL0=",
+        "owner": "ekickx",
+        "repo": "clipboard-image.nvim",
+        "rev": "ed2ddad45b0dc33c501dcf4c4750fcb2006b26af",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ekickx",
+        "repo": "clipboard-image.nvim",
+        "type": "github"
+      }
+    },
     "plugin:cmp-buffer": {
       "flake": false,
       "locked": {
@@ -1420,6 +1436,7 @@
         "plugin:barbar.nvim": "plugin:barbar.nvim",
         "plugin:catppuccin": "plugin:catppuccin",
         "plugin:cheatsheet.nvim": "plugin:cheatsheet.nvim",
+        "plugin:clipboard-image.nvim": "plugin:clipboard-image.nvim",
         "plugin:cmp-buffer": "plugin:cmp-buffer",
         "plugin:cmp-cmdline": "plugin:cmp-cmdline",
         "plugin:cmp-cmdline-history": "plugin:cmp-cmdline-history",

@@ -234,6 +234,11 @@ wk.register({
   }, { prefix = "<localleader>" })
 -- elseif vim.bo.filetype=="markdown" then
   wk.register({
+    i = {
+      name = "image tools",
+      p = {":PasteImg<CR>", "paste image"},
+      c = {":!maim -su | xclip -selection clipboard -t image/png<CR>", "capture and paste"},
+    },
     c = {
       name = "compile using pandoc",
       p = {":!pandoc<space>%<space>-o<space>%:r.pdf<CR>", "to pdf"},
