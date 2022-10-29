@@ -292,11 +292,11 @@
     "plugin__cmp-nvim-lsp": {
       "flake": false,
       "locked": {
-        "lastModified": 1667026972,
-        "narHash": "sha256-amY87Q2HQseMoEFJW8YFf6k5UUWru52498EoDs4m9r8=",
+        "lastModified": 1652705110,
+        "narHash": "sha256-19Ka4EQhqo//IMjJ/DnXiHsevVWFy2M90oSjmBFfCO0=",
         "owner": "hrsh7th",
         "repo": "cmp-nvim-lsp",
-        "rev": "78924d1d677b29b3d1fe429864185341724ee5a2",
+        "rev": "affe808a5c56b71630f17aa7c38e15c59fd648a8",
         "type": "github"
       },
       "original": {
