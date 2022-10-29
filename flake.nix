@@ -421,7 +421,7 @@
           flake = false;
         };
         "plugin__nvimager" = {
-          url = "github:Quoteme/nvimager";
+          url = "github:mbpowers/nvimager";
           flake = false;
         };
       # marks

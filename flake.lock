@@ -948,15 +948,15 @@
     "plugin__nvimager": {
       "flake": false,
       "locked": {
-        "lastModified": 1667048389,
-        "narHash": "sha256-ARTwauiMkAGHTNZXlMdqrphDsIYPkzhO8uBJ1vkelCU=",
-        "owner": "Quoteme",
+        "lastModified": 1654146428,
+        "narHash": "sha256-97MOZE/f0meWIO31Wsk1U4N7wMBaIrcm6zYE336bQf4=",
+        "owner": "mbpowers",
         "repo": "nvimager",
-        "rev": "ebf44dcca7285fe7bf83aedda541424d00b5efc1",
+        "rev": "44328829b9a58528d10bfc015956e50dbdd22e00",
         "type": "github"
       },
       "original": {
-        "owner": "Quoteme",
+        "owner": "mbpowers",
         "repo": "nvimager",
         "type": "github"
       }
