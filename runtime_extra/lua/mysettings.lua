@@ -5,6 +5,7 @@ MyIMG = {}
 
 -- {{{ Image
 MyIMG.Image = {}
+MyIMG.namespace = vim.api.nvim_create_namespace('myimgnamespace')
 
 function MyIMG.Image:new(o, url)
   o = o or {}
@@ -90,6 +91,10 @@ function MyIMG.showFull(url)
   img:show(5)
 end;
 
+function MyIMG.clearVirtualText()
+  vim.api.nvim_buf_clear_namespace(0, MyIMG.namespace, 0, -1)
+end
+
 function MyIMG.tsParseForImageNodes()
   local query = vim.treesitter.query.parse_query('markdown_inline', '(image) @image')
 
@@ -113,7 +118,7 @@ function MyIMG.tsParseForImageNodes()
       local range = ts_utils.get_vim_range({ ts_utils.get_node_range(node) }, buffer)
       local mark_id = vim.api.nvim_buf_set_extmark(
         vim.fn.bufnr('%'),
-        vim.api.nvim_create_namespace('demo'),
+        MyIMG.namespace,
         range, -- range[1],
         0, -- range[2],
         {
