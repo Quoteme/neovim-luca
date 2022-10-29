@@ -436,6 +436,8 @@
         # Extra programs
         extraPrograms = with pkgs; [
           # Language servers
+            # Bash
+              nodePackages.bash-language-server
             # LaTex
               texlab
             # Haskell
@@ -446,6 +448,7 @@
               nodePackages.vscode-css-languageserver-bin
               nodePackages.vscode-json-languageserver-bin
             # JavaScript / Typescript
+              nodePackages.vscode-langservers-extracted
               deno
             # NIX
               rnix-lsp

@@ -552,18 +552,21 @@ local on_attach = function(client, bufnr)
 end
 
 local servers = {
-  'texlab',
-  'hls',
-  'rnix',
-  'jedi_language_server',
-  'clojure_lsp',
-  'rust_analyzer',
+  'bashls',
   'clangd',
   'cmake',
-  'ltex',
+  'clojure_lsp',
   'dartls',
   'denols',
-  'dockerls'
+  'dockerls',
+  'eslint',
+  'hls',
+  'jedi_language_server',
+  'ltex',
+  'rust_analyzer',
+  'rnix',
+  'texlab',
+  'vimls'
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
