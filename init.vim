@@ -805,9 +805,12 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
 " Autocommands and keyboard-shortcuts
   " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
   autocmd VimEnter  * :e
-  " Code action on alt-enter like intellij
+  " {{{ Code action on alt-enter like intellij
   inoremap <a-cr> <esc>:CodeActionMenu<CR>
   nnoremap <a-cr> <esc>:CodeActionMenu<CR>
+  inoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
+  nnoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
+  " }}}
   " {{{
   " German keyboard fix
   nmap ö '
