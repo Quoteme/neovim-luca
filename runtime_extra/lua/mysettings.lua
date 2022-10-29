@@ -95,7 +95,7 @@ function MyIMG.clearVirtualText()
   vim.api.nvim_buf_clear_namespace(0, MyIMG.namespace, 0, -1)
 end
 
-function MyIMG.tsParseForImageNodes()
+function MyIMG.showAllImages()
   local query = vim.treesitter.query.parse_query('markdown_inline', '(image) @image')
 
   local buffer = vim.api.nvim_get_current_buf()
@@ -115,11 +115,23 @@ function MyIMG.tsParseForImageNodes()
     local iter = query:iter_captures(root, buffer, 0, line_count + 1)
 
     for _, node, _ in iter do
-      local range = ts_utils.get_vim_range({ ts_utils.get_node_range(node) }, buffer)
+      -- print(({ ts_utils.get_vim_range({ ts_utils.get_node_range(node) }, buffer) })[1])
+      local range = { ts_utils.get_vim_range({ ts_utils.get_node_range(node) }, buffer) }
+      -- `node` has two subnodes:
+      -- ![here is some description]
+      -- (here is the url)
+      -- we now get the second node
+      local locationNode = ts_utils.get_named_children(node)[2]
+      -- now we get the text corresponding to the second node
+      -- because the location consists of only one line, we get the first element
+      local locationURL = ts_utils.get_node_text(locationNode, buffer)[1]
+      locationURL = string.gsub(locationURL, "file:", "")
+      locationURL = string.gsub(locationURL, "~", os.getenv("HOME") .. "/")
+      -- local location = 
       local mark_id = vim.api.nvim_buf_set_extmark(
         vim.fn.bufnr('%'),
         MyIMG.namespace,
-        range, -- range[1],
+        range[1], -- range[1],
         0, -- range[2],
         {
           virt_lines_above = true,
@@ -130,6 +142,7 @@ function MyIMG.tsParseForImageNodes()
             {{"PLACEHOLDER", "error"}},
             {{"PLACEHOLDER", "error"}},
             {{"PLACEHOLDER", "error"}},
+            {{"PLACEHOLDER"..locationURL, "error"}},
         }
       })
     end
