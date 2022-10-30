@@ -913,6 +913,22 @@
         "type": "github"
       }
     },
+    "plugin__nvim-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666959736,
+        "narHash": "sha256-cUVrxOgox5qqJumJyLN4uVQ209SC2Ojx7g83IgL7EfY=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "rev": "287ffdccc1dd7ed017d844a4fad069fd3340fa94",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter",
+        "type": "github"
+      }
+    },
     "plugin__nvim-ts-rainbow": {
       "flake": false,
       "locked": {
@@ -1499,6 +1515,7 @@
         "plugin__nvim-lightbulb": "plugin__nvim-lightbulb",
         "plugin__nvim-lspconfig": "plugin__nvim-lspconfig",
         "plugin__nvim-notify": "plugin__nvim-notify",
+        "plugin__nvim-treesitter": "plugin__nvim-treesitter",
         "plugin__nvim-ts-rainbow": "plugin__nvim-ts-rainbow",
         "plugin__nvim-web-devicons": "plugin__nvim-web-devicons",
         "plugin__nvimager": "plugin__nvimager",
