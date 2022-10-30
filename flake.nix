@@ -665,7 +665,9 @@
           # Add sniprun as an extra plugin from nixpkgs because idk
           # how to build it from source yet
           start = (builtins.attrValues pkgs.neovimPlugins)
-                ++ [pkgs.vimPlugins.sniprun];
+            ++ [ pkgs.vimPlugins.sniprun
+                 pkgs.vimPlugins.markdown-preview-nvim
+               ];
           dependencies = with pkgs; [
             # Telescope
               fd
