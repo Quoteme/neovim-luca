@@ -3,6 +3,12 @@
 -- {{{ Window and OS operations
 WindowCMD = {}
 
+function os.getfullpath(path)
+  local fullpath = string.gsub(path, "~", os.getenv("HOME") .. "/")
+  fullpath = string.gsub(fullpath, "file:", "")
+  return fullpath
+end
+
 function os.capture(cmd)
     local f = assert(io.popen(cmd, 'r'))
     local s = assert(f:read('*a'))
@@ -63,20 +69,6 @@ function MyIMG.Image:new(o, url, x, y, w, h)
   return o
 end
 
-function MyIMG.Image:command(seconds)
-  return 'ueberzug layer --parser bash 0< <(' ..
-            'declare -Ap add_command=( ' ..
-              '[action]="add" ' ..
-              '[identifier]="id0" ' ..
-              '[x]="' .. self.x .. '" ' ..
-              '[y]="' .. self.y .. '" ' ..
-              (self.width~="" and '[width]="' .. self.width .. '" ' or "") ..
-              (self.height~="" and'[height]="' .. self.height .. '" ' or "") ..
-              '[scaler]="' .. self.scaler .. '" ' ..
-              '[path]="' .. self.url .. '"); ' ..
-              'sleep ' .. tostring(seconds) .. ')'
-end
-
 function MyIMG.Image:commandfifo()
     return string.format(
       vim.env.RUNTIME_EXTRA.."/scripts/ueberzug-fifo.sh %s %s %s %s %s %s",
@@ -120,6 +112,7 @@ function MyIMG.Collection:add(image)
   table.insert(self.images, image)
 end
 
+-- TODO:add online image previews by using curl
 function MyIMG.Collection:show(seconds)
   for _, image in ipairs(self.images) do
     image:show(seconds)
@@ -127,6 +120,9 @@ function MyIMG.Collection:show(seconds)
 end
 -- }}}
 
+--- Show the image which is pointed to by the cursor
+---@param width number Width of the image
+---@param height number Height of the image
 function MyIMG.showUnderCursor(width, height)
   width = width or 20
   height = height or 20
@@ -139,6 +135,24 @@ function MyIMG.showUnderCursor(width, height)
     img:show("infinity")
     vim.fn.getchar()
     img:hide()
+  else
+    print("No link found")
+  end
+end
+
+function MyIMG.deleteUnderCursorFromFilesystem()
+  if vim.treesitter.get_node_at_cursor() == "link_destination" then
+    local tsu = require('nvim-treesitter.ts_utils')
+    local url = tsu.get_node_text(tsu.get_node_at_cursor())[1]
+    url = os.getfullpath(url)
+    require("notify")("Do you want to delete " .. url .. "? y/n", "info", { title = "Confirm image deletion" })
+    local answer = vim.fn.getchar()
+    if answer == 121 then
+      os.remove(url)
+      require("notify")("Image deleted", "info", { title = "Image deleted" })
+    else
+      require("notify")("Image not deleted", "warn", { title = "Image not deleted" })
+    end
   else
     print("No link found")
   end
@@ -216,7 +230,7 @@ function MyIMG.showAllImages(height, offsetTop, offsetLeft)
         local img = MyIMG.Image:new(nil,
           locationURL,
           col1+offsetLeft,
-          row1+offsetTop + MyIMG.numOfCurrentlyVisibleVirtualLines,
+          row1+offsetTop + MyIMG.numOfCurrentlyVisibleVirtualLines - vim.fn.winline(),
           nil,
           height)
         img:show(5)

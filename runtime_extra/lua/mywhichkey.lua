@@ -36,7 +36,8 @@ wk.register({
     name = "image tools",
     i = {":PasteImg<CR>", "insert from clipboard"},
     p = {":lua MyIMG.showUnderCursor(70,70)<CR>", "insert from clipboard"},
-    c = {":!maim -su | xclip -selection clipboard -t image/png<CR>", "capture and paste"},
+    c = {":!maim -su | xclip -selection clipboard -t image/png<CR>", "capture to clipboard"},
+    d = {":lua MyIMG.deleteUnderCursorFromFilesystem()<CR>", "delete image under cursor"},
   },
   l = {
     name = "LSP commands",
