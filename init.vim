@@ -910,7 +910,11 @@ nnoremap <F1> :Neotree filesystem toggle left<CR>
 
 " {{{
 " Sage
-autocmd FileType sage set syntax=python
+autocmd FileType sage set syntax=python set ft=python
+" }}}
+" {{{
+" Python
+autocmd FileType python set autoindent
 " }}}
 " {{{
 " GO
