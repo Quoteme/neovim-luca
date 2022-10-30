@@ -107,10 +107,10 @@
           flake = false;
         };
       # Tree-sitter
-        "plugin__nvim-treesitter" = {
-          url = "github:nvim-treesitter/nvim-treesitter";
-          flake = false;
-        };
+        # "plugin__nvim-treesitter" = {
+        #   url = "github:nvim-treesitter/nvim-treesitter";
+        #   flake = false;
+        # };
         "plugin__nvim-ts-rainbow" = {
           url = "github:p00f/nvim-ts-rainbow";
           flake = false;
@@ -666,6 +666,7 @@
           # how to build it from source yet
           start = (builtins.attrValues pkgs.neovimPlugins)
             ++ [ pkgs.vimPlugins.sniprun
+                 pkgs.vimPlugins.nvim-treesitter
                  pkgs.vimPlugins.markdown-preview-nvim
                ];
           dependencies = with pkgs; [
