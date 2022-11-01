@@ -486,6 +486,7 @@
             # Docker
               nodePackages.dockerfile-language-server-nodejs
           # Other dependencies
+            xcolor
             xclip
             ueberzug
             # Spelling and grammar

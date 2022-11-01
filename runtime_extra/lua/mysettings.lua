@@ -269,3 +269,11 @@ function MyIMG.showAllImages(height, offsetTop, offsetLeft)
   end)
 end
 -- }}}
+
+-- {{{ General functions
+function colorpicker()
+  local cmd = ('xcolor')
+  local buf = os.capture(cmd)
+  vim.cmd("normal! i" .. buf)
+end
+-- }}}
