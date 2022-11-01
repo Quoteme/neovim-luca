@@ -140,6 +140,33 @@ function MyIMG.showUnderCursor(width, height)
   end
 end
 
+function MyIMG.renameUnderCursorFromFilesystem()
+  if vim.treesitter.get_node_at_cursor() == "link_destination" then
+    local tsu = require('nvim-treesitter.ts_utils')
+    local node = tsu.get_node_at_cursor()
+    local url = tsu.get_node_text(node)[1]
+    url = os.getfullpath(url)
+    require("notify")("Enter a new name for " .. url .. ". Leave empty to cancel.", "info", { title = "Rename file" })
+    local newname = vim.fn.input("New name: ", url)
+    if newname ~= "" then
+      os.rename(url, newname)
+      -- now change the text in the buffer
+      local buffer = vim.api.nvim_get_current_buf()
+      local row1, col1, row2, col2 =tsu.get_vim_range({ tsu.get_node_range(node) }, buffer) -- node:range()
+      local line = vim.api.nvim_buf_get_lines(buffer, row1-1, row1, false)[1]
+      print(vim.inspect( line:sub(0, col1+1) ))
+      print(vim.inspect( line:sub(col2+1) ))
+      local nline = line:sub(0, col1-1) .. newname .. line:sub(col2+1)
+      vim.api.nvim_set_current_line(nline)
+      require("notify")("File renamed", "info", { title = "File renamed" })
+    else
+      require("notify")("File not renamed because new name was empty", "warn", { title = "File not renamed" })
+    end
+  else
+    print("No link found")
+  end
+end
+
 function MyIMG.deleteUnderCursorFromFilesystem()
   if vim.treesitter.get_node_at_cursor() == "link_destination" then
     local tsu = require('nvim-treesitter.ts_utils')
