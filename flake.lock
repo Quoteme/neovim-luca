@@ -417,6 +417,22 @@
         "type": "github"
       }
     },
+    "plugin__codewindow.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667194515,
+        "narHash": "sha256-L97RKpjUJ9Fw6Kpw3eY/GF38XmIHsCvtR1MqaMiw61I=",
+        "owner": "gorbit99",
+        "repo": "codewindow.nvim",
+        "rev": "987b394b3c987cb9dd6c07ea57de88a4ce64f7e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gorbit99",
+        "repo": "codewindow.nvim",
+        "type": "github"
+      }
+    },
     "plugin__conjure": {
       "flake": false,
       "locked": {
@@ -1452,6 +1468,7 @@
         "plugin__cmp-rg": "plugin__cmp-rg",
         "plugin__cmp-spell": "plugin__cmp-spell",
         "plugin__cmp_luasnip": "plugin__cmp_luasnip",
+        "plugin__codewindow.nvim": "plugin__codewindow.nvim",
         "plugin__conjure": "plugin__conjure",
         "plugin__copilot-cmp": "plugin__copilot-cmp",
         "plugin__copilot.lua": "plugin__copilot.lua",

@@ -127,6 +127,14 @@ lua require("focus").setup()
 lua require('neoscroll').setup()
 " }}}
 
+" {{{ Codewindow
+lua <<EOF
+local codewindow = require('codewindow')
+codewindow.setup()
+--codewindow.apply_default_keybinds()
+EOF
+" }}}
+
 " {{{
 " Marks.nvim
 lua << EOF

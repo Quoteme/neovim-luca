@@ -19,6 +19,13 @@ wk.register({
     a = {"<cmd>lua require('nabla').action()<CR>", "action"},
     p = {"<cmd>lua require('nabla').popup()<CR>", "popup"},
     },
+  m = {
+    name = "codewindow.nvim - code minimap",
+    o = {":lua require('codewindow').open_minimap()<CR>", "open minimap"},
+    c = {":lua require('codewindow').close_minimap()<CR>", "close minimap"},
+    f = {":lua require('codewindow').toggle_minimap()<CR>", "toggle minimap"},
+    m = {":lua require('codewindow').toggle_focus()<CR>", "toggle focus"},
+    },
   -- ? = {"<cmd>Cheatsheet<CR>", "Cheatsheet"},
   d = {
     name = "neogen documentation",

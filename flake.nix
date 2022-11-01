@@ -377,6 +377,10 @@
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
+      "plugin__codewindow.nvim" = {
+        url = "github:gorbit99/codewindow.nvim";
+        flake = false;
+      };
       # "plugin__auto-session" = {
       #   url = "github:rmagatti/auto-session";
       #   flake = false;
