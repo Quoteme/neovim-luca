@@ -456,9 +456,9 @@
               haskell-language-server
               ormolu
             # html
-              nodePackages.vscode-html-languageserver-bin
-              nodePackages.vscode-css-languageserver-bin
-              nodePackages.vscode-json-languageserver-bin
+              # nodePackages.vscode-html-languageserver-bin
+              # nodePackages.vscode-css-languageserver-bin
+              # nodePackages.vscode-json-languageserver-bin
             # JavaScript / Typescript
               nodePackages.vscode-langservers-extracted
               deno

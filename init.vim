@@ -598,7 +598,7 @@ nvim_lsp.html.setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { "html-languageserver", "--stdio" }
+  -- cmd = { "html-languageserver", "--stdio" }
 }
 
 nvim_lsp.cssls.setup {
@@ -607,7 +607,7 @@ nvim_lsp.cssls.setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { "css-languageserver", "--stdio" }
+  -- cmd = { "css-languageserver", "--stdio" }
 }
 
 nvim_lsp.jsonls.setup {
@@ -616,7 +616,7 @@ nvim_lsp.jsonls.setup {
   flags = {
     debounce_text_changes = 150,
   },
-  cmd = { "json-languageserver", "--stdio" }
+  -- cmd = { "json-languageserver", "--stdio" }
 }
 
 -- Java language server
