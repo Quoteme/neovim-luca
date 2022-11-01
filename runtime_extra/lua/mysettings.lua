@@ -141,7 +141,7 @@ function MyIMG.showUnderCursor(width, height)
 end
 
 function MyIMG.renameUnderCursorFromFilesystem()
-  if vim.treesitter.get_node_at_cursor() == "link_destination" then
+  if vim.treesitter.get_node_at_cursor() == "link_destination" or vim.treesitter.get_node_at_cursor() == "attribute_value" then
     local tsu = require('nvim-treesitter.ts_utils')
     local node = tsu.get_node_at_cursor()
     local url = tsu.get_node_text(node)[1]
