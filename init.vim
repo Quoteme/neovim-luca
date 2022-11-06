@@ -865,8 +865,8 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   " }}}
   " {{{
   " Save and restore view (including folds) automatically
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent! loadview
+    autocmd BufWritePost,BufLeave,WinLeave,BufWinLeave ?* mkview!
+    autocmd BufWinEnter ?* silent! loadview
   " }}}
   " {{{
   " Disables automatic commenting on newline:
