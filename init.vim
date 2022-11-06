@@ -571,6 +571,7 @@ local servers = {
   'dockerls',
   'eslint',
   'hls',
+  'pyright',
   'jedi_language_server',
   'ltex',
   'rust_analyzer',

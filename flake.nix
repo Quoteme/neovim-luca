@@ -466,6 +466,7 @@
               rnix-lsp
             # Python
               python39Packages.jedi-language-server
+              nodePackages.pyright
             # Rust
               rust-analyzer
             # Clojure
