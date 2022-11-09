@@ -132,11 +132,11 @@
     "plugin__catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1666895699,
-        "narHash": "sha256-CUxc2CwRiRXHMfbt7QhYVSdx9HjPbRGIdlgnOn7Bfl0=",
+        "lastModified": 1667749312,
+        "narHash": "sha256-vhKhEXCkmz0KH8LlZzcOvGkvdwp7TtI7ZV7ZxojgnAI=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "e695645298320e9714d10897aadee3cb5951567a",
+        "rev": "cd676faa020b34e6617398835b5fa3d1c2e8895c",
         "type": "github"
       },
       "original": {
