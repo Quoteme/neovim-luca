@@ -847,7 +847,7 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   tnoremap <M-Tab> <cmd>BufferMoveNext<CR><ESC>
   tnoremap <M-S-Tab> <cmd>BufferMovePrevious<CR><ESC>
   tnoremap <C-W> <cmd>BufferClose<CR><ESC>
-  tnoremap <C-S-W> <cmd>BufferClose!<CR>"}}}
+  tnoremap <C-S-W> <cmd>BufferClose!<CR>
   " }}}
 
   " {{{
