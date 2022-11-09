@@ -295,7 +295,26 @@ require('legendary').setup({
   keymaps = {
     -- open command palette like VSCode
     { '<C-S-P>', ':Legendary<CR>', description="open command palette (legendary.nvim)" },
-  },
+    -- folds
+    { '<C-+>', ':lua require("fold-cycle").open()<CR>', description="open folds" },
+    { '<C-->', ':lua require("fold-cycle").close()<CR>', description="close folds" },
+    { '<C-S-+>', ':lua require("fold-cycle").open_all()<CR>', description="open all folds" },
+    { '<C-S-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
+    -- Code action
+    { '<C-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
+    { '<A-b>'     , ':lua vim.lsp.buf.definition()' , description="go to definition" } ,
+    -- Buffer stuff
+    { '<C-Tab>'   , ':BufferNext<CR><ESC>'         , description='next buffer'},
+    { '<C-S-Tab>' , ':BufferPrevious<CR><ESC>'     , description='previous buffer'},
+    { '<M-Tab>'   , ':BufferMoveNext<CR><ESC>'     , description='swap buffer with next'},
+    { '<M-S-Tab>' , ':BufferMovePrevious<CR><ESC>' , description='swap buffer with previous'},
+    { '<C-W>'     , ':BufferClose<CR><ESC>'        , description='close buffer'},
+    { '<C-S-W>'   , ':BufferClose!<CR>'            , description='force close buffer'},
+    -- Hotkeys
+    { '<F1>' , ':Neotree filesystem toggle left<CR>' , description='open neotree'} ,
+    { '<F1>' , ':SymbolsOutline<CR>' , description='symbols outline'} ,
+    { '<F1>' , ':TodoTelescope<CR>' , description='list all todos'} ,
+  }          ,
   which_key = {
     auto_register = true,
   },
