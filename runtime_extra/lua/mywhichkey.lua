@@ -100,6 +100,8 @@ wk.register({
       u = {"<cmd>lua package.loaded.gitsigns.undo_stage_hunk()<CR>", "undo stage hunk"},
       p = {"<cmd>lua package.loaded.gitsigns.preview_hunk()<CR>", "preview hunk"},
     },
+    ["<"] = {"<cmd>Gitsigns prev_hunk<CR>", "previous hunk"},
+    [">"] = {"<cmd>Gitsigns next_hunk<CR>", "next hunk"},
     s = {"<cmd>lua package.loaded.gitsigns.stage_buffer()<CR>", "stage buffer"},
     r = {"<cmd>lua package.loaded.gitsigns.reset_buffer()<CR>", "reset buffer"},
     t = {"<cmd>lua package.loaded.gitsigns.toggle_current_line_blame()<CR>", "toggle current line blame"},
