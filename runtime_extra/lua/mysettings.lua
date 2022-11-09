@@ -1,5 +1,6 @@
 -- vim: tabstop=2 shiftwidth=2 expandtab foldmethod=marker
 
+-- {{{ My Own functions 
 -- {{{ Window and OS operations
 WindowCMD = {}
 
@@ -276,4 +277,29 @@ function colorpicker()
   local buf = os.capture(cmd)
   vim.cmd("normal! i" .. buf)
 end
+-- }}}
+-- }}}
+
+-- {{{ Plugins loading
+-- {{{ Legendary.nvim
+--
+-- A legend for your keymaps, commands, and autocmds,
+-- with which-key.nvim integration
+--
+
+-- First set up `dressing.nvim` for better visuals
+require('dressing').setup()
+
+-- Then set up `legendary.nvim`
+require('legendary').setup({
+  keymaps = {
+    -- open command palette like VSCode
+    { '<C-S-P>', ':Legendary<CR>', description="open command palette (legendary.nvim)" },
+  },
+  which_key = {
+    auto_register = true,
+  },
+})
+
+-- }}}
 -- }}}

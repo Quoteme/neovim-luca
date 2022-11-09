@@ -402,6 +402,15 @@
           url = "github:sudormrfbin/cheatsheet.nvim";
           flake = false;
         };
+        "plugin__legendary.nvim" = {
+          url = "github:mrjones2014/legendary.nvim";
+          flake = false;
+        };
+        # Better Graphics
+          "plugin__dressing.nvim" = {
+            url = "github:stevearc/dressing.nvim";
+            flake = false;
+          };
       # Buffer line
         "plugin__nvim-web-devicons" = {
            url = "github:kyazdani42/nvim-web-devicons";
