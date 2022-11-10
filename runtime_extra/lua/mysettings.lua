@@ -302,7 +302,7 @@ require('legendary').setup({
     { '<C-S-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
     -- Code action
     { '<C-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
-    { '<A-b>'     , ':lua vim.lsp.buf.definition()' , description="go to definition" } ,
+    { '<A-b>'     , ':lua vim.lsp.buf.definition()<CR>' , description="go to definition" } ,
     -- Buffer stuff
     { '<C-Tab>'   , ':BufferNext<CR><ESC>'         , description='next buffer'},
     { '<C-S-Tab>' , ':BufferPrevious<CR><ESC>'     , description='previous buffer'},
