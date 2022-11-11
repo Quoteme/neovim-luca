@@ -301,7 +301,7 @@ require('legendary').setup({
     { '<C-S-+>', ':lua require("fold-cycle").open_all()<CR>', description="open all folds" },
     { '<C-S-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
     -- Code action
-    { '<C-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
+    { '<A-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
     { '<A-b>'     , ':lua vim.lsp.buf.definition()<CR>' , description="go to definition" } ,
     -- Buffer stuff
     { '<C-Tab>'   , ':BufferNext<CR><ESC>'         , description='next buffer'},
