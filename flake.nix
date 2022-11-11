@@ -480,6 +480,8 @@
               rust-analyzer
             # Clojure
               clojure-lsp
+            # Nim
+              nimlsp
             # C
               clang-tools
             # Cmake

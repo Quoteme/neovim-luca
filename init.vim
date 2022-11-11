@@ -572,6 +572,7 @@ local servers = {
   'pyright',
   'jedi_language_server',
   'ltex',
+  'nimls',
   'rust_analyzer',
   'rnix',
   'texlab',
