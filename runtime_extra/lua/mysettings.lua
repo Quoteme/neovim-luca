@@ -298,8 +298,8 @@ require('legendary').setup({
     -- folds
     { '<C-+>', ':lua require("fold-cycle").open()<CR>', description="open folds" },
     { '<C-->', ':lua require("fold-cycle").close()<CR>', description="close folds" },
-    { '<C-S-+>', ':lua require("fold-cycle").open_all()<CR>', description="open all folds" },
-    { '<C-S-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
+    { '<C-A-+>', ':lua require("fold-cycle").open_all()<CR>', description="open all folds" },
+    { '<C-A-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
     -- Code action
     { '<A-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
     { '<A-b>'     , ':lua vim.lsp.buf.definition()<CR>' , description="go to definition" } ,
