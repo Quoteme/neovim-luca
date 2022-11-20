@@ -50,6 +50,8 @@ wk.register({
   },
   l = {
     name = "LSP commands",
+    ["<"] = {"<cmd>lua vim.diagnostic.goto_prev()<CR>", "previous diagnostic"},
+    [">"] = {"<cmd>lua vim.diagnostic.goto_next()<CR>", "next diagnostic"},
     D = {"<cmd>lua vim.lsp.buf.declaration()<CR>","goto declaration"},
     d = {"<cmd>lua vim.lsp.buf.definition()<CR>","goto definition"},
     h = {"<cmd>lua vim.lsp.buf.hover()<CR>","hover"},
