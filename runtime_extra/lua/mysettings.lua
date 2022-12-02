@@ -314,7 +314,7 @@ require('legendary').setup({
     { '<F1>' , ':Neotree filesystem toggle left<CR>' , description='open neotree'} ,
     { '<F2>' , ':SymbolsOutline<CR>' , description='symbols outline'} ,
     { '<F3>' , ':TodoTelescope<CR>' , description='list all todos'} ,
-  }          ,
+  },
   which_key = {
     auto_register = true,
   },

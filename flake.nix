@@ -18,11 +18,6 @@
       flake = false;
     };
 
-    java-debug = {
-      url = "github:microsoft/java-debug";
-      flake = false;
-    };
-    
     # Theme / Colorscheme
       "plugin__onedark-vim" = {
         url = "github:joshdick/onedark.vim";
@@ -33,7 +28,7 @@
         flake = false;
       };
     # Splits and windows
-      "plugin__focus.nvim" = {
+      "plugin__focus_nvim" = {
         url = "github:beauwilliams/focus.nvim";
         flake = false;
       };
@@ -116,7 +111,7 @@
           flake = false;
         };
       # Language Server Protocol
-        "plugin__trouble.nvim" = {
+        "plugin__trouble_nvim" = {
           url = "github:folke/trouble.nvim";
           flake = false;
         };
@@ -124,7 +119,7 @@
           url = "github:neovim/nvim-lspconfig";
           flake = false;
         };
-        "plugin__lsp_signature.nvim" = {
+        "plugin__lsp_signature_nvim" = {
           url = "github:ray-x/lsp_signature.nvim";
           flake = false;
         };
@@ -150,7 +145,7 @@
             url = "github:hrsh7th/cmp-nvim-lsp";
             flake = false;
           };
-          "plugin__lspkind.nvim" = {
+          "plugin__lspkind_nvim" = {
             url = "github:onsails/lspkind.nvim";
             flake = false;
           };
@@ -198,7 +193,7 @@
             url = "github:hrsh7th/cmp-emoji";
             flake = false;
           };
-          "plugin__cmp-pandoc.nvim" = {
+          "plugin__cmp-pandoc_nvim" = {
             url = "github:aspeddro/cmp-pandoc.nvim";
             flake = false;
           };
@@ -268,7 +263,7 @@
             flake = false;
           };
           # Required by neo-tree
-            "plugin__nui.nvim" = {
+            "plugin__nui_nvim" = {
               url = "github:MunifTanjim/nui.nvim";
               flake = false;
             };
@@ -277,11 +272,11 @@
           #   url = "github:stevearc/aerial.nvim";
           #   flake = false;
           # };
-          "plugin__symbols-outline.nvim" = {
+          "plugin__symbols-outline_nvim" = {
             url = "github:simrat39/symbols-outline.nvim";
             flake = false;
           };
-          "plugin__todo-comments.nvim" = {
+          "plugin__todo-comments_nvim" = {
             url = "github:folke/todo-comments.nvim";
             flake = false;
           };
@@ -306,7 +301,7 @@
           flake = false;
         };
       # Git integration
-        "plugin__gitsigns.nvim" = {
+        "plugin__gitsigns_nvim" = {
           url = "github:lewis6991/gitsigns.nvim";
           flake = false;
         };
@@ -315,7 +310,7 @@
           url = "github:norcalli/nvim-colorizer.lua";
           flake = false;
         };
-        "plugin__twilight.nvim" = {
+        "plugin__twilight_nvim" = {
           url = "github:folke/twilight.nvim";
           flake = false;
         };
@@ -332,16 +327,16 @@
         flake = false;
       };
       # folding
-        "plugin__fold-cycle.nvim" = {
+        "plugin__fold-cycle_nvim" = {
           url = "github:jghauser/fold-cycle.nvim";
           flake = false;
         };
-        "plugin__pretty-fold.nvim" = {
+        "plugin__pretty-fold_nvim" = {
           url = "github:anuvyklack/pretty-fold.nvim";
           flake = false;
         };
         # for preview of folds:
-          "plugin__fold-preview.nvim" = {
+          "plugin__fold-preview_nvim" = {
             url = "github:anuvyklack/fold-preview.nvim";
             flake = false;
           };
@@ -361,7 +356,7 @@
         url = "github:mg979/vim-visual-multi";
         flake = false;
       };
-      "plugin__which-key.nvim" = {
+      "plugin__which-key_nvim" = {
         url = "github:folke/which-key.nvim";
         flake = false;
       };
@@ -369,15 +364,15 @@
         url = "github:noahfrederick/vim-skeleton";
         flake = false;
       };
-      "plugin__indent-blankline.nvim" = {
+      "plugin__indent-blankline_nvim" = {
         url = "github:lukas-reineke/indent-blankline.nvim";
         flake = false;
       };
-      "plugin__neoscroll.nvim" = {
+      "plugin__neoscroll_nvim" = {
         url = "github:karb94/neoscroll.nvim";
         flake = false;
       };
-      "plugin__codewindow.nvim" = {
+      "plugin__codewindow_nvim" = {
         url = "github:gorbit99/codewindow.nvim";
         flake = false;
       };
@@ -386,28 +381,28 @@
       #   flake = false;
       # };
       # Cheatcheet
-        "plugin__plenary.nvim" = {
+        "plugin__plenary_nvim" = {
           url = "github:nvim-lua/plenary.nvim";
           flake = false;
         };
-        "plugin__telescope.nvim" = {
+        "plugin__telescope_nvim" = {
           url = "github:nvim-telescope/telescope.nvim";
           flake = false;
         };
-        "plugin__popup.nvim" = {
+        "plugin__popup_nvim" = {
           url = "github:nvim-lua/popup.nvim";
           flake = false;
         };
-        "plugin__cheatsheet.nvim" = {
+        "plugin__cheatsheet_nvim" = {
           url = "github:sudormrfbin/cheatsheet.nvim";
           flake = false;
         };
-        "plugin__legendary.nvim" = {
+        "plugin__legendary_nvim" = {
           url = "github:mrjones2014/legendary.nvim";
           flake = false;
         };
         # Better Graphics
-          "plugin__dressing.nvim" = {
+          "plugin__dressing_nvim" = {
             url = "github:stevearc/dressing.nvim";
             flake = false;
           };
@@ -416,20 +411,20 @@
            url = "github:kyazdani42/nvim-web-devicons";
            flake = false;
           };
-        "plugin__barbar.nvim" = {
+        "plugin__barbar_nvim" = {
            url = "github:romgrk/barbar.nvim";
            flake = false;
          };
       # Note taking
-        "plugin__nabla.nvim" = {
+        "plugin__nabla_nvim" = {
           url = "github:jbyuki/nabla.nvim";
           flake = false;
         };
-        "plugin__pandoc.nvim" = {
+        "plugin__pandoc_nvim" = {
           url = "github:aspeddro/pandoc.nvim";
           flake = false;
         };
-        "plugin__clipboard-image.nvim" = {
+        "plugin__clipboard-image_nvim" = {
           url = "github:ekickx/clipboard-image.nvim";
           flake = false;
         };
@@ -438,12 +433,12 @@
           flake = false;
         };
       # marks
-        "plugin__marks.nvim" = {
+        "plugin__marks_nvim" = {
           url = "github:chentoast/marks.nvim";
           flake = false;
         };
       # Gestures
-        "plugin__gesture.nvim" = {
+        "plugin__gesture_nvim" = {
           url = "github:notomo/gesture.nvim";
           flake = false;
         };
