@@ -728,7 +728,7 @@ EOF
 " {{{
 " colorscheme
 " colorscheme onedark
-  let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+  let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
   lua require("catppuccin").setup()
   colorscheme catppuccin
 " }}}
