@@ -91,8 +91,8 @@
     ## Snippets
     "plugin__LuaSnip" = { url = "github:L3MON4D3/LuaSnip"; flake = false; };
     "plugin__cmp_luasnip" = { url = "github:saadparwaiz1/cmp_luasnip"; flake = false; };
-    snippets-java = { url = "github:tushortz/vscode-Java-Snippets"; flake = false; };
-    snippets-shebang = { url = "github:Rpinski/vscode-shebang-snippets"; flake = false; };
+    "plugin__snippets-java" = { url = "github:tushortz/vscode-Java-Snippets"; flake = false; };
+    "plugin__snippets-shebang" = { url = "github:Rpinski/vscode-shebang-snippets"; flake = false; };
     "plugin__friendly-snippets" = { url = "github:rafamadriz/friendly-snippets"; flake = false; };
     "plugin__vim-snippets" = { url = "github:honza/vim-snippets"; flake = false; };
 
@@ -368,9 +368,6 @@
                                 --prefix PATH : $out/bin \
                                 --prefix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
                                 --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra
-                              mkdir -p $out/share/nvim/runtime/snippets/
-                              cp -r ${inputs.snippets-java} $out/share/nvim/runtime/snippets/snippets-java
-                              cp -r ${inputs.snippets-shebang} $out/share/nvim/runtime/snippets/snippets-shebang
                               # Create runtime_extra
                               mkdir -p $out/share/nvim/runtime_extra
                               cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/

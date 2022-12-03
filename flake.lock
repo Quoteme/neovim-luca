@@ -1089,6 +1089,38 @@
         "type": "github"
       }
     },
+    "plugin__snippets-java": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1456672155,
+        "narHash": "sha256-hzqmb1uhX/DTS43cUxkPhAUjMbcf/IZoZ/pVhLsYYmA=",
+        "owner": "tushortz",
+        "repo": "vscode-Java-Snippets",
+        "rev": "8f37f1fc290c3d375872491a0f5fd7f2e802554b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tushortz",
+        "repo": "vscode-Java-Snippets",
+        "type": "github"
+      }
+    },
+    "plugin__snippets-shebang": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1594681038,
+        "narHash": "sha256-uhNtMPLU0HKy5ci7YlX6KiU9NCQn6lh2Z5Mw6Zf5V+Y=",
+        "owner": "Rpinski",
+        "repo": "vscode-shebang-snippets",
+        "rev": "9aa476b97f24cc5ebc86fa3e62eee0ef08fb6620",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Rpinski",
+        "repo": "vscode-shebang-snippets",
+        "type": "github"
+      }
+    },
     "plugin__symbols-outline_nvim": {
       "flake": false,
       "locked": {
@@ -1542,6 +1574,8 @@
         "plugin__plenary_nvim": "plugin__plenary_nvim",
         "plugin__popup_nvim": "plugin__popup_nvim",
         "plugin__pretty-fold_nvim": "plugin__pretty-fold_nvim",
+        "plugin__snippets-java": "plugin__snippets-java",
+        "plugin__snippets-shebang": "plugin__snippets-shebang",
         "plugin__symbols-outline_nvim": "plugin__symbols-outline_nvim",
         "plugin__tabular": "plugin__tabular",
         "plugin__telescope_nvim": "plugin__telescope_nvim",
@@ -1565,41 +1599,7 @@
         "plugin__vim-visual-multi": "plugin__vim-visual-multi",
         "plugin__vimspector": "plugin__vimspector",
         "plugin__which-key_nvim": "plugin__which-key_nvim",
-        "plugin__yuck.vim": "plugin__yuck.vim",
-        "snippets-java": "snippets-java",
-        "snippets-shebang": "snippets-shebang"
-      }
-    },
-    "snippets-java": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1456672155,
-        "narHash": "sha256-hzqmb1uhX/DTS43cUxkPhAUjMbcf/IZoZ/pVhLsYYmA=",
-        "owner": "tushortz",
-        "repo": "vscode-Java-Snippets",
-        "rev": "8f37f1fc290c3d375872491a0f5fd7f2e802554b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tushortz",
-        "repo": "vscode-Java-Snippets",
-        "type": "github"
-      }
-    },
-    "snippets-shebang": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1594681038,
-        "narHash": "sha256-uhNtMPLU0HKy5ci7YlX6KiU9NCQn6lh2Z5Mw6Zf5V+Y=",
-        "owner": "Rpinski",
-        "repo": "vscode-shebang-snippets",
-        "rev": "9aa476b97f24cc5ebc86fa3e62eee0ef08fb6620",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Rpinski",
-        "repo": "vscode-shebang-snippets",
-        "type": "github"
+        "plugin__yuck.vim": "plugin__yuck.vim"
       }
     }
   },
