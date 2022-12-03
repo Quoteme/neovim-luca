@@ -95,9 +95,8 @@
     "plugin__snippets-shebang" = { url = "github:Rpinski/vscode-shebang-snippets"; flake = false; };
     "plugin__friendly-snippets" = { url = "github:rafamadriz/friendly-snippets"; flake = false; };
     "plugin__vim-snippets" = { url = "github:honza/vim-snippets"; flake = false; };
-
-    ### Language specific snippets
     "plugin__dartlang-snippets" = { url = "github:natebosch/dartlang-snippets"; flake = false; };
+
     ## Github Copilot
     "plugin__copilot.vim" = { url = "github:github/copilot.vim"; flake = false; };
     "plugin__copilot.lua" = { url = "github:zbirenbaum/copilot.lua"; flake = false; };
