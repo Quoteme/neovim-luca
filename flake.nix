@@ -31,6 +31,7 @@
 
     ## Dart / Flutter
     "plugin__dart-vim-plugin" = { url = "github:dart-lang/dart-vim-plugin"; flake = false; };
+    "plugin__flutter-tools.nvim" = { url = "github:akinsho/flutter-tools.nvim"; flake = false; };
 
     ## Yuck (for eww)
     "plugin__yuck.vim" = { url = "github:elkowar/yuck.vim"; flake = false; };

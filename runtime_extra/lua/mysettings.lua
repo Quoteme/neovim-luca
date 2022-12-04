@@ -397,4 +397,15 @@ require('auto-session').setup {
 }
 -- }}}
 
+-- {{{ flutter-tools.nvim
+require("flutter-tools").setup {
+  debugger = {
+    enabled = true,
+  },
+  flutter_path = vim.fn.getenv("FLUTTER_SDK") .. "/bin/flutter",
+  widget_guides = {
+    enabled = true,
+  },
+}
+-- }}}
 -- }}}

@@ -567,7 +567,7 @@ local servers = {
   'clangd',
   'cmake',
   'clojure_lsp',
-  'dartls',
+  --'dartls',
   'denols',
   'dockerls',
   'eslint',

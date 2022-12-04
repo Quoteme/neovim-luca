@@ -593,6 +593,22 @@
         "type": "github"
       }
     },
+    "plugin__flutter-tools.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668710993,
+        "narHash": "sha256-/9+6znJ5YA/yTNp5nZlusG5+FF4Ogz0QluuPbdmtX1Q=",
+        "owner": "akinsho",
+        "repo": "flutter-tools.nvim",
+        "rev": "b666a057108c7655882cbc64217222228aad68da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "akinsho",
+        "repo": "flutter-tools.nvim",
+        "type": "github"
+      }
+    },
     "plugin__focus_nvim": {
       "flake": false,
       "locked": {
@@ -1607,6 +1623,7 @@
         "plugin__dartlang-snippets": "plugin__dartlang-snippets",
         "plugin__delimitMate": "plugin__delimitMate",
         "plugin__dressing_nvim": "plugin__dressing_nvim",
+        "plugin__flutter-tools.nvim": "plugin__flutter-tools.nvim",
         "plugin__focus_nvim": "plugin__focus_nvim",
         "plugin__fold-cycle_nvim": "plugin__fold-cycle_nvim",
         "plugin__fold-preview_nvim": "plugin__fold-preview_nvim",
