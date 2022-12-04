@@ -113,6 +113,22 @@
         "type": "github"
       }
     },
+    "plugin__barbecue_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669929430,
+        "narHash": "sha256-DT7VaRNKQMkMegxe8lRwfTEzROGLOxIY6Bk5Aoxn3oY=",
+        "owner": "utilyre",
+        "repo": "barbecue.nvim",
+        "rev": "ccabd32c54c8fff5883ac0adb655250c1ff410b0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "utilyre",
+        "repo": "barbecue.nvim",
+        "type": "github"
+      }
+    },
     "plugin__catppuccin": {
       "flake": false,
       "locked": {
@@ -705,6 +721,22 @@
         "type": "github"
       }
     },
+    "plugin__lualine_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669646907,
+        "narHash": "sha256-DiSbSGfCe8h/7Bu48jbYQfwFXhlHmJnGG5R6oBG4JPs=",
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "rev": "bfa0d99ba6f98d077dd91779841f1c88b7b5c165",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-lualine",
+        "repo": "lualine.nvim",
+        "type": "github"
+      }
+    },
     "plugin__marks_nvim": {
       "flake": false,
       "locked": {
@@ -926,6 +958,22 @@
       "original": {
         "owner": "neovim",
         "repo": "nvim-lspconfig",
+        "type": "github"
+      }
+    },
+    "plugin__nvim-navic": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669558444,
+        "narHash": "sha256-0VeJyAqCs9izdBEk3Vet8Aoa1LLAjN3wrhsfjmD9LZM=",
+        "owner": "smiteshp",
+        "repo": "nvim-navic",
+        "rev": "343e07de11b15f93e44ebd47eb98dce6b7da2e6b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "smiteshp",
+        "repo": "nvim-navic",
         "type": "github"
       }
     },
@@ -1513,6 +1561,7 @@
         "nixpkgs": "nixpkgs",
         "plugin__LuaSnip": "plugin__LuaSnip",
         "plugin__barbar_nvim": "plugin__barbar_nvim",
+        "plugin__barbecue_nvim": "plugin__barbecue_nvim",
         "plugin__catppuccin": "plugin__catppuccin",
         "plugin__cheatsheet_nvim": "plugin__cheatsheet_nvim",
         "plugin__clipboard-image_nvim": "plugin__clipboard-image_nvim",
@@ -1550,6 +1599,7 @@
         "plugin__legendary_nvim": "plugin__legendary_nvim",
         "plugin__lsp_signature_nvim": "plugin__lsp_signature_nvim",
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
+        "plugin__lualine_nvim": "plugin__lualine_nvim",
         "plugin__marks_nvim": "plugin__marks_nvim",
         "plugin__nabla_nvim": "plugin__nabla_nvim",
         "plugin__neo-tree": "plugin__neo-tree",
@@ -1564,6 +1614,7 @@
         "plugin__nvim-keymap-amend": "plugin__nvim-keymap-amend",
         "plugin__nvim-lightbulb": "plugin__nvim-lightbulb",
         "plugin__nvim-lspconfig": "plugin__nvim-lspconfig",
+        "plugin__nvim-navic": "plugin__nvim-navic",
         "plugin__nvim-notify": "plugin__nvim-notify",
         "plugin__nvim-treesitter": "plugin__nvim-treesitter",
         "plugin__nvim-ts-rainbow": "plugin__nvim-ts-rainbow",

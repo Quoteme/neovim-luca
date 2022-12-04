@@ -528,6 +528,7 @@ EOF
 " lspconfig
 lua << EOF
 local nvim_lsp = require('lspconfig')
+local navic = require("nvim-navic")
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -577,7 +578,10 @@ local servers = {
   'rust_analyzer',
   'rnix',
   'texlab',
-  'vimls'
+  'vimls',
+  'html',
+  'cssls',
+  'jsonls',
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -592,33 +596,6 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
-nvim_lsp.html.setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-  flags = {
-    debounce_text_changes = 150,
-  },
-  -- cmd = { "html-languageserver", "--stdio" }
-}
-
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-  flags = {
-    debounce_text_changes = 150,
-  },
-  -- cmd = { "css-languageserver", "--stdio" }
-}
-
-nvim_lsp.jsonls.setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-  flags = {
-    debounce_text_changes = 150,
-  },
-  -- cmd = { "json-languageserver", "--stdio" }
-}
 
 -- Java language server
 nvim_lsp.java_language_server.setup {
