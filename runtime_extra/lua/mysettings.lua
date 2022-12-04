@@ -394,6 +394,11 @@ require('auto-session').setup {
       return vim.cmd("Neotree filesystem close")
     end
   },
+  post_save_cmds = {
+    function()
+      return vim.cmd("Neotree filesystem toggle left")
+    end
+  },
 }
 -- }}}
 
