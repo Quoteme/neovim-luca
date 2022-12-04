@@ -311,7 +311,7 @@ require('legendary').setup({
     { '<C-W>'     , ':BufferClose<CR><ESC>'        , description='close buffer'},
     { '<C-S-W>'   , ':BufferClose!<CR>'            , description='force close buffer'},
     -- Hotkeys
-    { '<F1>' , ':Neotree filesystem toggle left<CR>' , description='open neotree'} ,
+    { '<F1>' , ':Neotree filesystem toggle left reveal<CR>' , description='open neotree'} ,
     { '<F2>' , ':SymbolsOutline<CR>' , description='symbols outline'} ,
     { '<F3>' , ':TodoTelescope<CR>' , description='list all todos'} ,
   },

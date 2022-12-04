@@ -901,7 +901,7 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
 
 " {{{
 " neotree file browsing
-nnoremap <F1> :Neotree filesystem toggle left<CR>
+nnoremap <F1> :Neotree filesystem toggle left reveal<CR>
 " }}}
 " {{{
 " symbols-outline code browsing
