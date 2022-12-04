@@ -50,9 +50,6 @@
     "plugin__vim-sexp"                             = { url = "github:guns/vim-sexp"; flake                              = false; };
     "plugin__vim-sexp-mappings-for-regular-people" = { url = "github:tpope/vim-sexp-mappings-for-regular-people"; flake = false; };
 
-    ## JAVA
-    "plugin__nvim-jdtls" = { url = "github:mfussenegger/nvim-jdtls"; flake = false; };
-
     # Debugging
     "plugin__nvim-dap"   = { url = "github:mfussenegger/nvim-dap"; flake   = false; };
     "plugin__vimspector" = { url = "github:puremourning/vimspector"; flake = false; };

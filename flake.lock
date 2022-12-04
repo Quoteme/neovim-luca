@@ -913,22 +913,6 @@
         "type": "github"
       }
     },
-    "plugin__nvim-jdtls": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1669806517,
-        "narHash": "sha256-4Y0Jp9Co6Ui3VkuZ/2vuuzBc7bAGXFLC/Ugfey7wbnE=",
-        "owner": "mfussenegger",
-        "repo": "nvim-jdtls",
-        "rev": "4ea8e66d61c9a7e40c40f4cc6051ebfbf4ce0d38",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mfussenegger",
-        "repo": "nvim-jdtls",
-        "type": "github"
-      }
-    },
     "plugin__nvim-keymap-amend": {
       "flake": false,
       "locked": {
@@ -1627,7 +1611,6 @@
         "plugin__nvim-code-action-menu": "plugin__nvim-code-action-menu",
         "plugin__nvim-colorizer.lua": "plugin__nvim-colorizer.lua",
         "plugin__nvim-dap": "plugin__nvim-dap",
-        "plugin__nvim-jdtls": "plugin__nvim-jdtls",
         "plugin__nvim-keymap-amend": "plugin__nvim-keymap-amend",
         "plugin__nvim-lightbulb": "plugin__nvim-lightbulb",
         "plugin__nvim-lspconfig": "plugin__nvim-lspconfig",
