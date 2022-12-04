@@ -133,3 +133,6 @@ require("flutter-tools").setup {
 }
 -- }}}
 
+-- {{{ Debug-Adapter-Protocol
+require('dapui').setup()
+-- }}}

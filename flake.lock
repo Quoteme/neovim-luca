@@ -945,6 +945,22 @@
         "type": "github"
       }
     },
+    "plugin__nvim-dap-ui": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669281515,
+        "narHash": "sha256-FlcOi1ZOn8QQSqAcmrAtOwhX8cH0gsVKs9TDg1OwJQ4=",
+        "owner": "rcarriga",
+        "repo": "nvim-dap-ui",
+        "rev": "54365d2eb4cb9cfab0371306c6a76c913c5a67e3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rcarriga",
+        "repo": "nvim-dap-ui",
+        "type": "github"
+      }
+    },
     "plugin__nvim-keymap-amend": {
       "flake": false,
       "locked": {
@@ -1645,6 +1661,7 @@
         "plugin__nvim-code-action-menu": "plugin__nvim-code-action-menu",
         "plugin__nvim-colorizer.lua": "plugin__nvim-colorizer.lua",
         "plugin__nvim-dap": "plugin__nvim-dap",
+        "plugin__nvim-dap-ui": "plugin__nvim-dap-ui",
         "plugin__nvim-keymap-amend": "plugin__nvim-keymap-amend",
         "plugin__nvim-lightbulb": "plugin__nvim-lightbulb",
         "plugin__nvim-lspconfig": "plugin__nvim-lspconfig",

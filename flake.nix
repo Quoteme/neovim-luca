@@ -54,6 +54,7 @@
 
     # Debugging
     "plugin__nvim-dap" = { url = "github:mfussenegger/nvim-dap"; flake = false; };
+    "plugin__nvim-dap-ui" = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
     "plugin__vimspector" = { url = "github:puremourning/vimspector"; flake = false; };
 
     # Tree-sitter
