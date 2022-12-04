@@ -319,6 +319,53 @@ require('legendary').setup({
     auto_register = true,
   },
 })
-
 -- }}}
+
+-- {{{ barbecue.vim
+-- require("barbecue").setup()
+-- }}}
+
+-- {{{ lualine
+local myBranch = {
+  'branch',
+  on_click = function()
+    vim.cmd('Telescope git_branches')
+  end,
+}
+local myDiagnostic = {
+  'diagnostics',
+  on_click = function()
+    vim.cmd [[TroubleToggle]]
+  end,
+}
+local myFiletype = {'filetype', icon_only = true}
+require('lualine').setup {
+  options = {
+    theme = "catppuccin",
+    icons_enabled = true,
+    component_separators = {'', ''},
+    section_separators = {'', ''},
+    disabled_filetypes = {}
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {myBranch, 'diff', myDiagnostic},
+    lualine_c = {'filename'},
+    lualine_x = { 'encoding', myFiletype},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
+-- }}}
+
 -- }}}

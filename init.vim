@@ -729,9 +729,26 @@ EOF
 " {{{
 " colorscheme
 " colorscheme onedark
-  let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
-  lua require("catppuccin").setup()
-  colorscheme catppuccin
+let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
+lua << EOF
+require("catppuccin").setup({
+  integrations = {
+    aerial          = true,
+    barbar          = true,
+    cmp             = true,
+    gitsigns        = true,
+    neotest         = true,
+    neotree         = true,
+    lsp_trouble     = true,
+    notify          = true,
+    symbols_outline = true,
+    treesitter      = true,
+    ts_rainbow      = true,
+    which_key       = true,
+  }
+})
+EOF
+colorscheme catppuccin
 " }}}
 
 " {{{

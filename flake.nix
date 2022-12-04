@@ -164,10 +164,9 @@
     "plugin__nvim-notify" = { url = "github:rcarriga/nvim-notify"; flake = false; };
 
     ## Buffer line / tabline  / statusline
-    "plugin__nvim-web-devicons"       = { url = "github:kyazdani42/nvim-web-devicons"; flake                 = false; };
-    "plugin__barbar_nvim"             = { url = "github:romgrk/barbar.nvim"; flake                           = false; };
-    "plugin__feline_nvim"             = { url = "github:feline-nvim/feline.nvim"; flake                      = false; };
-    # "plugin__feline_one_monokai_nvim" = { url = "github:Hitesh-Aggarwal/feline_one_monokai.nvim"; flake      = false; };
+    "plugin__nvim-web-devicons" = { url = "github:kyazdani42/nvim-web-devicons"; flake = false; };
+    "plugin__barbar_nvim"       = { url = "github:romgrk/barbar.nvim"; flake           = false; };
+    "plugin__lualine_nvim"      = { url = "github:nvim-lualine/lualine.nvim"; flake    = false; };
 
     ## marks
     "plugin__marks_nvim" = { url = "github:chentoast/marks.nvim"; flake = false; };
