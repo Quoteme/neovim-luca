@@ -339,6 +339,10 @@ local myDiagnostic = {
   end,
 }
 local myFiletype = {'filetype', icon_only = true}
+local navic = require("nvim-navic")
+local myNvimNavic = {
+  navic.get_location, cond = navic.is_available
+}
 require('lualine').setup {
   options = {
     theme = "catppuccin",
@@ -351,7 +355,7 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {myBranch, 'diff', myDiagnostic},
     lualine_c = {'filename'},
-    lualine_x = { 'encoding', myFiletype},
+    lualine_x = {myNvimNavic, 'encoding', myFiletype},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },

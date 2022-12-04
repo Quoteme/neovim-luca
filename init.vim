@@ -557,6 +557,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
   -- lsp-signature
   require "lsp_signature".on_attach()
+  -- nvim-navic
+  navic.attach(client, bufnr)
 end
 
 local servers = {
