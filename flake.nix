@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.05";
     flake-utils = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/flake-utils";
@@ -188,7 +189,7 @@
             # LaTex
               texlab
             # Haskell
-              haskell-language-server
+              pkgs.stable.haskell-language-server
               ormolu
             # html
               # nodePackages.vscode-html-languageserver-bin
@@ -284,6 +285,9 @@
             pluginOverlay
             (final: prev: {
               neovim-unwrapped = inputs.neovim-flake.packages.${prev.system}.neovim;
+            })
+            (final: prev: {
+              stable = import inputs.nixpkgs-stable { inherit system; config.allowUnfree = true; };
             })
           ];
         };
