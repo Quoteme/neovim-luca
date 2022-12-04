@@ -39,6 +39,15 @@ wk.register({
     ':exec &conceallevel ? "set conceallevel=0<CR>" : "set conceallevel=1"',
     "toggle conceal"
     },
+  s = {
+    name = "session",
+    s = {":SaveSession<CR>", "save session"},
+    c = {":lua MySession.saveDialog()<CR>", "create session"},
+    r = {":RestoreSession<CR>", "restore session"},
+    D = {":DeleteSession<CR>", "delete current session"},
+    l = {":Autosession search<CR>", "list sessions to load"},
+    d = {":Autosession delete<CR>", "list session for deletion"},
+    },
   i = {
     name = "image tools",
     p = {":PasteImg<CR>", "paste from clipboard"},

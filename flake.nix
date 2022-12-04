@@ -115,6 +115,9 @@
     "plugin__neo-tree" = { url = "github:nvim-neo-tree/neo-tree.nvim"; flake = false; };
     "plugin__nui_nvim" = { url = "github:MunifTanjim/nui.nvim"; flake = false; };
 
+    # Sessions
+    "plugin__auto-session" = { url = "github:rmagatti/auto-session"; flake = false; };
+
     # Code browsing
     "plugin__symbols-outline_nvim" = { url = "github:simrat39/symbols-outline.nvim"; flake        = false; };
     "plugin__todo-comments_nvim"   = { url = "github:folke/todo-comments.nvim"; flake             = false; };

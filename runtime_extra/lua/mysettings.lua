@@ -372,4 +372,24 @@ require('lualine').setup {
 }
 -- }}}
 
+-- {{{ Autosessions
+MySession = {}
+function MySession:saveDialog()
+  vim.ui.input(
+    { prompt = "Session name: " },
+    function(sessionName)
+      sessionName = vim.fn.getcwd() .. "/" .. sessionName
+      sessionName = string.gsub(sessionName, "/", "%")
+      local saveLocation = vim.fn.stdpath("data") .. "/sessions/"
+      vim.cmd("SaveSession " .. saveLocation .. sessionName)
+    end
+  )
+end
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+require('auto-session').setup {
+  log_level="error",
+  auto_session_root_dir = vim.fn.stdpath('data')..'/sessions/'
+}
+-- }}}
+
 -- }}}
