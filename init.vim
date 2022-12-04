@@ -989,3 +989,4 @@ autocmd FileType kotlin setlocal expandtab
 " }}}
 
 :luafile $RUNTIME_EXTRA/lua/mysettings.lua
+:luafile $RUNTIME_EXTRA/lua/myplugins.lua

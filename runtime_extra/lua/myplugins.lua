@@ -1,0 +1,135 @@
+-- vim: tabstop=2 shiftwidth=2 expandtab foldmethod=marker
+
+-- {{{ Legendary.nvim
+--
+-- A legend for your keymaps, commands, and autocmds,
+-- with which-key.nvim integration
+--
+
+-- First set up `dressing.nvim` for better visuals
+require('dressing').setup()
+
+-- Then set up `legendary.nvim`
+require('legendary').setup({
+  keymaps = {
+    -- open command palette like VSCode
+    { '<C-S-P>', ':Legendary<CR>', description="open command palette (legendary.nvim)" },
+    -- folds
+    { '<C-+>', ':lua require("fold-cycle").open()<CR>', description="open folds" },
+    { '<C-->', ':lua require("fold-cycle").close()<CR>', description="close folds" },
+    { '<C-A-+>', ':lua require("fold-cycle").open_all()<CR>', description="open all folds" },
+    { '<C-A-->', ':lua require("fold-cycle").close_all()<CR>', description="close all folds" },
+    -- Code action
+    { '<A-a>'     , ':CodeActionMenu<CR>'           , description="code action menu" } ,
+    { '<A-b>'     , ':lua vim.lsp.buf.definition()<CR>' , description="go to definition" } ,
+    -- Buffer stuff
+    { '<C-Tab>'   , ':BufferNext<CR><ESC>'         , description='next buffer'},
+    { '<C-S-Tab>' , ':BufferPrevious<CR><ESC>'     , description='previous buffer'},
+    { '<M-Tab>'   , ':BufferMoveNext<CR><ESC>'     , description='swap buffer with next'},
+    { '<M-S-Tab>' , ':BufferMovePrevious<CR><ESC>' , description='swap buffer with previous'},
+    { '<C-W>'     , ':BufferClose<CR><ESC>'        , description='close buffer'},
+    { '<C-S-W>'   , ':BufferClose!<CR>'            , description='force close buffer'},
+    -- Hotkeys
+    { '<F1>' , ':Neotree filesystem toggle left reveal<CR>' , description='open neotree'} ,
+    { '<F2>' , ':SymbolsOutline<CR>' , description='symbols outline'} ,
+    { '<F3>' , ':TodoTelescope<CR>' , description='list all todos'} ,
+  },
+  which_key = {
+    auto_register = true,
+  },
+})
+-- }}}
+
+-- {{{ barbecue.vim
+-- require("barbecue").setup()
+-- }}}
+
+-- {{{ lualine
+local myBranch = {
+  'branch',
+  on_click = function()
+    vim.cmd('Telescope git_branches')
+  end,
+}
+local myDiagnostic = {
+  'diagnostics',
+  on_click = function()
+    vim.cmd [[TroubleToggle]]
+  end,
+}
+local myFiletype = {'filetype', icon_only = true}
+local navic = require("nvim-navic")
+local myNvimNavic = {
+  navic.get_location, cond = navic.is_available
+}
+require('lualine').setup {
+  options = {
+    theme = "catppuccin",
+    icons_enabled = true,
+    component_separators = {'', ''},
+    section_separators = {'', ''},
+    disabled_filetypes = {}
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {myBranch, 'diff', myDiagnostic},
+    lualine_c = {'filename'},
+    lualine_x = {myNvimNavic, 'encoding', myFiletype},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
+-- }}}
+
+-- {{{ Autosessions
+MySession = {}
+function MySession:saveDialog()
+  vim.ui.input(
+    { prompt = "Session name: " },
+    function(sessionName)
+      sessionName = vim.fn.getcwd() .. "/" .. sessionName
+      sessionName = string.gsub(sessionName, "/", "%")
+      local saveLocation = vim.fn.stdpath("data") .. "/sessions/"
+      vim.cmd("SaveSession " .. saveLocation .. sessionName)
+    end
+  )
+end
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+require('auto-session').setup {
+  log_level="error",
+  auto_session_root_dir = vim.fn.stdpath('data')..'/sessions/',
+  pre_save_cmds = {
+    function()
+      return vim.cmd("Neotree filesystem close")
+    end
+  },
+  post_save_cmds = {
+    function()
+      return vim.cmd("Neotree filesystem toggle left")
+    end
+  },
+}
+-- }}}
+
+-- {{{ flutter-tools.nvim
+require("flutter-tools").setup {
+  debugger = {
+    enabled = true,
+  },
+  flutter_path = vim.fn.getenv("FLUTTER_SDK") .. "/bin/flutter",
+  widget_guides = {
+    enabled = true,
+  },
+}
+-- }}}
+
