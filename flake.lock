@@ -865,6 +865,118 @@
         "type": "github"
       }
     },
+    "plugin__neotest": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670271394,
+        "narHash": "sha256-c9hqJrIpycl9riIPVkODfA1imOSCXmS20WD93ev/OBY=",
+        "owner": "nvim-neotest",
+        "repo": "neotest",
+        "rev": "d9bd5b05983ccfa349ff2692a5adb17b227088b5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "repo": "neotest",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-dart": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1666951570,
+        "narHash": "sha256-q2fGUggRdKBm8iFHgZpAYVfhPSluqA/uW94iV3t1KTQ=",
+        "owner": "sidlatau",
+        "repo": "neotest-dart",
+        "rev": "ceef1a7b06b50d2fe4ad914b584406c9ca554e29",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sidlatau",
+        "repo": "neotest-dart",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-deno": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669965690,
+        "narHash": "sha256-b6CL0nENfkYw+3u5ot3VbRNba+IHMvDJO0lyHc1moL4=",
+        "owner": "MarkEmmons",
+        "repo": "neotest-deno",
+        "rev": "77a1628a1e9c7b4a2daaea2022c94cd782cf9ff3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "MarkEmmons",
+        "repo": "neotest-deno",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-haskell": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669239909,
+        "narHash": "sha256-zX8Bb3Q4Z/Jk9md3kiDUCtvmoJWOfcD83iyeyl0GgdY=",
+        "owner": "mrcjkb",
+        "repo": "neotest-haskell",
+        "rev": "412f498d25592d57932baa938857ef542754191b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mrcjkb",
+        "repo": "neotest-haskell",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-plenary": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1662888563,
+        "narHash": "sha256-/Cfi/1yMEIkExWpMJBl1PhbXOPbNeW6dWZ8UxHRDeig=",
+        "owner": "nvim-neotest",
+        "repo": "neotest-plenary",
+        "rev": "37ba50bf8eaec30dcc253060499b43641b5dfe4b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "repo": "neotest-plenary",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-python": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669110105,
+        "narHash": "sha256-WYFS5AxDMClAeDKlmqdlA65QDWN/z2MuqGOTUhgaPgU=",
+        "owner": "nvim-neotest",
+        "repo": "neotest-python",
+        "rev": "e53920d145d37783c8d8428365a0a230e0a18cb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "repo": "neotest-python",
+        "type": "github"
+      }
+    },
+    "plugin__neotest-vim-test": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669887197,
+        "narHash": "sha256-XJPQiBAPi7+t0h5Cc3DnL8S1H2FGTxhBAI9dTuydgFI=",
+        "owner": "nvim-neotest",
+        "repo": "neotest-vim-test",
+        "rev": "07f25ab7ba4e7646b38c84e10002b195a53b0096",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-neotest",
+        "repo": "neotest-vim-test",
+        "type": "github"
+      }
+    },
     "plugin__nui_nvim": {
       "flake": false,
       "locked": {
