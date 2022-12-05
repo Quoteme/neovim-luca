@@ -126,7 +126,17 @@
     "plugin__barbecue_nvim" = { url = "github:utilyre/barbecue.nvim"; flake = false; };
 
     # Code testing
+    "plugin__neotest" = { url = "github:nvim-neotest/neotest"; flake = false; };
+    "plugin__neotest-vim-test" = { url = "github:nvim-neotest/neotest-vim-test"; flake = false; };
     "plugin__vim-test" = { url = "github:vim-test/vim-test"; flake = false; };
+    "plugin__nvim-coverage" = { url = "github:andythigpen/nvim-coverage"; flake = false; };
+
+    ## Code testing - Language specific
+    "plugin__neotest-python" = { url = "github:nvim-neotest/neotest-python"; flake = false; };
+    "plugin__neotest-dart" = { url = "github:sidlatau/neotest-dart"; flake = false; };
+    "plugin__neotest-haskell" = { url = "github:mrcjkb/neotest-haskell"; flake = false; };
+    "plugin__neotest-deno" = { url = "github:MarkEmmons/neotest-deno"; flake = false; };
+    "plugin__neotest-plenary" = { url = "github:nvim-neotest/neotest-plenary"; flake = false; };
 
     # Git integration
     "plugin__gitsigns_nvim" = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };

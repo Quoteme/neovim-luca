@@ -136,3 +136,23 @@ require("flutter-tools").setup {
 -- {{{ Debug-Adapter-Protocol
 require('dapui').setup()
 -- }}}
+
+-- {{{ Testing
+require("neotest").setup({
+  adapters = {
+    require("neotest-python")({
+      dap = { justMyCode = false },
+    }),
+    require("neotest-deno"),
+    require("neotest-plenary"),
+    require("neotest-haskell"),
+    require('neotest-dart') {
+      command = 'flutter',
+      use_lsp = true
+    },
+    require("neotest-vim-test")({
+      ignore_file_types = { "python", "vim", "lua" },
+    }),
+  },
+})
+-- }}}
