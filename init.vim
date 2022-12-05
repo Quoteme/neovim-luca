@@ -174,6 +174,9 @@ EOF
 " {{{
 " Copilot
 lua << EOF
+vim.api.nvim_set_var("copilot_filetypes", {
+      ["dap-repl"] = false,
+})
 -- vim.schedule(function() require("copilot") end)
 EOF
 " }}}
@@ -417,7 +420,7 @@ lua <<EOF
     -- }}}
     -- {{{ Sources
     sources = {
-      { name = "copilot" },
+      -- { name = "copilot" },
       { name = 'nvim_lsp' },
       { name = 'luasnip' }, -- For luasnip users
       { name = "latex_symbols" },

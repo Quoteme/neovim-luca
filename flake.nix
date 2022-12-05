@@ -57,6 +57,9 @@
     "plugin__nvim-dap-ui" = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
     "plugin__vimspector" = { url = "github:puremourning/vimspector"; flake = false; };
 
+    ## Debugging - Adapters
+    "plugin__nvim-dap-python" = { url = "github:mfussenegger/nvim-dap-python"; flake = false; };
+
     # Tree-sitter
     "plugin__nvim-treesitter" = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     "plugin__nvim-ts-rainbow" = { url = "github:p00f/nvim-ts-rainbow"; flake = false; };
@@ -383,7 +386,8 @@
                 wrapProgram $out/bin/nvim \
                   --prefix PATH : $out/bin \
                   --prefix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
-                  --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra
+                  --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra \
+                  --prefix PYTHON_BIN : "/run/current-system/sw/bin/python3" \
                 # Create runtime_extra
                 mkdir -p $out/share/nvim/runtime_extra
                 cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/
