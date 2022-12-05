@@ -1041,6 +1041,22 @@
         "type": "github"
       }
     },
+    "plugin__nvim-coverage": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667162090,
+        "narHash": "sha256-3nncLtyDYGk8E/DKD0Z1QJj5gmha7b996Mn5izSOeO4=",
+        "owner": "andythigpen",
+        "repo": "nvim-coverage",
+        "rev": "f067885c422f42bcbedd15f16a11e8ba8c771693",
+        "type": "github"
+      },
+      "original": {
+        "owner": "andythigpen",
+        "repo": "nvim-coverage",
+        "type": "github"
+      }
+    },
     "plugin__nvim-dap": {
       "flake": false,
       "locked": {
@@ -1054,6 +1070,22 @@
       "original": {
         "owner": "mfussenegger",
         "repo": "nvim-dap",
+        "type": "github"
+      }
+    },
+    "plugin__nvim-dap-python": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667297967,
+        "narHash": "sha256-UlwLESRrfwtzQGP30nYVkELAQWs85eyo9ORIjMLr198=",
+        "owner": "mfussenegger",
+        "repo": "nvim-dap-python",
+        "rev": "27a0eff2bd3114269bb010d895b179e667e712bd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mfussenegger",
+        "repo": "nvim-dap-python",
         "type": "github"
       }
     },
@@ -1768,11 +1800,20 @@
         "plugin__neo-tree": "plugin__neo-tree",
         "plugin__neogen": "plugin__neogen",
         "plugin__neoscroll_nvim": "plugin__neoscroll_nvim",
+        "plugin__neotest": "plugin__neotest",
+        "plugin__neotest-dart": "plugin__neotest-dart",
+        "plugin__neotest-deno": "plugin__neotest-deno",
+        "plugin__neotest-haskell": "plugin__neotest-haskell",
+        "plugin__neotest-plenary": "plugin__neotest-plenary",
+        "plugin__neotest-python": "plugin__neotest-python",
+        "plugin__neotest-vim-test": "plugin__neotest-vim-test",
         "plugin__nui_nvim": "plugin__nui_nvim",
         "plugin__nvim-cmp": "plugin__nvim-cmp",
         "plugin__nvim-code-action-menu": "plugin__nvim-code-action-menu",
         "plugin__nvim-colorizer.lua": "plugin__nvim-colorizer.lua",
+        "plugin__nvim-coverage": "plugin__nvim-coverage",
         "plugin__nvim-dap": "plugin__nvim-dap",
+        "plugin__nvim-dap-python": "plugin__nvim-dap-python",
         "plugin__nvim-dap-ui": "plugin__nvim-dap-ui",
         "plugin__nvim-keymap-amend": "plugin__nvim-keymap-amend",
         "plugin__nvim-lightbulb": "plugin__nvim-lightbulb",
