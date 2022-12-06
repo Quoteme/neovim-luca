@@ -10,26 +10,6 @@
 require('dressing').setup()
 
 -- Then set up `legendary.nvim`
--- {{{ Some keybindings that legendary nvim does not set somehow ?
-vim.keymap.set(
-  'n', '<S-F9>',
-  function()
-    if vim.bo.filetype == 'dart' then
-      vim.cmd('FlutterRun')
-    elseif vim.bo.filetype == 'nix' then
-      vim.cmd('!nix run')
-    end
-  end,
-  {noremap = true, silent = true, desc='debug program'}
-  )
-vim.keymap.set(
-  'n', '<S-F10>',
-  function()
-    require('dap').continue()
-  end,
-  {noremap = true, silent = true, desc='run program'}
-  )
---  }}}
 require('legendary').setup({
   keymaps = {
     -- {{{ command palette like VSCode
@@ -46,6 +26,22 @@ require('legendary').setup({
     -- {{{ Code action
     { '<A-a>', ':CodeActionMenu<CR>', description = "code action menu" },
     { '<A-b>', ':lua vim.lsp.buf.definition()<CR>', description = "go to definition" },
+    { '<S->F9>',
+      function()
+        if vim.bo.filetype == 'dart' then
+          vim.cmd('FlutterRun')
+        elseif vim.bo.filetype == 'nix' then
+          vim.cmd('!nix run')
+        end
+      end,
+      description = "debug program"
+    },
+    { '<S->F10>',
+      function()
+        require('dap').continue()
+      end,
+      description = "run program"
+    },
     -- }}}
     -- {{{ Buffer stuff
     { '<C-Tab>', ':BufferNext<CR><ESC>', description = 'next buffer' },
