@@ -213,7 +213,6 @@ wk.register({
   prefix = "<leader>"
 })
 
--- if vim.bo.filetype=="clojure" then
   wk.register({
     E = {"evaluate visual selection"},
     e = {
@@ -230,9 +229,6 @@ wk.register({
       r = {"clear - soft reset"},
       R = {"clear - hard reset"},
       },
-  }, { prefix = "<localleader>" })
--- elseif vim.bo.filetype=="java" then
-  wk.register({
     j = {
       name = "jdtls",
       o = {"<cmd>lua require'jdtls'.organize_imports()<CR>","organize imports"},
@@ -285,14 +281,27 @@ wk.register({
         u = {"<Plug>VimspectorUpFrame", "up frame"},
         d = {"<Plug>VimspectorDownFrame", "down frame"},
       }
-    }
-  }, { prefix = "<localleader>" })
--- elseif vim.bo.filetype=="markdown" then
-  wk.register({
+    },
     c = {
       name = "compile using pandoc",
       p = {":!pandoc<space>%<space>-o<space>%:r.pdf<CR>", "to pdf"},
       h = {":!pandoc<space>%<space>-o<space>%:r.html<CR>", "to html"},
+      },
+    f = {
+      name = "flutter-tools",
+      r = {":FlutterRun<cr>", "Run the current flutter project"},
+      d = {":FlutterDevices<cr>", "Brings up a list of connected flutter devices to select from."},
+      e = {":FlutterEmulators<cr>", "Brings up a list of available flutter emulators to select from."},
+      R = {":FlutterReload<cr>", "Reloads the running flutter project."},
+      s = {":FlutterRestart<cr>", "Restarts the running flutter project."},
+      q = {":FlutterQuit<cr>", "Quits the running flutter project."},
+      D = {":FlutterDetach<cr>", "Detaches the running flutter project."},
+      o = {":FlutterOutlineToggle<cr>", "Toggles the outline of the current flutter project."},
+      S = {":FlutterDevTools<CR>", "Starts a new flutter devtools server."},
+      c = {":FlutterCopyProfilerUrl<CR>", "Copies the url of the current flutter devtools server."},
+      l = {":FlutterLspRestart<CR>", "Restarts the flutter LSP server."},
+      u = {":FlutterSuper<CR>", "Go to superclass"},
+      a = {":FlutterReanalyze<cr>", "Reanalyzes the current flutter project."},
       },
   }, { prefix = "<localleader>" })
 -- end
