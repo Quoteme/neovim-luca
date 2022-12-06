@@ -31,6 +31,8 @@ require('legendary').setup({
     { '<M-S-Tab>', ':BufferMovePrevious<CR><ESC>', description = 'swap buffer with previous' },
     { '<C-W>', ':BufferClose<CR><ESC>', description = 'close buffer' },
     { '<C-S-W>', ':BufferClose!<CR>', description = 'force close buffer' },
+    { '<C-M-K>', ':windo wincmd K<CR>', description = 'switch to horizontal buffer' },
+    { '<C-M-H>', ':windo wincmd H<CR>', description = 'switch to vertical buffer' },
     -- Hotkeys
     { '<F1>', ':Neotree filesystem toggle left reveal<CR>', description = 'open neotree' },
     { '<F2>', ':SymbolsOutline<CR>', description = 'symbols outline' },
