@@ -28,13 +28,9 @@ wk.register({
     },
   -- ? = {"<cmd>Cheatsheet<CR>", "Cheatsheet"},
   d = {
-    name = "neogen documentation",
-    d = {":Neogen<CR>", "document automatically"},
-    f = {":Neogen func<CR>", "document function"},
-    F = {":Neogen file<CR>", "document file"},
-    c = {":Neogen class<CR>", "document class"},
-    t = {":Neogen type<CR>", "document type"},
-  },
+      name = "debug (dap)",
+      t = {":lua require('dapui').toggle()<CR>", "toggle dapui"},
+    },
   c = {
     ':exec &conceallevel ? "set conceallevel=0<CR>" : "set conceallevel=1"',
     "toggle conceal"
@@ -244,8 +240,12 @@ wk.register({
         },
       },
     d = {
-      name = "debug (dap)",
-      t = {":lua require('dapui').toggle()<CR>", "toggle dapui"},
+      name = "neogen documentation",
+      d = {":Neogen<CR>", "document automatically"},
+      f = {":Neogen func<CR>", "document function"},
+      F = {":Neogen file<CR>", "document file"},
+      c = {":Neogen class<CR>", "document class"},
+      t = {":Neogen type<CR>", "document type"},
     },
     D = {
       name = "debug (vimspector)",
