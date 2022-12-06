@@ -98,7 +98,7 @@ require('lualine').setup {
   sections = {
     lualine_a = { 'mode' },
     lualine_b = { myBranch, 'diff', myDiagnostic },
-    lualine_c = { 'filename' },
+    lualine_c = { {'filename', path=1} },
     lualine_x = { myNvimNavic, 'encoding', myFiletype },
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
