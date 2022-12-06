@@ -382,11 +382,12 @@
                 ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
                 wrapProgram $out/bin/ltex-ls \
                   --set JAVA_HOME ${pkgs.jdk11}
+
                 # add external dependencies to path of neovim
                 wrapProgram $out/bin/nvim \
-                  --prefix PATH : $out/bin \
-                  --prefix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
-                  --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra \
+                  --suffix PATH : $out/bin \
+                  --suffix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
+                  --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra
                   --prefix PYTHON_BIN : "/run/current-system/sw/bin/python3" \
                 # Create runtime_extra
                 mkdir -p $out/share/nvim/runtime_extra
