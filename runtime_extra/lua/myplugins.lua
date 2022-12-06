@@ -96,36 +96,6 @@ require('lualine').setup {
 -- }}}
 
 -- {{{ Session Manager 
--- {{{ Autosessions
--- MySession = {}
--- function MySession:saveDialog()
---   vim.ui.input(
---     { prompt = "Session name: " },
---     function(sessionName)
---       sessionName = vim.fn.getcwd() .. "/" .. sessionName
---       sessionName = string.gsub(sessionName, "/", "%")
---       local saveLocation = vim.fn.stdpath("data") .. "/sessions/"
---       vim.cmd("SaveSession " .. saveLocation .. sessionName)
---     end
---   )
--- end
-
--- vim.o.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos"
--- require('auto-session').setup {
---   log_level = "error",
---   auto_session_root_dir = vim.fn.stdpath('data') .. '/sessions/',
---   pre_save_cmds = {
---     function()
---       return vim.cmd("Neotree filesystem close")
---     end
---   },
---   post_save_cmds = {
---     function()
---       return vim.cmd("Neotree filesystem toggle left")
---     end
---   },
--- }
--- }}}
 -- {{{ Persisted.nvim
 require("persisted").setup({
   autoload = true,
