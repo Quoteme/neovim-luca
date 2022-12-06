@@ -289,6 +289,7 @@ wk.register({
       },
     f = {
       name = "flutter-tools",
+      f = {":Telescope flutter commands<CR>", "find flutter commands"},
       r = {":FlutterRun<cr>", "Run the current flutter project"},
       d = {":FlutterDevices<cr>", "Brings up a list of connected flutter devices to select from."},
       e = {":FlutterEmulators<cr>", "Brings up a list of available flutter emulators to select from."},
