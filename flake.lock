@@ -113,22 +113,6 @@
         "type": "github"
       }
     },
-    "plugin__NeoRoot.lua": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1650366689,
-        "narHash": "sha256-yx6YMiN14KI+bvLrQzUStZ6dnj7XwMjoojikvV1pK/0=",
-        "owner": "nyngwang",
-        "repo": "NeoRoot.lua",
-        "rev": "998b3c08bf91c523c6fa502ca0dabf14c24d67ae",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nyngwang",
-        "repo": "NeoRoot.lua",
-        "type": "github"
-      }
-    },
     "plugin__auto-session": {
       "flake": false,
       "locked": {
@@ -1769,7 +1753,6 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "plugin__LuaSnip": "plugin__LuaSnip",
-        "plugin__NeoRoot.lua": "plugin__NeoRoot.lua",
         "plugin__auto-session": "plugin__auto-session",
         "plugin__barbar_nvim": "plugin__barbar_nvim",
         "plugin__barbecue_nvim": "plugin__barbecue_nvim",
