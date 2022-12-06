@@ -388,7 +388,7 @@
                   --suffix PATH : $out/bin \
                   --suffix PATH : ${pkgs.lib.makeBinPath extraPrograms} \
                   --prefix RUNTIME_EXTRA : $out/share/nvim/runtime_extra
-                  --prefix PYTHON_BIN : "/run/current-system/sw/bin/python3" \
+
                 # Create runtime_extra
                 mkdir -p $out/share/nvim/runtime_extra
                 cp -r $src/runtime_extra/* $out/share/nvim/runtime_extra/
