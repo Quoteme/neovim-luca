@@ -820,6 +820,10 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   inoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   " }}}
+  " {{{ Simple keymap finding
+  inoremap <a-k> <esc>:Telescope keymaps<CR>
+  nnoremap <a-k> <esc>:Telescope keymaps<CR>
+  " }}}
   " {{{
   " German keyboard fix
   nmap ö '
