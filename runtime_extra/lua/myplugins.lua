@@ -26,7 +26,7 @@ require('legendary').setup({
     -- {{{ Code action
     { '<A-a>', ':CodeActionMenu<CR>', description = "code action menu" },
     { '<A-b>', ':lua vim.lsp.buf.definition()<CR>', description = "go to definition" },
-    { '<S->F9>',
+    { '<F21>', -- S->F9
       function()
         if vim.bo.filetype == 'dart' then
           vim.cmd('FlutterRun')
@@ -36,7 +36,7 @@ require('legendary').setup({
       end,
       description = "debug program"
     },
-    { '<S->F10>',
+    { '<F22>', -- S-F10
       function()
         require('dap').continue()
       end,
