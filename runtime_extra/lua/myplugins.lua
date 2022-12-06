@@ -130,7 +130,7 @@ function MySession:saveDialog()
   )
 end
 
-vim.o.sessionoptions = "buffers,curdir,help,tabpages,winsize,winpos"
+vim.o.sessionoptions = "buffers,curdir,help,tabpages"
 require('auto-session').setup {
   log_level = "error",
   auto_session_root_dir = vim.fn.stdpath('data') .. '/sessions/',
