@@ -120,6 +120,7 @@
 
     # Sessions
     "plugin__auto-session" = { url = "github:rmagatti/auto-session"; flake = false; };
+    "plugin__NeoRoot.lua" = { url = "github:nyngwang/NeoRoot.lua"; flake = false; };
 
     # Code browsing
     "plugin__symbols-outline_nvim" = { url = "github:simrat39/symbols-outline.nvim"; flake = false; };
