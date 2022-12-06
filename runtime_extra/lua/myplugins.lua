@@ -12,19 +12,22 @@ require('dressing').setup()
 -- Then set up `legendary.nvim`
 require('legendary').setup({
   keymaps = {
-    -- open command palette like VSCode
+    -- {{{ command palette like VSCode
     { '<C-S-P>', ':Legendary<CR>', description = "open command palette (legendary.nvim)" },
     { '<C-S-F>', ':Telescope commands<cr>', description = "find command" },
-    { '<C-K>', ':Telescope keymaps<cr>', description = "find keymaps" },
-    -- folds
+    { '<A-K>', ':Telescope keymaps<cr>', description = "find keymaps" },
+    -- }}}
+    -- {{{ folds
     { '<C-+>', ':lua require("fold-cycle").open()<CR>', description = "open folds" },
     { '<C-->', ':lua require("fold-cycle").close()<CR>', description = "close folds" },
     { '<C-A-+>', ':lua require("fold-cycle").open_all()<CR>', description = "open all folds" },
     { '<C-A-->', ':lua require("fold-cycle").close_all()<CR>', description = "close all folds" },
-    -- Code action
+      -- }}}
+    -- {{{ Code action
     { '<A-a>', ':CodeActionMenu<CR>', description = "code action menu" },
     { '<A-b>', ':lua vim.lsp.buf.definition()<CR>', description = "go to definition" },
-    -- Buffer stuff
+    -- }}}
+    -- {{{ Buffer stuff
     { '<C-Tab>', ':BufferNext<CR><ESC>', description = 'next buffer' },
     { '<C-S-Tab>', ':BufferPrevious<CR><ESC>', description = 'previous buffer' },
     { '<M-Tab>', ':BufferMoveNext<CR><ESC>', description = 'swap buffer with next' },
@@ -33,10 +36,12 @@ require('legendary').setup({
     { '<C-S-W>', ':BufferClose!<CR>', description = 'force close buffer' },
     { '<C-M-K>', ':windo wincmd K<CR>', description = 'switch to horizontal buffer' },
     { '<C-M-H>', ':windo wincmd H<CR>', description = 'switch to vertical buffer' },
-    -- Hotkeys
+    -- }}}
+    -- {{{ Hotkeys
     { '<F1>', ':Neotree filesystem toggle left reveal<CR>', description = 'open neotree' },
     { '<F2>', ':SymbolsOutline<CR>', description = 'symbols outline' },
     { '<F3>', ':TodoTelescope<CR>', description = 'list all todos' },
+    -- }}}
   },
   which_key = {
     auto_register = true,
