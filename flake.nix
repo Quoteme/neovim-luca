@@ -119,7 +119,8 @@
     "plugin__nui_nvim" = { url = "github:MunifTanjim/nui.nvim"; flake = false; };
 
     # Sessions
-    "plugin__auto-session" = { url = "github:rmagatti/auto-session"; flake = false; };
+    # "plugin__auto-session" = { url = "github:rmagatti/auto-session"; flake = false; };
+    "plugin__persisted_nvim" = { url = "github:olimorris/persisted.nvim"; flake = false; };
 
     # Code browsing
     "plugin__symbols-outline_nvim" = { url = "github:simrat39/symbols-outline.nvim"; flake = false; };

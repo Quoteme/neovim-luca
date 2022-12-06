@@ -113,22 +113,6 @@
         "type": "github"
       }
     },
-    "plugin__auto-session": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1669097955,
-        "narHash": "sha256-2XRx0o6BMF0eBcjJJh/ZbqIipkasDaW4Sarm31/nzxs=",
-        "owner": "rmagatti",
-        "repo": "auto-session",
-        "rev": "da03666a61af32eb0f57b37f18c020a3a33a44d4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "rmagatti",
-        "repo": "auto-session",
-        "type": "github"
-      }
-    },
     "plugin__barbar_nvim": {
       "flake": false,
       "locked": {
@@ -1281,6 +1265,22 @@
         "type": "github"
       }
     },
+    "plugin__persisted_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668606209,
+        "narHash": "sha256-WkpWKIisoDfAYLwbyOaGSbAveOg1A+vXk60Gk6BEUfk=",
+        "owner": "olimorris",
+        "repo": "persisted.nvim",
+        "rev": "769c1308311e4093260ca0d5d465a77ab3125ca3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "olimorris",
+        "repo": "persisted.nvim",
+        "type": "github"
+      }
+    },
     "plugin__plenary_nvim": {
       "flake": false,
       "locked": {
@@ -1753,7 +1753,6 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "plugin__LuaSnip": "plugin__LuaSnip",
-        "plugin__auto-session": "plugin__auto-session",
         "plugin__barbar_nvim": "plugin__barbar_nvim",
         "plugin__barbecue_nvim": "plugin__barbecue_nvim",
         "plugin__catppuccin": "plugin__catppuccin",
@@ -1826,6 +1825,7 @@
         "plugin__nvimager": "plugin__nvimager",
         "plugin__onedark-vim": "plugin__onedark-vim",
         "plugin__pandoc_nvim": "plugin__pandoc_nvim",
+        "plugin__persisted_nvim": "plugin__persisted_nvim",
         "plugin__plenary_nvim": "plugin__plenary_nvim",
         "plugin__popup_nvim": "plugin__popup_nvim",
         "plugin__pretty-fold_nvim": "plugin__pretty-fold_nvim",
