@@ -14,6 +14,8 @@ require('legendary').setup({
   keymaps = {
     -- open command palette like VSCode
     { '<C-S-P>', ':Legendary<CR>', description = "open command palette (legendary.nvim)" },
+    { '<C-S-F>', ':Telescope commands<cr>', description = "find command" },
+    { '<C-K>', ':Telescope keymaps<cr>', description = "find keymaps" },
     -- folds
     { '<C-+>', ':lua require("fold-cycle").open()<CR>', description = "open folds" },
     { '<C-->', ':lua require("fold-cycle").close()<CR>', description = "close folds" },
