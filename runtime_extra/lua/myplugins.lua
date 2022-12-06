@@ -229,4 +229,5 @@ require("neotest").setup({
     }),
   },
 })
+require("coverage").setup()
 -- }}}
