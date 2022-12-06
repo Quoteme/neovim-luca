@@ -116,19 +116,35 @@ require('lualine').setup {
 }
 -- }}}
 
--- {{{ Session Manager 
--- {{{ Persisted.nvim
-require("persisted").setup({
-  autoload = true,
-  before_save = function()
-    return vim.cmd("Neotree filesystem close")
-  end,
-  after_save = function()
-    return vim.cmd("Neotree filesystem toggle left")
-  end,
-})
-require("telescope").load_extension("persisted")
--- }}}
+-- {{{ Autosessions
+MySession = {}
+function MySession:saveDialog()
+  vim.ui.input(
+    { prompt = "Session name: " },
+    function(sessionName)
+      sessionName = vim.fn.getcwd() .. "/" .. sessionName
+      sessionName = string.gsub(sessionName, "/", "%")
+      local saveLocation = vim.fn.stdpath("data") .. "/sessions/"
+      vim.cmd("SaveSession " .. saveLocation .. sessionName)
+    end
+  )
+end
+
+vim.o.sessionoptions = "buffers,curdir,folds,help,tabpages,winsize,winpos"
+require('auto-session').setup {
+  log_level = "error",
+  auto_session_root_dir = vim.fn.stdpath('data') .. '/sessions/',
+  pre_save_cmds = {
+    function()
+      return vim.cmd("Neotree filesystem close")
+    end
+  },
+  post_save_cmds = {
+    function()
+      return vim.cmd("Neotree filesystem toggle left")
+    end
+  },
+}
 -- }}}
 
 -- {{{ flutter-tools.nvim
