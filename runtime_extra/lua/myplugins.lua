@@ -133,7 +133,7 @@ end
 vim.o.sessionoptions = "buffers,curdir,help,tabpages"
 require('auto-session').setup {
   log_level = "error",
-  auto_session_root_dir = vim.fn.stdpath('data') .. '/sessions/',
+  auto_session_root_dir = vim.fn.getcwd() .. '/.sessions/',
   pre_save_cmds = {
     function()
       return vim.cmd("Neotree filesystem close")
