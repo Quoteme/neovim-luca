@@ -126,6 +126,9 @@ require('auto-session').setup {
 require("flutter-tools").setup {
   debugger = {
     enabled = true,
+    register_configurations = function(_)
+      require('dap.ext.vscode').load_launchjs()
+    end,
   },
   flutter_path = vim.fn.getenv("FLUTTER_SDK") .. "/bin/flutter",
   widget_guides = {
@@ -168,7 +171,29 @@ dap.configurations.python = {
   },
 }
 -- }}}
-
+-- {{{ Dart / Flutter 
+dap.adapters.dart = {
+  type = 'executable';
+  command = vim.fn.exepath('dart');
+  args = { vim.fn.getenv('FLUTTER_SDK') .. '/packages/flutter_tools/lib/src/commands/debug_adapter.dart', 'dap' };
+}
+dap.configurations.dart = {
+  {
+    type = 'dart';
+    request = 'launch';
+    name = "Launch file";
+    program = "${file}";
+  },
+  {
+    type = "dart",
+    request = "launch",
+    name = "Launch Flutter",
+    program = "${workspaceFolder}/lib/main.dart",
+    args = { "--flavor", "dev" },
+  },
+}
+-- }}}
+require('dap.ext.vscode').load_launchjs()
 require('dapui').setup()
 -- }}}
 
