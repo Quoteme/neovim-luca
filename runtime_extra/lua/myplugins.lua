@@ -136,6 +136,9 @@ require('auto-session').setup {
   auto_session_root_dir = vim.fn.getcwd() .. '/.sessions/',
   pre_save_cmds = {
     function()
+      if (not vim.fn.isdirectory(vim.fn.getcwd() .. '/.sessions/')) then
+        vim.fn.mkdir(vim.fn.getcwd() .. '/.sessions/')
+      end
       vim.o.sessionoptions = ""
       vim.opt.winminheight = 1
       vim.opt.winheight = 1000000000
