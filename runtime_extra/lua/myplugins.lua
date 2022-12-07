@@ -130,12 +130,17 @@ function MySession:saveDialog()
   )
 end
 
-vim.o.sessionoptions = "buffers,curdir,help,tabpages"
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 require('auto-session').setup {
   log_level = "error",
   auto_session_root_dir = vim.fn.getcwd() .. '/.sessions/',
   pre_save_cmds = {
     function()
+      vim.o.sessionoptions = ""
+      vim.opt.winminheight = 1
+      vim.opt.winheight = 1000000000
+      vim.opt.winminwidth = 1
+      vim.opt.winwidth = 1000000000
       return vim.cmd("Neotree filesystem close")
     end
   },
