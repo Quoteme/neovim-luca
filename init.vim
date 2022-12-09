@@ -528,6 +528,12 @@ EOF
 " }}}
 
 " {{{
+" {{{ Package managers
+lua << EOF
+require("mason").setup() 
+require("mason-lspconfig").setup()
+EOF
+" }}}
 " lspconfig
 lua << EOF
 local nvim_lsp = require('lspconfig')

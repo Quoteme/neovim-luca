@@ -154,6 +154,10 @@
     "plugin__indent-blankline_nvim" = { url = "github:lukas-reineke/indent-blankline.nvim"; flake = false; };
     "plugin__neoscroll_nvim" = { url = "github:karb94/neoscroll.nvim"; flake = false; };
 
+    ## Package manager
+    "plugin__mason_nvim" = { url = "github:williamboman/mason.nvim"; flake = false; };
+    "plugin__mason-lspconfig_nvim" = { url = "github:williamboman/mason-lspconfig.nvim"; flake = false; };
+
     ## folding
     "plugin__fold-cycle_nvim" = { url = "github:jghauser/fold-cycle.nvim"; flake = false; };
     "plugin__pretty-fold_nvim" = { url = "github:anuvyklack/pretty-fold.nvim"; flake = false; };
