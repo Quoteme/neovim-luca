@@ -586,24 +586,24 @@ end
 
 local servers = {
   'bashls',
-  'clangd',
-  'cmake',
-  'clojure_lsp',
+  --'clangd',
+  --'cmake',
+  --'clojure_lsp',
   --'dartls',
-  'denols',
-  'dockerls',
-  'eslint',
+  --'denols',
+  --'dockerls',
+  --'eslint',
   'hls',
-  'pyright',
-  'jedi_language_server',
+  --'pyright',
+  --'jedi_language_server',
   'ltex',
-  'rust_analyzer',
-  'rnix',
+  --'rust_analyzer',
+  --'rnix',
   'texlab',
   'vimls',
-  'html',
-  'cssls',
-  'jsonls',
+  --'html',
+  --'cssls',
+  --'jsonls',
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -618,16 +618,6 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
--- Java language server
-nvim_lsp.java_language_server.setup {
-  on_attach = on_attach,
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities),
-  cmd = {"java-language-server"},
-  flags = {
-    debounce_text_changes = 150,
-  }
-}
 
 -- sumneko_lua - Lua Language Server
 local runtime_path = vim.split(package.path, ';')
