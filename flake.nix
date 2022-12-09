@@ -214,32 +214,32 @@
           pkgs.stable.haskell-language-server
           ormolu
           ## JavaScript / Typescript / HTML / CSS
-          nodePackages.vscode-langservers-extracted
-          deno
+          # nodePackages.vscode-langservers-extracted
+          # deno
           ## NIX
           rnix-lsp
           ## Python
-          python39Packages.jedi-language-server
-          nodePackages.pyright
+          # python39Packages.jedi-language-server
+          # nodePackages.pyright
           ## Rust
-          rust-analyzer
+          # rust-analyzer
           ## Clojure
-          clojure-lsp
+          # clojure-lsp
           ## C
           clang-tools
           ## Cmake
-          cmake-language-server
+          # cmake-language-server
           ## Java
           jdk11
-          java-language-server
+          # java-language-server
           ## Lua
           sumneko-lua-language-server
           ## Dart
-          dart
+          # dart
           ## (Neo)Vim
           nodePackages.vim-language-server
           ## Docker
-          nodePackages.dockerfile-language-server-nodejs
+          # nodePackages.dockerfile-language-server-nodejs
           ## FSharp
           dotnet-sdk
           # Other dependencies

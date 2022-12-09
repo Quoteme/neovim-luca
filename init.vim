@@ -586,24 +586,11 @@ end
 
 local servers = {
   'bashls',
-  --'clangd',
-  --'cmake',
-  --'clojure_lsp',
-  --'dartls',
-  --'denols',
-  --'dockerls',
-  --'eslint',
   'hls',
-  --'pyright',
-  --'jedi_language_server',
   'ltex',
-  --'rust_analyzer',
-  --'rnix',
+  'rnix',
   'texlab',
   'vimls',
-  --'html',
-  --'cssls',
-  --'jsonls',
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
