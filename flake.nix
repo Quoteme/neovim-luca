@@ -237,6 +237,8 @@
           nodePackages.vim-language-server
           ## Docker
           nodePackages.dockerfile-language-server-nodejs
+          ## FSharp
+          dotnet-sdk
           # Other dependencies
           xcolor
           xclip

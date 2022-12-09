@@ -801,7 +801,23 @@
         "type": "github"
       }
     },
-    "plugin__mason.nvim": {
+    "plugin__mason-lspconfig_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670453010,
+        "narHash": "sha256-BHUw/LUVxfw5XWjW5EYMAyTmnRpuvt+duoOkHjJO878=",
+        "owner": "williamboman",
+        "repo": "mason-lspconfig.nvim",
+        "rev": "e8bd50153b94cc5bbfe3f59fc10ec7c4902dd526",
+        "type": "github"
+      },
+      "original": {
+        "owner": "williamboman",
+        "repo": "mason-lspconfig.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__mason_nvim": {
       "flake": false,
       "locked": {
         "lastModified": 1670493785,
@@ -1812,7 +1828,8 @@
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
         "plugin__lualine_nvim": "plugin__lualine_nvim",
         "plugin__marks_nvim": "plugin__marks_nvim",
-        "plugin__mason.nvim": "plugin__mason.nvim",
+        "plugin__mason-lspconfig_nvim": "plugin__mason-lspconfig_nvim",
+        "plugin__mason_nvim": "plugin__mason_nvim",
         "plugin__nabla_nvim": "plugin__nabla_nvim",
         "plugin__neo-tree": "plugin__neo-tree",
         "plugin__neogen": "plugin__neogen",
