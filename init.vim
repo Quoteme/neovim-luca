@@ -528,9 +528,15 @@ EOF
 " }}}
 
 " {{{
-" {{{ Package managers
+" {{{ Package managers / Mason
 lua << EOF
 require("mason").setup() 
+require("mason-null-ls").setup({
+  automatic_setup = true,
+})
+require("mason-nvim-dap").setup({
+    automatic_setup = true,
+})
 require("mason-lspconfig").setup()
 require("mason-lspconfig").setup_handlers {
   -- The first entry (without a key) will be the default handler

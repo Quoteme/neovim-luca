@@ -71,6 +71,7 @@
     "plugin__trouble_nvim" = { url = "github:folke/trouble.nvim"; flake = false; };
     "plugin__nvim-lspconfig" = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     "plugin__lsp_signature_nvim" = { url = "github:ray-x/lsp_signature.nvim"; flake = false; };
+    "plugin__null-ls_nvim" = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
 
     ## code actions
     "plugin__nvim-code-action-menu" = { url = "github:weilbith/nvim-code-action-menu"; flake = false; };
@@ -160,6 +161,8 @@
     ## Package manager
     "plugin__mason_nvim" = { url = "github:williamboman/mason.nvim"; flake = false; };
     "plugin__mason-lspconfig_nvim" = { url = "github:williamboman/mason-lspconfig.nvim"; flake = false; };
+    "plugin__mason-null-ls_nvim" = { url = "github:jay-babu/mason-null-ls.nvim"; flake = false; };
+    "plugin__mason-nvim-dap_nvim" = { url = "github:jay-babu/mason-nvim-dap.nvim"; flake = false; };
 
     ## folding
     "plugin__fold-cycle_nvim" = { url = "github:jghauser/fold-cycle.nvim"; flake = false; };
