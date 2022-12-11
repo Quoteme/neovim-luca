@@ -409,7 +409,7 @@ lua <<EOF
           fallback()
         end
       end),
-      ['<S-M-Tab>'] = cmp.mapping(function(fallback)
+      ['<M-S-Tab>'] = cmp.mapping(function(fallback)
         if luasnip.jumpable(-1) then
           luasnip.jump(-1)
         else
