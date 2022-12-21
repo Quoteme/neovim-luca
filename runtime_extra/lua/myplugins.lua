@@ -57,6 +57,37 @@ require('legendary').setup({
     { '<F1>', ':Neotree filesystem toggle left reveal<CR>', description = 'open neotree' },
     { '<F2>', ':SymbolsOutline<CR>', description = 'symbols outline' },
     { '<F3>', ':TodoTelescope<CR>', description = 'list all todos' },
+    { '<F5>', function ()
+      if vim.bo.filetype == 'dart' then
+        vim.cmd('FlutterRun')
+      elseif vim.bo.filetype == 'nix' then
+        vim.cmd('!nix run')
+      elseif vim.bo.filetype == 'tex' then
+        vim.cmd('!latexmk -pdf')
+      elseif vim.bo.filetype == 'markdown' then
+        vim.cmd('Pandoc')
+      elseif vim.bo.filetype == 'python' then
+        vim.cmd('!python3 %')
+      elseif vim.bo.filetype == 'sh' then
+        vim.cmd('!sh %')
+      elseif vim.bo.filetype == 'lua' then
+        vim.cmd('!lua %')
+      elseif vim.bo.filetype == 'c' then
+        vim.cmd('!gcc % -o %<')
+        vim.cmd('!./%<')
+      elseif vim.bo.filetype == 'cpp' then
+        vim.cmd('!g++ % -o %<')
+        vim.cmd('!./%<')
+      elseif vim.bo.filetype == 'java' then
+        vim.cmd('!javac %')
+        vim.cmd('!java %<')
+      elseif vim.bo.filetype == 'rust' then
+        vim.cmd('!rustc %')
+        vim.cmd('!./%<')
+      elseif vim.bo.filetype == 'go' then
+        vim.cmd('!go run %')
+      end
+    end, description = 'compile project' },
     -- }}}
   },
   which_key = {
