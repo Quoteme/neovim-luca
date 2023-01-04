@@ -14,7 +14,8 @@ require('legendary').setup({
   keymaps = {
     -- {{{ command palette like VSCode
     { '<C-S-P>', ':Legendary<CR>', description = "open command palette (legendary.nvim)" },
-    { '<C-S-F>', ':Telescope commands<cr>', description = "find command" },
+    { '<C-S-F>', ':Telescope live_grep<cr>', description = "find command" },
+    { '<C-S-X>', ':Telescope commands<cr>', description = "find command" },
     { '<A-K>', ':Telescope keymaps<cr>', description = "find keymaps" },
     -- }}}
     -- {{{ folds
