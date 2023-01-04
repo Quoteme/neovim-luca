@@ -628,6 +628,35 @@ ls.add_snippets("markdown",{
     insert(4, "a_4"),
     text({" \\\\",""}),
     text({"\\end{bmatrix}"}),
+  }),
+  snip({
+    trig="nsphere",
+    name="n-Sphere",
+    dscr="S^n",
+    },{
+    text({"S^n"}),
+  }),
+  snip({
+      trig="function",
+      name="f : A -> B",
+      dscr="a mathematical function",
+    },{
+      insert(1, "f"),
+      text({":"}),
+      insert(2, "A"),
+      text({"\\to "}),
+      insert(3, "B"),
+  }),
+  snip({
+      trig="homotopy",
+      name="H : A × [0,1] -> B",
+      dscr="a mathematical homotopy between f:A→B and g:A→B",
+    },{
+      text({"H:"}),
+      insert(1, "A"),
+      text({"\\times [0,1]"}),
+      text({"\\to "}),
+      insert(2, "B"),
   })
 })
 
