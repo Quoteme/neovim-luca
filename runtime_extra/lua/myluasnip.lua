@@ -678,6 +678,13 @@ ls.add_snippets("markdown",{
       dscr="\\tilde",
     },{
       text({"\\tilde"}),
+  }),
+  snip({
+      trig="les",
+      name="lange exakte Folge",
+      dscr="lange exakte Folge",
+    },{
+      text({"lange exakte Folge"}),
   })
 })
 
