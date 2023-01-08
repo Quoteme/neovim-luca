@@ -716,6 +716,14 @@ EOF
 let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
 lua << EOF
 require("catppuccin").setup({
+  highlight_overrides = {
+    all = function(colors)
+    return {
+      NvimTreeNormal = { fg = colors.none },
+      CmpBorder = { fg = "#a0a0a0" },
+    }
+    end
+  },
   integrations = {
     aerial          = true,
     barbar          = true,
@@ -730,7 +738,7 @@ require("catppuccin").setup({
     ts_rainbow      = true,
     which_key       = true,
   }
-})
+  })
 EOF
 colorscheme catppuccin
 " }}}

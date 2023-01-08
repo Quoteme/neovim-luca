@@ -164,11 +164,11 @@
     "plugin__catppuccin": {
       "flake": false,
       "locked": {
-        "lastModified": 1669870234,
-        "narHash": "sha256-pDm0APfCmRjHLHNt2rV181zCb71DIpiEMRqZSvF1vXU=",
+        "lastModified": 1671218978,
+        "narHash": "sha256-Y3rJsjVGHYDEBKQOBTPmOc71PBNOwTiPEPXw6T8UM/k=",
         "owner": "catppuccin",
         "repo": "nvim",
-        "rev": "4d2ed20bda0c07e9473c374826721ac16154698b",
+        "rev": "55f43a952856bc0029e6cef066297c6cfab3451d",
         "type": "github"
       },
       "original": {
@@ -705,6 +705,22 @@
         "type": "github"
       }
     },
+    "plugin__gruvbox": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1593780126,
+        "narHash": "sha256-H8WkOC9NMPXFznv2+dwOj3syNd2sLqszmoMqST/W5hQ=",
+        "owner": "morhetz",
+        "repo": "gruvbox",
+        "rev": "bf2885a95efdad7bd5e4794dd0213917770d79b7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "morhetz",
+        "repo": "gruvbox",
+        "type": "github"
+      }
+    },
     "plugin__indent-blankline_nvim": {
       "flake": false,
       "locked": {
@@ -718,6 +734,22 @@
       "original": {
         "owner": "lukas-reineke",
         "repo": "indent-blankline.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__kanagawa.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672693353,
+        "narHash": "sha256-KP3DgywCxMnKuB/Rg2VRFQpKULLKR5dX98j10Fm1IQ4=",
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
+        "rev": "476eb2289d47d132ebacc1a4d459e3204866599b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rebelot",
+        "repo": "kanagawa.nvim",
         "type": "github"
       }
     },
@@ -1054,6 +1086,22 @@
       "original": {
         "owner": "nvim-neotest",
         "repo": "neotest-vim-test",
+        "type": "github"
+      }
+    },
+    "plugin__nightfox.nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673043401,
+        "narHash": "sha256-thf6gM7FXJaaUAWrkPK8LU0xgxzL2H7EBntpOYbhwGc=",
+        "owner": "EdenEast",
+        "repo": "nightfox.nvim",
+        "rev": "6677c99d89050fa940ffc320fe780fb52baa68ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "EdenEast",
+        "repo": "nightfox.nvim",
         "type": "github"
       }
     },
@@ -1521,6 +1569,22 @@
         "type": "github"
       }
     },
+    "plugin__tokyonight-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672860258,
+        "narHash": "sha256-a6Cr1KaEe8VXdY2Lcj/A50GEpwklVgsh6fvuzmhd/WI=",
+        "owner": "folke",
+        "repo": "tokyonight.nvim",
+        "rev": "def91651c41f6d1d43ebcb50763324d35331baee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "tokyonight.nvim",
+        "type": "github"
+      }
+    },
     "plugin__trouble_nvim": {
       "flake": false,
       "locked": {
@@ -1809,6 +1873,22 @@
         "type": "github"
       }
     },
+    "plugin__vimtex": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672696619,
+        "narHash": "sha256-+sSbih7ktewVb0vyXzV+bVUUp4VNnHw3Vn4CwL5f4to=",
+        "owner": "lervag",
+        "repo": "vimtex",
+        "rev": "e8c2c8087f810f0c67373d11d05b47c6a2800b98",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lervag",
+        "repo": "vimtex",
+        "type": "github"
+      }
+    },
     "plugin__which-key_nvim": {
       "flake": false,
       "locked": {
@@ -1886,7 +1966,9 @@
         "plugin__friendly-snippets": "plugin__friendly-snippets",
         "plugin__gesture_nvim": "plugin__gesture_nvim",
         "plugin__gitsigns_nvim": "plugin__gitsigns_nvim",
+        "plugin__gruvbox": "plugin__gruvbox",
         "plugin__indent-blankline_nvim": "plugin__indent-blankline_nvim",
+        "plugin__kanagawa.nvim": "plugin__kanagawa.nvim",
         "plugin__legendary_nvim": "plugin__legendary_nvim",
         "plugin__lsp_signature_nvim": "plugin__lsp_signature_nvim",
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
@@ -1908,6 +1990,7 @@
         "plugin__neotest-plenary": "plugin__neotest-plenary",
         "plugin__neotest-python": "plugin__neotest-python",
         "plugin__neotest-vim-test": "plugin__neotest-vim-test",
+        "plugin__nightfox.nvim": "plugin__nightfox.nvim",
         "plugin__nui_nvim": "plugin__nui_nvim",
         "plugin__null-ls_nvim": "plugin__null-ls_nvim",
         "plugin__nvim-cmp": "plugin__nvim-cmp",
@@ -1937,6 +2020,7 @@
         "plugin__tabular": "plugin__tabular",
         "plugin__telescope_nvim": "plugin__telescope_nvim",
         "plugin__todo-comments_nvim": "plugin__todo-comments_nvim",
+        "plugin__tokyonight-nvim": "plugin__tokyonight-nvim",
         "plugin__trouble_nvim": "plugin__trouble_nvim",
         "plugin__twilight_nvim": "plugin__twilight_nvim",
         "plugin__vim-commentary": "plugin__vim-commentary",
@@ -1955,6 +2039,7 @@
         "plugin__vim-test": "plugin__vim-test",
         "plugin__vim-visual-multi": "plugin__vim-visual-multi",
         "plugin__vimspector": "plugin__vimspector",
+        "plugin__vimtex": "plugin__vimtex",
         "plugin__which-key_nvim": "plugin__which-key_nvim",
         "plugin__yuck.vim": "plugin__yuck.vim"
       }

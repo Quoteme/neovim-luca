@@ -22,6 +22,10 @@
     # Theme / Colorscheme
     "plugin__onedark-vim" = { url = "github:joshdick/onedark.vim"; flake = false; };
     "plugin__catppuccin" = { url = "github:catppuccin/nvim"; flake = false; };
+    "plugin__tokyonight-nvim" = { url = "github:folke/tokyonight.nvim"; flake = false; };
+    "plugin__kanagawa.nvim" = { url = "github:rebelot/kanagawa.nvim"; flake = false; };
+    "plugin__nightfox.nvim" = { url = "github:EdenEast/nightfox.nvim"; flake = false; };
+    "plugin__gruvbox" = { url = "github:morhetz/gruvbox"; flake = false; };
 
     # Color
     "plugin__nvim-colorizer.lua" = { url = "github:norcalli/nvim-colorizer.lua"; flake = false; };
