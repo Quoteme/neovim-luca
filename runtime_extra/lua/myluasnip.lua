@@ -657,6 +657,27 @@ ls.add_snippets("markdown",{
       text({"\\times [0,1]"}),
       text({"\\to "}),
       insert(2, "B"),
+  }),
+  snip({
+      trig="o+",
+      name="(+)",
+      dscr="\\oplus",
+    },{
+      text({"\\oplus"}),
+  }),
+  snip({
+      trig="ox",
+      name="(x)",
+      dscr="\\otimes",
+    },{
+      text({"\\otimess"}),
+  }),
+  snip({
+      trig="~",
+      name="tilde over next letter",
+      dscr="\\tilde",
+    },{
+      text({"\\tilde"}),
   })
 })
 
