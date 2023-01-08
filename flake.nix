@@ -55,6 +55,9 @@
     ## F#
     "plugin__neofsharp_vim" = { url = "github:adelarsq/neofsharp.vim"; flake = false; };
 
+    ## Latex
+    "plugin__vimtex" = { url = "github:lervag/vimtex"; flake = false; };
+
     # Debugging
     "plugin__nvim-dap" = { url = "github:mfussenegger/nvim-dap"; flake = false; };
     "plugin__nvim-dap-ui" = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
