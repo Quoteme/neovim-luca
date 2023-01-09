@@ -670,7 +670,7 @@ ls.add_snippets("markdown",{
       name="(x)",
       dscr="\\otimes",
     },{
-      text({"\\otimess"}),
+      text({"\\otimes"}),
   }),
   snip({
       trig="~",
