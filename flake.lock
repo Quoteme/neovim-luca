@@ -1365,6 +1365,70 @@
         "type": "github"
       }
     },
+    "plugin__nvim_treesitter_context": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672994337,
+        "narHash": "sha256-DBbsv7nefBwgUtBqviPVzd8/Kqh+oy7cjWhiFz4vMjU=",
+        "owner": "romgrk",
+        "repo": "nvim-treesitter-context",
+        "rev": "cacee4828152dd3a83736169ae61bbcd29a3d213",
+        "type": "github"
+      },
+      "original": {
+        "owner": "romgrk",
+        "repo": "nvim-treesitter-context",
+        "type": "github"
+      }
+    },
+    "plugin__nvim_treesitter_pairs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650140977,
+        "narHash": "sha256-1MRLZ3mc/QI2bjZg43cF43LGzzwtD0grS1w5YgdDMBU=",
+        "owner": "theHamsta",
+        "repo": "nvim-treesitter-pairs",
+        "rev": "68a8d3d0bebc9173e862b9f8c5957b7f82cd0d60",
+        "type": "github"
+      },
+      "original": {
+        "owner": "theHamsta",
+        "repo": "nvim-treesitter-pairs",
+        "type": "github"
+      }
+    },
+    "plugin__nvim_treesitter_playground": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672092593,
+        "narHash": "sha256-uBSSGdlpj3g2wEYYaZCvPz+gHlwxjJP+C0ES8JcKPrA=",
+        "owner": "nvim-treesitter",
+        "repo": "playground",
+        "rev": "8a887bcf66017bd775a0fb19c9d8b7a4d6759c48",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "playground",
+        "type": "github"
+      }
+    },
+    "plugin__nvim_treesitter_refactor": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1652483521,
+        "narHash": "sha256-8iAwtoMqh+2ef8qooxBFzm1eAm+P+8IKjjepV4n/+vI=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-refactor",
+        "rev": "75f5895cc662d61eb919da8050b7a0124400d589",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-refactor",
+        "type": "github"
+      }
+    },
     "plugin__nvim_treesitter_textobjects": {
       "flake": false,
       "locked": {
@@ -1378,6 +1442,22 @@
       "original": {
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter-textobjects",
+        "type": "github"
+      }
+    },
+    "plugin__nvim_treesitter_textsubjects": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672185534,
+        "narHash": "sha256-mBX0ggMoF7HQyYhhtNpPEWWs0rUaPhhFKRfTH21WoWs=",
+        "owner": "RRethy",
+        "repo": "nvim-treesitter-textsubjects",
+        "rev": "bc047b20768845fd54340eb76272b2cf2f6fa3f3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "RRethy",
+        "repo": "nvim-treesitter-textsubjects",
         "type": "github"
       }
     },
@@ -1682,6 +1762,22 @@
       "original": {
         "owner": "clojure-vim",
         "repo": "vim-jack-in",
+        "type": "github"
+      }
+    },
+    "plugin__vim-markdown": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669286150,
+        "narHash": "sha256-5q/s/ypZku4Iviq+eGip6hSWs0Ei3FrnX3IL3WV/FHw=",
+        "owner": "preservim",
+        "repo": "vim-markdown",
+        "rev": "df4be8626e2c5b2a42eb60e1f100fce469b81f7d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "preservim",
+        "repo": "vim-markdown",
         "type": "github"
       }
     },
@@ -2011,7 +2107,12 @@
         "plugin__nvim-treesitter": "plugin__nvim-treesitter",
         "plugin__nvim-ts-rainbow": "plugin__nvim-ts-rainbow",
         "plugin__nvim-web-devicons": "plugin__nvim-web-devicons",
+        "plugin__nvim_treesitter_context": "plugin__nvim_treesitter_context",
+        "plugin__nvim_treesitter_pairs": "plugin__nvim_treesitter_pairs",
+        "plugin__nvim_treesitter_playground": "plugin__nvim_treesitter_playground",
+        "plugin__nvim_treesitter_refactor": "plugin__nvim_treesitter_refactor",
         "plugin__nvim_treesitter_textobjects": "plugin__nvim_treesitter_textobjects",
+        "plugin__nvim_treesitter_textsubjects": "plugin__nvim_treesitter_textsubjects",
         "plugin__nvimager": "plugin__nvimager",
         "plugin__onedark-vim": "plugin__onedark-vim",
         "plugin__pandoc_nvim": "plugin__pandoc_nvim",
@@ -2031,6 +2132,7 @@
         "plugin__vim-dispatch": "plugin__vim-dispatch",
         "plugin__vim-dispatch-neovim": "plugin__vim-dispatch-neovim",
         "plugin__vim-jack-in": "plugin__vim-jack-in",
+        "plugin__vim-markdown": "plugin__vim-markdown",
         "plugin__vim-matchup": "plugin__vim-matchup",
         "plugin__vim-nix": "plugin__vim-nix",
         "plugin__vim-repeat": "plugin__vim-repeat",

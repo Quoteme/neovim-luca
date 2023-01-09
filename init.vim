@@ -655,6 +655,13 @@ let g:vimspector_base_dir=expand( '$HOME/.vim/vimspector-config' )
 " let g:vimspector_base_dir='/home/luca/.vim/vimspector-config'
 " }}}
 
+"{{{ vim-markdown
+let g:vim_markdown_math = 1
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_conceal_code_blocks = 0
+""}}}
+
 " {{{
 " treesitter
 lua << EOF
@@ -669,9 +676,44 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
-  }
+  },
 }
 vim.opt.runtimepath:append("~/.config/treesitter_parsers")
+
+require "nvim-treesitter.configs".setup {
+  playground = {
+    enable = true,
+    disable = {},
+    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    persist_queries = false, -- Whether the query persists across vim sessions
+    keybindings = {
+      toggle_query_editor = 'o',
+      toggle_hl_groups = 'i',
+      toggle_injected_languages = 't',
+      toggle_anonymous_nodes = 'a',
+      toggle_language_display = 'I',
+      focus_language = 'f',
+      unfocus_language = 'F',
+      update = 'R',
+      goto_node = '<cr>',
+      show_help = '?',
+    },
+  }
+}
+
+require('nvim-treesitter.configs').setup {
+  textsubjects = {
+    enable = true,
+    prev_selection = ',', -- (Optional) keymap to select the previous selection
+    keymaps = {
+      ['.'] = 'textsubjects-smart',
+      [';'] = 'textsubjects-container-outer',
+      ['i;'] = 'textsubjects-container-inner',
+    },
+  },
+}
+
+require'treesitter-context'.setup{}
 EOF
 " }}}
 

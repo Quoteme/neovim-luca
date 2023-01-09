@@ -54,6 +54,9 @@
     ## F#
     "plugin__neofsharp_vim" = { url = "github:adelarsq/neofsharp.vim"; flake = false; };
 
+    ## Markdown
+    "plugin__vim-markdown" = { url = "github:preservim/vim-markdown"; flake = false; };
+
     # Debugging
     "plugin__nvim-dap" = { url = "github:mfussenegger/nvim-dap"; flake = false; };
     "plugin__nvim-dap-ui" = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
@@ -66,6 +69,11 @@
     "plugin__nvim-treesitter" = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     "plugin__nvim-ts-rainbow" = { url = "github:p00f/nvim-ts-rainbow"; flake = false; };
     "plugin__nvim_treesitter_textobjects" = { url = "github:nvim-treesitter/nvim-treesitter-textobjects"; flake = false; };
+    "plugin__nvim_treesitter_textsubjects" = { url = "github:RRethy/nvim-treesitter-textsubjects"; flake = false; };
+    "plugin__nvim_treesitter_refactor" = { url = "github:nvim-treesitter/nvim-treesitter-refactor"; flake = false; };
+    "plugin__nvim_treesitter_playground" = { url = "github:nvim-treesitter/playground"; flake = false; };
+    "plugin__nvim_treesitter_context" = { url = "github:romgrk/nvim-treesitter-context"; flake = false; };
+    "plugin__nvim_treesitter_pairs" = { url = "github:theHamsta/nvim-treesitter-pairs"; flake = false; };
 
     # Language Server Protocol
     "plugin__trouble_nvim" = { url = "github:folke/trouble.nvim"; flake = false; };
