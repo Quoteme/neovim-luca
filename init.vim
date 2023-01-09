@@ -9,7 +9,7 @@
 " {{{
 " Environment variables:
   set nocompatible
-  syntax on
+  syntax enable
   let mapleader=","
   let maplocalleader="-"
   set conceallevel=0
@@ -593,7 +593,6 @@ end
 local servers = {
   'bashls',
   'hls',
-  'ltex',
   'rnix',
   'texlab',
   'vimls',

@@ -30,18 +30,6 @@
         "type": "github"
       }
     },
-    "ltex-ls": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-FXcoeSfyGWJg2OKI1DuWhttF6UTSGWgJxRN4oTVUucQ=",
-        "type": "tarball",
-        "url": "https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz"
-      },
-      "original": {
-        "type": "tarball",
-        "url": "https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz"
-      }
-    },
     "neovim-flake": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -1377,6 +1365,22 @@
         "type": "github"
       }
     },
+    "plugin__nvim_treesitter_textobjects": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673089707,
+        "narHash": "sha256-AeQ78ApI9g2k2ZL7w8BS3ivCeL5OfCgpS/1TqQ1TWU0=",
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-textobjects",
+        "rev": "a8c86f48c1030acee22b9e071e3c531de77bf253",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-treesitter",
+        "repo": "nvim-treesitter-textobjects",
+        "type": "github"
+      }
+    },
     "plugin__nvimager": {
       "flake": false,
       "locked": {
@@ -1873,22 +1877,6 @@
         "type": "github"
       }
     },
-    "plugin__vimtex": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1672696619,
-        "narHash": "sha256-+sSbih7ktewVb0vyXzV+bVUUp4VNnHw3Vn4CwL5f4to=",
-        "owner": "lervag",
-        "repo": "vimtex",
-        "rev": "e8c2c8087f810f0c67373d11d05b47c6a2800b98",
-        "type": "github"
-      },
-      "original": {
-        "owner": "lervag",
-        "repo": "vimtex",
-        "type": "github"
-      }
-    },
     "plugin__which-key_nvim": {
       "flake": false,
       "locked": {
@@ -1921,10 +1909,25 @@
         "type": "github"
       }
     },
+    "plugin_targets_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1575832317,
+        "narHash": "sha256-Sd+2dppKHpa7ONK6JgCAFKwjDMueaChFtSF0YvrAXKQ=",
+        "owner": "wellle",
+        "repo": "targets.vim",
+        "rev": "8d6ff2984cdfaebe5b7a6eee8f226a6dd1226f2d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wellle",
+        "repo": "targets.vim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "ltex-ls": "ltex-ls",
         "neovim-flake": "neovim-flake",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
@@ -2008,6 +2011,7 @@
         "plugin__nvim-treesitter": "plugin__nvim-treesitter",
         "plugin__nvim-ts-rainbow": "plugin__nvim-ts-rainbow",
         "plugin__nvim-web-devicons": "plugin__nvim-web-devicons",
+        "plugin__nvim_treesitter_textobjects": "plugin__nvim_treesitter_textobjects",
         "plugin__nvimager": "plugin__nvimager",
         "plugin__onedark-vim": "plugin__onedark-vim",
         "plugin__pandoc_nvim": "plugin__pandoc_nvim",
@@ -2039,9 +2043,9 @@
         "plugin__vim-test": "plugin__vim-test",
         "plugin__vim-visual-multi": "plugin__vim-visual-multi",
         "plugin__vimspector": "plugin__vimspector",
-        "plugin__vimtex": "plugin__vimtex",
         "plugin__which-key_nvim": "plugin__which-key_nvim",
-        "plugin__yuck.vim": "plugin__yuck.vim"
+        "plugin__yuck.vim": "plugin__yuck.vim",
+        "plugin_targets_nvim": "plugin_targets_nvim"
       }
     }
   },

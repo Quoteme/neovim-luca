@@ -319,9 +319,6 @@ wk.register({
 
 -- Default keybingigs in normal mode without any modifiers
 wk.register({
-  c = {
-    s = "change surrounding char arg1 with arg2. cs\"\'"
-    },
   g = {
     b = {"<cmd>BufferPrevious<CR>", "previous buffer"},
     B = {"<cmd>BufferNext<CR>", "next buffer"},

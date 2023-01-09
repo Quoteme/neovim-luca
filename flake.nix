@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ltex-ls = {
-      url = "https://github.com/valentjn/ltex-ls/releases/download/15.2.0/ltex-ls-15.2.0-linux-x64.tar.gz";
-      flake = false;
-    };
-
     # Theme / Colorscheme
     "plugin__onedark-vim" = { url = "github:joshdick/onedark.vim"; flake = false; };
     "plugin__catppuccin" = { url = "github:catppuccin/nvim"; flake = false; };
@@ -59,9 +54,6 @@
     ## F#
     "plugin__neofsharp_vim" = { url = "github:adelarsq/neofsharp.vim"; flake = false; };
 
-    ## Latex
-    "plugin__vimtex" = { url = "github:lervag/vimtex"; flake = false; };
-
     # Debugging
     "plugin__nvim-dap" = { url = "github:mfussenegger/nvim-dap"; flake = false; };
     "plugin__nvim-dap-ui" = { url = "github:rcarriga/nvim-dap-ui"; flake = false; };
@@ -73,6 +65,7 @@
     # Tree-sitter
     "plugin__nvim-treesitter" = { url = "github:nvim-treesitter/nvim-treesitter"; flake = false; };
     "plugin__nvim-ts-rainbow" = { url = "github:p00f/nvim-ts-rainbow"; flake = false; };
+    "plugin__nvim_treesitter_textobjects" = { url = "github:nvim-treesitter/nvim-treesitter-textobjects"; flake = false; };
 
     # Language Server Protocol
     "plugin__trouble_nvim" = { url = "github:folke/trouble.nvim"; flake = false; };
@@ -156,6 +149,7 @@
     "plugin__gitsigns_nvim" = { url = "github:lewis6991/gitsigns.nvim"; flake = false; };
 
     # Utilities
+    "plugin_targets_nvim" = { url = "github:wellle/targets.vim"; flake = false; };
     "plugin__tabular" = { url = "github:godlygeek/tabular"; flake = false; };
     "plugin__vim-matchup" = { url = "github:andymass/vim-matchup"; flake = false; };
     "plugin__delimitMate" = { url = "github:Raimondi/delimitMate"; flake = false; };
@@ -397,11 +391,6 @@
                 (pkgs.aspellWithDicts (dicts: with dicts; [ en de ]))
               ];
               postBuild = ''
-                # Add ltex-ls
-                ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
-                wrapProgram $out/bin/ltex-ls \
-                  --set JAVA_HOME ${pkgs.jdk11}
-
                 # add external dependencies to path of neovim
                 wrapProgram $out/bin/nvim \
                   --suffix PATH : $out/bin \
@@ -453,31 +442,10 @@
             gcc
             toilet
             nodejs-16_x
-            packages.ltex-ls
           ];
           # if you wish to only load the onedark-vim colorscheme:
           # start = with pkgs.neovimPlugins; [ onedark-vim ];
         };
-
-        # This should somehow be integrated into neovimLuca but idk how
-        apps.ltex-ls = {
-          type = "app";
-          program = "${packages.ltex-ls}/bin/ltex-ls";
-        };
-
-        packages.ltex-ls = pkgs.symlinkJoin {
-          name = "ltex-ls";
-          paths = [
-            pkgs.jdk11
-          ];
-          nativeBuildInputs = [ pkgs.makeWrapper ];
-          postBuild = ''
-            ln -sf ${inputs.ltex-ls}/bin/ltex-ls $out/bin/ltex-ls
-            wrapProgram $out/bin/ltex-ls \
-              --set JAVA_HOME ${pkgs.jdk11}
-          '';
-        };
-
       }
     );
 }
