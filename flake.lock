@@ -1669,6 +1669,22 @@
         "type": "github"
       }
     },
+    "plugin__treesitter-unit": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1631432812,
+        "narHash": "sha256-ahIar02sDhMbRpXVTBQSn134PLmMiubPUOg8Chq7gsk=",
+        "owner": "David-Kunz",
+        "repo": "treesitter-unit",
+        "rev": "89968a1f8c72427691088e6d09d26a52c2ddc6f4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "David-Kunz",
+        "repo": "treesitter-unit",
+        "type": "github"
+      }
+    },
     "plugin__trouble_nvim": {
       "flake": false,
       "locked": {
@@ -2126,6 +2142,7 @@
         "plugin__telescope_nvim": "plugin__telescope_nvim",
         "plugin__todo-comments_nvim": "plugin__todo-comments_nvim",
         "plugin__tokyonight-nvim": "plugin__tokyonight-nvim",
+        "plugin__treesitter-unit": "plugin__treesitter-unit",
         "plugin__trouble_nvim": "plugin__trouble_nvim",
         "plugin__twilight_nvim": "plugin__twilight_nvim",
         "plugin__vim-commentary": "plugin__vim-commentary",

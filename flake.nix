@@ -74,6 +74,7 @@
     "plugin__nvim_treesitter_playground" = { url = "github:nvim-treesitter/playground"; flake = false; };
     "plugin__nvim_treesitter_context" = { url = "github:romgrk/nvim-treesitter-context"; flake = false; };
     "plugin__nvim_treesitter_pairs" = { url = "github:theHamsta/nvim-treesitter-pairs"; flake = false; };
+    "plugin__treesitter-unit" = { url = "github:David-Kunz/treesitter-unit"; flake = false; };
 
     # Language Server Protocol
     "plugin__trouble_nvim" = { url = "github:folke/trouble.nvim"; flake = false; };
