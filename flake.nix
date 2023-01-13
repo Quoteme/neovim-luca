@@ -112,6 +112,9 @@
     "plugin__friendly-snippets" = { url = "github:rafamadriz/friendly-snippets"; flake = false; };
     "plugin__vim-snippets" = { url = "github:honza/vim-snippets"; flake = false; };
     "plugin__dartlang-snippets" = { url = "github:natebosch/dartlang-snippets"; flake = false; };
+    "plugin__latex-snippets" = { url = "github:gillescastel/latex-snippets"; flake = false; };
+    "plugin__latex-snippets-vim" = { url = "github:ckunte/latex-snippets-vim"; flake = false; };
+    "plugin__vim-es6" = { url = "github:isRuslan/vim-es6"; flake = false; };
 
     ## Github Copilot
     "plugin__copilot.vim" = { url = "github:github/copilot.vim"; flake = false; };

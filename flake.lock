@@ -741,6 +741,38 @@
         "type": "github"
       }
     },
+    "plugin__latex-snippets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1612268050,
+        "narHash": "sha256-w6Zxl59kCKPKDFPi/6i+B5uVKXRDiXHQvjBG58iCYkw=",
+        "owner": "gillescastel",
+        "repo": "latex-snippets",
+        "rev": "1e29f44c6fc0596dad1791fdf2c07d6da33fe27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gillescastel",
+        "repo": "latex-snippets",
+        "type": "github"
+      }
+    },
+    "plugin__latex-snippets-vim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672141958,
+        "narHash": "sha256-vpYBqdp1lFvwwQlO6DFGoBuiE9l7mua9iwPhHezJeBo=",
+        "owner": "ckunte",
+        "repo": "latex-snippets-vim",
+        "rev": "14666d6659c3183b6edb161da8f23f9e386a2630",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ckunte",
+        "repo": "latex-snippets-vim",
+        "type": "github"
+      }
+    },
     "plugin__legendary_nvim": {
       "flake": false,
       "locked": {
@@ -1765,6 +1797,22 @@
         "type": "github"
       }
     },
+    "plugin__vim-es6": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1556471039,
+        "narHash": "sha256-52TaUhSz5IpU1rRoiS2k9XF8UWuu4QDmJdrJN/D7pYg=",
+        "owner": "isRuslan",
+        "repo": "vim-es6",
+        "rev": "3f080e31dc712ca52e4cb443b5e9cbfd543ba73c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "isRuslan",
+        "repo": "vim-es6",
+        "type": "github"
+      }
+    },
     "plugin__vim-jack-in": {
       "flake": false,
       "locked": {
@@ -2084,6 +2132,8 @@
         "plugin__gruvbox": "plugin__gruvbox",
         "plugin__indent-blankline_nvim": "plugin__indent-blankline_nvim",
         "plugin__kanagawa.nvim": "plugin__kanagawa.nvim",
+        "plugin__latex-snippets": "plugin__latex-snippets",
+        "plugin__latex-snippets-vim": "plugin__latex-snippets-vim",
         "plugin__legendary_nvim": "plugin__legendary_nvim",
         "plugin__lsp_signature_nvim": "plugin__lsp_signature_nvim",
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
@@ -2148,6 +2198,7 @@
         "plugin__vim-commentary": "plugin__vim-commentary",
         "plugin__vim-dispatch": "plugin__vim-dispatch",
         "plugin__vim-dispatch-neovim": "plugin__vim-dispatch-neovim",
+        "plugin__vim-es6": "plugin__vim-es6",
         "plugin__vim-jack-in": "plugin__vim-jack-in",
         "plugin__vim-markdown": "plugin__vim-markdown",
         "plugin__vim-matchup": "plugin__vim-matchup",
