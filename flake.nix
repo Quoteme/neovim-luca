@@ -81,6 +81,7 @@
     "plugin__nvim-lspconfig" = { url = "github:neovim/nvim-lspconfig"; flake = false; };
     "plugin__lsp_signature_nvim" = { url = "github:ray-x/lsp_signature.nvim"; flake = false; };
     "plugin__null-ls_nvim" = { url = "github:jose-elias-alvarez/null-ls.nvim"; flake = false; };
+    "plugin__lspsaga_nvim" = { url = "github:glepnir/lspsaga.nvim"; flake = false; };
 
     ## code actions
     "plugin__nvim-code-action-menu" = { url = "github:weilbith/nvim-code-action-menu"; flake = false; };

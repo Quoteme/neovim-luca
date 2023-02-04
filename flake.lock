@@ -821,6 +821,22 @@
         "type": "github"
       }
     },
+    "plugin__lspsaga_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675520691,
+        "narHash": "sha256-M+REHJjuHw4nccexEW/pyFAzoFDS9hDAChw+yk2bLdk=",
+        "owner": "glepnir",
+        "repo": "lspsaga.nvim",
+        "rev": "9a7013874a9d5e0413039fc9ded613fcdbd59cbd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "glepnir",
+        "repo": "lspsaga.nvim",
+        "type": "github"
+      }
+    },
     "plugin__lualine_nvim": {
       "flake": false,
       "locked": {
@@ -2137,6 +2153,7 @@
         "plugin__legendary_nvim": "plugin__legendary_nvim",
         "plugin__lsp_signature_nvim": "plugin__lsp_signature_nvim",
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
+        "plugin__lspsaga_nvim": "plugin__lspsaga_nvim",
         "plugin__lualine_nvim": "plugin__lualine_nvim",
         "plugin__marks_nvim": "plugin__marks_nvim",
         "plugin__mason-lspconfig_nvim": "plugin__mason-lspconfig_nvim",

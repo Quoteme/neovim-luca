@@ -362,6 +362,7 @@ set completeopt=menu,menuone,noselect
 lua <<EOF
   -- {{{ Imports
   local cmp = require'cmp'
+  require("lspsaga").setup({})
   local lspkind = require('lspkind')
   local luasnip = require("luasnip")
   -- }}}
