@@ -27,6 +27,29 @@ require('legendary').setup({
     -- {{{ Code action
     { '<A-a>', ':CodeActionMenu<CR>', description = "code action menu" },
     { '<A-b>', ':lua vim.lsp.buf.definition()<CR>', description = "go to definition" },
+    -- show the hover information when pressing A-h
+    { '<A-h>', ':lua vim.lsp.buf.hover()<CR>', description = "show hover information" },
+    -- show the signature help when pressing A-i
+    { '<A-i>', ':lua vim.lsp.buf.signature_help()<CR>', description = "show signature help" },
+    -- show the diagnostics when pressing A-l
+    { '<A-l>', ':lua vim.diagnostic.open_float()<CR>', description = "show diagnostics" },
+    -- show the definition preview when pressing A-d
+    { '<A-d>', ':lua vim.lsp.buf.definition()<CR>', description = "show definition preview" },
+    { '<A-j>', ':lua vim.diagnostic.goto_next()<CR>', description = "next diagnostic" },
+    { '<A-k>', ':lua vim.diagnostic.goto_prev()<CR>', description = "previous diagnostic" },
+    { '<A-n>', ':lua vim.diagnostic.goto_next()<CR>', description = "next diagnostic" },
+    { '<A-p>', ':lua vim.diagnostic.goto_prev()<CR>', description = "previous diagnostic" },
+    { '<A-r>', ':Telescope lsp_incoming_calls<cr>', description = "incoming references"},
+    { '<A-R>', ':Telescope lsp_outgoing_calls<cr>', description = "outgoing references" },
+    { '<A-r>', ':Telescope lsp_references<cr>', description = "references" },
+    { '<A-s>', ':Telescope lsp_document_symbols<cr>', description = "document symbols" },
+    { '<A-S>', ':Telescope lsp_workspace_symbols<cr>', description = "workspace symbols" },
+    { '<A-t>', ':Telescope lsp_implementations<cr>', description = "implementations" },
+    { '<A-w>', ':Telescope lsp_workspace_diagnostics<cr>', description = "workspace diagnostics" },
+    { '<A-x>', ':Telescope lsp_document_diagnostics<cr>', description = "document diagnostics" },
+      { '<A-q>', ':quit<cr>', description = "quit" },
+    -- }}}
+    -- {{{ LSP
     { '<F21>', -- S->F9
       function()
         if vim.bo.filetype == 'dart' then
