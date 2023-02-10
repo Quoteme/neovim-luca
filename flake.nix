@@ -23,7 +23,7 @@
     "plugin__gruvbox" = { url = "github:morhetz/gruvbox"; flake = false; };
 
     # Color
-    "plugin__nvim-colorizer.lua" = { url = "github:norcalli/nvim-colorizer.lua"; flake = false; };
+    "plugin__nvim-colorizer_lua" = { url = "github:norcalli/nvim-colorizer.lua"; flake = false; };
     "plugin__twilight_nvim" = { url = "github:folke/twilight.nvim"; flake = false; };
 
     # Programming Language Specific stuff
@@ -33,7 +33,7 @@
     "plugin__flutter-tools.nvim" = { url = "github:akinsho/flutter-tools.nvim"; flake = false; };
 
     ## Yuck (for eww)
-    "plugin__yuck.vim" = { url = "github:elkowar/yuck.vim"; flake = false; };
+    "plugin__yuck_vim" = { url = "github:elkowar/yuck.vim"; flake = false; };
 
     ## SAGE
     "plugin__vim-sage" = { url = "github:petRUShka/vim-sage"; flake = false; };
@@ -118,8 +118,8 @@
     "plugin__vim-es6" = { url = "github:isRuslan/vim-es6"; flake = false; };
 
     ## Github Copilot
-    "plugin__copilot.vim" = { url = "github:github/copilot.vim"; flake = false; };
-    "plugin__copilot.lua" = { url = "github:zbirenbaum/copilot.lua"; flake = false; };
+    "plugin__copilot_vim" = { url = "github:github/copilot.vim"; flake = false; };
+    "plugin__copilot_lua" = { url = "github:zbirenbaum/copilot.lua"; flake = false; };
     "plugin__copilot-cmp" = { url = "github:zbirenbaum/copilot-cmp"; flake = false; };
 
     # Note taking

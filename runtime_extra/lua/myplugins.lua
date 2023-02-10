@@ -43,6 +43,7 @@ require('legendary').setup({
     { '<A-p>', ':lua vim.diagnostic.goto_prev()<CR>', description = "previous diagnostic" },
     { '<A-x>', ':Telescope lsp_document_diagnostics<cr>', description = "document diagnostics" },
     { '<A-q>', ':quit<cr>', description = "quit" },
+    { '<A-t>', ':TodoTelescope<CR>', description = "show todos" },
     -- }}}
     -- {{{ LSP
     { '<F21>', -- S->F9

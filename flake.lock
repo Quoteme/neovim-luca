@@ -104,11 +104,11 @@
     "plugin__auto-session": {
       "flake": false,
       "locked": {
-        "lastModified": 1669097955,
-        "narHash": "sha256-2XRx0o6BMF0eBcjJJh/ZbqIipkasDaW4Sarm31/nzxs=",
+        "lastModified": 1670893768,
+        "narHash": "sha256-VhInEXvjJNuJG0VtRZqeCV9uH9GMnNNfrKW9ZANKAnw=",
         "owner": "rmagatti",
         "repo": "auto-session",
-        "rev": "da03666a61af32eb0f57b37f18c020a3a33a44d4",
+        "rev": "c8b2f4048f846387361bd04cc185bf1aa7d2e3d1",
         "type": "github"
       },
       "original": {
@@ -440,11 +440,11 @@
     "plugin__codewindow_nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1667194515,
-        "narHash": "sha256-L97RKpjUJ9Fw6Kpw3eY/GF38XmIHsCvtR1MqaMiw61I=",
+        "lastModified": 1674040274,
+        "narHash": "sha256-TBoMpFD5MQHZwv/6TxbMNrVp2m2ATw8hbD1mDzU4Nf8=",
         "owner": "gorbit99",
         "repo": "codewindow.nvim",
-        "rev": "987b394b3c987cb9dd6c07ea57de88a4ce64f7e1",
+        "rev": "94d84e1a15b94248f205b854e70cb95f0b615b38",
         "type": "github"
       },
       "original": {
@@ -485,14 +485,14 @@
         "type": "github"
       }
     },
-    "plugin__copilot.lua": {
+    "plugin__copilot_lua": {
       "flake": false,
       "locked": {
-        "lastModified": 1669441351,
-        "narHash": "sha256-Lj60vbmZ5BRA8p2NDXSezD0cjP5mCBlRWvt0AbaQXpY=",
+        "lastModified": 1675346663,
+        "narHash": "sha256-+a286iUK7UijcbRLb8gXwmDFZAf1gYupS5f9EHB+dxU=",
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "rev": "bbb518fbba065773e50bb8e71eae42f7b7f0e2b0",
+        "rev": "a54e7b11a2c6efc9ddd3f42e56cf7d9eed1a9683",
         "type": "github"
       },
       "original": {
@@ -501,14 +501,14 @@
         "type": "github"
       }
     },
-    "plugin__copilot.vim": {
+    "plugin__copilot_vim": {
       "flake": false,
       "locked": {
-        "lastModified": 1667968220,
-        "narHash": "sha256-8O+7tzQQR5+QHLgXpL+KOISaVn6iOpdfQAQfHtyI4uw=",
+        "lastModified": 1675267373,
+        "narHash": "sha256-Mo7SKK0FvjFpIncMr0WI/cl+9+6NCfZ+Y/wlprQwWMg=",
         "owner": "github",
         "repo": "copilot.vim",
-        "rev": "5a411d19ce7334ab10ba12516743fc25dad363fa",
+        "rev": "c7d166ebda265370f38cec374e33f02eeec2f857",
         "type": "github"
       },
       "original": {
@@ -680,11 +680,11 @@
     "plugin__gitsigns_nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1669826718,
-        "narHash": "sha256-2S25m5sx7fHI/PHKosch7w/uV7DUOFtOQVpp9sUGKYk=",
+        "lastModified": 1676020921,
+        "narHash": "sha256-+ANMd331Iz3ZzX3Xp9fRUcUnoKGDFN65OPu5vaN3PzI=",
         "owner": "lewis6991",
         "repo": "gitsigns.nvim",
-        "rev": "d076301a634198e0ae3efee3b298fc63c055a871",
+        "rev": "f29f0b22fd66c910b892aae3bc18a4872c002738",
         "type": "github"
       },
       "original": {
@@ -1205,7 +1205,7 @@
         "type": "github"
       }
     },
-    "plugin__nvim-colorizer.lua": {
+    "plugin__nvim-colorizer_lua": {
       "flake": false,
       "locked": {
         "lastModified": 1591879145,
@@ -2069,7 +2069,7 @@
         "type": "github"
       }
     },
-    "plugin__yuck.vim": {
+    "plugin__yuck_vim": {
       "flake": false,
       "locked": {
         "lastModified": 1667045807,
@@ -2132,8 +2132,8 @@
         "plugin__codewindow_nvim": "plugin__codewindow_nvim",
         "plugin__conjure": "plugin__conjure",
         "plugin__copilot-cmp": "plugin__copilot-cmp",
-        "plugin__copilot.lua": "plugin__copilot.lua",
-        "plugin__copilot.vim": "plugin__copilot.vim",
+        "plugin__copilot_lua": "plugin__copilot_lua",
+        "plugin__copilot_vim": "plugin__copilot_vim",
         "plugin__dart-vim-plugin": "plugin__dart-vim-plugin",
         "plugin__dartlang-snippets": "plugin__dartlang-snippets",
         "plugin__delimitMate": "plugin__delimitMate",
@@ -2177,7 +2177,7 @@
         "plugin__null-ls_nvim": "plugin__null-ls_nvim",
         "plugin__nvim-cmp": "plugin__nvim-cmp",
         "plugin__nvim-code-action-menu": "plugin__nvim-code-action-menu",
-        "plugin__nvim-colorizer.lua": "plugin__nvim-colorizer.lua",
+        "plugin__nvim-colorizer_lua": "plugin__nvim-colorizer_lua",
         "plugin__nvim-coverage": "plugin__nvim-coverage",
         "plugin__nvim-dap": "plugin__nvim-dap",
         "plugin__nvim-dap-python": "plugin__nvim-dap-python",
@@ -2231,7 +2231,7 @@
         "plugin__vim-visual-multi": "plugin__vim-visual-multi",
         "plugin__vimspector": "plugin__vimspector",
         "plugin__which-key_nvim": "plugin__which-key_nvim",
-        "plugin__yuck.vim": "plugin__yuck.vim",
+        "plugin__yuck_vim": "plugin__yuck_vim",
         "plugin_targets_nvim": "plugin_targets_nvim"
       }
     }
