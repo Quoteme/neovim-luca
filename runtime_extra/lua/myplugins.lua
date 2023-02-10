@@ -44,6 +44,8 @@ require('legendary').setup({
     { '<A-x>', ':Telescope lsp_document_diagnostics<cr>', description = "document diagnostics" },
     { '<A-q>', ':quit<cr>', description = "quit" },
     { '<A-t>', ':TodoTelescope<CR>', description = "show todos" },
+    { '<A-w>', ':lua require("copilot.suggestion").accept_word()<CR>', description = "copilot: accept word" },
+    { '<A-e>', ':lua require("copilot.suggestion").accept_line()<CR>', description = "copilot: accept line" },
     -- }}}
     -- {{{ LSP
     { '<F21>', -- S->F9
@@ -150,7 +152,7 @@ require('lualine').setup {
     lualine_a = { 'mode' },
     lualine_b = { myBranch, 'diff', myDiagnostic },
     lualine_c = { {'filename', path=1} },
-    lualine_x = { myNvimNavic, 'encoding', myFiletype },
+    lualine_x = { myNvimNavic, 'encoding', myFiletype }, -- require('copilot_status').status_string
     lualine_y = { 'progress' },
     lualine_z = { 'location' }
   },

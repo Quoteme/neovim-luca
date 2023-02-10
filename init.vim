@@ -199,7 +199,7 @@ require("copilot").setup({
     auto_trigger = true,
     debounce = 75,
     keymap = {
-      accept = "<c-i>",
+      accept = "<M-CR>",
       accept_word = false,
       accept_line = false,
       next = "<M-]>",
@@ -209,6 +209,9 @@ require("copilot").setup({
   },
 })
 -- vim.schedule(function() require("copilot") end)
+-- make <c-i> trigger 'require("copilot.suggestion").accept()', but only if
+-- `require("copilot.suggestion").is_visible()` is true
+vim.api.nvim_set_keymap("i", "<c-i>", "<cmd>lua if require('copilot.suggestion').is_visible() then require('copilot.suggestion').accept() else vim.fn.feedkeys('\t', 'n') end<CR>", { noremap = true, silent = true })
 EOF
 " inoremap <m-cr> <cmd>lua require("copilot.suggestion").accept()<CR>
 " }}}
