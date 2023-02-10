@@ -118,9 +118,9 @@
     "plugin__vim-es6" = { url = "github:isRuslan/vim-es6"; flake = false; };
 
     ## Github Copilot
-    "plugin__copilot_vim" = { url = "github:github/copilot.vim"; flake = false; };
     "plugin__copilot_lua" = { url = "github:zbirenbaum/copilot.lua"; flake = false; };
     "plugin__copilot-cmp" = { url = "github:zbirenbaum/copilot-cmp"; flake = false; };
+    "plugin__copilot-status_nvim" = { url = "github:jonahgoldwastaken/copilot-status.nvim"; flake = false; };
 
     # Note taking
     "plugin__nabla_nvim" = { url = "github:jbyuki/nabla.nvim"; flake = false; };

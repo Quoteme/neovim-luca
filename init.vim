@@ -177,8 +177,40 @@ lua << EOF
 vim.api.nvim_set_var("copilot_filetypes", {
       ["dap-repl"] = false,
 })
+require("copilot").setup({
+  filetypes = {["."] = true},
+  panel = {
+    enabled = true,
+    auto_refresh = false,
+    keymap = {
+      jump_prev = "[[",
+      jump_next = "]]",
+      accept = "<CR>",
+      refresh = "gr",
+      open = "<M-S-CR>"
+    },
+    layout = {
+      position = "bottom", -- | top | left | right
+      ratio = 0.4
+    },
+  },
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    debounce = 75,
+    keymap = {
+      accept = "<c-i>",
+      accept_word = false,
+      accept_line = false,
+      next = "<M-]>",
+      prev = "<M-[>",
+      dismiss = "<C-]>",
+    },
+  },
+})
 -- vim.schedule(function() require("copilot") end)
 EOF
+" inoremap <m-cr> <cmd>lua require("copilot.suggestion").accept()<CR>
 " }}}
 
 " {{{
@@ -873,8 +905,8 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   " Nix flake hack (so neovim loads buffers correctly when opening a file from a command line arg)
   autocmd VimEnter ?* :e
   " {{{ Code action on alt-enter like intellij
-  inoremap <a-cr> <esc>:CodeActionMenu<CR>
-  nnoremap <a-cr> <esc>:CodeActionMenu<CR>
+  inoremap <a-.> <esc>:CodeActionMenu<CR>
+  nnoremap <a-.> <esc>:CodeActionMenu<CR>
   inoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   " }}}

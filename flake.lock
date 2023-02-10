@@ -485,6 +485,22 @@
         "type": "github"
       }
     },
+    "plugin__copilot-status_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1675983202,
+        "narHash": "sha256-36MR4WuLqtp0CizmAIqO50tdTTz+Cx5e402fM8Xlp3A=",
+        "owner": "jonahgoldwastaken",
+        "repo": "copilot-status.nvim",
+        "rev": "b8b2c3b336e262ddac2ccaaff0927a0cbfa3f658",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jonahgoldwastaken",
+        "repo": "copilot-status.nvim",
+        "type": "github"
+      }
+    },
     "plugin__copilot_lua": {
       "flake": false,
       "locked": {
@@ -498,22 +514,6 @@
       "original": {
         "owner": "zbirenbaum",
         "repo": "copilot.lua",
-        "type": "github"
-      }
-    },
-    "plugin__copilot_vim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1675267373,
-        "narHash": "sha256-Mo7SKK0FvjFpIncMr0WI/cl+9+6NCfZ+Y/wlprQwWMg=",
-        "owner": "github",
-        "repo": "copilot.vim",
-        "rev": "c7d166ebda265370f38cec374e33f02eeec2f857",
-        "type": "github"
-      },
-      "original": {
-        "owner": "github",
-        "repo": "copilot.vim",
         "type": "github"
       }
     },
@@ -2132,8 +2132,8 @@
         "plugin__codewindow_nvim": "plugin__codewindow_nvim",
         "plugin__conjure": "plugin__conjure",
         "plugin__copilot-cmp": "plugin__copilot-cmp",
+        "plugin__copilot-status_nvim": "plugin__copilot-status_nvim",
         "plugin__copilot_lua": "plugin__copilot_lua",
-        "plugin__copilot_vim": "plugin__copilot_vim",
         "plugin__dart-vim-plugin": "plugin__dart-vim-plugin",
         "plugin__dartlang-snippets": "plugin__dartlang-snippets",
         "plugin__delimitMate": "plugin__delimitMate",

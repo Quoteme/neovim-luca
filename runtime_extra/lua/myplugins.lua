@@ -206,6 +206,7 @@ require('auto-session').setup {
 }
 -- }}}
 
+
 -- {{{ flutter-tools.nvim
 require("flutter-tools").setup {
   debugger = {
