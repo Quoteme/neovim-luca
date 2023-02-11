@@ -178,7 +178,10 @@ vim.api.nvim_set_var("copilot_filetypes", {
       ["dap-repl"] = false,
 })
 require("copilot").setup({
-  filetypes = {["."] = true},
+  filetypes = {
+    markdown = true,
+    ["."] = true
+  },
   panel = {
     enabled = true,
     auto_refresh = false,
