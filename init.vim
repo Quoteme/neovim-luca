@@ -27,7 +27,8 @@
   set incsearch ignorecase  " Increase search
   set smartcase             " Override the 'ignorecase' option if the
                             " search pattern contains upper case characters.
-  set foldmethod=expr
+  " set foldmethod=expr
+  set foldmethod=syntax
   set foldexpr=nvim_treesitter#foldexpr()
   " set foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
   " set fillchars=fold:\ 
