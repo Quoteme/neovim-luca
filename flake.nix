@@ -51,6 +51,10 @@
     "plugin__vim-sexp" = { url = "github:guns/vim-sexp"; flake = false; };
     "plugin__vim-sexp-mappings-for-regular-people" = { url = "github:tpope/vim-sexp-mappings-for-regular-people"; flake = false; };
 
+    ## Haskell
+    "plugin__haskell-vim" = { url = "github:neovimhaskell/haskell-vim"; flake = false; };
+    "plugin__telescope_hoogle" = { url = "github:luc-tielen/telescope_hoogle"; flake = false; };
+
     ## F#
     "plugin__neofsharp_vim" = { url = "github:adelarsq/neofsharp.vim"; flake = false; };
 
