@@ -234,6 +234,7 @@
           ## Haskell
           pkgs.stable.haskell-language-server
           ormolu
+          haskellPackages.hoogle
           ## JavaScript / Typescript / HTML / CSS
           # nodePackages.vscode-langservers-extracted
           # deno

@@ -55,6 +55,17 @@
 "               |___/                              |___/
 
 " {{{
+
+" {{{
+" Telescope
+lua << EOF
+local telescope = require('telescope')
+telescope.setup()
+
+telescope.load_extension('hoogle')
+EOF
+" }}}
+
 " {{{
 " gesture.nvim
 lua << EOF

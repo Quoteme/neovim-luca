@@ -29,6 +29,7 @@ require('legendary').setup({
     { '<A-b>', ':lua vim.lsp.buf.definition()<CR>', description = "go to definition" },
     -- show the hover information when pressing A-h
     { '<A-h>', ':lua vim.lsp.buf.hover()<CR>', description = "show hover information" },
+    { '<A-H>', ':Telescope hoogle<CR>', description = "hoogle" },
     { '<A-i>', ':Telescope lsp_incoming_calls<cr>', description = "incoming references" },
     { '<A-o>', ':Telescope lsp_outgoing_calls<cr>', description = "outgoing references" },
     -- show the diagnostics when pressing A-l
