@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-22.11";
     flake-utils = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/flake-utils";
@@ -11,7 +11,6 @@
 
     neovim-flake = {
       url = "github:neovim/neovim?dir=contrib";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Theme / Colorscheme
@@ -254,8 +253,6 @@
           ## Java
           jdk11
           # java-language-server
-          ## Lua
-          sumneko-lua-language-server
           ## Dart
           # dart
           ## (Neo)Vim
@@ -326,7 +323,7 @@
           overlays = [
             pluginOverlay
             (final: prev: {
-              neovim-unwrapped = inputs.neovim-flake.packages.${prev.system}.neovim;
+              custom-neovim-unwrapped = inputs.neovim-flake.packages.${prev.system}.neovim;
             })
             (final: prev: {
               stable = import inputs.nixpkgs-stable { inherit system; config.allowUnfree = true; };
