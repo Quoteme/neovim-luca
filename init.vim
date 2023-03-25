@@ -694,10 +694,6 @@ require'nvim-treesitter.configs'.setup {
     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
     max_file_lines = nil, -- Do not enable for files with more than n lines, int
   },
-}
-vim.opt.runtimepath:append("~/.config/treesitter_parsers")
-
-require "nvim-treesitter.configs".setup {
   playground = {
     enable = true,
     disable = {},
@@ -715,10 +711,7 @@ require "nvim-treesitter.configs".setup {
       goto_node = '<cr>',
       show_help = '?',
     },
-  }
-}
-
-require('nvim-treesitter.configs').setup {
+  },
   textsubjects = {
     enable = true,
     prev_selection = ',', -- (Optional) keymap to select the previous selection
@@ -727,8 +720,9 @@ require('nvim-treesitter.configs').setup {
       [';'] = 'textsubjects-container-outer',
       ['i;'] = 'textsubjects-container-inner',
     },
-  },
+  }
 }
+vim.opt.runtimepath:append("~/.config/treesitter_parsers")
 
 require'treesitter-context'.setup{}
 
