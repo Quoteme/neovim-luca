@@ -885,6 +885,8 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   " {{{ Code action on alt-enter like intellij
   inoremap <a-.> <esc>:CodeActionMenu<CR>
   nnoremap <a-.> <esc>:CodeActionMenu<CR>
+  inoremap <a-CR> <esc>:CodeActionMenu<CR>
+  nnoremap <a-CR> <esc>:CodeActionMenu<CR>
   inoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   " }}}
