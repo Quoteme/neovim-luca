@@ -28,8 +28,9 @@
   set smartcase             " Override the 'ignorecase' option if the
                             " search pattern contains upper case characters.
   " set foldmethod=expr
-  set foldmethod=syntax
+  set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
+  set nofoldenable
   " set foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
   " set fillchars=fold:\ 
   " set foldnestmax=3
