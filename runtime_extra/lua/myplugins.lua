@@ -209,6 +209,20 @@ require('auto-session').setup {
 }
 -- }}}
 
+-- {{{
+require('litee.lib').setup({
+  tree = {
+    icon_set = "codicons"
+  },
+  panel = {
+    orientation = "left",
+    panel_size  = 30
+  }
+})
+require('litee.calltree').setup({})
+require('litee.symboltree').setup({})
+require'litee.filetree'.setup{}
+-- }}}
 
 -- {{{ flutter-tools.nvim
 require("flutter-tools").setup {

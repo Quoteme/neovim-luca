@@ -407,6 +407,12 @@ EOF
 :luafile $RUNTIME_EXTRA/lua/myluasnip.lua
 " }}}
 
+" {{{ indent-tools.nvim
+lua <<EOF
+require("indent-tools").config({})
+EOF
+" }}}
+
 " {{{
 " Nvim-Cmp
 set completeopt=menu,menuone,noselect
@@ -526,9 +532,9 @@ lua <<EOF
   -- {{{ : commands
   cmp.setup.cmdline(':', {
     sources = {
+      -- { name = 'cmdline_history' },
       { name = 'path' },
       { name = 'cmdline' },
-      { name = 'cmdline_history' },
     },
     mapping = cmp.mapping.preset.cmdline(),
   })
@@ -886,8 +892,8 @@ vnoremap <C-l> :<C-u>call unicoder#selection()<CR>
   " {{{ Code action on alt-enter like intellij
   inoremap <a-.> <esc>:CodeActionMenu<CR>
   nnoremap <a-.> <esc>:CodeActionMenu<CR>
-  inoremap <a-CR> <esc>:CodeActionMenu<CR>
-  nnoremap <a-CR> <esc>:CodeActionMenu<CR>
+  inoremap <a-CR> <esc>:Lspsaga code_action<CR>
+  nnoremap <a-CR> <esc>:Lspsaga code_action<CR>
   inoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   nnoremap <a-b> <cmd>lua vim.lsp.buf.definition()<CR>
   " }}}

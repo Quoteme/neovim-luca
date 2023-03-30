@@ -115,6 +115,22 @@
         "type": "github"
       }
     },
+    "plugin__arshlib_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673213536,
+        "narHash": "sha256-vrE+JKO+i5IE1NbdyJ76sWAiXumJxaiVn+ztmBtyPms=",
+        "owner": "arsham",
+        "repo": "arshlib.nvim",
+        "rev": "86a8bbb6efec19fa972ed8f546ab405359efbf05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "arsham",
+        "repo": "arshlib.nvim",
+        "type": "github"
+      }
+    },
     "plugin__auto-session": {
       "flake": false,
       "locked": {
@@ -755,6 +771,22 @@
         "type": "github"
       }
     },
+    "plugin__indent-tools_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673708006,
+        "narHash": "sha256-1nPl7MEWUJHsf8pmuln4bDpDgZUAZvgiT3HbGsd4j/g=",
+        "owner": "arsham",
+        "repo": "indent-tools.nvim",
+        "rev": "d4df36381141758ed2e17bb69e31473a862e1cfa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "arsham",
+        "repo": "indent-tools.nvim",
+        "type": "github"
+      }
+    },
     "plugin__kanagawa.nvim": {
       "flake": false,
       "locked": {
@@ -816,6 +848,70 @@
       "original": {
         "owner": "mrjones2014",
         "repo": "legendary.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__litee-calltree_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664385726,
+        "narHash": "sha256-qCe6pflIJobXwQsEe3BRkismKJLkEo8y73zWLYh6MSQ=",
+        "owner": "ldelossa",
+        "repo": "litee-calltree.nvim",
+        "rev": "e2dffec35740032258fee3a3c7f30123226f2271",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "repo": "litee-calltree.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__litee-filetree_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664243796,
+        "narHash": "sha256-TbwKzyZHw/KH2qR15UTAYbbTMkxJky9SVrcSTlppw0k=",
+        "owner": "ldelossa",
+        "repo": "litee-filetree.nvim",
+        "rev": "be343ae68e7fd1f9c6859d5d946ab735cdc8235e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "repo": "litee-filetree.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__litee-symboltree_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1664385776,
+        "narHash": "sha256-V40YM+dw16znMyhV1n/8sxFaCNT6IAyywgF8dshVUlY=",
+        "owner": "ldelossa",
+        "repo": "litee-symboltree.nvim",
+        "rev": "488a660afcfd54644e6b755256907d3c7d8cf8d0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "repo": "litee-symboltree.nvim",
+        "type": "github"
+      }
+    },
+    "plugin__litee_nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670723283,
+        "narHash": "sha256-uC7FQlTwyMI7rSF4MzQSMTlfD4iqfjhIcY23csHig84=",
+        "owner": "ldelossa",
+        "repo": "litee.nvim",
+        "rev": "bf366a1414fd0f9401631ac8884f2f9fa4bf18d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "repo": "litee.nvim",
         "type": "github"
       }
     },
@@ -1398,11 +1494,11 @@
     "plugin__nvim-treesitter": {
       "flake": false,
       "locked": {
-        "lastModified": 1679718717,
-        "narHash": "sha256-Ozy974kpGewwUPb4OH4DoVLtvVAv2ab+MTuRqkrFg8g=",
+        "lastModified": 1680160570,
+        "narHash": "sha256-sRYxbzBqQSjbyAbZsbXenUPcUW///nNtRaTbNvCGkRE=",
         "owner": "nvim-treesitter",
         "repo": "nvim-treesitter",
-        "rev": "c9ef5e58f7d59aba875324825ff47900d0be61f2",
+        "rev": "09275650b8ae262ac173398976093b60e36e01e8",
         "type": "github"
       },
       "original": {
@@ -2154,6 +2250,7 @@
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-stable": "nixpkgs-stable",
         "plugin__LuaSnip": "plugin__LuaSnip",
+        "plugin__arshlib_nvim": "plugin__arshlib_nvim",
         "plugin__auto-session": "plugin__auto-session",
         "plugin__barbar_nvim": "plugin__barbar_nvim",
         "plugin__barbecue_nvim": "plugin__barbecue_nvim",
@@ -2194,10 +2291,15 @@
         "plugin__gruvbox": "plugin__gruvbox",
         "plugin__haskell-vim": "plugin__haskell-vim",
         "plugin__indent-blankline_nvim": "plugin__indent-blankline_nvim",
+        "plugin__indent-tools_nvim": "plugin__indent-tools_nvim",
         "plugin__kanagawa.nvim": "plugin__kanagawa.nvim",
         "plugin__latex-snippets": "plugin__latex-snippets",
         "plugin__latex-snippets-vim": "plugin__latex-snippets-vim",
         "plugin__legendary_nvim": "plugin__legendary_nvim",
+        "plugin__litee-calltree_nvim": "plugin__litee-calltree_nvim",
+        "plugin__litee-filetree_nvim": "plugin__litee-filetree_nvim",
+        "plugin__litee-symboltree_nvim": "plugin__litee-symboltree_nvim",
+        "plugin__litee_nvim": "plugin__litee_nvim",
         "plugin__lsp_signature_nvim": "plugin__lsp_signature_nvim",
         "plugin__lspkind_nvim": "plugin__lspkind_nvim",
         "plugin__lspsaga_nvim": "plugin__lspsaga_nvim",
