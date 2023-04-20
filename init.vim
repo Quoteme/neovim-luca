@@ -27,7 +27,6 @@
   set incsearch ignorecase  " Increase search
   set smartcase             " Override the 'ignorecase' option if the
                             " search pattern contains upper case characters.
-  " set foldmethod=expr
   set foldmethod=expr
   set foldexpr=nvim_treesitter#foldexpr()
   set nofoldenable
@@ -228,6 +227,9 @@ require("copilot").setup({
 -- make <c-i> trigger 'require("copilot.suggestion").accept()', but only if
 -- `require("copilot.suggestion").is_visible()` is true
 vim.api.nvim_set_keymap("i", "<c-i>", "<cmd>lua if require('copilot.suggestion').is_visible() then require('copilot.suggestion').accept() else vim.fn.feedkeys('\t', 'n') end<CR>", { noremap = true, silent = true })
+
+-- Toggle Copilot using <ctrl><alt><shift>O
+vim.api.nvim_set_keymap("n", "<M-C-O>", "<cmd>Copilot toggle<CR>", { noremap = true, silent = true })
 EOF
 " inoremap <m-cr> <cmd>lua require("copilot.suggestion").accept()<CR>
 " }}}
@@ -665,7 +667,10 @@ for _, lsp in ipairs(servers) do
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities),
     flags = {
       debounce_text_changes = 150,
-    }
+    },
+    settings = {
+      offsetEncoding = "utf-8",
+    },
   }
 end
 EOF
