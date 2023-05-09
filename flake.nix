@@ -428,9 +428,9 @@
                 aspell -d de dump master | aspell -l de expand > $out/share/nvim/runtime_extra/dictionaries/de.dict
                 aspell -d en dump master | aspell -l en expand > $out/share/nvim/runtime_extra/dictionaries/en.dict
                 # Make aliases for neovim command
-                ln -sf $out/bin/nvim $out/bin/vi
-                ln -sf $out/bin/nvim $out/bin/vim
-                ln -sf $out/bin/nvim $out/bin/neovim
+                # ln -sf $out/bin/nvim $out/bin/vi
+                # ln -sf $out/bin/nvim $out/bin/vim
+                # ln -sf $out/bin/nvim $out/bin/neovim
                 ln -sf $out/bin/nvim $out/bin/neovim-luca
               '';
             };
